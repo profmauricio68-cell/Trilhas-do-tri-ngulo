@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trilha 7 · Parecidos, mas não iguais · Trilha dos Triângulos</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <svg class="mascote" viewBox="0 0 100 100"><polygon points="50,10 90,85 10,85" fill="#7C4DFF"/><circle cx="38" cy="65" r="6" fill="#fff"/><circle cx="62" cy="65" r="6" fill="#fff"/><circle cx="38" cy="65" r="3" fill="#2E2452"/><circle cx="62" cy="65" r="3" fill="#2E2452"/><path d="M35 76 Q50 88 65 76" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+      Trilha dos Triângulos
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Início</a>
+      <a href="trilha1.html">Trilha 1</a>
+      <a href="trilha2.html">Trilha 2</a>
+      <a href="trilha3.html">Trilha 3</a>
+      <a href="trilha4.html">Trilha 4</a>
+      <a href="trilha5.html">Trilha 5</a>
+      <a href="trilha6.html">Trilha 6</a>
+      <a href="trilha7.html" class="active">Trilha 7</a>
+      <a href="trilha8.html">Trilha 8</a>
+      <a href="index.html#mapa">Mapa</a>
+    </nav>
+    <div class="progresso-pill" data-progresso-pill>⭐ 0/8 trilhas</div>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- ============ CONTEXTUALIZAÇÃO ============ -->
+  <section class="section-card">
+    <span class="tag laranja">TRILHA 7 · 9º ANO</span>
+    <h2>📏 Parecidos, mas não iguais</h2>
+
+    <div class="contexto-flex">
+      <div class="texto">
+        <p class="lead">Há mais de 2500 anos, o grego Tales de Mileto impressionou o Egito ao calcular a altura de uma pirâmide sem escalar nem usar nenhuma régua gigante. Ele esperou o momento exato do dia em que a sombra do seu próprio corpo tinha o mesmo tamanho da sua altura — e então bastou medir a sombra da pirâmide, no mesmo instante, para descobrir a altura dela. Técnicas parecidas, comparando sombras e proporções, são usadas até hoje por comunidades tradicionais para estimar a altura de árvores e construções sem precisar escalar.</p>
+        <div class="balaozinho">🤔 Como é possível descobrir a altura de algo gigante sem medir diretamente? A resposta está em triângulos "parecidos" — só que de tamanhos diferentes.</div>
+      </div>
+      <div class="imagem">
+        <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="400" height="220" rx="24" fill="#DCF3FF"/>
+          <circle cx="360" cy="35" r="22" fill="#FFD166"/>
+
+          <!-- pessoa e sombra -->
+          <line x1="60" y1="180" x2="60" y2="130" stroke="#5B2EE0" stroke-width="5" stroke-linecap="round"/>
+          <circle cx="60" cy="120" r="10" fill="#5B2EE0"/>
+          <line x1="60" y1="180" x2="105" y2="180" stroke="#2E2452" stroke-width="3" stroke-dasharray="5 4"/>
+          <line x1="60" y1="120" x2="105" y2="180" stroke="#FFB020" stroke-width="2" stroke-dasharray="4 3"/>
+
+          <!-- piramide e sombra -->
+          <polygon points="220,180 320,180 270,90" fill="none" stroke="#8D5A2B" stroke-width="4"/>
+          <line x1="270" y1="180" x2="380" y2="180" stroke="#2E2452" stroke-width="3" stroke-dasharray="5 4"/>
+          <line x1="270" y1="90" x2="380" y2="180" stroke="#FFB020" stroke-width="2" stroke-dasharray="4 3"/>
+
+          <text x="80" y="200" text-anchor="middle" font-family="Baloo 2, cursive" font-size="12" fill="#5B2EE0" font-weight="700">eu</text>
+          <text x="300" y="203" text-anchor="middle" font-family="Baloo 2, cursive" font-size="12" fill="#8D5A2B" font-weight="700">pirâmide</text>
+          <text x="200" y="35" text-anchor="middle" font-family="Baloo 2, cursive" font-size="13" fill="#5B2EE0" font-weight="700">mesmo ângulo do sol ☀️</text>
+        </svg>
+        <p style="font-size:0.8rem; text-align:center; color:#5B2EE0; margin-top:6px;">Dois triângulos com o mesmo formato — um pequeno, um gigante — ligados pelo mesmo ângulo do sol.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPLORANDO ============ -->
+  <section class="section-card">
+    <span class="tag roxo">EXPLORANDO</span>
+    <h2>🔎 Semelhança de triângulos</h2>
+    <p class="lead">Dois triângulos são <strong>semelhantes</strong> quando têm os três ângulos correspondentes congruentes e os lados correspondentes proporcionais — ou seja, o mesmo "formato", mas não necessariamente o mesmo tamanho.</p>
+    <p class="lead"><strong>Critério AA (Ângulo-Ângulo):</strong> basta que dois pares de ângulos correspondentes sejam iguais para garantir que os triângulos são semelhantes — o terceiro par sai de graça, já que a soma dos ângulos de qualquer triângulo é sempre 180°!</p>
+
+    <div class="center">
+      <svg viewBox="0 0 260 120" style="width:min(360px,95%);">
+        <polygon points="10,95 60,95 35,35" fill="none" stroke="#5B2EE0" stroke-width="3"/>
+        <text x="35" y="104" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11" fill="#5B2EE0" font-weight="700">4</text>
+        <text x="15" y="59" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11" fill="#5B2EE0" font-weight="700">6</text>
+        <text x="55" y="59" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11" fill="#5B2EE0" font-weight="700">8</text>
+
+        <text x="120" y="60" text-anchor="middle" font-family="Baloo 2, cursive" font-size="26" fill="#FF8A3D">~</text>
+
+        <polygon points="150,100 250,100 200,10" fill="none" stroke="#5B2EE0" stroke-width="3.5"/>
+        <text x="200" y="111" text-anchor="middle" font-family="Nunito, sans-serif" font-size="12" fill="#5B2EE0" font-weight="700">8</text>
+        <text x="166" y="49" text-anchor="middle" font-family="Nunito, sans-serif" font-size="12" fill="#5B2EE0" font-weight="700">12</text>
+        <text x="234" y="49" text-anchor="middle" font-family="Nunito, sans-serif" font-size="12" fill="#5B2EE0" font-weight="700">16</text>
+      </svg>
+    </div>
+    <p class="lead" style="font-size:0.95rem;">Repare: <strong>6/12 = 4/8 = 8/16 = 1/2</strong> — todos os lados do triângulo grande valem o dobro do pequeno. Essa razão constante entre lados correspondentes se chama <strong>razão de semelhança</strong>.</p>
+
+    <div class="balaozinho">💡 Para saber mais: essa ideia de "triângulos com o mesmo formato" também é a chave para demonstrar o Teorema de Pitágoras! Quer descobrir como? É o assunto da próxima trilha. 👉</div>
+  </section>
+
+  <!-- ============ PRATICANDO ============ -->
+  <section class="section-card">
+    <span class="tag verde">PRATICANDO</span>
+    <h2>✏️ Vamos treinar</h2>
+
+    <div class="quiz-item" data-correta="0">
+      <div class="quiz-pergunta">1. Dois triângulos são semelhantes quando:</div>
+      <div class="quiz-opcoes">
+        <div class="quiz-opcao" data-valor="0">Têm os mesmos ângulos e lados proporcionais</div>
+        <div class="quiz-opcao" data-valor="1">Têm exatamente o mesmo tamanho</div>
+        <div class="quiz-opcao" data-valor="2">Têm só um lado igual</div>
+      </div>
+      <div class="quiz-feedback"></div>
+    </div>
+
+    <div class="quiz-item" data-correta="1">
+      <div class="quiz-pergunta">2. Um triângulo pequeno tem lados 3, 5 e 6. Um triângulo semelhante a ele, maior, tem razão de semelhança 2. Quais são os lados do triângulo maior?</div>
+      <div class="quiz-opcoes">
+        <div class="quiz-opcao" data-valor="0">5, 7 e 8</div>
+        <div class="quiz-opcao" data-valor="1">6, 10 e 12</div>
+        <div class="quiz-opcao" data-valor="2">3, 5 e 6</div>
+      </div>
+      <div class="quiz-feedback"></div>
+    </div>
+
+    <div class="quiz-item" data-correta="1">
+      <div class="quiz-pergunta">3. Se dois triângulos têm dois pares de ângulos correspondentes iguais, pelo critério AA, eles são:</div>
+      <div class="quiz-opcoes">
+        <div class="quiz-opcao" data-valor="0">Congruentes</div>
+        <div class="quiz-opcao" data-valor="1">Semelhantes</div>
+        <div class="quiz-opcao" data-valor="2">Sem relação nenhuma</div>
+      </div>
+      <div class="quiz-feedback"></div>
+    </div>
+  </section>
+
+  <!-- ============ JOGO ============ -->
+  <section class="section-card">
+    <span class="tag rosa">JOGO FINAL</span>
+    <h2>🎮 Complete a medida</h2>
+    <p class="lead">Esses triângulos são sempre semelhantes — use a razão de semelhança para descobrir a medida que falta em cada rodada!</p>
+
+    <div class="jogo-wrap">
+      <div class="jogo-placar">
+        <div>Rodada <span id="jogoRodadaAtual">1</span>/<span id="jogoRodadaTotal">6</span></div>
+        <div>Pontos: <span class="valor" id="jogoPontos">0</span></div>
+      </div>
+
+      <div id="jogoAtivo">
+        <p class="center quiz-pergunta" id="jogoPergunta">Qual é a medida que falta?</p>
+        <div class="jogo-triangulo-area">
+          <svg viewBox="0 0 100 100" id="jogoSvg" style="width:260px;"></svg>
+        </div>
+        <div class="jogo-botoes" id="jogoBotoes"></div>
+        <div class="jogo-mensagem" id="jogoMensagem"></div>
+      </div>
+
+      <div id="jogoFim" class="jogo-fim" style="display:none;">
+        <h3 id="jogoFimTitulo">🎉 Trilha concluída!</h3>
+        <p id="jogoFimTexto"></p>
+        <a href="trilha8.html" class="btn verde">Ir para a Trilha 8 ⭐</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="center" style="margin-bottom:40px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+    <a href="trilha6.html" class="btn laranja">← Trilha 6</a>
+    <a href="trilha8.html" class="btn verde">Trilha 8 →</a>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  Trilha dos Triângulos — Produto Educacional PROFMAT 🔺✨
+</footer>
+
+<script src="script.js"></script>
+<script>
+/* ---------- Quiz "Praticando" ---------- */
+document.querySelectorAll('.quiz-item').forEach(item=>{
+  const correta = item.getAttribute('data-correta');
+  const feedback = item.querySelector('.quiz-feedback');
+  let respondido = false;
+  item.querySelectorAll('.quiz-opcao').forEach(op=>{
+    op.addEventListener('click', ()=>{
+      if(respondido) return;
+      respondido = true;
+      const valor = op.getAttribute('data-valor');
+      if(valor === correta){
+        op.classList.add('certo');
+        feedback.textContent = '✅ Isso mesmo! Mandou bem.';
+        feedback.style.color = '#039073';
+      }else{
+        op.classList.add('errado');
+        item.querySelector(`[data-valor="${correta}"]`).classList.add('certo');
+        feedback.textContent = '❌ Quase! A resposta certa está em verde.';
+        feedback.style.color = '#C43F6E';
+      }
+    });
+  });
+});
+
+/* ---------- Jogo "Complete a medida" ---------- */
+const rodadas = [
+  { pequeno:[4,6,8], grande:[6,9,null], razao:1.5, resposta:12 },
+  { pequeno:[3,5,7], grande:[9,null,21], razao:3, resposta:15 },
+  { pequeno:[5,8,10], grande:[10,16,null], razao:2, resposta:20 },
+  { pequeno:[6,9,12], grande:[null,18,24], razao:2, resposta:12 },
+  { pequeno:[10,4,6], grande:[5,null,3], razao:0.5, resposta:2 },
+  { pequeno:[7,3,5], grande:[null,9,15], razao:3, resposta:21 },
+];
+
+let rodadaIdx = 0;
+let pontos = 0;
+let travado = false;
+
+document.getElementById('jogoRodadaTotal').textContent = rodadas.length;
+
+function embaralhar(arr){
+  const a = arr.slice();
+  for(let i=a.length-1;i>0;i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [a[i],a[j]]=[a[j],a[i]];
+  }
+  return a;
+}
+
+function gerarOpcoes(certo){
+  const opcoes = new Set([certo]);
+  while(opcoes.size < 3){
+    const delta = [-4,-3,-2,2,3,4,5][Math.floor(Math.random()*7)];
+    const candidato = certo + delta;
+    if(candidato > 0) opcoes.add(candidato);
+  }
+  return embaralhar(Array.from(opcoes));
+}
+
+function svgSemelhanca(r){
+  const [p1,p2,p3] = r.pequeno;
+  const [g1,g2,g3] = r.grande;
+  const t = (v)=> v===null ? '?' : v;
+  const cor = (v)=> v===null ? '#FF8A3D' : '#4FC3F7';
+  return `
+    <text x="180" y="18" text-anchor="middle" font-size="9" fill="#2E2452" font-weight="700">razão ${r.razao}x</text>
+    <polygon points="8,90 45,90 26,45" fill="none" stroke="#5B2EE0" stroke-width="2.5"/>
+    <text x="26" y="99" text-anchor="middle" font-size="8" fill="${cor(p1)}" font-weight="700">${t(p1)}</text>
+    <text x="10" y="62" text-anchor="middle" font-size="8" fill="${cor(p2)}" font-weight="700">${t(p2)}</text>
+    <text x="42" y="62" text-anchor="middle" font-size="8" fill="${cor(p3)}" font-weight="700">${t(p3)}</text>
+    <text x="60" y="55" text-anchor="middle" font-size="16" fill="#FF8A3D">~</text>
+    <polygon points="75,95 200,95 130,10" fill="none" stroke="#5B2EE0" stroke-width="3"/>
+    <text x="139" y="105" text-anchor="middle" font-size="9" fill="${cor(g1)}" font-weight="700">${t(g1)}</text>
+    <text x="93" y="49" text-anchor="middle" font-size="9" fill="${cor(g2)}" font-weight="700">${t(g2)}</text>
+    <text x="174" y="48" text-anchor="middle" font-size="9" fill="${cor(g3)}" font-weight="800">${t(g3)}</text>
+  `;
+}
+
+function carregarRodada(){
+  travado = false;
+  const r = rodadas[rodadaIdx];
+  document.getElementById('jogoRodadaAtual').textContent = rodadaIdx+1;
+  document.getElementById('jogoMensagem').textContent = '';
+
+  const svg = document.getElementById('jogoSvg');
+  svg.setAttribute('viewBox','0 0 210 110');
+  svg.innerHTML = svgSemelhanca(r);
+  document.getElementById('jogoPergunta').textContent = 'Esses triângulos são semelhantes. Qual é a medida que falta?';
+
+  const botoesDiv = document.getElementById('jogoBotoes');
+  botoesDiv.innerHTML = '';
+  gerarOpcoes(r.resposta).forEach(op=>{
+    const btn = document.createElement('button');
+    btn.textContent = op;
+    btn.addEventListener('click', ()=> responder(op, btn));
+    botoesDiv.appendChild(btn);
+  });
+}
+
+function responder(escolha, btn){
+  if(travado) return;
+  travado = true;
+  const r = rodadas[rodadaIdx];
+  const msg = document.getElementById('jogoMensagem');
+  if(escolha === r.resposta){
+    pontos++;
+    document.getElementById('jogoPontos').textContent = pontos;
+    btn.style.background = '#06D6A0'; btn.style.color = '#fff'; btn.style.borderColor = '#06D6A0';
+    msg.textContent = '✅ Isso aí! A resposta certa era ' + r.resposta + '.';
+    msg.style.color = '#039073';
+  }else{
+    btn.style.background = '#FF6B9D'; btn.style.color = '#fff'; btn.style.borderColor = '#FF6B9D';
+    msg.textContent = '❌ Era ' + r.resposta + '. Vamos para a próxima!';
+    msg.style.color = '#C43F6E';
+  }
+
+  setTimeout(()=>{
+    rodadaIdx++;
+    if(rodadaIdx < rodadas.length){
+      carregarRodada();
+    }else{
+      finalizarJogo();
+    }
+  }, 1400);
+}
+
+function finalizarJogo(){
+  document.getElementById('jogoAtivo').style.display = 'none';
+  const fim = document.getElementById('jogoFim');
+  fim.style.display = 'block';
+  document.getElementById('jogoFimTexto').textContent =
+    `Você acertou ${pontos} de ${rodadas.length} desafios. Sua estrela da Trilha 7 já foi guardada — agora vamos usar essa ideia de semelhança para descobrir o Teorema de Pitágoras! 🎉`;
+  marcarTrilhaConcluida('trilha7');
+}
+
+carregarRodada();
+</script>
+</body>
+</html>

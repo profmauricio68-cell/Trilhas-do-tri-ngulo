@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trilha 2 · Existe ou não existe? · Trilha dos Triângulos</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .barra-linha{ display:flex; align-items:center; gap:10px; margin:8px 0; }
+  .barra-rotulo{ width:110px; font-weight:800; font-size:0.9rem; color:#5B2EE0; flex-shrink:0; }
+  .barra-trilho{ flex:1; background:#F1ECFF; border-radius:10px; height:26px; position:relative; overflow:hidden; min-width:120px; }
+  .barra-preenchimento{ height:100%; border-radius:10px 0 0 10px; display:flex; }
+  .barra-parte{ height:100%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:0.72rem; font-weight:800; }
+  .barra-marcador{ position:absolute; top:-4px; bottom:-4px; width:3px; background:#2E2452; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <svg class="mascote" viewBox="0 0 100 100"><polygon points="50,10 90,85 10,85" fill="#7C4DFF"/><circle cx="38" cy="65" r="6" fill="#fff"/><circle cx="62" cy="65" r="6" fill="#fff"/><circle cx="38" cy="65" r="3" fill="#2E2452"/><circle cx="62" cy="65" r="3" fill="#2E2452"/><path d="M35 76 Q50 88 65 76" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+      Trilha dos Triângulos
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Início</a>
+      <a href="trilha1.html">Trilha 1</a>
+      <a href="trilha2.html" class="active">Trilha 2</a>
+      <a href="trilha3.html">Trilha 3</a>
+      <a href="trilha4.html">Trilha 4</a>
+      <a href="trilha5.html">Trilha 5</a>
+      <a href="trilha6.html">Trilha 6</a>
+      <a href="trilha7.html">Trilha 7</a>
+      <a href="trilha8.html">Trilha 8</a>
+      <a href="index.html#mapa">Mapa</a>
+    </nav>
+    <div class="progresso-pill" data-progresso-pill>⭐ 0/8 trilhas</div>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- ============ CONTEXTUALIZAÇÃO ============ -->
+  <section class="section-card">
+    <span class="tag laranja">TRILHA 2 · 7º ANO</span>
+    <h2>🥢 Existe ou não existe?</h2>
+
+    <div class="contexto-flex">
+      <div class="texto">
+        <p class="lead">Comunidades ribeirinhas e povos indígenas do Brasil escolhem com muito cuidado o tamanho dos gravetos e varas quando amarram armadilhas de pesca, cabanas e estruturas de bambu: se as varas forem muito desiguais, a amarração não fecha e a estrutura não fica firme. É a mesma coisa quando brincamos de montar um triângulo com três canudinhos de tamanhos diferentes — às vezes ele fecha bonitinho, às vezes sobra ou falta canudo e ele não fecha de jeito nenhum!</p>
+        <div class="balaozinho">🤔 Será que três varetas de qualquer tamanho sempre formam um triângulo? Ou existe uma regra escondida aí?</div>
+      </div>
+      <div class="imagem">
+        <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="400" height="280" rx="24" fill="#E8F7EE"/>
+          <!-- rio -->
+          <path d="M0 220 Q100 200 200 220 T400 220 V280 H0 Z" fill="#4FC3F7" opacity="0.6"/>
+          <!-- cabana com varas triangulares -->
+          <line x1="90" y1="200" x2="150" y2="90" stroke="#8D5A2B" stroke-width="8" stroke-linecap="round"/>
+          <line x1="210" y1="200" x2="150" y2="90" stroke="#8D5A2B" stroke-width="8" stroke-linecap="round"/>
+          <line x1="90" y1="200" x2="210" y2="200" stroke="#8D5A2B" stroke-width="8" stroke-linecap="round"/>
+          <line x1="150" y1="90" x2="150" y2="200" stroke="#C9A06A" stroke-width="5" stroke-linecap="round" opacity="0.7"/>
+          <!-- canudinhos coloridos tentando fechar triangulo -->
+          <g transform="translate(260,150) rotate(-8)">
+            <rect x="0" y="0" width="70" height="10" rx="5" fill="#FF6B9D"/>
+          </g>
+          <g transform="translate(255,120) rotate(45)">
+            <rect x="0" y="0" width="55" height="10" rx="5" fill="#FFD166"/>
+          </g>
+          <g transform="translate(300,165) rotate(150)">
+            <rect x="0" y="0" width="40" height="10" rx="5" fill="#06D6A0"/>
+          </g>
+          <text x="270" y="220" font-family="Baloo 2, cursive" font-size="13" fill="#5B2EE0" font-weight="700">Fecha?</text>
+        </svg>
+        <p style="font-size:0.8rem; text-align:center; color:#5B2EE0; margin-top:6px;">Varas de amarração e canudinhos: nem todo trio de tamanhos fecha um triângulo firme.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPLORANDO ============ -->
+  <section class="section-card">
+    <span class="tag roxo">EXPLORANDO</span>
+    <h2>📏 A condição de existência do triângulo</h2>
+    <p class="lead">Para três segmentos formarem um triângulo, existe uma regra simples, chamada <strong>desigualdade triangular</strong>: <strong>a soma de quaisquer dois lados precisa ser maior que o terceiro lado</strong>. Se isso não acontecer, os segmentos não se encontram — e o triângulo não existe.</p>
+
+    <h3 style="color:#5B2EE0;">Exemplo que fecha</h3>
+    <div class="barra-linha">
+      <div class="barra-rotulo">3 + 4 cm</div>
+      <div class="barra-trilho"><div class="barra-preenchimento" style="width:70%;"><div class="barra-parte" style="width:42.8%;background:#7C4DFF;">3</div><div class="barra-parte" style="width:57.2%;background:#FF8A3D;">4</div></div></div>
+    </div>
+    <div class="barra-linha">
+      <div class="barra-rotulo">lado de 5 cm</div>
+      <div class="barra-trilho"><div class="barra-preenchimento" style="width:50%;"><div class="barra-parte" style="width:100%;background:#06D6A0;">5</div></div></div>
+    </div>
+    <p class="lead" style="font-size:0.95rem;">3 + 4 = 7, que é maior que 5 → <strong>fecha! ✅</strong> (é o famoso triângulo 3-4-5)</p>
+
+    <h3 style="color:#5B2EE0;">Exemplo que não fecha</h3>
+    <div class="barra-linha">
+      <div class="barra-rotulo">2 + 3 cm</div>
+      <div class="barra-trilho"><div class="barra-preenchimento" style="width:41.6%;"><div class="barra-parte" style="width:40%;background:#7C4DFF;">2</div><div class="barra-parte" style="width:60%;background:#FF8A3D;">3</div></div></div>
+    </div>
+    <div class="barra-linha">
+      <div class="barra-rotulo">lado de 6 cm</div>
+      <div class="barra-trilho"><div class="barra-preenchimento" style="width:50%;"><div class="barra-parte" style="width:100%;background:#FF6B9D;">6</div></div></div>
+    </div>
+    <p class="lead" style="font-size:0.95rem;">2 + 3 = 5, que é <strong>menor</strong> que 6 → <strong>não fecha ❌</strong> (os dois lados menores nem se encostam no terceiro)</p>
+
+    <div class="balaozinho">💡 Repare que a barra "2 + 3" fica bem mais curta que a barra "6" — por isso os canudinhos nunca se encontram!</div>
+
+    <h3 style="color:#5B2EE0; margin-top:26px;">Antes de começar: o que é um arco?</h3>
+    <p class="lead">Para desenhar o triângulo vamos usar o <strong>compasso</strong>: um instrumento com duas hastes presas por uma dobradiça. Uma das pontas é a <strong>ponta seca</strong> (uma agulha, que fica fixa e parada em um ponto do papel); a outra ponta tem um <strong>grafite</strong>, que gira ao redor da ponta seca sem mudar de abertura.</p>
+    <p class="lead">Quando o grafite gira mantendo sempre a mesma abertura, ele desenha um <strong>arco</strong>: um pedacinho de circunferência, onde todo ponto está exatamente à mesma distância (o raio) da ponta seca. É por isso que dizemos "trace um arco de raio b a partir do ponto A" — significa: fixe a ponta seca em A, abra o compasso na medida b (usando a régua) e gire, deixando o grafite riscar o papel.</p>
+
+    <div class="contexto-flex">
+      <div class="imagem">
+        <svg viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="300" height="220" rx="16" fill="#FFF8ED"/>
+          <path d="M210,150 A120,120 0 0,0 65,75" fill="none" stroke="#06D6A0" stroke-width="3" stroke-dasharray="6 5"/>
+          <line x1="150" y1="25" x2="90" y2="150" stroke="#5B2EE0" stroke-width="5" stroke-linecap="round"/>
+          <line x1="150" y1="25" x2="210" y2="150" stroke="#5B2EE0" stroke-width="5" stroke-linecap="round"/>
+          <circle cx="150" cy="25" r="6" fill="#FF8A3D"/>
+          <circle cx="90" cy="150" r="5" fill="#2E2452"/>
+          <circle cx="90" cy="150" r="10" fill="none" stroke="#2E2452" stroke-width="1.5" opacity="0.5"/>
+          <polygon points="210,150 216,162 204,162" fill="#2E2452"/>
+          <text x="90" y="175" text-anchor="middle" font-family="Nunito, sans-serif" font-size="12" fill="#2E2452" font-weight="700">ponta seca (A)</text>
+          <text x="222" y="178" text-anchor="middle" font-family="Nunito, sans-serif" font-size="12" fill="#2E2452" font-weight="700">grafite</text>
+          <text x="150" y="15" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11" fill="#FF8A3D" font-weight="700">dobradiça</text>
+          <text x="45" y="60" text-anchor="middle" font-family="Nunito, sans-serif" font-size="12" fill="#039073" font-weight="700">arco</text>
+        </svg>
+        <p style="font-size:0.8rem; text-align:center; color:#5B2EE0; margin-top:6px;">O compasso: ponta seca fixa em A, grafite gira e risca o arco.</p>
+      </div>
+      <div class="texto">
+        <p class="lead" style="margin-top:0;"><strong>Passo a passo para traçar um arco:</strong></p>
+        <ol style="padding-left:20px; line-height:1.8;">
+          <li>Meça com a régua a abertura desejada (o raio do arco).</li>
+          <li>Trave o compasso nessa medida, sem deixar as pernas escorregarem.</li>
+          <li>Fixe bem a ponta seca no ponto de referência (por exemplo, A).</li>
+          <li>Gire o compasso em torno da ponta seca, deixando o grafite tocar o papel — isso desenha o arco.</li>
+        </ol>
+      </div>
+    </div>
+
+    <h3 style="color:#5B2EE0; margin-top:26px;">Construindo com régua e compasso</h3>
+    <p class="lead">Conhecendo as medidas dos três lados, dá para desenhar o triângulo com régua e compasso, sem precisar medir ângulo nenhum:</p>
+    <div class="contexto-flex">
+      <div class="texto">
+        <ol style="padding-left:20px; line-height:1.8;">
+          <li>Desenhe um dos lados com a régua — esse vira o segmento <strong>AB</strong>.</li>
+          <li>Abra o compasso com a medida do segundo lado e trace um arco a partir de <strong>A</strong>.</li>
+          <li>Abra o compasso com a medida do terceiro lado e trace um arco a partir de <strong>B</strong>.</li>
+          <li>Onde os dois arcos se cruzam é o ponto <strong>C</strong>. Ligue A–C e B–C: seu triângulo está pronto!</li>
+        </ol>
+      </div>
+      <div class="imagem">
+        <svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="200" height="160" rx="16" fill="#FFF8ED"/>
+          <circle cx="40" cy="130" r="104" fill="none" stroke="#7C4DFF" stroke-width="2" stroke-dasharray="6 5"/>
+          <circle cx="160" cy="130" r="104" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-dasharray="6 5"/>
+          <line x1="40" y1="130" x2="160" y2="130" stroke="#2E2452" stroke-width="3"/>
+          <line x1="40" y1="130" x2="100" y2="45" stroke="#2E2452" stroke-width="3"/>
+          <line x1="160" y1="130" x2="100" y2="45" stroke="#2E2452" stroke-width="3"/>
+          <circle cx="40" cy="130" r="4" fill="#5B2EE0"/>
+          <circle cx="160" cy="130" r="4" fill="#5B2EE0"/>
+          <circle cx="100" cy="45" r="4" fill="#5B2EE0"/>
+          <text x="26" y="150" font-family="Baloo 2, cursive" font-size="11" fill="#5B2EE0" font-weight="700">A</text>
+          <text x="166" y="150" font-family="Baloo 2, cursive" font-size="11" fill="#5B2EE0" font-weight="700">B</text>
+          <text x="104" y="38" font-family="Baloo 2, cursive" font-size="11" fill="#5B2EE0" font-weight="700">C</text>
+        </svg>
+        <p style="font-size:0.78rem; text-align:center; color:#5B2EE0; margin-top:6px;">Os dois arcos (o "compasso") se cruzam exatamente no ponto C.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRATICANDO ============ -->
+  <section class="section-card">
+    <span class="tag verde">PRATICANDO</span>
+    <h2>✏️ Vamos treinar</h2>
+
+    <div class="quiz-item" data-correta="0">
+      <div class="quiz-pergunta">1. Lados de 3 cm, 4 cm e 5 cm formam um triângulo?</div>
+      <div class="quiz-opcoes">
+        <div class="quiz-opcao" data-valor="0">Sim, formam</div>
+        <div class="quiz-opcao" data-valor="1">Não formam</div>
+      </div>
+      <div class="quiz-feedback"></div>
+    </div>
+
+    <div class="quiz-item" data-correta="1">
+      <div class="quiz-pergunta">2. Lados de 2 cm, 3 cm e 6 cm formam um triângulo?</div>
+      <div class="quiz-opcoes">
+        <div class="quiz-opcao" data-valor="0">Sim, formam</div>
+        <div class="quiz-opcao" data-valor="1">Não formam</div>
+      </div>
+      <div class="quiz-feedback"></div>
+    </div>
+
+    <div class="quiz-item" data-correta="1">
+      <div class="quiz-pergunta">3. Qual é a condição de existência de um triângulo?</div>
+      <div class="quiz-opcoes">
+        <div class="quiz-opcao" data-valor="0">A soma dos três lados deve ser 180</div>
+        <div class="quiz-opcao" data-valor="1">A soma de quaisquer dois lados deve ser maior que o terceiro</div>
+        <div class="quiz-opcao" data-valor="2">Os três lados devem ser diferentes</div>
+      </div>
+      <div class="quiz-feedback"></div>
+    </div>
+  </section>
+
+  <!-- ============ JOGO ============ -->
+  <section class="section-card">
+    <span class="tag rosa">JOGO FINAL</span>
+    <h2>🎮 Fecha ou não fecha?</h2>
+    <p class="lead">Veja os três "canudinhos" da rodada e decida: esses tamanhos fecham um triângulo ou não?</p>
+
+    <div class="jogo-wrap">
+      <div class="jogo-placar">
+        <div>Rodada <span id="jogoRodadaAtual">1</span>/<span id="jogoRodadaTotal">6</span></div>
+        <div>Pontos: <span class="valor" id="jogoPontos">0</span></div>
+      </div>
+
+      <div id="jogoAtivo">
+        <p class="center quiz-pergunta" id="jogoPergunta">Esses lados fecham um triângulo?</p>
+
+        <div class="barra-linha">
+          <div class="barra-rotulo" id="rotuloSoma">a + b</div>
+          <div class="barra-trilho"><div class="barra-preenchimento" id="barraSoma" style="width:0%;"></div></div>
+        </div>
+        <div class="barra-linha">
+          <div class="barra-rotulo" id="rotuloMaior">c</div>
+          <div class="barra-trilho"><div class="barra-preenchimento" id="barraMaior" style="width:0%;"></div></div>
+        </div>
+
+        <div class="jogo-botoes">
+          <button id="btnFecha">Fecha ✅</button>
+          <button id="btnNaoFecha">Não fecha ❌</button>
+        </div>
+        <div class="jogo-mensagem" id="jogoMensagem"></div>
+      </div>
+
+      <div id="jogoFim" class="jogo-fim" style="display:none;">
+        <h3 id="jogoFimTitulo">🎉 Trilha concluída!</h3>
+        <p id="jogoFimTexto"></p>
+        <a href="index.html" class="btn verde">Voltar ao mapa ⭐</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="center" style="margin-bottom:40px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+    <a href="trilha1.html" class="btn laranja">← Trilha 1</a>
+    <a href="trilha3.html" class="btn verde">Trilha 3 →</a>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  Trilha dos Triângulos — Produto Educacional PROFMAT 🔺✨
+</footer>
+
+<script src="script.js"></script>
+<script>
+/* ---------- Quiz "Praticando" ---------- */
+document.querySelectorAll('.quiz-item').forEach(item=>{
+  const correta = item.getAttribute('data-correta');
+  const feedback = item.querySelector('.quiz-feedback');
+  let respondido = false;
+  item.querySelectorAll('.quiz-opcao').forEach(op=>{
+    op.addEventListener('click', ()=>{
+      if(respondido) return;
+      respondido = true;
+      const valor = op.getAttribute('data-valor');
+      if(valor === correta){
+        op.classList.add('certo');
+        feedback.textContent = '✅ Isso mesmo! Mandou bem.';
+        feedback.style.color = '#039073';
+      }else{
+        op.classList.add('errado');
+        item.querySelector(`[data-valor="${correta}"]`).classList.add('certo');
+        feedback.textContent = '❌ Quase! A resposta certa está em verde.';
+        feedback.style.color = '#C43F6E';
+      }
+    });
+  });
+});
+
+/* ---------- Jogo "Fecha ou não fecha?" ---------- */
+const rodadas = [
+  { lados:[3,4,5] },
+  { lados:[2,3,6] },
+  { lados:[5,6,7] },
+  { lados:[1,2,5] },
+  { lados:[4,4,4] },
+  { lados:[3,3,6] },
+];
+
+let rodadaIdx = 0;
+let pontos = 0;
+let travado = false;
+
+document.getElementById('jogoRodadaTotal').textContent = rodadas.length;
+
+function analisar(lados){
+  const ordenado = lados.slice().sort((a,b)=>a-b);
+  const [x,y,z] = ordenado;
+  return { menor1:x, menor2:y, maior:z, soma:x+y, fecha:(x+y) > z };
+}
+
+function carregarRodada(){
+  travado = false;
+  const r = rodadas[rodadaIdx];
+  const info = analisar(r.lados);
+  document.getElementById('jogoRodadaAtual').textContent = rodadaIdx+1;
+  document.getElementById('jogoMensagem').textContent = '';
+
+  document.getElementById('rotuloSoma').textContent = `${info.menor1} + ${info.menor2}`;
+  document.getElementById('rotuloMaior').textContent = `${info.maior}`;
+
+  const escala = 100 / Math.max(info.soma, info.maior);
+  document.getElementById('barraSoma').style.width = (info.soma*escala) + '%';
+  document.getElementById('barraMaior').style.width = (info.maior*escala) + '%';
+
+  document.getElementById('jogoPergunta').textContent =
+    `Lados de ${r.lados[0]} cm, ${r.lados[1]} cm e ${r.lados[2]} cm — fecham um triângulo?`;
+}
+
+function responder(escolha){
+  if(travado) return;
+  travado = true;
+  const r = rodadas[rodadaIdx];
+  const info = analisar(r.lados);
+  const correta = info.fecha ? 'fecha' : 'naofecha';
+  const msg = document.getElementById('jogoMensagem');
+  const btnFecha = document.getElementById('btnFecha');
+  const btnNaoFecha = document.getElementById('btnNaoFecha');
+  const btnEscolhido = escolha === 'fecha' ? btnFecha : btnNaoFecha;
+
+  if(escolha === correta){
+    pontos++;
+    document.getElementById('jogoPontos').textContent = pontos;
+    btnEscolhido.style.background = '#06D6A0'; btnEscolhido.style.color = '#fff';
+    msg.textContent = info.fecha
+      ? `✅ Isso! ${info.menor1} + ${info.menor2} = ${info.soma}, maior que ${info.maior} — fecha!`
+      : `✅ Isso! ${info.menor1} + ${info.menor2} = ${info.soma}, não é maior que ${info.maior} — não fecha!`;
+    msg.style.color = '#039073';
+  }else{
+    btnEscolhido.style.background = '#FF6B9D'; btnEscolhido.style.color = '#fff';
+    msg.textContent = info.fecha
+      ? `❌ Na verdade fecha: ${info.menor1} + ${info.menor2} = ${info.soma}, maior que ${info.maior}.`
+      : `❌ Na verdade não fecha: ${info.menor1} + ${info.menor2} = ${info.soma}, que não é maior que ${info.maior}.`;
+    msg.style.color = '#C43F6E';
+  }
+
+  setTimeout(()=>{
+    btnFecha.style.background = ''; btnFecha.style.color = '';
+    btnNaoFecha.style.background = ''; btnNaoFecha.style.color = '';
+    rodadaIdx++;
+    if(rodadaIdx < rodadas.length){
+      carregarRodada();
+    }else{
+      finalizarJogo();
+    }
+  }, 1700);
+}
+
+document.getElementById('btnFecha').addEventListener('click', ()=> responder('fecha'));
+document.getElementById('btnNaoFecha').addEventListener('click', ()=> responder('naofecha'));
+
+function finalizarJogo(){
+  document.getElementById('jogoAtivo').style.display = 'none';
+  const fim = document.getElementById('jogoFim');
+  fim.style.display = 'block';
+  document.getElementById('jogoFimTexto').textContent =
+    `Você acertou ${pontos} de ${rodadas.length} desafios. Sua estrela da Trilha 2 já foi guardada!`;
+  marcarTrilhaConcluida('trilha2');
+}
+
+carregarRodada();
+</script>
+</body>
+</html>
