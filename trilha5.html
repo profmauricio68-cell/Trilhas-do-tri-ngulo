@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trilha 5 · Construindo passo a passo · Trilha dos Triângulos</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .legenda-fluxo{ display:flex; gap:18px; flex-wrap:wrap; justify-content:center; margin:14px 0; font-size:0.85rem; font-weight:700; color:#5B2EE0; }
+  .legenda-fluxo span{ display:inline-flex; align-items:center; gap:6px; }
+  .legenda-forma{ width:16px; height:16px; display:inline-block; border:2px solid #5B2EE0; }
+  .legenda-forma.oval{ border-radius:50%; background:#F1ECFF; }
+  .legenda-forma.retangulo{ border-radius:3px; background:#FFF8ED; }
+  .legenda-forma.losango{ background:#FFF0F5; transform:rotate(45deg); width:12px; height:12px; }
+
+  .jogo-fluxo-sequencia{
+    display:flex; flex-wrap:wrap; gap:8px; justify-content:center; min-height:44px;
+    margin-bottom:16px; padding:10px; background:#EAFBF6; border-radius:14px; border:2px dashed #06D6A0;
+  }
+  .seq-chip{
+    background:#06D6A0; color:#fff; font-weight:800; padding:6px 12px; border-radius:999px; font-size:0.85rem;
+  }
+  .jogo-fluxo-cartas{ display:flex; flex-direction:column; gap:10px; max-width:480px; margin:0 auto; }
+  .carta-passo{
+    background:#fff; border:3px solid #E4DEFB; border-radius:14px; padding:12px 16px;
+    font-weight:700; color:#2E2452; cursor:pointer; transition: all .12s ease; text-align:left;
+  }
+  .carta-passo:hover{ border-color:#7C4DFF; transform: translateX(4px); }
+  .carta-passo.errado{ border-color:#FF6B9D; background:#FFF0F5; }
+  .carta-passo.usada{ display:none; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <svg class="mascote" viewBox="0 0 100 100"><polygon points="50,10 90,85 10,85" fill="#7C4DFF"/><circle cx="38" cy="65" r="6" fill="#fff"/><circle cx="62" cy="65" r="6" fill="#fff"/><circle cx="38" cy="65" r="3" fill="#2E2452"/><circle cx="62" cy="65" r="3" fill="#2E2452"/><path d="M35 76 Q50 88 65 76" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+      Trilha dos Triângulos
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Início</a>
+      <a href="trilha1.html">Trilha 1</a>
+      <a href="trilha2.html">Trilha 2</a>
+      <a href="trilha3.html">Trilha 3</a>
+      <a href="trilha4.html">Trilha 4</a>
+      <a href="trilha5.html" class="active">Trilha 5</a>
+      <a href="trilha6.html">Trilha 6</a>
+      <a href="trilha7.html">Trilha 7</a>
+      <a href="trilha8.html">Trilha 8</a>
+      <a href="index.html#mapa">Mapa</a>
+    </nav>
+    <div class="progresso-pill" data-progresso-pill>⭐ 0/8 trilhas</div>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- ============ CONTEXTUALIZAÇÃO ============ -->
+  <section class="section-card">
+    <span class="tag laranja">TRILHA 5 · 7º ANO</span>
+    <h2>🧭 Construindo passo a passo</h2>
+
+    <div class="contexto-flex">
+      <div class="texto">
+        <p class="lead">Muito antes de a palavra "algoritmo" existir, tecelãs, ceramistas e construtoras de cestos de povos indígenas e comunidades tradicionais brasileiras já seguiam sequências precisas de passos — sempre na mesma ordem — para criar seus padrões geométricos e suas construções. Uma receita de cozinha passada de geração em geração funciona do mesmo jeito: uma lista de passos que, seguida na ordem certa, sempre dá o mesmo resultado.</p>
+        <div class="balaozinho">🤔 E se a gente escrevesse uma "receita" — um algoritmo — para construir qualquer triângulo, sabendo só as medidas dos três lados?</div>
+      </div>
+      <div class="imagem">
+        <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="400" height="220" rx="24" fill="#FFF3E0"/>
+          <!-- cesto trançado com padrão geometrico -->
+          <g transform="translate(30,30)">
+            <path d="M0,120 Q0,20 60,20 Q120,20 120,120 Z" fill="none" stroke="#8D5A2B" stroke-width="3"/>
+            <path d="M5,110 L115,110 M8,90 L112,90 M13,70 L107,70 M20,50 L100,50 M30,32 L90,32" stroke="#8D5A2B" stroke-width="2"/>
+            <path d="M10,120 L30,20 M35,120 L50,22 M60,120 L60,20 M85,120 L70,22 M110,120 L90,20" stroke="#C1440E" stroke-width="2"/>
+          </g>
+          <!-- setas de fluxograma estilizadas -->
+          <g transform="translate(210,25)">
+            <rect x="0" y="0" width="130" height="30" rx="14" fill="#F1ECFF" stroke="#5B2EE0" stroke-width="2.5"/>
+            <text x="65" y="20" text-anchor="middle" font-family="Baloo 2, cursive" font-size="12" fill="#5B2EE0" font-weight="700">passo 1</text>
+            <line x1="65" y1="30" x2="65" y2="52" stroke="#5B2EE0" stroke-width="2.5"/>
+            <polygon points="60,50 65,58 70,50" fill="#5B2EE0"/>
+            <rect x="0" y="58" width="130" height="30" rx="8" fill="#FFF8ED" stroke="#5B2EE0" stroke-width="2.5"/>
+            <text x="65" y="78" text-anchor="middle" font-family="Baloo 2, cursive" font-size="12" fill="#5B2EE0" font-weight="700">passo 2</text>
+            <line x1="65" y1="88" x2="65" y2="110" stroke="#5B2EE0" stroke-width="2.5"/>
+            <polygon points="60,108 65,116 70,108" fill="#5B2EE0"/>
+            <rect x="0" y="116" width="130" height="30" rx="8" fill="#FFF8ED" stroke="#5B2EE0" stroke-width="2.5"/>
+            <text x="65" y="136" text-anchor="middle" font-family="Baloo 2, cursive" font-size="12" fill="#5B2EE0" font-weight="700">passo 3</text>
+          </g>
+        </svg>
+        <p style="font-size:0.8rem; text-align:center; color:#5B2EE0; margin-top:6px;">Padrões de cestaria tradicional seguem sequências fixas de passos — assim como um fluxograma.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPLORANDO ============ -->
+  <section class="section-card">
+    <span class="tag roxo">EXPLORANDO</span>
+    <h2>🗺️ Algoritmo e fluxograma</h2>
+    <p class="lead">Um <strong>algoritmo</strong> é uma sequência finita e ordenada de instruções que resolve um problema. Um <strong>fluxograma</strong> é uma forma de desenhar esse algoritmo usando setas e formas — cada forma tem um significado:</p>
+
+    <div class="legenda-fluxo">
+      <span><span class="legenda-forma oval"></span> Início / Fim</span>
+      <span><span class="legenda-forma retangulo"></span> Ação</span>
+      <span><span class="legenda-forma losango"></span> Decisão (sim/não)</span>
+    </div>
+
+    <div class="balaozinho">🔎 Lembrete rápido: um <strong>arco</strong> é um pedaço de circunferência, traçado girando o compasso com abertura fixa (o raio) a partir de um ponto — a ponta seca fica presa nesse ponto, e o grafite risca o papel ao girar. Vale revisar a explicação completa e o passo a passo na <a href="trilha2.html" style="color:#5B2EE0; text-decoration:underline;">Trilha 2</a> antes de continuar.</div>
+
+    <p class="lead">Veja o fluxograma completo para construir um triângulo qualquer, com régua e compasso, conhecendo as medidas dos três lados (a, b e c):</p>
+
+    <div class="center">
+      <svg viewBox="0 0 340 660" style="width:min(340px,90%);">
+        <defs>
+          <marker id="seta5" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z" fill="#5B2EE0"/>
+          </marker>
+        </defs>
+        <ellipse cx="150" cy="30" rx="65" ry="24" fill="#F1ECFF" stroke="#5B2EE0" stroke-width="2.5"/>
+        <text x="150" y="35" text-anchor="middle" font-family="Nunito, sans-serif" font-size="13" font-weight="700" fill="#5B2EE0">Início</text>
+        <line x1="150" y1="54" x2="150" y2="72" stroke="#5B2EE0" stroke-width="2.5" marker-end="url(#seta5)"/>
+
+        <rect x="55" y="74" width="190" height="42" rx="8" fill="#FFF8ED" stroke="#5B2EE0" stroke-width="2.5"/>
+        <text x="150" y="91" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11.5" fill="#2E2452">Ler as medidas dos</text>
+        <text x="150" y="106" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11.5" fill="#2E2452">3 lados (a, b, c)</text>
+        <line x1="150" y1="116" x2="150" y2="136" stroke="#5B2EE0" stroke-width="2.5" marker-end="url(#seta5)"/>
+
+        <polygon points="150,136 248,193 150,250 52,193" fill="#FFF0F5" stroke="#5B2EE0" stroke-width="2.5"/>
+        <text x="150" y="186" text-anchor="middle" font-family="Nunito, sans-serif" font-size="10.5" fill="#2E2452">a+b&gt;c, a+c&gt;b</text>
+        <text x="150" y="201" text-anchor="middle" font-family="Nunito, sans-serif" font-size="10.5" fill="#2E2452">e b+c&gt;a ?</text>
+
+        <line x1="248" y1="193" x2="292" y2="193" stroke="#5B2EE0" stroke-width="2.5" marker-end="url(#seta5)"/>
+        <text x="266" y="184" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11" fill="#C43F6E" font-weight="700">Não</text>
+        <ellipse cx="292" cy="230" rx="40" ry="30" fill="#FFF0F5" stroke="#C43F6E" stroke-width="2.5"/>
+        <text x="292" y="225" text-anchor="middle" font-family="Nunito, sans-serif" font-size="9.5" fill="#C43F6E" font-weight="700">Fim: não dá</text>
+        <text x="292" y="238" text-anchor="middle" font-family="Nunito, sans-serif" font-size="9.5" fill="#C43F6E" font-weight="700">para construir</text>
+
+        <line x1="150" y1="250" x2="150" y2="270" stroke="#5B2EE0" stroke-width="2.5" marker-end="url(#seta5)"/>
+        <text x="163" y="264" font-family="Nunito, sans-serif" font-size="11" fill="#039073" font-weight="700">Sim</text>
+
+        <rect x="55" y="272" width="190" height="40" rx="8" fill="#FFF8ED" stroke="#5B2EE0" stroke-width="2.5"/>
+        <text x="150" y="296" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11.5" fill="#2E2452">Traçar AB (lado a)</text>
+        <line x1="150" y1="312" x2="150" y2="332" stroke="#5B2EE0" stroke-width="2.5" marker-end="url(#seta5)"/>
+
+        <rect x="55" y="334" width="190" height="40" rx="8" fill="#FFF8ED" stroke="#5B2EE0" stroke-width="2.5"/>
+        <text x="150" y="358" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11.5" fill="#2E2452">Arco raio b a partir de A</text>
+        <line x1="150" y1="374" x2="150" y2="394" stroke="#5B2EE0" stroke-width="2.5" marker-end="url(#seta5)"/>
+
+        <rect x="55" y="396" width="190" height="40" rx="8" fill="#FFF8ED" stroke="#5B2EE0" stroke-width="2.5"/>
+        <text x="150" y="420" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11.5" fill="#2E2452">Arco raio c a partir de B</text>
+        <line x1="150" y1="436" x2="150" y2="456" stroke="#5B2EE0" stroke-width="2.5" marker-end="url(#seta5)"/>
+
+        <rect x="55" y="458" width="190" height="40" rx="8" fill="#FFF8ED" stroke="#5B2EE0" stroke-width="2.5"/>
+        <text x="150" y="482" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11.5" fill="#2E2452">Marcar C na interseção</text>
+        <line x1="150" y1="498" x2="150" y2="518" stroke="#5B2EE0" stroke-width="2.5" marker-end="url(#seta5)"/>
+
+        <rect x="55" y="520" width="190" height="40" rx="8" fill="#FFF8ED" stroke="#5B2EE0" stroke-width="2.5"/>
+        <text x="150" y="544" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11.5" fill="#2E2452">Ligar AC e BC</text>
+        <line x1="150" y1="560" x2="150" y2="580" stroke="#5B2EE0" stroke-width="2.5" marker-end="url(#seta5)"/>
+
+        <ellipse cx="150" cy="612" rx="80" ry="26" fill="#EAFBF6" stroke="#06D6A0" stroke-width="2.5"/>
+        <text x="150" y="608" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11.5" fill="#039073" font-weight="700">Fim: triângulo</text>
+        <text x="150" y="622" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11.5" fill="#039073" font-weight="700">construído</text>
+      </svg>
+    </div>
+
+    <div class="balaozinho">💡 O mesmo algoritmo, escrito por extenso: (1) verifique a condição de existência; (2) trace AB com a medida do lado a; (3) trace um arco de raio b a partir de A; (4) trace um arco de raio c a partir de B; (5) marque o ponto C onde os arcos se cruzam; (6) ligue AC e BC.</div>
+  </section>
+
+  <!-- ============ PRATICANDO ============ -->
+  <section class="section-card">
+    <span class="tag verde">PRATICANDO</span>
+    <h2>✏️ Vamos treinar</h2>
+
+    <div class="quiz-item" data-correta="1">
+      <div class="quiz-pergunta">1. Em um fluxograma, qual forma representa uma decisão (pergunta do tipo sim/não)?</div>
+      <div class="quiz-opcoes">
+        <div class="quiz-opcao" data-valor="0">Retângulo</div>
+        <div class="quiz-opcao" data-valor="1">Losango</div>
+        <div class="quiz-opcao" data-valor="2">Círculo</div>
+      </div>
+      <div class="quiz-feedback"></div>
+    </div>
+
+    <div class="quiz-item" data-correta="0">
+      <div class="quiz-pergunta">2. Antes de começar a desenhar o triângulo, qual é o primeiro passo do algoritmo?</div>
+      <div class="quiz-opcoes">
+        <div class="quiz-opcao" data-valor="0">Verificar a condição de existência dos 3 lados</div>
+        <div class="quiz-opcao" data-valor="1">Traçar o segundo arco</div>
+        <div class="quiz-opcao" data-valor="2">Ligar os pontos A e C</div>
+      </div>
+      <div class="quiz-feedback"></div>
+    </div>
+
+    <div class="quiz-item" data-correta="0">
+      <div class="quiz-pergunta">3. O que é um algoritmo?</div>
+      <div class="quiz-opcoes">
+        <div class="quiz-opcao" data-valor="0">Uma sequência ordenada de passos para resolver um problema</div>
+        <div class="quiz-opcao" data-valor="1">Um tipo especial de triângulo</div>
+        <div class="quiz-opcao" data-valor="2">Um instrumento de desenho, como a régua</div>
+      </div>
+      <div class="quiz-feedback"></div>
+    </div>
+  </section>
+
+  <!-- ============ JOGO ============ -->
+  <section class="section-card">
+    <span class="tag rosa">JOGO FINAL</span>
+    <h2>🎮 Monte o Fluxograma</h2>
+    <p class="lead">Os passos do algoritmo estão embaralhados. Clique neles na ordem certa para montar a sequência!</p>
+
+    <div class="jogo-wrap">
+      <div class="jogo-placar">
+        <div>Rodada <span id="jogoRodadaAtual">1</span>/<span id="jogoRodadaTotal">3</span></div>
+        <div>Pontos: <span class="valor" id="jogoPontos">0</span></div>
+      </div>
+
+      <div id="jogoAtivo">
+        <p class="center quiz-pergunta" id="jogoPergunta">Monte a sequência de construção:</p>
+        <div class="jogo-fluxo-sequencia" id="fluxoSequencia"></div>
+        <div class="jogo-fluxo-cartas" id="fluxoCartas"></div>
+        <div class="jogo-mensagem" id="jogoMensagem"></div>
+      </div>
+
+      <div id="jogoFim" class="jogo-fim" style="display:none;">
+        <h3 id="jogoFimTitulo">🎉 Trilha concluída!</h3>
+        <p id="jogoFimTexto"></p>
+        <a href="index.html" class="btn verde">Voltar ao mapa ⭐</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="center" style="margin-bottom:40px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+    <a href="trilha4.html" class="btn laranja">← Trilha 4</a>
+    <a href="trilha6.html" class="btn verde">Trilha 6 →</a>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  Trilha dos Triângulos — Produto Educacional PROFMAT 🔺✨
+</footer>
+
+<script src="script.js"></script>
+<script>
+/* ---------- Quiz "Praticando" ---------- */
+document.querySelectorAll('.quiz-item').forEach(item=>{
+  const correta = item.getAttribute('data-correta');
+  const feedback = item.querySelector('.quiz-feedback');
+  let respondido = false;
+  item.querySelectorAll('.quiz-opcao').forEach(op=>{
+    op.addEventListener('click', ()=>{
+      if(respondido) return;
+      respondido = true;
+      const valor = op.getAttribute('data-valor');
+      if(valor === correta){
+        op.classList.add('certo');
+        feedback.textContent = '✅ Isso mesmo! Mandou bem.';
+        feedback.style.color = '#039073';
+      }else{
+        op.classList.add('errado');
+        item.querySelector(`[data-valor="${correta}"]`).classList.add('certo');
+        feedback.textContent = '❌ Quase! A resposta certa está em verde.';
+        feedback.style.color = '#C43F6E';
+      }
+    });
+  });
+});
+
+/* ---------- Jogo "Monte o Fluxograma" ---------- */
+const rodadas = [
+  { a:5, b:6, c:7 },
+  { a:4, b:4, c:4 },
+  { a:6, b:8, c:10 },
+];
+
+let rodadaIdx = 0;
+let pontos = 0;
+let proximoEsperado = 1;
+let acertouSemErro = true;
+
+document.getElementById('jogoRodadaTotal').textContent = rodadas.length;
+
+function embaralhar(arr){
+  const a = arr.slice();
+  for(let i=a.length-1;i>0;i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [a[i],a[j]]=[a[j],a[i]];
+  }
+  return a;
+}
+
+function passosDaRodada(r){
+  return [
+    { id:1, texto:'Verificar a condição de existência dos 3 lados' },
+    { id:2, texto:`Desenhar o segmento AB = ${r.a} cm (lado a)` },
+    { id:3, texto:`Traçar um arco de raio ${r.b} cm a partir de A` },
+    { id:4, texto:`Traçar um arco de raio ${r.c} cm a partir de B` },
+    { id:5, texto:'Marcar o ponto C na interseção dos arcos' },
+    { id:6, texto:'Ligar AC e BC para fechar o triângulo' },
+  ];
+}
+
+function carregarRodada(){
+  proximoEsperado = 1;
+  acertouSemErro = true;
+  const r = rodadas[rodadaIdx];
+  document.getElementById('jogoRodadaAtual').textContent = rodadaIdx+1;
+  document.getElementById('jogoMensagem').textContent = '';
+  document.getElementById('jogoPergunta').textContent =
+    `Monte a sequência para construir um triângulo de lados ${r.a} cm, ${r.b} cm e ${r.c} cm:`;
+  document.getElementById('fluxoSequencia').innerHTML = '';
+
+  const passos = embaralhar(passosDaRodada(r));
+  const cartasDiv = document.getElementById('fluxoCartas');
+  cartasDiv.innerHTML = '';
+  passos.forEach(p=>{
+    const btn = document.createElement('button');
+    btn.className = 'carta-passo';
+    btn.textContent = p.texto;
+    btn.addEventListener('click', ()=> clicarPasso(p.id, btn));
+    cartasDiv.appendChild(btn);
+  });
+}
+
+function clicarPasso(id, btn){
+  const msg = document.getElementById('jogoMensagem');
+  if(id === proximoEsperado){
+    btn.classList.add('usada');
+    const chip = document.createElement('span');
+    chip.className = 'seq-chip';
+    chip.textContent = proximoEsperado;
+    document.getElementById('fluxoSequencia').appendChild(chip);
+    proximoEsperado++;
+    msg.textContent = '✅ Isso! Passo certo.';
+    msg.style.color = '#039073';
+
+    if(proximoEsperado > 6){
+      if(acertouSemErro){
+        pontos++;
+        document.getElementById('jogoPontos').textContent = pontos;
+      }
+      msg.textContent = acertouSemErro
+        ? '🎉 Sequência perfeita, sem nenhum erro!'
+        : '✅ Sequência completa! Na próxima, tente sem errar a ordem.';
+      setTimeout(()=>{
+        rodadaIdx++;
+        if(rodadaIdx < rodadas.length){
+          carregarRodada();
+        }else{
+          finalizarJogo();
+        }
+      }, 1600);
+    }
+  }else{
+    acertouSemErro = false;
+    btn.classList.add('errado');
+    msg.textContent = '❌ Ainda não é esse passo — pense no que precisa acontecer antes.';
+    msg.style.color = '#C43F6E';
+  }
+}
+
+function finalizarJogo(){
+  document.getElementById('jogoAtivo').style.display = 'none';
+  const fim = document.getElementById('jogoFim');
+  fim.style.display = 'block';
+  document.getElementById('jogoFimTexto').textContent =
+    `Você acertou ${pontos} de ${rodadas.length} sequências perfeitas. Sua estrela da Trilha 5 já foi guardada!`;
+  marcarTrilhaConcluida('trilha5');
+}
+
+carregarRodada();
+</script>
+</body>
+</html>

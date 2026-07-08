@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trilha 8 · A corda dos 12 nós · Trilha dos Triângulos</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .pitagoras-box{ text-align:center; background:#F1ECFF; border-radius:16px; padding:18px; margin:16px 0; }
+  .pitagoras-box .formula{ font-family:'Baloo 2',cursive; font-size:1.5rem; font-weight:800; color:#5B2EE0; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <svg class="mascote" viewBox="0 0 100 100"><polygon points="50,10 90,85 10,85" fill="#7C4DFF"/><circle cx="38" cy="65" r="6" fill="#fff"/><circle cx="62" cy="65" r="6" fill="#fff"/><circle cx="38" cy="65" r="3" fill="#2E2452"/><circle cx="62" cy="65" r="3" fill="#2E2452"/><path d="M35 76 Q50 88 65 76" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+      Trilha dos Triângulos
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Início</a>
+      <a href="trilha1.html">Trilha 1</a>
+      <a href="trilha2.html">Trilha 2</a>
+      <a href="trilha3.html">Trilha 3</a>
+      <a href="trilha4.html">Trilha 4</a>
+      <a href="trilha5.html">Trilha 5</a>
+      <a href="trilha6.html">Trilha 6</a>
+      <a href="trilha7.html">Trilha 7</a>
+      <a href="trilha8.html" class="active">Trilha 8</a>
+      <a href="index.html#mapa">Mapa</a>
+    </nav>
+    <div class="progresso-pill" data-progresso-pill>⭐ 0/8 trilhas</div>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- ============ CONTEXTUALIZAÇÃO ============ -->
+  <section class="section-card">
+    <span class="tag laranja">TRILHA 8 · 9º ANO</span>
+    <h2>🪢 A corda dos 12 nós</h2>
+
+    <div class="contexto-flex">
+      <div class="texto">
+        <p class="lead">Há mais de 4000 anos, no Egito Antigo, encarregados chamados de "esticadores de corda" (harpedonaptas) tinham uma missão importante: depois que o rio Nilo enchia e apagava as marcações dos terrenos, eles precisavam redesenhar cantos perfeitamente retos para reconstruir as divisas das terras e as bases das construções. A ferramenta deles era simples: uma corda com 12 nós igualmente espaçados, amarrada em um laço fechado.</p>
+        <p class="lead">Bastava esticar essa corda formando um triângulo com 3 nós de um lado, 4 nós de outro e 5 nós do terceiro lado — e o ângulo entre o lado de 3 e o lado de 4 saía sempre perfeitamente reto, sem precisar de nenhum esquadro. Pedreiros usam esse mesmo truque até hoje para conferir se uma parede está "no esquadro".</p>
+        <div class="balaozinho">🤔 Por que será que um triângulo de lados 3, 4 e 5 SEMPRE forma um ângulo reto? Existe uma relação escondida entre essas três medidas — vamos descobrir!</div>
+      </div>
+      <div class="imagem">
+        <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="400" height="220" rx="24" fill="#FFE9C7"/>
+          <circle cx="355" cy="35" r="20" fill="#FFD166"/>
+          <line x1="20" y1="196" x2="380" y2="196" stroke="#D9A05B" stroke-width="3"/>
+
+          <polygon points="130,190 230,190 130,115" fill="none" stroke="#8D5A2B" stroke-width="3" stroke-dasharray="1 7" stroke-linecap="round"/>
+          <polyline points="130,180 140,180 140,190" fill="none" stroke="#5B2EE0" stroke-width="2"/>
+
+          <circle cx="130" cy="190" r="4.5" fill="#5B2EE0"/>
+          <circle cx="155" cy="190" r="4" fill="#5B2EE0"/>
+          <circle cx="180" cy="190" r="4" fill="#5B2EE0"/>
+          <circle cx="205" cy="190" r="4" fill="#5B2EE0"/>
+          <circle cx="230" cy="190" r="4.5" fill="#5B2EE0"/>
+          <circle cx="130" cy="165" r="4" fill="#5B2EE0"/>
+          <circle cx="130" cy="140" r="4" fill="#5B2EE0"/>
+          <circle cx="130" cy="115" r="4.5" fill="#5B2EE0"/>
+          <circle cx="150" cy="130" r="4" fill="#5B2EE0"/>
+          <circle cx="170" cy="145" r="4" fill="#5B2EE0"/>
+          <circle cx="190" cy="160" r="4" fill="#5B2EE0"/>
+          <circle cx="210" cy="175" r="4" fill="#5B2EE0"/>
+
+          <line x1="130" y1="190" x2="130" y2="206" stroke="#2E2452" stroke-width="4" stroke-linecap="round"/>
+          <line x1="230" y1="190" x2="230" y2="206" stroke="#2E2452" stroke-width="4" stroke-linecap="round"/>
+          <line x1="130" y1="115" x2="130" y2="131" stroke="#2E2452" stroke-width="4" stroke-linecap="round"/>
+
+          <circle cx="245" cy="178" r="7" fill="#FF6B9D"/>
+          <line x1="245" y1="185" x2="245" y2="205" stroke="#FF6B9D" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="118" cy="103" r="7" fill="#06D6A0"/>
+          <line x1="118" y1="110" x2="118" y2="130" stroke="#06D6A0" stroke-width="4" stroke-linecap="round"/>
+
+          <text x="180" y="30" text-anchor="middle" font-family="Baloo 2, cursive" font-size="12" fill="#8D5A2B" font-weight="700">🪢 a corda de 12 nós</text>
+        </svg>
+        <p style="font-size:0.8rem; text-align:center; color:#5B2EE0; margin-top:6px;">12 nós, 12 espaços iguais: 3 de um lado + 4 do outro + 5 na diagonal — e um ângulo reto aparece sozinho.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPLORANDO ============ -->
+  <section class="section-card">
+    <span class="tag roxo">EXPLORANDO</span>
+    <h2>📐 O Teorema de Pitágoras</h2>
+    <p class="lead">Em todo triângulo retângulo, o lado oposto ao ângulo reto — sempre o maior dos três — é chamado de <strong>hipotenusa</strong>. Os outros dois lados, que formam o ângulo reto, são os <strong>catetos</strong>. O Teorema de Pitágoras revela a relação escondida entre eles:</p>
+
+    <div class="pitagoras-box">
+      <div class="formula">a² = b² + c²</div>
+      <p style="margin:6px 0 0; font-size:0.9rem; color:#2E2452;">(a = hipotenusa; b e c = catetos)</p>
+    </div>
+
+    <div class="center">
+      <svg viewBox="0 0 160 140" style="width:min(220px,70%);">
+        <polygon points="20,120 140,120 20,20" fill="none" stroke="#5B2EE0" stroke-width="3.5"/>
+        <polyline points="20,110 30,110 30,120" fill="none" stroke="#5B2EE0" stroke-width="2"/>
+        <text x="87" y="132" text-anchor="middle" font-family="Nunito, sans-serif" font-size="14" fill="#5B2EE0" font-weight="700">4</text>
+        <text x="7" y="65" text-anchor="middle" font-family="Nunito, sans-serif" font-size="14" fill="#5B2EE0" font-weight="700">3</text>
+        <text x="91" y="61" text-anchor="middle" font-family="Nunito, sans-serif" font-size="14" fill="#FF8A3D" font-weight="700">5</text>
+      </svg>
+    </div>
+    <p style="font-size:0.85rem; text-align:center; color:#5B2EE0;">3 e 4 são os catetos (formam o ângulo reto); 5 é a hipotenusa — o lado oposto a ele, sempre o maior.</p>
+
+    <p class="lead" style="font-size:0.95rem;">Conferindo com o famoso triângulo 3-4-5 da corda de nós: 3² + 4² = 9 + 16 = 25 = 5². Funciona! ✅ Esse é o exemplo mais famoso, mas existem infinitos outros: 5² + 12² = 25 + 144 = 169 = 13² também funciona.</p>
+
+    <div class="balaozinho">💡 Para saber mais: quer entender <em>por que</em> esse teorema funciona? Ele pode ser demonstrado usando semelhança de triângulos (Trilha 7) — ao traçar a altura relativa à hipotenusa, formam-se dois triângulos menores, ambos semelhantes ao triângulo original!</div>
+  </section>
+
+  <!-- ============ PRATICANDO ============ -->
+  <section class="section-card">
+    <span class="tag verde">PRATICANDO</span>
+    <h2>✏️ Vamos treinar</h2>
+
+    <div class="quiz-item" data-correta="0">
+      <div class="quiz-pergunta">1. Um triângulo retângulo tem catetos de 6 cm e 8 cm. Qual é a medida da hipotenusa?</div>
+      <div class="quiz-opcoes">
+        <div class="quiz-opcao" data-valor="0">10 cm</div>
+        <div class="quiz-opcao" data-valor="1">12 cm</div>
+        <div class="quiz-opcao" data-valor="2">14 cm</div>
+      </div>
+      <div class="quiz-feedback"></div>
+    </div>
+
+    <div class="quiz-item" data-correta="0">
+      <div class="quiz-pergunta">2. A hipotenusa de um triângulo retângulo é:</div>
+      <div class="quiz-opcoes">
+        <div class="quiz-opcao" data-valor="0">O lado oposto ao ângulo reto, sempre o maior</div>
+        <div class="quiz-opcao" data-valor="1">Qualquer um dos três lados</div>
+        <div class="quiz-opcao" data-valor="2">Sempre o menor lado</div>
+      </div>
+      <div class="quiz-feedback"></div>
+    </div>
+
+    <div class="quiz-item" data-correta="0">
+      <div class="quiz-pergunta">3. Um triângulo retângulo tem hipotenusa de 13 cm e um dos catetos mede 5 cm. Quanto mede o outro cateto?</div>
+      <div class="quiz-opcoes">
+        <div class="quiz-opcao" data-valor="0">12 cm</div>
+        <div class="quiz-opcao" data-valor="1">8 cm</div>
+        <div class="quiz-opcao" data-valor="2">9 cm</div>
+      </div>
+      <div class="quiz-feedback"></div>
+    </div>
+  </section>
+
+  <!-- ============ JOGO ============ -->
+  <section class="section-card">
+    <span class="tag rosa">JOGO FINAL</span>
+    <h2>🎮 Complete a medida</h2>
+    <p class="lead">Às vezes falta a hipotenusa, às vezes falta um cateto — use a² = b² + c² para descobrir!</p>
+
+    <div class="jogo-wrap">
+      <div class="jogo-placar">
+        <div>Rodada <span id="jogoRodadaAtual">1</span>/<span id="jogoRodadaTotal">6</span></div>
+        <div>Pontos: <span class="valor" id="jogoPontos">0</span></div>
+      </div>
+
+      <div id="jogoAtivo">
+        <p class="center quiz-pergunta" id="jogoPergunta">Qual é a medida que falta?</p>
+        <div class="jogo-triangulo-area">
+          <svg viewBox="-10 -10 120 120" id="jogoSvg" style="width:260px;"></svg>
+        </div>
+        <div class="jogo-botoes" id="jogoBotoes"></div>
+        <div class="jogo-mensagem" id="jogoMensagem"></div>
+      </div>
+
+      <div id="jogoFim" class="jogo-fim" style="display:none;">
+        <h3 id="jogoFimTitulo">🎉 Trilha concluída!</h3>
+        <p id="jogoFimTexto"></p>
+        <a href="index.html" class="btn verde">Voltar ao mapa ⭐</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="center" style="margin-bottom:40px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+    <a href="trilha7.html" class="btn laranja">← Trilha 7</a>
+    <a href="index.html" class="btn verde">Mapa completo 🎉</a>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  Trilha dos Triângulos — Produto Educacional PROFMAT 🔺✨
+</footer>
+
+<script src="script.js"></script>
+<script>
+/* ---------- Quiz "Praticando" ---------- */
+document.querySelectorAll('.quiz-item').forEach(item=>{
+  const correta = item.getAttribute('data-correta');
+  const feedback = item.querySelector('.quiz-feedback');
+  let respondido = false;
+  item.querySelectorAll('.quiz-opcao').forEach(op=>{
+    op.addEventListener('click', ()=>{
+      if(respondido) return;
+      respondido = true;
+      const valor = op.getAttribute('data-valor');
+      if(valor === correta){
+        op.classList.add('certo');
+        feedback.textContent = '✅ Isso mesmo! Mandou bem.';
+        feedback.style.color = '#039073';
+      }else{
+        op.classList.add('errado');
+        item.querySelector(`[data-valor="${correta}"]`).classList.add('certo');
+        feedback.textContent = '❌ Quase! A resposta certa está em verde.';
+        feedback.style.color = '#C43F6E';
+      }
+    });
+  });
+});
+
+/* ---------- Jogo "Complete a medida" ---------- */
+const rodadas = [
+  { tipo:'hipotenusa', catetos:[3,4], resposta:5 },
+  { tipo:'hipotenusa', catetos:[6,8], resposta:10 },
+  { tipo:'cateto', catetoConhecido:5, hipotenusa:13, resposta:12 },
+  { tipo:'hipotenusa', catetos:[9,12], resposta:15 },
+  { tipo:'cateto', catetoConhecido:8, hipotenusa:17, resposta:15 },
+  { tipo:'cateto', catetoConhecido:7, hipotenusa:25, resposta:24 },
+];
+
+let rodadaIdx = 0;
+let pontos = 0;
+let travado = false;
+
+document.getElementById('jogoRodadaTotal').textContent = rodadas.length;
+
+function embaralhar(arr){
+  const a = arr.slice();
+  for(let i=a.length-1;i>0;i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [a[i],a[j]]=[a[j],a[i]];
+  }
+  return a;
+}
+
+function gerarOpcoes(certo){
+  const opcoes = new Set([certo]);
+  while(opcoes.size < 3){
+    const delta = [-4,-3,-2,2,3,4,5][Math.floor(Math.random()*7)];
+    const candidato = certo + delta;
+    if(candidato > 0) opcoes.add(candidato);
+  }
+  return embaralhar(Array.from(opcoes));
+}
+
+/* 4 posições possíveis para o ângulo reto (um em cada canto), giradas em
+   passos de 90°, para o triângulo não aparecer sempre do mesmo jeito.
+   A = vértice do ângulo reto; B = ao longo do "cateto2"; C = ao longo do "cateto1". */
+const ORIENTACOES = [
+  { A:[20,90], B:[90,90], C:[20,15] },  // reto no canto inferior-esquerdo
+  { A:[90,90], B:[20,90], C:[90,15] },  // reto no canto inferior-direito
+  { A:[90,15], B:[20,15], C:[90,90] },  // reto no canto superior-direito
+  { A:[20,15], B:[90,15], C:[20,90] },  // reto no canto superior-esquerdo
+];
+
+function posicionarRotulo(vertice, centro, distancia){
+  const dx = vertice[0]-centro[0], dy = vertice[1]-centro[1];
+  const len = Math.sqrt(dx*dx+dy*dy) || 1;
+  return [ vertice[0] + (dx/len)*distancia, vertice[1] + (dy/len)*distancia ];
+}
+
+function svgPitagoras(r){
+  let cateto1, cateto2, hip;
+  if(r.tipo === 'hipotenusa'){
+    cateto1 = r.catetos[0];
+    cateto2 = r.catetos[1];
+    hip = '?';
+  }else{
+    cateto1 = r.catetoConhecido;
+    cateto2 = '?';
+    hip = r.hipotenusa;
+  }
+  const cor = (v)=> v === '?' ? '#FF8A3D' : '#4FC3F7';
+
+  const { A, B, C } = ORIENTACOES[Math.floor(Math.random()*ORIENTACOES.length)];
+  const centroide = [ (A[0]+B[0]+C[0])/3, (A[1]+B[1]+C[1])/3 ];
+
+  const midAC = [ (A[0]+C[0])/2, (A[1]+C[1])/2 ];
+  const midAB = [ (A[0]+B[0])/2, (A[1]+B[1])/2 ];
+  const midBC = [ (B[0]+C[0])/2, (B[1]+C[1])/2 ];
+
+  const posCateto1 = posicionarRotulo(midAC, centroide, 13);
+  const posCateto2 = posicionarRotulo(midAB, centroide, 13);
+  const posHip = posicionarRotulo(midBC, centroide, 13);
+
+  // marca do ângulo reto: pequeno "L" no vértice A, ao longo dos dois catetos
+  const distAB = Math.hypot(B[0]-A[0], B[1]-A[1]);
+  const distAC = Math.hypot(C[0]-A[0], C[1]-A[1]);
+  const dAB = [ (B[0]-A[0])/distAB, (B[1]-A[1])/distAB ];
+  const dAC = [ (C[0]-A[0])/distAC, (C[1]-A[1])/distAC ];
+  const m1 = [ A[0]+dAC[0]*10, A[1]+dAC[1]*10 ];
+  const m2 = [ A[0]+dAB[0]*10+dAC[0]*10, A[1]+dAB[1]*10+dAC[1]*10 ];
+  const m3 = [ A[0]+dAB[0]*10, A[1]+dAB[1]*10 ];
+
+  return `
+    <polygon points="${A[0]},${A[1]} ${B[0]},${B[1]} ${C[0]},${C[1]}" fill="none" stroke="#5B2EE0" stroke-width="3"/>
+    <polyline points="${m1[0]},${m1[1]} ${m2[0]},${m2[1]} ${m3[0]},${m3[1]}" fill="none" stroke="#5B2EE0" stroke-width="2"/>
+    <text x="${posCateto1[0]}" y="${posCateto1[1]}" text-anchor="middle" font-size="13" fill="${cor(cateto1)}" font-weight="700">${cateto1}</text>
+    <text x="${posCateto2[0]}" y="${posCateto2[1]}" text-anchor="middle" font-size="13" fill="${cor(cateto2)}" font-weight="700">${cateto2}</text>
+    <text x="${posHip[0]}" y="${posHip[1]}" text-anchor="middle" font-size="13" fill="${cor(hip)}" font-weight="800">${hip}</text>
+  `;
+}
+
+function carregarRodada(){
+  travado = false;
+  const r = rodadas[rodadaIdx];
+  document.getElementById('jogoRodadaAtual').textContent = rodadaIdx+1;
+  document.getElementById('jogoMensagem').textContent = '';
+
+  const svg = document.getElementById('jogoSvg');
+  svg.setAttribute('viewBox','-10 -10 120 120');
+  svg.innerHTML = svgPitagoras(r);
+  document.getElementById('jogoPergunta').textContent = r.tipo === 'hipotenusa'
+    ? 'Esse triângulo é retângulo. Qual é a medida da hipotenusa?'
+    : 'Esse triângulo é retângulo. Qual é a medida do cateto que falta?';
+
+  const botoesDiv = document.getElementById('jogoBotoes');
+  botoesDiv.innerHTML = '';
+  gerarOpcoes(r.resposta).forEach(op=>{
+    const btn = document.createElement('button');
+    btn.textContent = op;
+    btn.addEventListener('click', ()=> responder(op, btn));
+    botoesDiv.appendChild(btn);
+  });
+}
+
+function responder(escolha, btn){
+  if(travado) return;
+  travado = true;
+  const r = rodadas[rodadaIdx];
+  const msg = document.getElementById('jogoMensagem');
+  if(escolha === r.resposta){
+    pontos++;
+    document.getElementById('jogoPontos').textContent = pontos;
+    btn.style.background = '#06D6A0'; btn.style.color = '#fff'; btn.style.borderColor = '#06D6A0';
+    msg.textContent = '✅ Isso aí! A resposta certa era ' + r.resposta + '.';
+    msg.style.color = '#039073';
+  }else{
+    btn.style.background = '#FF6B9D'; btn.style.color = '#fff'; btn.style.borderColor = '#FF6B9D';
+    msg.textContent = '❌ Era ' + r.resposta + '. Vamos para a próxima!';
+    msg.style.color = '#C43F6E';
+  }
+
+  setTimeout(()=>{
+    rodadaIdx++;
+    if(rodadaIdx < rodadas.length){
+      carregarRodada();
+    }else{
+      finalizarJogo();
+    }
+  }, 1400);
+}
+
+function finalizarJogo(){
+  document.getElementById('jogoAtivo').style.display = 'none';
+  const fim = document.getElementById('jogoFim');
+  fim.style.display = 'block';
+  document.getElementById('jogoFimTexto').textContent =
+    `Você acertou ${pontos} de ${rodadas.length} desafios. Sua estrela da Trilha 8 já foi guardada — parabéns, você concluiu toda a Trilha dos Triângulos! 🎉`;
+  marcarTrilhaConcluida('trilha8');
+}
+
+carregarRodada();
+</script>
+</body>
+</html>

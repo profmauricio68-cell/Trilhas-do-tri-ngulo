@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trilha 4 · Triângulos não tremem! · Trilha dos Triângulos</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .icone-estrutura{ text-align:center; background:#FFF8ED; border-radius:16px; padding:14px; border:2px solid #FFE7C2; }
+  .icone-estrutura .nome{ font-weight:800; color:#5B2EE0; margin-top:6px; font-size:0.9rem; }
+
+  .jogo-comparacao{ display:flex; gap:18px; justify-content:center; flex-wrap:wrap; margin-top:6px; }
+  .figura-opcao{
+    cursor:pointer; background:#fff; border:3px solid #E4DEFB; border-radius:16px;
+    padding:10px; width:160px; transition: transform .15s ease, border-color .15s ease;
+  }
+  .figura-opcao:hover{ border-color:#7C4DFF; transform:translateY(-4px); }
+  .figura-opcao.certo{ border-color:#06D6A0; background:#EAFBF6; }
+  .figura-opcao.errado{ border-color:#FF6B9D; background:#FFF0F5; }
+  .figura-opcao.desabilitada{ pointer-events:none; }
+  .figura-label{ text-align:center; font-weight:800; color:#5B2EE0; margin-top:8px; font-size:0.9rem; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <svg class="mascote" viewBox="0 0 100 100"><polygon points="50,10 90,85 10,85" fill="#7C4DFF"/><circle cx="38" cy="65" r="6" fill="#fff"/><circle cx="62" cy="65" r="6" fill="#fff"/><circle cx="38" cy="65" r="3" fill="#2E2452"/><circle cx="62" cy="65" r="3" fill="#2E2452"/><path d="M35 76 Q50 88 65 76" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+      Trilha dos Triângulos
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Início</a>
+      <a href="trilha1.html">Trilha 1</a>
+      <a href="trilha2.html">Trilha 2</a>
+      <a href="trilha3.html">Trilha 3</a>
+      <a href="trilha4.html" class="active">Trilha 4</a>
+      <a href="trilha5.html">Trilha 5</a>
+      <a href="trilha6.html">Trilha 6</a>
+      <a href="trilha7.html">Trilha 7</a>
+      <a href="trilha8.html">Trilha 8</a>
+      <a href="index.html#mapa">Mapa</a>
+    </nav>
+    <div class="progresso-pill" data-progresso-pill>⭐ 0/8 trilhas</div>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- ============ CONTEXTUALIZAÇÃO ============ -->
+  <section class="section-card">
+    <span class="tag laranja">TRILHA 4 · 7º ANO</span>
+    <h2>🏗️ Triângulos não tremem!</h2>
+
+    <div class="contexto-flex">
+      <div class="texto">
+        <p class="lead">Repare da próxima vez que passar perto de uma torre de transmissão de energia, de um telhado com estrutura de madeira aparente ou de uma ponte: elas são cheias de triângulos, quase nunca de quadrados. Isso não é acaso. Construtores de todas as épocas — dos que erguem palafitas e ocas aos engenheiros modernos — descobriram o mesmo segredo: o triângulo é a única forma que não entorta quando é empurrada.</p>
+        <div class="balaozinho">🤔 Por que será que quase nenhuma estrutura de verdade é construída só com quadrados?</div>
+      </div>
+      <div class="imagem">
+        <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="400" height="220" rx="24" fill="#EAF4FF"/>
+
+          <!-- quadrado que bamboleia -->
+          <path d="M100 60 L130 60" stroke="#C43F6E" stroke-width="4" stroke-linecap="round"/>
+          <polygon points="130,52 148,60 130,68" fill="#C43F6E"/>
+          <polygon points="60,80 160,80 145,175 45,175" fill="none" stroke="#5B2EE0" stroke-width="4" stroke-dasharray="7 5"/>
+          <polygon points="60,80 160,80 160,175 60,175" fill="none" stroke="#5B2EE0" stroke-width="4" opacity="0.35"/>
+          <circle cx="60" cy="80" r="5" fill="#5B2EE0"/>
+          <circle cx="160" cy="80" r="5" fill="#5B2EE0"/>
+          <circle cx="160" cy="175" r="5" fill="#5B2EE0"/>
+          <circle cx="60" cy="175" r="5" fill="#5B2EE0"/>
+          <text x="110" y="205" text-anchor="middle" font-family="Baloo 2, cursive" font-size="13" fill="#C43F6E" font-weight="700">😵 bambolEIA</text>
+
+          <!-- triangulo que fica firme -->
+          <path d="M270 60 L300 60" stroke="#039073" stroke-width="4" stroke-linecap="round"/>
+          <polygon points="300,52 318,60 300,68" fill="#039073"/>
+          <polygon points="290,80 350,175 230,175" fill="none" stroke="#5B2EE0" stroke-width="4"/>
+          <circle cx="290" cy="80" r="5" fill="#5B2EE0"/>
+          <circle cx="350" cy="175" r="5" fill="#5B2EE0"/>
+          <circle cx="230" cy="175" r="5" fill="#5B2EE0"/>
+          <text x="290" y="205" text-anchor="middle" font-family="Baloo 2, cursive" font-size="13" fill="#039073" font-weight="700">💪 fica firme</text>
+        </svg>
+        <p style="font-size:0.8rem; text-align:center; color:#5B2EE0; margin-top:6px;">Empurrando os dois: o quadrado torto vira um paralelogramo, o triângulo simplesmente não se mexe.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPLORANDO ============ -->
+  <section class="section-card">
+    <span class="tag roxo">EXPLORANDO</span>
+    <h2>🔒 A rigidez geométrica do triângulo</h2>
+    <p class="lead">Quando você conhece as medidas dos três lados de um triângulo, existe um <strong>único</strong> formato possível para ele — não dá para "empurrar" um triângulo e transformá-lo em outro triângulo diferente, mantendo os mesmos três lados. É por isso que dizemos que o triângulo tem <strong>rigidez geométrica</strong>.</p>
+    <p class="lead">Já um quadrilátero, como o quadrado ou o retângulo, pode ser empurrado e virar um paralelogramo bem torto, mesmo mantendo os quatro lados do mesmo tamanho. Para travar um quadrado e deixá-lo firme, os construtores adicionam uma <strong>travessa na diagonal</strong> — e, ao fazer isso, estão dividindo o quadrado em dois triângulos!</p>
+
+    <h3 style="color:#5B2EE0;">Onde vemos essa rigidez sendo usada</h3>
+    <div class="exemplos-grid" style="grid-template-columns: repeat(auto-fit, minmax(140px,1fr));">
+      <div class="icone-estrutura">
+        <svg viewBox="0 0 100 100">
+          <polygon points="50,15 90,85 10,85" fill="none" stroke="#5B2EE0" stroke-width="4"/>
+          <line x1="50" y1="15" x2="50" y2="85" stroke="#5B2EE0" stroke-width="2.5"/>
+          <line x1="30" y1="50" x2="70" y2="50" stroke="#5B2EE0" stroke-width="2.5"/>
+        </svg>
+        <div class="nome">Tesoura de telhado</div>
+      </div>
+      <div class="icone-estrutura">
+        <svg viewBox="0 0 100 100">
+          <polygon points="35,25 65,25 50,8" fill="none" stroke="#5B2EE0" stroke-width="2.5"/>
+          <line x1="15" y1="90" x2="35" y2="25" stroke="#5B2EE0" stroke-width="3"/>
+          <line x1="85" y1="90" x2="65" y2="25" stroke="#5B2EE0" stroke-width="3"/>
+          <line x1="15" y1="90" x2="85" y2="90" stroke="#5B2EE0" stroke-width="3"/>
+          <line x1="21.15" y1="70" x2="78.85" y2="70" stroke="#5B2EE0" stroke-width="2"/>
+          <line x1="15" y1="90" x2="78.85" y2="70" stroke="#5B2EE0" stroke-width="2"/>
+          <line x1="85" y1="90" x2="21.15" y2="70" stroke="#5B2EE0" stroke-width="2"/>
+          <line x1="27.31" y1="50" x2="72.69" y2="50" stroke="#5B2EE0" stroke-width="2"/>
+          <line x1="21.15" y1="70" x2="72.69" y2="50" stroke="#5B2EE0" stroke-width="2"/>
+          <line x1="78.85" y1="70" x2="27.31" y2="50" stroke="#5B2EE0" stroke-width="2"/>
+        </svg>
+        <div class="nome">Torre de transmissão</div>
+      </div>
+      <div class="icone-estrutura">
+        <svg viewBox="0 0 100 100">
+          <line x1="10" y1="70" x2="90" y2="70" stroke="#5B2EE0" stroke-width="4"/>
+          <polyline points="10,70 30,40 50,70 70,40 90,70" fill="none" stroke="#5B2EE0" stroke-width="3"/>
+        </svg>
+        <div class="nome">Ponte de treliça</div>
+      </div>
+      <div class="icone-estrutura">
+        <svg viewBox="0 0 100 100">
+          <circle cx="25" cy="75" r="14" fill="none" stroke="#5B2EE0" stroke-width="3.2"/>
+          <circle cx="75" cy="75" r="14" fill="none" stroke="#5B2EE0" stroke-width="3.2"/>
+          <circle cx="38" cy="75" r="3" fill="#5B2EE0"/>
+          <line x1="38" y1="75" x2="25" y2="75" stroke="#5B2EE0" stroke-width="3.2"/>
+          <line x1="38" y1="75" x2="42" y2="32" stroke="#5B2EE0" stroke-width="3.2"/>
+          <line x1="42" y1="32" x2="25" y2="75" stroke="#5B2EE0" stroke-width="3.2"/>
+          <line x1="42" y1="32" x2="66" y2="38" stroke="#5B2EE0" stroke-width="3.2"/>
+          <line x1="38" y1="75" x2="66" y2="38" stroke="#5B2EE0" stroke-width="3.2"/>
+          <line x1="66" y1="38" x2="75" y2="75" stroke="#5B2EE0" stroke-width="3.2"/>
+          <line x1="42" y1="32" x2="38" y2="26" stroke="#5B2EE0" stroke-width="3.2" stroke-linecap="round"/>
+          <line x1="66" y1="38" x2="66" y2="26" stroke="#5B2EE0" stroke-width="3.2" stroke-linecap="round"/>
+          <line x1="60" y1="26" x2="72" y2="26" stroke="#5B2EE0" stroke-width="3.2" stroke-linecap="round"/>
+        </svg>
+        <div class="nome">Quadro de bicicleta</div>
+      </div>
+    </div>
+
+    <div class="balaozinho">💡 Sempre que você vir uma estrutura precisando ficar firme e não balançar, procure os triângulos escondidos nela!</div>
+  </section>
+
+  <!-- ============ PRATICANDO ============ -->
+  <section class="section-card">
+    <span class="tag verde">PRATICANDO</span>
+    <h2>✏️ Vamos treinar</h2>
+
+    <div class="quiz-item" data-correta="1">
+      <div class="quiz-pergunta">1. Por que engenheiros usam triângulos, e não quadrados, em torres e telhados?</div>
+      <div class="quiz-opcoes">
+        <div class="quiz-opcao" data-valor="0">Porque o triângulo é mais bonito</div>
+        <div class="quiz-opcao" data-valor="1">Porque o triângulo não muda de forma quando empurrado</div>
+        <div class="quiz-opcao" data-valor="2">Porque o triângulo tem menos lados para pintar</div>
+      </div>
+      <div class="quiz-feedback"></div>
+    </div>
+
+    <div class="quiz-item" data-correta="0">
+      <div class="quiz-pergunta">2. Se você empurrar um quadrado de canudinhos com cantos soltos (sem travar), o que acontece?</div>
+      <div class="quiz-opcoes">
+        <div class="quiz-opcao" data-valor="0">Ele vira um paralelogramo torto</div>
+        <div class="quiz-opcao" data-valor="1">Os canudinhos quebram na hora</div>
+        <div class="quiz-opcao" data-valor="2">Nada muda, ele fica igual</div>
+      </div>
+      <div class="quiz-feedback"></div>
+    </div>
+
+    <div class="quiz-item" data-correta="0">
+      <div class="quiz-pergunta">3. Qual dessas usa a rigidez dos triângulos para não balançar?</div>
+      <div class="quiz-opcoes">
+        <div class="quiz-opcao" data-valor="0">Torre de transmissão de energia</div>
+        <div class="quiz-opcao" data-valor="1">Bexiga de festa</div>
+        <div class="quiz-opcao" data-valor="2">Cortina de banheiro</div>
+      </div>
+      <div class="quiz-feedback"></div>
+    </div>
+  </section>
+
+  <!-- ============ JOGO ============ -->
+  <section class="section-card">
+    <span class="tag rosa">JOGO FINAL</span>
+    <h2>🎮 Qual é mais firme?</h2>
+    <p class="lead">Cada rodada mostra duas versões da mesma estrutura. Clique na versão que você acha que fica mais firme, sem balançar.</p>
+
+    <div class="jogo-wrap">
+      <div class="jogo-placar">
+        <div>Rodada <span id="jogoRodadaAtual">1</span>/<span id="jogoRodadaTotal">6</span></div>
+        <div>Pontos: <span class="valor" id="jogoPontos">0</span></div>
+      </div>
+
+      <div id="jogoAtivo">
+        <p class="center quiz-pergunta" id="jogoPergunta">Qual estrutura é mais firme?</p>
+        <div class="jogo-comparacao">
+          <div class="figura-opcao" id="figuraA">
+            <svg viewBox="0 0 100 100" id="svgA"></svg>
+            <div class="figura-label">Figura A</div>
+          </div>
+          <div class="figura-opcao" id="figuraB">
+            <svg viewBox="0 0 100 100" id="svgB"></svg>
+            <div class="figura-label">Figura B</div>
+          </div>
+        </div>
+        <div class="jogo-mensagem" id="jogoMensagem"></div>
+      </div>
+
+      <div id="jogoFim" class="jogo-fim" style="display:none;">
+        <h3 id="jogoFimTitulo">🎉 Trilha concluída!</h3>
+        <p id="jogoFimTexto"></p>
+        <a href="index.html" class="btn verde">Voltar ao mapa ⭐</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="center" style="margin-bottom:40px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+    <a href="trilha3.html" class="btn laranja">← Trilha 3</a>
+    <a href="trilha5.html" class="btn verde">Trilha 5 →</a>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  Trilha dos Triângulos — Produto Educacional PROFMAT 🔺✨
+</footer>
+
+<script src="script.js"></script>
+<script>
+/* ---------- Quiz "Praticando" ---------- */
+document.querySelectorAll('.quiz-item').forEach(item=>{
+  const correta = item.getAttribute('data-correta');
+  const feedback = item.querySelector('.quiz-feedback');
+  let respondido = false;
+  item.querySelectorAll('.quiz-opcao').forEach(op=>{
+    op.addEventListener('click', ()=>{
+      if(respondido) return;
+      respondido = true;
+      const valor = op.getAttribute('data-valor');
+      if(valor === correta){
+        op.classList.add('certo');
+        feedback.textContent = '✅ Isso mesmo! Mandou bem.';
+        feedback.style.color = '#039073';
+      }else{
+        op.classList.add('errado');
+        item.querySelector(`[data-valor="${correta}"]`).classList.add('certo');
+        feedback.textContent = '❌ Quase! A resposta certa está em verde.';
+        feedback.style.color = '#C43F6E';
+      }
+    });
+  });
+});
+
+/* ---------- Jogo "Qual é mais firme?" ---------- */
+const rodadas = [
+  { nome: 'telhado da casa', artigo: 'o', tipo: 'telhado' },
+  { nome: 'ponte sobre o rio', artigo: 'a', tipo: 'ponte' },
+  { nome: 'torre de transmissão', artigo: 'a', tipo: 'torre' },
+  { nome: 'portão da fazenda', artigo: 'o', tipo: 'portao' },
+  { nome: 'andaime da obra', artigo: 'o', tipo: 'andaime' },
+  { nome: 'grade do playground', artigo: 'a', tipo: 'grade' },
+];
+
+let rodadaIdx = 0;
+let pontos = 0;
+let travado = false;
+let ladoFirmeEhA = true;
+
+document.getElementById('jogoRodadaTotal').textContent = rodadas.length;
+
+/* Gera um fragmento SVG de uma cadeia de painéis (retângulos), na horizontal
+   ou vertical, com ou sem travessas diagonais. Sem travessa, mostra também
+   um contorno tracejado indicando como a estrutura pode se deformar. */
+function gerarCadeia(orientacao, nPaineis, comTriangulo){
+  const margem = 12;
+  const paineis = [];
+  if(orientacao === 'h'){
+    const totalW = 100 - margem*2;
+    const passo = totalW / nPaineis;
+    for(let i=0;i<nPaineis;i++){
+      paineis.push({ x0: margem+i*passo, y0: 28, x1: margem+(i+1)*passo, y1: 78 });
+    }
+  }else{
+    const totalH = 100 - margem*2;
+    const passo = totalH / nPaineis;
+    for(let i=0;i<nPaineis;i++){
+      paineis.push({ x0: 25, y0: margem+i*passo, x1: 75, y1: margem+(i+1)*passo });
+    }
+  }
+
+  let svg = '';
+  paineis.forEach((p,i)=>{
+    svg += `<rect x="${p.x0}" y="${p.y0}" width="${p.x1-p.x0}" height="${p.y1-p.y0}" fill="none" stroke="#5B2EE0" stroke-width="3"/>`;
+    if(comTriangulo){
+      if(i % 2 === 0) svg += `<line x1="${p.x0}" y1="${p.y0}" x2="${p.x1}" y2="${p.y1}" stroke="#5B2EE0" stroke-width="2.5"/>`;
+      else svg += `<line x1="${p.x1}" y1="${p.y0}" x2="${p.x0}" y2="${p.y1}" stroke="#5B2EE0" stroke-width="2.5"/>`;
+    }
+  });
+
+  if(!comTriangulo){
+    const desloc = 10;
+    if(orientacao === 'h'){
+      const y0 = paineis[0].y0, y1 = paineis[0].y1;
+      const xIni = paineis[0].x0, xFim = paineis[paineis.length-1].x1;
+      svg += `<polyline points="${xIni+desloc},${y0} ${xFim+desloc},${y0} ${xFim},${y1} ${xIni},${y1}" fill="none" stroke="#FF6B9D" stroke-width="2" stroke-dasharray="4 3"/>`;
+    }else{
+      const x0 = paineis[0].x0, x1 = paineis[0].x1;
+      const yIni = paineis[0].y0, yFim = paineis[paineis.length-1].y1;
+      svg += `<polyline points="${x0},${yIni} ${x1},${yIni+desloc} ${x1},${yFim+desloc} ${x0},${yFim}" fill="none" stroke="#FF6B9D" stroke-width="2" stroke-dasharray="4 3"/>`;
+    }
+  }
+
+  return svg;
+}
+
+/* Telhado: versão rígida (triângulo/tesoura) vs versão instável (trapézio solto, com "fantasma" tracejado indicando para onde ele pode ceder). */
+function gerarTelhado(comTriangulo){
+  if(comTriangulo){
+    return `
+      <polygon points="10,80 90,80 50,20" fill="none" stroke="#5B2EE0" stroke-width="3"/>
+      <line x1="50" y1="20" x2="50" y2="80" stroke="#5B2EE0" stroke-width="2.5"/>
+      <line x1="30" y1="50" x2="70" y2="50" stroke="#5B2EE0" stroke-width="2.5"/>
+    `;
+  }
+  const desloc = 12;
+  return `
+    <polygon points="20,80 80,80 65,30 35,30" fill="none" stroke="#5B2EE0" stroke-width="3"/>
+    <polyline points="${35+desloc},30 ${65+desloc},30 80,80 20,80" fill="none" stroke="#FF6B9D" stroke-width="2" stroke-dasharray="4 3"/>
+  `;
+}
+
+function gerarFigura(tipo, comTriangulo){
+  switch(tipo){
+    case 'telhado': return gerarTelhado(comTriangulo);
+    case 'portao': return gerarCadeia('v', 2, comTriangulo);
+    case 'ponte': return gerarCadeia('h', 4, comTriangulo);
+    case 'grade': return gerarCadeia('v', 3, comTriangulo);
+    case 'torre': return gerarCadeia('v', 4, comTriangulo);
+    case 'andaime': return gerarCadeia('h', 3, comTriangulo);
+    default: return gerarCadeia('h', 3, comTriangulo);
+  }
+}
+
+function carregarRodada(){
+  travado = false;
+  const r = rodadas[rodadaIdx];
+  ladoFirmeEhA = Math.random() < 0.5;
+  document.getElementById('jogoRodadaAtual').textContent = rodadaIdx+1;
+  document.getElementById('jogoMensagem').textContent = '';
+  document.getElementById('jogoPergunta').textContent =
+    `Qual ${r.nome} fica mais firme, sem balançar?`;
+
+  document.getElementById('svgA').innerHTML = gerarFigura(r.tipo, ladoFirmeEhA);
+  document.getElementById('svgB').innerHTML = gerarFigura(r.tipo, !ladoFirmeEhA);
+
+  document.getElementById('figuraA').classList.remove('certo','errado','desabilitada');
+  document.getElementById('figuraB').classList.remove('certo','errado','desabilitada');
+}
+
+function responder(escolha){
+  if(travado) return;
+  travado = true;
+  const figA = document.getElementById('figuraA');
+  const figB = document.getElementById('figuraB');
+  const msg = document.getElementById('jogoMensagem');
+  const acertou = (escolha === 'A' && ladoFirmeEhA) || (escolha === 'B' && !ladoFirmeEhA);
+
+  figA.classList.add('desabilitada');
+  figB.classList.add('desabilitada');
+  if(ladoFirmeEhA){ figA.classList.add('certo'); figB.classList.add('errado'); }
+  else{ figB.classList.add('certo'); figA.classList.add('errado'); }
+
+  if(acertou){
+    pontos++;
+    document.getElementById('jogoPontos').textContent = pontos;
+    msg.textContent = '✅ Isso aí! Os triângulos travam a estrutura e ela não bamboleia.';
+    msg.style.color = '#039073';
+  }else{
+    msg.textContent = '❌ Essa sem os triângulos pode "amassar" para o lado. A certa está em verde.';
+    msg.style.color = '#C43F6E';
+  }
+
+  setTimeout(()=>{
+    rodadaIdx++;
+    if(rodadaIdx < rodadas.length){
+      carregarRodada();
+    }else{
+      finalizarJogo();
+    }
+  }, 1600);
+}
+
+document.getElementById('figuraA').addEventListener('click', ()=> responder('A'));
+document.getElementById('figuraB').addEventListener('click', ()=> responder('B'));
+
+function finalizarJogo(){
+  document.getElementById('jogoAtivo').style.display = 'none';
+  const fim = document.getElementById('jogoFim');
+  fim.style.display = 'block';
+  document.getElementById('jogoFimTexto').textContent =
+    `Você acertou ${pontos} de ${rodadas.length} comparações. Sua estrela da Trilha 4 já foi guardada!`;
+  marcarTrilhaConcluida('trilha4');
+}
+
+carregarRodada();
+</script>
+</body>
+</html>
