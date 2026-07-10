@@ -125,6 +125,42 @@
     <div class="balaozinho">💡 Repare: todo triângulo tem uma classificação quanto aos lados <em>e</em> uma quanto aos ângulos, ao mesmo tempo! Por exemplo, um triângulo pode ser isósceles e retângulo ao mesmo tempo.</div>
   </section>
 
+  <!-- ============ PRATICANDO ============ -->
+  <section class="section-card">
+    <span class="tag verde">PRATICANDO</span>
+    <h2>✏️ Vamos treinar</h2>
+
+    <div class="quiz-item" data-correta="2">
+      <div class="quiz-pergunta">1. Um triângulo com lados 5 cm, 5 cm e 5 cm é classificado quanto aos lados como:</div>
+      <div class="quiz-opcoes">
+        <div class="quiz-opcao" data-valor="0">Escaleno</div>
+        <div class="quiz-opcao" data-valor="1">Isósceles</div>
+        <div class="quiz-opcao" data-valor="2">Equilátero</div>
+      </div>
+      <div class="quiz-feedback"></div>
+    </div>
+
+    <div class="quiz-item" data-correta="2">
+      <div class="quiz-pergunta">2. Um triângulo que tem um ângulo de exatamente 90° é chamado de:</div>
+      <div class="quiz-opcoes">
+        <div class="quiz-opcao" data-valor="0">Acutângulo</div>
+        <div class="quiz-opcao" data-valor="1">Obtusângulo</div>
+        <div class="quiz-opcao" data-valor="2">Retângulo</div>
+      </div>
+      <div class="quiz-feedback"></div>
+    </div>
+
+    <div class="quiz-item" data-correta="0">
+      <div class="quiz-pergunta">3. Todo triângulo, sem exceção, tem:</div>
+      <div class="quiz-opcoes">
+        <div class="quiz-opcao" data-valor="0">3 lados e 3 ângulos</div>
+        <div class="quiz-opcao" data-valor="1">4 lados e 3 ângulos</div>
+        <div class="quiz-opcao" data-valor="2">3 lados e 4 ângulos</div>
+      </div>
+      <div class="quiz-feedback"></div>
+    </div>
+  </section>
+
   <!-- ============ EXPLORE COM AS MÃOS ============ -->
   <section class="section-card">
     <span class="tag azul">EXPLORE COM AS MÃOS</span>
@@ -184,71 +220,6 @@
     </div>
   </section>
 
-  <!-- ============ PRATICANDO ============ -->
-  <section class="section-card">
-    <span class="tag verde">PRATICANDO</span>
-    <h2>✏️ Vamos treinar</h2>
-
-    <div class="quiz-item" data-correta="2">
-      <div class="quiz-pergunta">1. Um triângulo com lados 5 cm, 5 cm e 5 cm é classificado quanto aos lados como:</div>
-      <div class="quiz-opcoes">
-        <div class="quiz-opcao" data-valor="0">Escaleno</div>
-        <div class="quiz-opcao" data-valor="1">Isósceles</div>
-        <div class="quiz-opcao" data-valor="2">Equilátero</div>
-      </div>
-      <div class="quiz-feedback"></div>
-    </div>
-
-    <div class="quiz-item" data-correta="2">
-      <div class="quiz-pergunta">2. Um triângulo que tem um ângulo de exatamente 90° é chamado de:</div>
-      <div class="quiz-opcoes">
-        <div class="quiz-opcao" data-valor="0">Acutângulo</div>
-        <div class="quiz-opcao" data-valor="1">Obtusângulo</div>
-        <div class="quiz-opcao" data-valor="2">Retângulo</div>
-      </div>
-      <div class="quiz-feedback"></div>
-    </div>
-
-    <div class="quiz-item" data-correta="0">
-      <div class="quiz-pergunta">3. Todo triângulo, sem exceção, tem:</div>
-      <div class="quiz-opcoes">
-        <div class="quiz-opcao" data-valor="0">3 lados e 3 ângulos</div>
-        <div class="quiz-opcao" data-valor="1">4 lados e 3 ângulos</div>
-        <div class="quiz-opcao" data-valor="2">3 lados e 4 ângulos</div>
-      </div>
-      <div class="quiz-feedback"></div>
-    </div>
-  </section>
-
-  <!-- ============ JOGO ============ -->
-  <section class="section-card">
-    <span class="tag rosa">JOGO FINAL</span>
-    <h2>🎮 Caça-Triângulos</h2>
-    <p class="lead">Classifique cada triângulo antes que a rodada acabe. Acerte o máximo possível para ganhar sua estrela da Trilha 1!</p>
-
-    <div class="jogo-wrap">
-      <div class="jogo-placar">
-        <div>Rodada <span id="jogoRodadaAtual">1</span>/<span id="jogoRodadaTotal">6</span></div>
-        <div>Pontos: <span class="valor" id="jogoPontos">0</span></div>
-      </div>
-
-      <div id="jogoAtivo">
-        <p class="center quiz-pergunta" id="jogoPergunta">Classifique este triângulo quanto aos lados:</p>
-        <div class="jogo-triangulo-area">
-          <svg viewBox="0 0 100 100" id="jogoSvg"><polygon id="jogoPoligono" points="50,12 90,82 10,82" fill="#7C4DFF" stroke="#5B2EE0" stroke-width="3"/></svg>
-        </div>
-        <div class="jogo-botoes" id="jogoBotoes"></div>
-        <div class="jogo-mensagem" id="jogoMensagem"></div>
-      </div>
-
-      <div id="jogoFim" class="jogo-fim" style="display:none;">
-        <h3 id="jogoFimTitulo">🎉 Trilha concluída!</h3>
-        <p id="jogoFimTexto"></p>
-        <a href="index.html" class="btn verde">Voltar ao mapa ⭐</a>
-      </div>
-    </div>
-  </section>
-
   <!-- ============ DESAFIO FINAL ============ -->
   <section class="section-card">
     <span class="tag rosa">DESAFIO FINAL</span>
@@ -287,6 +258,35 @@
     </div>
     <div id="assessListT1"></div>
     <p class="assess-footer" id="assessFooterT1">Seu progresso é salvo automaticamente neste navegador.</p>
+  </section>
+
+  <!-- ============ JOGO ============ -->
+  <section class="section-card">
+    <span class="tag rosa">JOGO FINAL</span>
+    <h2>🎮 Caça-Triângulos</h2>
+    <p class="lead">Classifique cada triângulo antes que a rodada acabe. Acerte o máximo possível para ganhar sua estrela da Trilha 1!</p>
+
+    <div class="jogo-wrap">
+      <div class="jogo-placar">
+        <div>Rodada <span id="jogoRodadaAtual">1</span>/<span id="jogoRodadaTotal">6</span></div>
+        <div>Pontos: <span class="valor" id="jogoPontos">0</span></div>
+      </div>
+
+      <div id="jogoAtivo">
+        <p class="center quiz-pergunta" id="jogoPergunta">Classifique este triângulo quanto aos lados:</p>
+        <div class="jogo-triangulo-area">
+          <svg viewBox="0 0 100 100" id="jogoSvg"><polygon id="jogoPoligono" points="50,12 90,82 10,82" fill="#7C4DFF" stroke="#5B2EE0" stroke-width="3"/></svg>
+        </div>
+        <div class="jogo-botoes" id="jogoBotoes"></div>
+        <div class="jogo-mensagem" id="jogoMensagem"></div>
+      </div>
+
+      <div id="jogoFim" class="jogo-fim" style="display:none;">
+        <h3 id="jogoFimTitulo">🎉 Trilha concluída!</h3>
+        <p id="jogoFimTexto"></p>
+        <a href="index.html" class="btn verde">Voltar ao mapa ⭐</a>
+      </div>
+    </div>
   </section>
 
   <div class="center" style="margin-bottom:40px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
