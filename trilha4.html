@@ -19,6 +19,20 @@
   .figura-opcao.errado{ border-color:#FF6B9D; background:#FFF0F5; }
   .figura-opcao.desabilitada{ pointer-events:none; }
   .figura-label{ text-align:center; font-weight:800; color:#5B2EE0; margin-top:8px; font-size:0.9rem; }
+
+  .rigidez-stage{ display:grid; grid-template-columns:1fr 1fr; gap:0; margin:18px 0 8px; border-top:1px dashed #E4DEFB; }
+  .rigidez-col{ padding:16px 14px 18px; text-align:center; }
+  .rigidez-col:first-child{ border-right:1px dashed #E4DEFB; }
+  .rigidez-label{ font-weight:800; color:#5B2EE0; margin-bottom:4px; font-size:0.9rem; }
+  .rigidez-caption{ font-size:0.85rem; color:#5B2EE0; margin-top:6px; min-height:34px; }
+  @keyframes shakeT4{
+    0%,100%{ transform: translate(0,0); }
+    20%{ transform: translate(-3px,2px); }
+    40%{ transform: translate(3px,-2px); }
+    60%{ transform: translate(-2px,-2px); }
+    80%{ transform: translate(2px,2px); }
+  }
+  .shake-anim{ animation: shakeT4 .35s ease; }
 </style>
 </head>
 <body>
@@ -181,6 +195,75 @@
       </div>
       <div class="quiz-feedback"></div>
     </div>
+  </section>
+
+  <!-- ============ EXPLORE COM AS MÃOS ============ -->
+  <section class="section-card">
+    <span class="tag azul">EXPLORE COM AS MÃOS</span>
+    <h2>🖐️ Tente destravar o triângulo</h2>
+    <p class="lead">Arraste o vértice laranja de cada armação abaixo e sinta na prática a diferença entre uma forma travada e uma forma solta.</p>
+
+    <div class="rigidez-stage">
+      <div class="rigidez-col">
+        <div class="rigidez-label">Armação quadrada</div>
+        <svg id="svgQuadradoT4" viewBox="0 0 260 220" width="260" height="220"></svg>
+        <p class="rigidez-caption" id="quadradoCaptionT4">Arraste o vértice livre (em laranja).</p>
+      </div>
+      <div class="rigidez-col">
+        <div class="rigidez-label">Armação triangular</div>
+        <svg id="svgTrianguloT4" viewBox="0 0 260 220" width="260" height="220"></svg>
+        <p class="rigidez-caption" id="trianguloCaptionT4">Tente arrastar o vértice livre.</p>
+      </div>
+    </div>
+    <p class="hint">Barras de comprimento fixo, presas por dobradiças — como em uma treliça de verdade.</p>
+    <div class="badges" id="rigidez-badgesT4"></div>
+
+    <h3 style="color:#5B2EE0; margin-top:26px;">Missões</h3>
+    <div class="tasks" id="taskListT4">
+      <div class="task" data-task="deformou">
+        <div class="task-check">✓</div>
+        <div class="task-text"><strong>Missão 1 — Deforme o quadrado</strong><span>Arraste o vértice livre do quadrado até ele parecer bem torto (um paralelogramo achatado).</span></div>
+      </div>
+      <div class="task" data-task="tentoutriangulo">
+        <div class="task-check">✓</div>
+        <div class="task-text"><strong>Missão 2 — Teste o triângulo</strong><span>Tente arrastar o vértice livre do triângulo pelo menos 3 vezes.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DESAFIO FINAL ============ -->
+  <section class="section-card">
+    <span class="tag rosa">DESAFIO FINAL</span>
+    <h2>🔺 Triângulos escondidos no seu dia a dia</h2>
+    <p class="lead">Além de telhados e torres, muitas estruturas do seu bairro ou da sua casa usam triângulos escondidos para ficarem firmes — às vezes sem que ninguém repare.</p>
+    <div class="challenge-card">
+      <h3>Encontre uma estrutura firme perto de você que usa triângulos</h3>
+      <div class="insp-grid">
+        <div class="insp"><b>Móveis</b>Cadeiras, mesas e escadas com reforços diagonais.</div>
+        <div class="insp"><b>Portões e grades</b>Cruzetas de metal travando painéis.</div>
+        <div class="insp"><b>Brinquedos</b>Estruturas de balanço, escorregador ou pipa.</div>
+        <div class="insp"><b>Construções tradicionais</b>Cabanas, currais e pontes de madeira da sua região.</div>
+      </div>
+      <p>Descreva a estrutura e explique: onde estão os triângulos (ou as diagonais que os formam) e o que aconteceria se eles fossem removidos?</p>
+      <textarea class="reflect" id="reflectTextT4" placeholder="Escreva aqui sua investigação..."></textarea>
+      <div class="challenge-actions">
+        <button class="btn laranja" id="reflectSaveT4">Salvar minha investigação</button>
+        <span class="save-note" id="reflectStatusT4">salvo automaticamente neste navegador</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AUTOAVALIAÇÃO ============ -->
+  <section class="section-card">
+    <span class="tag verde">AUTOAVALIAÇÃO</span>
+    <h2>✅ Antes de seguir em frente</h2>
+    <p class="lead">Marque com sinceridade. Isto não vale nota — é um mapa para você (e seu professor) saberem onde reforçar.</p>
+    <div class="assess-progress">
+      <div class="assess-bar"><div class="assess-bar-fill" id="assessBarFillT4"></div></div>
+      <div class="assess-pct" id="assessPctT4">0%</div>
+    </div>
+    <div id="assessListT4"></div>
+    <p class="assess-footer" id="assessFooterT4">Seu progresso é salvo automaticamente neste navegador.</p>
   </section>
 
   <!-- ============ JOGO ============ -->
@@ -407,6 +490,186 @@ function finalizarJogo(){
 }
 
 carregarRodada();
+
+/* ============================================================
+Explore com as mãos — Trilha 4 (demo de rigidez arrastável)
+============================================================ */
+(function rigidezT4(){
+  function circleIntersect(c1, r1, c2, r2, preferUp){
+    const dx = c2.x-c1.x, dy = c2.y-c1.y;
+    const d = Math.hypot(dx,dy);
+    if (d > r1+r2 || d < Math.abs(r1-r2) || d===0) return null;
+    const a = (r1*r1 - r2*r2 + d*d) / (2*d);
+    const h2 = r1*r1 - a*a;
+    const h = h2 > 0 ? Math.sqrt(h2) : 0;
+    const xm = c1.x + a*dx/d;
+    const ym = c1.y + a*dy/d;
+    const rx = -dy*(h/d);
+    const ry = dx*(h/d);
+    const p1 = {x:xm+rx, y:ym+ry};
+    const p2 = {x:xm-rx, y:ym-ry};
+    if (preferUp) return p1.y <= p2.y ? p1 : p2;
+    return p1.y >= p2.y ? p1 : p2;
+  }
+  const SVGNS = "http://www.w3.org/2000/svg";
+  function el(tag, attrs){
+    const e = document.createElementNS(SVGNS, tag);
+    for (const k in attrs) e.setAttribute(k, attrs[k]);
+    return e;
+  }
+
+  const taskState = { deformou:false, tentoutriangulo:false };
+  let dragCountTriangulo = 0;
+  function updateTasksUI(){
+    document.querySelectorAll('#taskListT4 .task').forEach(t=>{
+      const key = t.getAttribute('data-task');
+      t.classList.toggle('done', !!taskState[key]);
+    });
+  }
+  function updateBadges(){
+    const badges = document.getElementById('rigidez-badgesT4');
+    badges.innerHTML = '';
+    const b1 = document.createElement('span');
+    b1.className = 'badge on aviso';
+    b1.textContent = 'Quadrado: forma livre';
+    const b2 = document.createElement('span');
+    b2.className = 'badge on';
+    b2.textContent = 'Triângulo: forma travada';
+    badges.appendChild(b1); badges.appendChild(b2);
+  }
+  updateBadges();
+
+  // ---- Armação quadrada (deformável) ----
+  const svgSq = document.getElementById('svgQuadradoT4');
+  const A = {x:60, y:160}, B = {x:200, y:160};
+  const lenAD = 100, lenBC = 100, lenDC = 140;
+  let D = {x:60, y:60};
+  let C = circleIntersect(D, lenDC, B, lenBC, true) || {x:200,y:60};
+
+  function drawSquare(){
+    svgSq.innerHTML = '';
+    const pts = [A,B,C,D];
+    svgSq.appendChild(el('polygon', {points: pts.map(p=>p.x+','+p.y).join(' '),
+      fill:'rgba(193,121,26,0.12)', stroke:'#C1791A', 'stroke-width':2.5}));
+    [[A,B],[B,C],[C,D],[D,A]].forEach(([p,q])=>{
+      svgSq.appendChild(el('line',{x1:p.x,y1:p.y,x2:q.x,y2:q.y, stroke:'#C1791A','stroke-width':4,'stroke-linecap':'round'}));
+    });
+    [A,B,C].forEach(p=> svgSq.appendChild(el('circle',{cx:p.x,cy:p.y,r:5, fill:'#2E2452'})));
+    const dHandle = el('circle',{cx:D.x,cy:D.y,r:9, fill:'#FF8A3D', stroke:'#2E2452','stroke-width':2, class:'handle'});
+    svgSq.appendChild(dHandle);
+    dHandle.addEventListener('pointerdown', startDragSquare);
+  }
+
+  function startDragSquare(ev){
+    ev.preventDefault();
+    document.getElementById('quadradoCaptionT4').textContent = 'Solta e ela balança — os ângulos mudam livremente.';
+    function move(e){
+      const rect = svgSq.getBoundingClientRect();
+      const scaleX = 260/rect.width, scaleY = 220/rect.height;
+      const mx = (e.clientX-rect.left)*scaleX, my = (e.clientY-rect.top)*scaleY;
+      const ang = Math.atan2(my-A.y, mx-A.x);
+      D = {x: A.x + lenAD*Math.cos(ang), y: A.y + lenAD*Math.sin(ang)};
+      const newC = circleIntersect(D, lenDC, B, lenBC, true);
+      if (newC) C = newC;
+      drawSquare();
+      taskState.deformou = true;
+      updateTasksUI();
+    }
+    function up(){ window.removeEventListener('pointermove', move); window.removeEventListener('pointerup', up); }
+    window.addEventListener('pointermove', move);
+    window.addEventListener('pointerup', up);
+  }
+  drawSquare();
+
+  // ---- Armação triangular (travada) ----
+  const svgTri = document.getElementById('svgTrianguloT4');
+  const TA = {x:60, y:160}, TB = {x:200, y:160};
+  const lenTAapex = 100, lenTBapex = 120;
+  let apex = circleIntersect(TA, lenTAapex, TB, lenTBapex, true) || {x:110,y:50};
+
+  function drawTriRig(){
+    svgTri.innerHTML = '';
+    svgTri.appendChild(el('polygon', {points:[TA,TB,apex].map(p=>p.x+','+p.y).join(' '),
+      fill:'rgba(31,122,108,0.14)', stroke:'#155A50', 'stroke-width':2.5}));
+    [[TA,TB],[TB,apex],[apex,TA]].forEach(([p,q])=>{
+      svgTri.appendChild(el('line',{x1:p.x,y1:p.y,x2:q.x,y2:q.y, stroke:'#155A50','stroke-width':4,'stroke-linecap':'round'}));
+    });
+    [TA,TB].forEach(p=> svgTri.appendChild(el('circle',{cx:p.x,cy:p.y,r:5, fill:'#2E2452'})));
+    const apexHandle = el('circle',{cx:apex.x,cy:apex.y,r:9, fill:'#FF8A3D', stroke:'#2E2452','stroke-width':2, class:'handle'});
+    svgTri.appendChild(apexHandle);
+    apexHandle.addEventListener('pointerdown', tryDragTriangle);
+  }
+  function tryDragTriangle(ev){
+    ev.preventDefault();
+    drawTriRig();
+    svgTri.classList.add('shake-anim');
+    dragCountTriangulo++;
+    document.getElementById('trianguloCaptionT4').textContent = 'Travado! Com os 3 lados fixos, existe apenas UM formato possível.';
+    setTimeout(()=> svgTri.classList.remove('shake-anim'), 350);
+    if(dragCountTriangulo >= 3) taskState.tentoutriangulo = true;
+    updateTasksUI();
+  }
+  drawTriRig();
+})();
+
+/* ---------- Desafio final — persistência local ---------- */
+(function reflectionT4(){
+  const ta = document.getElementById('reflectTextT4');
+  const status = document.getElementById('reflectStatusT4');
+  const KEY = 'trilha4-reflexao';
+  try{ const saved = localStorage.getItem(KEY); if(saved) ta.value = saved; }catch(e){}
+  document.getElementById('reflectSaveT4').addEventListener('click', ()=>{
+    try{ localStorage.setItem(KEY, ta.value); status.textContent='salvo ✓'; setTimeout(()=>status.textContent='salvo automaticamente neste navegador',1800); }
+    catch(e){ status.textContent='não foi possível salvar neste navegador'; }
+  });
+})();
+
+/* ---------- Autoavaliação ---------- */
+(function assessmentT4(){
+  const ITEMS = [
+    'Eu sei explicar o que é a rigidez geométrica do triângulo.',
+    'Eu sei explicar por que um quadrilátero pode se deformar mesmo com os lados fixos.',
+    'Eu sei como uma travessa diagonal deixa um quadrado firme.',
+    'Eu consigo identificar triângulos escondidos em estruturas reais (telhados, pontes, torres).',
+    'Eu já pensei em uma estrutura do meu dia a dia que usa triângulos para não balançar.'
+  ];
+  const KEY = 'trilha4-autoavaliacao';
+  let stars = {};
+  try { stars = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch(e){ stars = {}; }
+  const list = document.getElementById('assessListT4');
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(stars)); }catch(e){} updateProgress(); }
+  function updateProgress(){
+    const total = ITEMS.length*5;
+    let sum=0;
+    ITEMS.forEach((_,i)=> sum += (stars[i]||0));
+    const pct = Math.round((sum/total)*100);
+    document.getElementById('assessBarFillT4').style.width = pct+'%';
+    document.getElementById('assessPctT4').textContent = pct+'%';
+    document.getElementById('assessFooterT4').textContent = pct===100
+      ? 'Domínio completo declarado — hora de seguir para a próxima trilha!'
+      : 'Seu progresso é salvo automaticamente neste navegador.';
+  }
+  ITEMS.forEach((text,i)=>{
+    const row = document.createElement('div');
+    row.className='assess-item';
+    const t = document.createElement('div'); t.className='assess-item-text'; t.textContent = text;
+    const starWrap = document.createElement('div'); starWrap.className='stars';
+    for (let s=1; s<=5; s++){
+      const b = document.createElement('button');
+      b.className='star-btn' + ((stars[i]||0)>=s ? ' filled':'');
+      b.textContent='★';
+      b.addEventListener('click', ()=>{
+        stars[i] = (stars[i]===s) ? s-1 : s;
+        starWrap.querySelectorAll('.star-btn').forEach((sb,idx)=> sb.classList.toggle('filled', idx < stars[i]));
+        save();
+      });
+      starWrap.appendChild(b);
+    }
+    row.appendChild(t); row.appendChild(starWrap);
+    list.appendChild(row);
+  });
+  updateProgress();
+})();
 </script>
 </body>
 </html>

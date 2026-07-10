@@ -150,6 +150,82 @@
     </div>
   </section>
 
+  <!-- ============ EXPLORE COM AS MÃOS ============ -->
+  <section class="section-card">
+    <span class="tag azul">EXPLORE COM AS MÃOS</span>
+    <h2>🖐️ Vire o gêmeo do modelo</h2>
+    <p class="lead">Arraste os vértices do seu triângulo (à direita) até os três lados ficarem parecidos com os do triângulo-modelo (à esquerda).</p>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:0; margin:18px 0 8px; border-top:1px dashed #E4DEFB;">
+      <div style="padding:16px 14px; text-align:center; border-right:1px dashed #E4DEFB;">
+        <div style="font-weight:800; color:#5B2EE0; margin-bottom:4px; font-size:0.9rem;">Modelo</div>
+        <svg id="svgModeloT6" viewBox="0 0 320 280" width="100%" height="220"></svg>
+      </div>
+      <div style="padding:16px 14px; text-align:center;">
+        <div style="font-weight:800; color:#5B2EE0; margin-bottom:4px; font-size:0.9rem;">Seu triângulo</div>
+        <svg id="svgCopiaT6" viewBox="0 0 320 280" width="100%" height="220"></svg>
+      </div>
+    </div>
+
+    <div class="applet-readout">
+      <div class="ro-cell"><span class="k">Lado a</span><span class="v" id="et6-a">–</span></div>
+      <div class="ro-cell"><span class="k">Lado b</span><span class="v" id="et6-b">–</span></div>
+      <div class="ro-cell"><span class="k">Lado c</span><span class="v" id="et6-c">–</span></div>
+    </div>
+    <div class="badges" id="et6-badges"></div>
+
+    <h3 style="color:#5B2EE0; margin-top:26px;">Missão — Qual caso garante isso?</h3>
+    <p class="lead" style="font-size:0.9rem;">Se os 3 lados do seu triângulo ficaram iguais aos do modelo, qual caso de congruência garante que eles são congruentes?</p>
+    <div class="jogo-botoes" id="et6-opcoes" style="justify-content:flex-start;"></div>
+    <p class="nt-result" id="et6-resposta"></p>
+
+    <div class="tasks" id="taskListT6" style="margin-top:18px;">
+      <div class="task" data-task="congruente">
+        <div class="task-check">✓</div>
+        <div class="task-text"><strong>Missão 1 — Vire o gêmeo</strong><span>Deixe os 3 lados do seu triângulo aproximadamente iguais aos do modelo.</span></div>
+      </div>
+      <div class="task" data-task="caso">
+        <div class="task-check">✓</div>
+        <div class="task-text"><strong>Missão 2 — Identifique o caso</strong><span>Responda corretamente qual caso de congruência se aplica.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DESAFIO FINAL ============ -->
+  <section class="section-card">
+    <span class="tag rosa">DESAFIO FINAL</span>
+    <h2>🖨️ Carimbos e moldes da sua cultura</h2>
+    <p class="lead">Carimbos, moldes, fôrmas e gabaritos existem para reproduzir a mesma forma várias vezes, com precisão — é a congruência em ação no dia a dia.</p>
+    <div class="challenge-card">
+      <h3>Pense em um carimbo, molde ou gabarito do seu contexto</h3>
+      <div class="insp-grid">
+        <div class="insp"><b>Pintura corporal e cerâmica</b>Carimbos indígenas que repetem o mesmo grafismo.</div>
+        <div class="insp"><b>Costura e artesanato</b>Moldes de roupa ou gabaritos de corte.</div>
+        <div class="insp"><b>Culinária</b>Fôrmas de biscoito ou moldes de doces.</div>
+        <div class="insp"><b>Construção</b>Gabaritos usados por marceneiros e pedreiros para repetir peças.</div>
+      </div>
+      <p>Descreva o objeto e explique: por que usar um molde garante peças congruentes, em vez de desenhar cada uma "de olho"?</p>
+      <textarea class="reflect" id="reflectTextT6" placeholder="Escreva aqui sua investigação..."></textarea>
+      <div class="challenge-actions">
+        <button class="btn laranja" id="reflectSaveT6">Salvar minha investigação</button>
+        <span class="save-note" id="reflectStatusT6">salvo automaticamente neste navegador</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AUTOAVALIAÇÃO ============ -->
+  <section class="section-card">
+    <span class="tag verde">AUTOAVALIAÇÃO</span>
+    <h2>✅ Antes de seguir em frente</h2>
+    <p class="lead">Marque com sinceridade. Isto não vale nota — é um mapa para você (e seu professor) saberem onde reforçar.</p>
+    <div class="assess-progress">
+      <div class="assess-bar"><div class="assess-bar-fill" id="assessBarFillT6"></div></div>
+      <div class="assess-pct" id="assessPctT6">0%</div>
+    </div>
+    <div id="assessListT6"></div>
+    <p class="assess-footer" id="assessFooterT6">Seu progresso é salvo automaticamente neste navegador.</p>
+  </section>
+
   <!-- ============ JOGO ============ -->
   <section class="section-card">
     <span class="tag rosa">JOGO FINAL</span>
@@ -337,6 +413,169 @@ function finalizarJogo(){
 }
 
 carregarRodada();
+
+/* ============================================================
+Explore com as mãos — Trilha 6 (vire o gêmeo do modelo)
+============================================================ */
+(function gemeoT6(){
+  const SVGNS = "http://www.w3.org/2000/svg";
+  function el(tag, attrs){ const e = document.createElementNS(SVGNS, tag); for(const k in attrs) e.setAttribute(k, attrs[k]); return e; }
+  function dist(p,q){ return Math.hypot(p.x-q.x, p.y-q.y); }
+  const scale = 0.045;
+
+  const modeloVerts = [{x:80,y:230},{x:260,y:230},{x:170,y:90}];
+  const svgModelo = document.getElementById('svgModeloT6');
+  function desenharModelo(){
+    svgModelo.innerHTML=''; svgModelo.setAttribute('viewBox','0 0 320 280');
+    svgModelo.appendChild(el('polygon',{points:modeloVerts.map(p=>p.x+','+p.y).join(' '), fill:'rgba(6,214,160,0.12)', stroke:'#039073','stroke-width':3}));
+    const [P1,P2,P3] = modeloVerts;
+    const labels = [ {mid:mid2(P2,P3), val:dist(P2,P3)*scale}, {mid:mid2(P1,P3), val:dist(P1,P3)*scale}, {mid:mid2(P1,P2), val:dist(P1,P2)*scale} ];
+    labels.forEach(L=>{
+      const t=el('text',{x:L.mid.x,y:L.mid.y,'font-size':13,fill:'#039073','text-anchor':'middle','font-weight':'700'});
+      t.textContent = L.val.toFixed(1); svgModelo.appendChild(t);
+    });
+  }
+  function mid2(p,q){ return {x:(p.x+q.x)/2, y:(p.y+q.y)/2}; }
+  desenharModelo();
+  const modeloLados = [dist(modeloVerts[1],modeloVerts[2])*scale, dist(modeloVerts[0],modeloVerts[2])*scale, dist(modeloVerts[0],modeloVerts[1])*scale].sort((x,y)=>x-y);
+
+  const taskState = { congruente:false, caso:false };
+  function updateTasksUI(){
+    document.querySelectorAll('#taskListT6 .task').forEach(t=>{
+      const key = t.getAttribute('data-task');
+      t.classList.toggle('done', !!taskState[key]);
+    });
+  }
+
+  const svgCopia = document.getElementById('svgCopiaT6');
+  let verts = [{x:80,y:210},{x:230,y:220},{x:150,y:70}];
+
+  function draw(){
+    svgCopia.innerHTML=''; svgCopia.setAttribute('viewBox','0 0 320 280');
+    svgCopia.appendChild(el('polygon',{points:verts.map(p=>p.x+','+p.y).join(' '), fill:'rgba(124,77,255,0.12)', stroke:'#5B2EE0','stroke-width':3}));
+    verts.forEach((p,i)=>{
+      const c=el('circle',{cx:p.x,cy:p.y,r:9,fill:'#FF8A3D',stroke:'#2E2452','stroke-width':2,class:'handle'});
+      c.addEventListener('pointerdown',(ev)=>startDrag(ev,i));
+      svgCopia.appendChild(c);
+    });
+
+    const a = dist(verts[1],verts[2])*scale, b = dist(verts[0],verts[2])*scale, c = dist(verts[0],verts[1])*scale;
+    document.getElementById('et6-a').textContent = a.toFixed(1)+' cm';
+    document.getElementById('et6-b').textContent = b.toFixed(1)+' cm';
+    document.getElementById('et6-c').textContent = c.toFixed(1)+' cm';
+
+    const ladosCopia = [a,b,c].sort((x,y)=>x-y);
+    const tol = 0.35;
+    const congruente = Math.abs(ladosCopia[0]-modeloLados[0])<tol && Math.abs(ladosCopia[1]-modeloLados[1])<tol && Math.abs(ladosCopia[2]-modeloLados[2])<tol;
+
+    const badges = document.getElementById('et6-badges');
+    badges.innerHTML = '';
+    const b1 = document.createElement('span');
+    b1.className = 'badge on' + (congruente ? '' : ' aviso');
+    b1.textContent = congruente ? 'Congruente ✅' : 'Ainda não é congruente';
+    badges.appendChild(b1);
+
+    if(congruente) taskState.congruente = true;
+    updateTasksUI();
+  }
+
+  function startDrag(ev, idx){
+    ev.preventDefault();
+    function move(e){
+      const rect = svgCopia.getBoundingClientRect();
+      const scaleX = 320/rect.width, scaleY = 280/rect.height;
+      let mx=(e.clientX-rect.left)*scaleX, my=(e.clientY-rect.top)*scaleY;
+      mx=Math.max(14,Math.min(306,mx)); my=Math.max(14,Math.min(266,my));
+      const trial = verts.slice(); trial[idx]={x:mx,y:my};
+      const areaX2 = Math.abs((trial[1].x-trial[0].x)*(trial[2].y-trial[0].y)-(trial[2].x-trial[0].x)*(trial[1].y-trial[0].y));
+      if(areaX2>400){ verts=trial; draw(); }
+    }
+    function up(){ window.removeEventListener('pointermove',move); window.removeEventListener('pointerup',up); }
+    window.addEventListener('pointermove',move); window.addEventListener('pointerup',up);
+  }
+  draw();
+
+  const opcoes = ['LAL','ALA','LLL','LAAo'];
+  const opcoesDiv = document.getElementById('et6-opcoes');
+  const respostaEl = document.getElementById('et6-resposta');
+  opcoes.forEach(op=>{
+    const btn = document.createElement('button');
+    btn.textContent = op;
+    btn.addEventListener('click', ()=>{
+      if(op === 'LLL'){
+        btn.style.background='#06D6A0'; btn.style.color='#fff'; btn.style.borderColor='#06D6A0';
+        respostaEl.textContent = '✓ Isso! Com os 3 lados iguais, o caso LLL garante a congruência.';
+        respostaEl.className = 'nt-result ok';
+        taskState.caso = true;
+        updateTasksUI();
+      }else{
+        btn.style.background='#FF6B9D'; btn.style.color='#fff'; btn.style.borderColor='#FF6B9D';
+        respostaEl.textContent = '✗ Pense de novo: você igualou os 3 LADOS, não os ângulos.';
+        respostaEl.className = 'nt-result bad';
+      }
+    });
+    opcoesDiv.appendChild(btn);
+  });
+})();
+
+/* ---------- Desafio final — persistência local ---------- */
+(function reflectionT6(){
+  const ta = document.getElementById('reflectTextT6');
+  const status = document.getElementById('reflectStatusT6');
+  const KEY = 'trilha6-reflexao';
+  try{ const saved = localStorage.getItem(KEY); if(saved) ta.value = saved; }catch(e){}
+  document.getElementById('reflectSaveT6').addEventListener('click', ()=>{
+    try{ localStorage.setItem(KEY, ta.value); status.textContent='salvo ✓'; setTimeout(()=>status.textContent='salvo automaticamente neste navegador',1800); }
+    catch(e){ status.textContent='não foi possível salvar neste navegador'; }
+  });
+})();
+
+/* ---------- Autoavaliação ---------- */
+(function assessmentT6(){
+  const ITEMS = [
+    'Eu sei o que significa dois triângulos serem congruentes.',
+    'Eu sei os quatro casos de congruência (LAL, ALA, LLL, LAAo).',
+    'Eu sei identificar qual caso se aplica observando as marcas de um triângulo.',
+    'Eu entendo por que basta comparar 3 elementos, e não os 6.',
+    'Eu já pensei em um carimbo, molde ou gabarito do meu contexto.'
+  ];
+  const KEY = 'trilha6-autoavaliacao';
+  let stars = {};
+  try { stars = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch(e){ stars = {}; }
+  const list = document.getElementById('assessListT6');
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(stars)); }catch(e){} updateProgress(); }
+  function updateProgress(){
+    const total = ITEMS.length*5;
+    let sum=0;
+    ITEMS.forEach((_,i)=> sum += (stars[i]||0));
+    const pct = Math.round((sum/total)*100);
+    document.getElementById('assessBarFillT6').style.width = pct+'%';
+    document.getElementById('assessPctT6').textContent = pct+'%';
+    document.getElementById('assessFooterT6').textContent = pct===100
+      ? 'Domínio completo declarado — hora de seguir para a próxima trilha!'
+      : 'Seu progresso é salvo automaticamente neste navegador.';
+  }
+  ITEMS.forEach((text,i)=>{
+    const row = document.createElement('div');
+    row.className='assess-item';
+    const t = document.createElement('div'); t.className='assess-item-text'; t.textContent = text;
+    const starWrap = document.createElement('div'); starWrap.className='stars';
+    for (let s=1; s<=5; s++){
+      const b = document.createElement('button');
+      b.className='star-btn' + ((stars[i]||0)>=s ? ' filled':'');
+      b.textContent='★';
+      b.addEventListener('click', ()=>{
+        stars[i] = (stars[i]===s) ? s-1 : s;
+        starWrap.querySelectorAll('.star-btn').forEach((sb,idx)=> sb.classList.toggle('filled', idx < stars[i]));
+        save();
+      });
+      starWrap.appendChild(b);
+    }
+    row.appendChild(t); row.appendChild(starWrap);
+    list.appendChild(row);
+  });
+  updateProgress();
+})();
 </script>
 </body>
 </html>
