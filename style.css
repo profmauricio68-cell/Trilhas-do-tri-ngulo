@@ -223,3 +223,92 @@ a{ color: inherit; text-decoration: none; }
 @media (max-width: 600px){
   .main-nav{ display:none; }
 }
+
+/* ===== Adições — exercícios extras da Trilha 1 ===== */
+.tag.azul{ background: var(--azul); }
+
+/* ---------- Applet interativo (arraste) ---------- */
+.applet-card{
+  background: var(--creme); border-radius: 18px; padding: 20px 20px 24px; border: 2px solid #FFE7C2;
+  margin-top: 18px;
+}
+.applet-readout{
+  display:grid; grid-template-columns: repeat(3,1fr); gap:1px; background:#FFE7C2;
+  border:1px solid #FFE7C2; margin-top:14px; border-radius: 10px; overflow:hidden;
+}
+.ro-cell{ background:#fff; padding:9px 8px; text-align:center; }
+.ro-cell .k{ display:block; color:#8880ab; font-size:0.7rem; text-transform:uppercase; letter-spacing:.04em; margin-bottom:3px; font-weight:700; }
+.ro-cell .v{ font-weight:800; font-size:0.95rem; color: var(--roxo-escuro); }
+.badges{ display:flex; gap:8px; margin-top:12px; flex-wrap:wrap; }
+.badge{
+  font-size:0.85rem; font-weight:800; padding:6px 14px; border-radius:999px;
+  border:2px solid var(--roxo); color: var(--roxo-escuro); background:#fff;
+}
+.badge.on{ background: var(--roxo); border-color: var(--roxo); color:#fff; }
+.badge.on.aviso{ background: var(--rosa); border-color: var(--rosa); }
+.hint{ font-size:0.85rem; color:#8880ab; margin-top:10px; }
+.handle{ cursor:grab; }
+.handle:active{ cursor:grabbing; }
+
+/* ---------- Missões / atividade ---------- */
+.tasks{ display:flex; flex-direction:column; gap:10px; margin-top:18px; }
+.task{
+  display:flex; align-items:flex-start; gap:12px; padding:13px 16px; border:2px solid #FFE7C2;
+  background:#fff; border-radius:14px; transition: background .2s ease, border-color .2s ease;
+}
+.task.done{ background:#E3FBF3; border-color: var(--verde); }
+.task-check{
+  width:22px; height:22px; border:2px solid var(--roxo); border-radius:50%; flex:none; margin-top:2px;
+  display:flex; align-items:center; justify-content:center; font-size:13px; color:transparent; font-weight:800;
+}
+.task.done .task-check{ background: var(--verde); border-color: var(--verde); color:#fff; }
+.task-text strong{ display:block; font-size:0.95rem; color: var(--roxo-escuro); }
+.task-text span{ font-size:0.85rem; }
+
+.numeric-tester{
+  margin-top:22px; padding:18px; border:2px dashed var(--roxo); border-radius:16px;
+}
+.nt-row{ display:flex; gap:10px; flex-wrap:wrap; align-items:flex-end; margin-top:10px; }
+.nt-field label{ display:block; font-weight:700; font-size:0.75rem; text-transform:uppercase; color:#8880ab; margin-bottom:4px; }
+.nt-field input{
+  width:76px; font-size:1rem; padding:8px; border:2px solid var(--roxo); border-radius:10px; font-family:'Nunito',sans-serif;
+}
+.nt-result{ margin-top:14px; font-weight:700; min-height:20px; }
+.nt-result.ok{ color: #039073; }
+.nt-result.bad{ color: var(--rosa); }
+
+/* ---------- Desafio final ---------- */
+.challenge-card{
+  background: var(--texto); color: var(--creme); padding: 28px clamp(18px,4vw,34px); border-radius: var(--radius);
+}
+.challenge-card h3{ color:#fff; margin-top:0; }
+.insp-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap:12px; margin: 20px 0; }
+.insp{ background: rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.18); border-radius:12px; padding:14px; font-size:0.9rem; }
+.insp b{ display:block; color: var(--amarelo); margin-bottom:5px; }
+.quote{
+  font-style: italic; border-left:3px solid var(--amarelo); padding-left:16px; margin:18px 0; color:#EDE7FF;
+}
+.quote cite{ display:block; font-size:0.75rem; font-style:normal; opacity:.75; margin-top:6px; }
+textarea.reflect{
+  width:100%; min-height:120px; background: rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.3);
+  border-radius:12px; color:#fff; padding:14px; font-family:'Nunito',sans-serif; font-size:1rem; resize:vertical; margin-top:8px;
+}
+textarea.reflect::placeholder{ color: rgba(255,255,255,0.45); }
+.challenge-actions{ display:flex; gap:10px; align-items:center; margin-top:12px; flex-wrap:wrap; }
+.save-note{ font-size:0.8rem; opacity:.75; }
+
+/* ---------- Autoavaliação ---------- */
+.assess-progress{ display:flex; align-items:center; gap:14px; margin-bottom:20px; }
+.assess-bar{ flex:1; height:10px; background:#F1ECFF; border-radius:6px; overflow:hidden; }
+.assess-bar-fill{ height:100%; width:0%; background: linear-gradient(90deg, var(--verde), var(--amarelo)); transition: width .3s ease; }
+.assess-pct{ font-weight:800; min-width:46px; text-align:right; color: var(--roxo-escuro); }
+.assess-item{
+  display:flex; justify-content:space-between; align-items:center; gap:14px; padding:12px 4px;
+  border-bottom:2px solid #F1ECFF; flex-wrap:wrap;
+}
+.assess-item:last-of-type{ border-bottom:none; }
+.assess-item-text{ font-size:0.92rem; max-width:60ch; }
+.stars{ display:flex; gap:3px; }
+.star-btn{ background:none; border:none; font-size:1.3rem; cursor:pointer; color:#E4DEFB; padding:2px; transition: color .1s ease; }
+.star-btn.filled{ color: var(--amarelo); }
+.assess-footer{ margin-top:16px; font-size:0.85rem; color:#8880ab; }

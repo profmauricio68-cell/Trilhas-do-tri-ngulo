@@ -125,6 +125,65 @@
     <div class="balaozinho">💡 Repare: todo triângulo tem uma classificação quanto aos lados <em>e</em> uma quanto aos ângulos, ao mesmo tempo! Por exemplo, um triângulo pode ser isósceles e retângulo ao mesmo tempo.</div>
   </section>
 
+  <!-- ============ EXPLORE COM AS MÃOS ============ -->
+  <section class="section-card">
+    <span class="tag azul">EXPLORE COM AS MÃOS</span>
+    <h2>🖐️ Arraste e descubra</h2>
+    <p class="lead">Arraste os vértices do triângulo abaixo e observe: os lados e os ângulos mudam, mas a soma dos ângulos internos nunca sai de <strong>180°</strong>.</p>
+
+    <div class="applet-card">
+      <svg id="svgExploreT1" viewBox="0 0 320 280" width="100%" height="280"></svg>
+      <div class="applet-readout">
+        <div class="ro-cell"><span class="k">Lado a</span><span class="v" id="et1-a">–</span></div>
+        <div class="ro-cell"><span class="k">Lado b</span><span class="v" id="et1-b">–</span></div>
+        <div class="ro-cell"><span class="k">Lado c</span><span class="v" id="et1-c">–</span></div>
+        <div class="ro-cell"><span class="k">Ângulo A</span><span class="v" id="et1-A">–</span></div>
+        <div class="ro-cell"><span class="k">Ângulo B</span><span class="v" id="et1-B">–</span></div>
+        <div class="ro-cell"><span class="k">Ângulo C</span><span class="v" id="et1-C">–</span></div>
+      </div>
+      <p class="hint">Soma dos ângulos: <strong id="et1-sum">–</strong></p>
+      <div class="badges" id="et1-badges"></div>
+    </div>
+
+    <h3 style="color:#5B2EE0; margin-top:26px;">Missões</h3>
+    <p class="lead" style="font-size:0.95rem;">Continue arrastando o triângulo abaixo até completar cada missão.</p>
+    <div class="applet-card">
+      <svg id="svgMissoesT1" viewBox="0 0 320 280" width="100%" height="280"></svg>
+      <div class="applet-readout">
+        <div class="ro-cell"><span class="k">Lado a</span><span class="v" id="mt1-a">–</span></div>
+        <div class="ro-cell"><span class="k">Lado b</span><span class="v" id="mt1-b">–</span></div>
+        <div class="ro-cell"><span class="k">Lado c</span><span class="v" id="mt1-c">–</span></div>
+      </div>
+      <div class="badges" id="mt1-badges"></div>
+    </div>
+    <div class="tasks" id="taskListT1">
+      <div class="task" data-task="equilatero">
+        <div class="task-check">✓</div>
+        <div class="task-text"><strong>Missão 1 — Equilátero</strong><span>Forme um triângulo com os três lados aproximadamente iguais.</span></div>
+      </div>
+      <div class="task" data-task="retangulo">
+        <div class="task-check">✓</div>
+        <div class="task-text"><strong>Missão 2 — Retângulo</strong><span>Forme um triângulo com um ângulo de aproximadamente 90°.</span></div>
+      </div>
+      <div class="task" data-task="obtusangulo-escaleno">
+        <div class="task-check">✓</div>
+        <div class="task-text"><strong>Missão 3 — Obtusângulo escaleno</strong><span>Forme um triângulo com um ângulo maior que 90° e os três lados diferentes.</span></div>
+      </div>
+    </div>
+
+    <div class="numeric-tester">
+      <strong style="color:#5B2EE0; font-size:1.05rem;">Missão 4 — Teste numérico</strong>
+      <p class="lead" style="font-size:0.9rem; margin:6px 0 0;">Digite três medidas de lado. Vamos testar se dá para formar um triângulo de verdade.</p>
+      <div class="nt-row">
+        <div class="nt-field"><label>Lado a</label><input type="number" id="nt-a-t1" value="3" min="0.1" step="0.1"></div>
+        <div class="nt-field"><label>Lado b</label><input type="number" id="nt-b-t1" value="4" min="0.1" step="0.1"></div>
+        <div class="nt-field"><label>Lado c</label><input type="number" id="nt-c-t1" value="10" min="0.1" step="0.1"></div>
+        <button class="btn" id="nt-test-t1">Testar</button>
+      </div>
+      <p class="nt-result" id="nt-result-t1"></p>
+    </div>
+  </section>
+
   <!-- ============ PRATICANDO ============ -->
   <section class="section-card">
     <span class="tag verde">PRATICANDO</span>
@@ -188,6 +247,46 @@
         <a href="index.html" class="btn verde">Voltar ao mapa ⭐</a>
       </div>
     </div>
+  </section>
+
+  <!-- ============ DESAFIO FINAL ============ -->
+  <section class="section-card">
+    <span class="tag rosa">DESAFIO FINAL</span>
+    <h2>🌎 Triângulos que carregam cultura</h2>
+    <p class="lead">Cestos, telhados, redes de pesca, pipas, instrumentos musicais e técnicas de construção tradicionais carregam, há séculos, saberes matemáticos próprios.</p>
+
+    <div class="challenge-card">
+      <h3>Escolha um objeto triangular do seu contexto cultural e investigue por quê</h3>
+      <div class="insp-grid">
+        <div class="insp"><b>Tecelagem &amp; cestaria</b>Padrões triangulares em trançados indígenas e ribeirinhos.</div>
+        <div class="insp"><b>Arquitetura popular</b>Telhados e pontes de madeira com treliças triangulares artesanais.</div>
+        <div class="insp"><b>Pipas &amp; brinquedos</b>A armação triangular que mantém uma pipa rígida no vento.</div>
+        <div class="insp"><b>Instrumentos &amp; rituais</b>Formas triangulares em tambores, adornos e objetos cerimoniais.</div>
+      </div>
+      <p>Descreva o objeto, de onde ele vem, e proponha uma explicação: por que a forma triangular foi a escolha certa ali — em termos de força, equilíbrio ou significado cultural?</p>
+      <textarea class="reflect" id="reflectTextT1" placeholder="Escreva aqui sua investigação..."></textarea>
+      <div class="challenge-actions">
+        <button class="btn laranja" id="reflectSaveT1">Salvar minha investigação</button>
+        <span class="save-note" id="reflectStatusT1">salvo automaticamente neste navegador</span>
+      </div>
+      <div class="quote">Devidamente contextualizada, nenhuma forma cultural pode ser considerada superior a outra — inclusive quando o assunto é matemática.
+        <cite>— ideia discutida por Ubiratan D'Ambrosio em Etnomatemática: elo entre as tradições e a modernidade</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AUTOAVALIAÇÃO ============ -->
+  <section class="section-card">
+    <span class="tag verde">AUTOAVALIAÇÃO</span>
+    <h2>✅ Antes de seguir em frente</h2>
+    <p class="lead">Marque com sinceridade. Isto não vale nota — é um mapa para você (e seu professor) saberem onde reforçar.</p>
+
+    <div class="assess-progress">
+      <div class="assess-bar"><div class="assess-bar-fill" id="assessBarFillT1"></div></div>
+      <div class="assess-pct" id="assessPctT1">0%</div>
+    </div>
+    <div id="assessListT1"></div>
+    <p class="assess-footer" id="assessFooterT1">Seu progresso é salvo automaticamente neste navegador.</p>
   </section>
 
   <div class="center" style="margin-bottom:40px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
@@ -307,6 +406,244 @@ function finalizarJogo(){
 }
 
 carregarRodada();
+
+/* ============================================================
+Explore com as mãos — applet interativo de triângulo (Trilha 1)
+============================================================ */
+function distT1(p,q){ return Math.hypot(p.x-q.x, p.y-q.y); }
+function angleAtT1(p, q1, q2){
+  const v1 = {x:q1.x-p.x, y:q1.y-p.y};
+  const v2 = {x:q2.x-p.x, y:q2.y-p.y};
+  const dot = v1.x*v2.x + v1.y*v2.y;
+  const m1 = Math.hypot(v1.x,v1.y), m2 = Math.hypot(v2.x,v2.y);
+  let cos = dot/(m1*m2);
+  cos = Math.max(-1, Math.min(1, cos));
+  return Math.acos(cos) * 180/Math.PI;
+}
+const SVGNS_T1 = "http://www.w3.org/2000/svg";
+function elT1(tag, attrs){
+  const e = document.createElementNS(SVGNS_T1, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]);
+  return e;
+}
+
+function makeTriangleAppletT1(svgId, opts){
+  opts = opts || {};
+  const svg = document.getElementById(svgId);
+  const W = 320, H = 280;
+  let verts = opts.initial || [
+    {x:70, y:210}, {x:250, y:210}, {x:150, y:70}
+  ];
+  const scale = opts.scale || 0.045;
+  let onChange = opts.onChange || function(){};
+
+  function classify(){
+    const [P1,P2,P3] = verts;
+    const a = distT1(P2,P3), b = distT1(P1,P3), c = distT1(P1,P2);
+    const A = angleAtT1(P1,P2,P3), B = angleAtT1(P2,P1,P3), C = angleAtT1(P3,P1,P2);
+    const sides = [a,b,c].map(s=>s*scale);
+    const tol = 0.35;
+    const sMax = Math.max(...sides), sMin = Math.min(...sides);
+    let sideClass;
+    if (sMax - sMin < tol*sMax*0.6) sideClass = 'equilatero';
+    else if (Math.abs(sides[0]-sides[1])<tol || Math.abs(sides[1]-sides[2])<tol || Math.abs(sides[0]-sides[2])<tol) sideClass = 'isosceles';
+    else sideClass = 'escaleno';
+    const angs = [A,B,C];
+    const maxAng = Math.max(...angs);
+    let angClass;
+    if (Math.abs(maxAng-90) < 4) angClass = 'retangulo';
+    else if (maxAng > 90) angClass = 'obtusangulo';
+    else angClass = 'acutangulo';
+    return {a: sides[0], b: sides[1], c: sides[2], A, B, C, sum:A+B+C, sideClass, angClass};
+  }
+
+  function draw(){
+    svg.innerHTML = '';
+    svg.setAttribute('viewBox','0 0 '+W+' '+H);
+    const poly = elT1('polygon',{points:verts.map(p=>p.x+','+p.y).join(' '),
+      fill:'rgba(124,77,255,0.12)', stroke:'#5B2EE0', 'stroke-width':3});
+    svg.appendChild(poly);
+
+    const labels = [
+      {p:verts[0], o1:verts[1], o2:verts[2]}, {p:verts[1], o1:verts[0], o2:verts[2]}, {p:verts[2], o1:verts[0], o2:verts[1]}
+    ];
+    labels.forEach(L=>{
+      const ang = angleAtT1(L.p, L.o1, L.o2);
+      const bis = Math.atan2(L.o1.y-L.p.y, L.o1.x-L.p.x) + (Math.atan2(L.o2.y-L.p.y,L.o2.x-L.p.x) - Math.atan2(L.o1.y-L.p.y,L.o1.x-L.p.x))/2;
+      const lx = L.p.x + 26*Math.cos(bis);
+      const ly = L.p.y + 26*Math.sin(bis);
+      const t = elT1('text',{x:lx, y:ly, 'font-size':12, fill:'#5B2EE0', 'text-anchor':'middle', 'font-weight':'700'});
+      t.textContent = Math.round(ang)+'°';
+      svg.appendChild(t);
+    });
+
+    verts.forEach((p, i)=>{
+      const c = elT1('circle',{cx:p.x, cy:p.y, r:9, fill:'#FF8A3D', stroke:'#2E2452','stroke-width':2, class:'handle'});
+      c.addEventListener('pointerdown', (ev)=> startDrag(ev, i));
+      svg.appendChild(c);
+    });
+
+    onChange(classify());
+  }
+
+  function startDrag(ev, idx){
+    ev.preventDefault();
+    function move(e){
+      const rect = svg.getBoundingClientRect();
+      const scaleX = W/rect.width, scaleY = H/rect.height;
+      let mx = (e.clientX-rect.left)*scaleX, my = (e.clientY-rect.top)*scaleY;
+      mx = Math.max(14, Math.min(W-14, mx));
+      my = Math.max(14, Math.min(H-14, my));
+      const trial = verts.slice();
+      trial[idx] = {x:mx, y:my};
+      const areaX2 = Math.abs((trial[1].x-trial[0].x)*(trial[2].y-trial[0].y) - (trial[2].x-trial[0].x)*(trial[1].y-trial[0].y));
+      if (areaX2 > 400) { verts = trial; draw(); }
+    }
+    function up(){ window.removeEventListener('pointermove', move); window.removeEventListener('pointerup', up); }
+    window.addEventListener('pointermove', move);
+    window.addEventListener('pointerup', up);
+  }
+
+  draw();
+  return { getState: classify, redraw: draw };
+}
+
+const sideLabelT1 = {equilatero:'Equilátero', isosceles:'Isósceles', escaleno:'Escaleno'};
+const angLabelT1 = {acutangulo:'Acutângulo', retangulo:'Retângulo', obtusangulo:'Obtusângulo'};
+
+function renderBadgesT1(container, state){
+  container.innerHTML = '';
+  const b1 = document.createElement('span'); b1.className='badge on'; b1.textContent = sideLabelT1[state.sideClass];
+  const b2 = document.createElement('span'); b2.className='badge on' + (state.angClass==='obtusangulo' ? ' aviso':''); b2.textContent = angLabelT1[state.angClass];
+  container.appendChild(b1); container.appendChild(b2);
+}
+
+makeTriangleAppletT1('svgExploreT1', {
+  onChange: (state)=>{
+    document.getElementById('et1-a').textContent = state.a.toFixed(1)+' cm';
+    document.getElementById('et1-b').textContent = state.b.toFixed(1)+' cm';
+    document.getElementById('et1-c').textContent = state.c.toFixed(1)+' cm';
+    document.getElementById('et1-A').textContent = Math.round(state.A)+'°';
+    document.getElementById('et1-B').textContent = Math.round(state.B)+'°';
+    document.getElementById('et1-C').textContent = Math.round(state.C)+'°';
+    document.getElementById('et1-sum').textContent = Math.round(state.sum)+'°';
+    renderBadgesT1(document.getElementById('et1-badges'), state);
+  }
+});
+
+const taskStateT1 = {equilatero:false, retangulo:false, 'obtusangulo-escaleno':false};
+function updateTaskUIT1(){
+  document.querySelectorAll('#taskListT1 .task').forEach(t=>{
+    const key = t.getAttribute('data-task');
+    t.classList.toggle('done', !!taskStateT1[key]);
+  });
+}
+
+makeTriangleAppletT1('svgMissoesT1', {
+  initial: [{x:70,y:220},{x:230,y:220},{x:150,y:90}],
+  onChange: (state)=>{
+    document.getElementById('mt1-a').textContent = state.a.toFixed(1)+' cm';
+    document.getElementById('mt1-b').textContent = state.b.toFixed(1)+' cm';
+    document.getElementById('mt1-c').textContent = state.c.toFixed(1)+' cm';
+    renderBadgesT1(document.getElementById('mt1-badges'), state);
+
+    if (state.sideClass === 'equilatero') taskStateT1.equilatero = true;
+    if (state.angClass === 'retangulo') taskStateT1.retangulo = true;
+    if (state.angClass === 'obtusangulo' && state.sideClass === 'escaleno') taskStateT1['obtusangulo-escaleno'] = true;
+    updateTaskUIT1();
+  }
+});
+updateTaskUIT1();
+
+document.getElementById('nt-test-t1').addEventListener('click', ()=>{
+  const a = parseFloat(document.getElementById('nt-a-t1').value);
+  const b = parseFloat(document.getElementById('nt-b-t1').value);
+  const c = parseFloat(document.getElementById('nt-c-t1').value);
+  const result = document.getElementById('nt-result-t1');
+  if (!(a>0 && b>0 && c>0)) { result.textContent = 'Preencha os três lados com valores positivos.'; result.className='nt-result bad'; return; }
+  const sides = [a,b,c].sort((x,y)=>x-y);
+  if (sides[0]+sides[1] > sides[2]) {
+    result.textContent = '✓ Forma um triângulo válido! ' + a + ' + ' + b + ' e ' + c + ' respeitam a condição de existência.';
+    result.className = 'nt-result ok';
+  } else {
+    const [s1,s2,s3] = sides;
+    result.textContent = '✗ Impossível: os dois menores lados (' + s1 + ' + ' + s2 + ' = ' + (s1+s2).toFixed(1) + ') não superam o maior lado (' + s3 + '). As pontas nunca se encontrariam.';
+    result.className = 'nt-result bad';
+  }
+});
+
+/* ---------- Desafio final — persistência local ---------- */
+(function reflectionT1(){
+  const ta = document.getElementById('reflectTextT1');
+  const status = document.getElementById('reflectStatusT1');
+  const KEY = 'trilha1-reflexao';
+  try {
+    const saved = localStorage.getItem(KEY);
+    if (saved) ta.value = saved;
+  } catch(e){}
+  document.getElementById('reflectSaveT1').addEventListener('click', ()=>{
+    try {
+      localStorage.setItem(KEY, ta.value);
+      status.textContent = 'salvo ✓';
+      setTimeout(()=> status.textContent='salvo automaticamente neste navegador', 1800);
+    } catch(e){
+      status.textContent = 'não foi possível salvar neste navegador';
+    }
+  });
+})();
+
+/* ---------- Autoavaliação ---------- */
+(function assessmentT1(){
+  const ITEMS = [
+    'Eu sei explicar o que é um vértice, um lado e um ângulo interno de um triângulo.',
+    'Eu sei explicar por que a soma dos ângulos internos é sempre 180°.',
+    'Eu sei verificar se três medidas de lado conseguem formar um triângulo.',
+    'Eu consigo classificar um triângulo pelos lados (equilátero, isósceles, escaleno).',
+    'Eu consigo classificar um triângulo pelos ângulos (acutângulo, retângulo, obtusângulo).',
+    'Eu consigo explicar, com minhas palavras, por que o triângulo é uma forma rígida.',
+    'Eu já pensei em pelo menos um objeto ou tradição cultural que usa a forma triangular.'
+  ];
+  const KEY = 'trilha1-autoavaliacao';
+  let stars = {};
+  try { stars = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch(e){ stars = {}; }
+
+  const list = document.getElementById('assessListT1');
+
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(stars)); }catch(e){} updateProgress(); }
+
+  function updateProgress(){
+    const total = ITEMS.length*5;
+    let sum=0;
+    ITEMS.forEach((_,i)=> sum += (stars[i]||0));
+    const pct = Math.round((sum/total)*100);
+    document.getElementById('assessBarFillT1').style.width = pct+'%';
+    document.getElementById('assessPctT1').textContent = pct+'%';
+    document.getElementById('assessFooterT1').textContent = pct===100
+      ? 'Domínio completo declarado — hora de seguir para a próxima trilha!'
+      : 'Seu progresso é salvo automaticamente neste navegador.';
+  }
+
+  ITEMS.forEach((text,i)=>{
+    const row = document.createElement('div');
+    row.className='assess-item';
+    const t = document.createElement('div'); t.className='assess-item-text'; t.textContent = text;
+    const starWrap = document.createElement('div'); starWrap.className='stars';
+    for (let s=1; s<=5; s++){
+      const b = document.createElement('button');
+      b.className='star-btn' + ((stars[i]||0)>=s ? ' filled':'');
+      b.textContent='★';
+      b.addEventListener('click', ()=>{
+        stars[i] = (stars[i]===s) ? s-1 : s;
+        starWrap.querySelectorAll('.star-btn').forEach((sb,idx)=> sb.classList.toggle('filled', idx < stars[i]));
+        save();
+      });
+      starWrap.appendChild(b);
+    }
+    row.appendChild(t); row.appendChild(starWrap);
+    list.appendChild(row);
+  });
+  updateProgress();
+})();
 </script>
 </body>
 </html>
