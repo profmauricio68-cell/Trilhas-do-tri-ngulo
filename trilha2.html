@@ -40,43 +40,52 @@
 
 <main class="container">
 
-  <!-- ============ CONTEXTUALIZAÇÃO ============ -->
+ <!-- ============ CONTEXTUALIZAÇÃO ============ -->
   <section class="section-card">
     <span class="tag laranja">TRILHA 2 · 7º ANO</span>
-    <h2>🥢 Existe ou não existe?</h2>
-
+    <h2>🛶 As varas de amarrar de Jurema</h2>
+    
     <div class="contexto-flex">
       <div class="texto">
-        <p class="lead">Comunidades ribeirinhas e povos indígenas do Brasil escolhem com muito cuidado o tamanho dos gravetos e varas quando amarram armadilhas de pesca, cabanas e estruturas de bambu: se as varas forem muito desiguais, a amarração não fecha e a estrutura não fica firme. É a mesma coisa quando brincamos de montar um triângulo com três canudinhos de tamanhos diferentes — às vezes ele fecha bonitinho, às vezes sobra ou falta canudo e ele não fecha de jeito nenhum!</p>
-        <div class="balaozinho">🤔 Será que três varetas de qualquer tamanho sempre formam um triângulo? Ou existe uma regra escondida aí?</div>
+        <p class="lead" style="text-align: justify;">Na aldeia do povo <strong>Ticuna</strong>, na exuberante região do Alto Solimões, a jovem <strong>Jurema</strong> está animada: hoje ela vai ajudar seu avô, o sábio cacique <strong>Araquém</strong>, a preparar as varas de madeira para construir uma nova estrutura para secar sementes de urucum. Os Ticuna são o maior povo indígena da Amazônia brasileira e dominam a arte de construir estruturas, suportes e utensílios firmes usando recursos da floresta.</p>
+        <p class="lead" style="text-align: justify;">Jurema recolhe três varas caídas no chão. Uma delas é bem comprida, e as outras duas são gravetos bem curtinhos. "Vovô, com essas três varas nós conseguimos amarrar as pontas e formar um suporte de três lados firme?", pergunta Jurema. O avô Araquém olha com carinho para a tentativa da neta e diz: "Tente juntar as pontas deles, Jurema. Veja se eles conseguem se encontrar."</p>
+        <p class="lead" style="text-align: justify;">Por mais que Jurema estique as varas, os dois gravetos curtos não alcançam as pontas um do outro se estiverem apoiados na vara maior! Ela descobre que, na natureza, para que três varas se unam e fiquem firmes, há um segredo de tamanho entre elas.</p>
+        <div class="balaozinho" style="text-align: justify;">🤔 Por que será que algumas combinações de varas conseguem se fechar em um triângulo e outras não? Vamos ajudar Jurema a desvendar essa regra matemática!</div>
       </div>
       <div class="imagem">
-        <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg">
-          <rect x="0" y="0" width="400" height="280" rx="24" fill="#E8F7EE"/>
-          <!-- rio -->
-          <path d="M0 220 Q100 200 200 220 T400 220 V280 H0 Z" fill="#4FC3F7" opacity="0.6"/>
-          <!-- cabana com varas triangulares -->
-          <line x1="90" y1="200" x2="150" y2="90" stroke="#8D5A2B" stroke-width="8" stroke-linecap="round"/>
-          <line x1="210" y1="200" x2="150" y2="90" stroke="#8D5A2B" stroke-width="8" stroke-linecap="round"/>
-          <line x1="90" y1="200" x2="210" y2="200" stroke="#8D5A2B" stroke-width="8" stroke-linecap="round"/>
-          <line x1="150" y1="90" x2="150" y2="200" stroke="#C9A06A" stroke-width="5" stroke-linecap="round" opacity="0.7"/>
-          <!-- canudinhos coloridos tentando fechar triangulo -->
-          <g transform="translate(260,150) rotate(-8)">
-            <rect x="0" y="0" width="70" height="10" rx="5" fill="#FF6B9D"/>
-          </g>
-          <g transform="translate(255,120) rotate(45)">
-            <rect x="0" y="0" width="55" height="10" rx="5" fill="#FFD166"/>
-          </g>
-          <g transform="translate(300,165) rotate(150)">
-            <rect x="0" y="0" width="40" height="10" rx="5" fill="#06D6A0"/>
-          </g>
-          <text x="270" y="220" font-family="Baloo 2, cursive" font-size="13" fill="#5B2EE0" font-weight="700">Fecha?</text>
-        </svg>
-        <p style="font-size:0.8rem; text-align:center; color:#5B2EE0; margin-top:6px;">Varas de amarração e canudinhos: nem todo trio de tamanhos fecha um triângulo firme.</p>
+        <figure style="margin:0;">
+          <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" style="width:100%; border-radius:20px; display:block; background: linear-gradient(180deg, #E8F5E9 0%, #C8E6C9 100%); box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+            <style>
+              @keyframes balancoLento {
+                0%, 100% { transform: rotate(0deg); }
+                50% { transform: rotate(10deg); }
+              }
+              .canoa { animation: balancoLento 4s ease-in-out infinite; transform-origin: 150px 220px; }
+            </style>
+            <!-- Rio Solimões ao fundo -->
+            <path d="M0,180 Q100,160 200,185 T400,170 L400,280 L0,280 Z" fill="#29B6F6" opacity="0.6"/>
+            <path d="M0,210 Q120,190 250,215 T400,200 L400,280 L0,280 Z" fill="#0288D1" opacity="0.8"/>
+            <!-- Canoa Ticuna balançando suavemente no rio -->
+            <g class="canoa">
+              <path d="M80,210 C120,210 180,225 220,210 C200,230 100,230 80,210 Z" fill="#5D4037" stroke="#3E2723" stroke-width="2"/>
+            </g>
+            <!-- As varas de Jurema sendo testadas no chão de areia -->
+            <g transform="translate(40, 20)">
+              <!-- Chão -->
+              <ellipse cx="160" cy="180" rx="140" ry="20" fill="#FFE082" opacity="0.9"/>
+              <!-- Varas de madeira -->
+              <line x1="50" y1="180" x2="270" y2="180" stroke="#8D6E63" stroke-width="10" stroke-linecap="round"/>
+              <line x1="60" y1="175" x2="110" y2="110" stroke="#A1887F" stroke-width="6" stroke-linecap="round"/>
+              <line x1="260" y1="175" x2="210" y2="120" stroke="#A1887F" stroke-width="6" stroke-linecap="round"/>
+              <!-- Pontos de interrogação lúdicos na fresta -->
+              <text x="160" y="100" font-family="'Baloo 2', sans-serif" font-size="28" font-weight="bold" fill="#E65100" text-anchor="middle">?</text>
+            </g>
+          </svg>
+          <figcaption style="text-align:center; font-size:0.85rem; color:var(--roxo-escuro); margin-top:10px; font-weight:800;">Os Gravetos Ticuna que não se alcançam</figcaption>
+        </figure>
       </div>
     </div>
   </section>
-
   <!-- ============ EXPLORANDO ============ -->
   <section class="section-card">
     <span class="tag roxo">EXPLORANDO</span>
@@ -264,7 +273,7 @@
     <div class="challenge-card">
       <h3>Pense em uma construção amarrada ou trançada do seu contexto</h3>
       <div class="insp-grid">
-        <div class="insp"><b>Redes e armadilhas</b>Varas ou cordas que precisam de medidas certas para fechar.</div>
+        <div class="insp"><b>Redes e armadilhas</b>Varas ou cordas que precisam de medidas certas para fechar (repare: a armadilha inteira é um cone ou uma pirâmide — um sólido —, mas cada face travada é um triângulo).</div>
         <div class="insp"><b>Cercas e currais</b>Estacas espaçadas de forma precisa para não deixar brechas.</div>
         <div class="insp"><b>Tendas e barracas</b>Hastes que só formam a estrutura certa em certas proporções.</div>
         <div class="insp"><b>Brinquedos e artesanato</b>Canudinhos, palitos ou varetas montados em formas fixas.</div>

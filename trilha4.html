@@ -61,45 +61,56 @@
 
 <main class="container">
 
-  <!-- ============ CONTEXTUALIZAÇÃO ============ -->
+ <!-- ============ CONTEXTUALIZAÇÃO ============ -->
   <section class="section-card">
     <span class="tag laranja">TRILHA 4 · 7º ANO</span>
-    <h2>🏗️ Triângulos não tremem!</h2>
-
+    <h2>🪵 Os esteios fortes de Yara</h2>
+    
     <div class="contexto-flex">
       <div class="texto">
-        <p class="lead">Repare da próxima vez que passar perto de uma torre de transmissão de energia, de um telhado com estrutura de madeira aparente ou de uma ponte: elas são cheias de triângulos, quase nunca de quadrados. Isso não é acaso. Construtores de todas as épocas — dos que erguem palafitas e ocas aos engenheiros modernos — descobriram o mesmo segredo: o triângulo é a única forma que não entorta quando é empurrada.</p>
-        <div class="balaozinho">🤔 Por que será que quase nenhuma estrutura de verdade é construída só com quadrados?</div>
+        <p class="lead" style="text-align: justify;">Na comunidade do povo <strong>Guarani Kaiowá</strong>, no Mato Grosso do Sul, a jovem <strong>Yara</strong> observa a movimentação dos adultos. Eles estão erguendo a estrutura de madeira da nova <em>Oga Pysy</em> (a casa de reza da comunidade), um local sagrado onde as crianças ouvem as belas histórias dos anciãos e todos se reúnem para agradecer pelas colheitas.</p>
+        <p class="lead" style="text-align: justify;">O vento da tarde sopra forte, e Yara percebe que algumas estruturas feitas apenas com quatro estacas de madeira em formato de quadrado balançam um pouco para os lados quando o vento aperta. No entanto, os pilares que têm uma viga de madeira atravessada na diagonal — dividindo o espaço em formas de três lados — não se movem nem um milímetro.</p>
+        <p class="lead" style="text-align: justify;">Yara corre até seu pai, que está ajudando na construção: "Pai, por que aquela viga atravessada não deixa a madeira tremer?" O pai sorri, aponta para a estrutura e diz: "Yara, a forma de quatro lados é flexível e gosta de dançar com o vento. Mas quando colocamos aquela madeira no meio, criamos uma forma de três lados. Essa forma é firme, ela não se deforma. Ela protege nossa casa de reza e garante que nossa comunidade fique segura contra qualquer tempestade."</p>
+        <div class="balaozinho" style="text-align: justify;">🤔 Por que a forma triangular é a única que não se deforma mesmo quando fazemos força nela? Vamos testar a rigidez dos triângulos na prática!</div>
       </div>
       <div class="imagem">
-        <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
-          <rect x="0" y="0" width="400" height="220" rx="24" fill="#EAF4FF"/>
-
-          <!-- quadrado que bamboleia -->
-          <path d="M100 60 L130 60" stroke="#C43F6E" stroke-width="4" stroke-linecap="round"/>
-          <polygon points="130,52 148,60 130,68" fill="#C43F6E"/>
-          <polygon points="60,80 160,80 145,175 45,175" fill="none" stroke="#5B2EE0" stroke-width="4" stroke-dasharray="7 5"/>
-          <polygon points="60,80 160,80 160,175 60,175" fill="none" stroke="#5B2EE0" stroke-width="4" opacity="0.35"/>
-          <circle cx="60" cy="80" r="5" fill="#5B2EE0"/>
-          <circle cx="160" cy="80" r="5" fill="#5B2EE0"/>
-          <circle cx="160" cy="175" r="5" fill="#5B2EE0"/>
-          <circle cx="60" cy="175" r="5" fill="#5B2EE0"/>
-          <text x="110" y="205" text-anchor="middle" font-family="Baloo 2, cursive" font-size="13" fill="#C43F6E" font-weight="700">😵 bambolEIA</text>
-
-          <!-- triangulo que fica firme -->
-          <path d="M270 60 L300 60" stroke="#039073" stroke-width="4" stroke-linecap="round"/>
-          <polygon points="300,52 318,60 300,68" fill="#039073"/>
-          <polygon points="290,80 350,175 230,175" fill="none" stroke="#5B2EE0" stroke-width="4"/>
-          <circle cx="290" cy="80" r="5" fill="#5B2EE0"/>
-          <circle cx="350" cy="175" r="5" fill="#5B2EE0"/>
-          <circle cx="230" cy="175" r="5" fill="#5B2EE0"/>
-          <text x="290" y="205" text-anchor="middle" font-family="Baloo 2, cursive" font-size="13" fill="#039073" font-weight="700">💪 fica firme</text>
-        </svg>
-        <p style="font-size:0.8rem; text-align:center; color:#5B2EE0; margin-top:6px;">Empurrando os dois: o quadrado torto vira um paralelogramo, o triângulo simplesmente não se mexe.</p>
+        <figure style="margin:0;">
+          <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" style="width:100%; border-radius:20px; display:block; background: linear-gradient(180deg, #FFF3E0 0%, #FFE0B2 100%); box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+            <style>
+              @keyframes tremerEstrutura {
+                0%, 100% { transform: skewX(0deg); }
+                50% { transform: skewX(8deg); }
+              }
+              .viga-instavel { animation: tremerEstrutura 2s ease-in-out infinite; transform-origin: bottom center; }
+            </style>
+            <!-- Céu de pôr do sol na aldeia -->
+            <circle cx="200" cy="180" r="140" fill="#FF8A65" opacity="0.3"/>
+            <!-- Chão de terra vermelha típica do Mato Grosso do Sul -->
+            <path d="M0,220 Q150,200 300,220 T400,210 L400,280 L0,280 Z" fill="#A73A12"/>
+            <!-- Oga Pysy estrutural sendo erguida -->
+            <!-- Base estável com o triângulo diagonal que Yara observa -->
+            <g transform="translate(180, 70)">
+              <!-- Postes laterais -->
+              <rect x="20" y="20" width="10" height="130" rx="3" fill="#5D4037"/>
+              <rect x="120" y="20" width="10" height="130" rx="3" fill="#5D4037"/>
+              <rect x="20" y="10" width="110" height="12" rx="3" fill="#5D4037"/>
+              <!-- Viga diagonal milagrosa de sustentação -->
+              <line x1="25" y1="140" x2="125" y2="20" stroke="#8D6E63" stroke-width="12" stroke-linecap="round"/>
+              <text x="75" y="165" text-anchor="middle" font-weight="800" fill="#2E7D32" font-size="11">RÍGIDO (Triângulo)</text>
+            </g>
+            <!-- Esteio instável sem a viga que treme com o vento -->
+            <g transform="translate(40, 70)" class="viga-instavel">
+              <rect x="20" y="20" width="10" height="130" rx="3" fill="#D84315"/>
+              <rect x="100" y="20" width="10" height="130" rx="3" fill="#D84315"/>
+              <rect x="20" y="10" width="90" height="10" rx="3" fill="#D84315"/>
+              <text x="65" y="165" text-anchor="middle" font-weight="800" fill="#C2185B" font-size="11">FLEXÍVEL</text>
+            </g>
+          </svg>
+          <figcaption style="text-align:center; font-size:0.85rem; color:var(--roxo-escuro); margin-top:10px; font-weight:800;">A Estrutura da Oga Pysy sob a força do vento</figcaption>
+        </figure>
       </div>
     </div>
   </section>
-
   <!-- ============ EXPLORANDO ============ -->
   <section class="section-card">
     <span class="tag roxo">EXPLORANDO</span>

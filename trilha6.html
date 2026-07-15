@@ -39,40 +39,46 @@
 
 <main class="container">
 
-  <!-- ============ CONTEXTUALIZAÇÃO ============ -->
+ <!-- ============ CONTEXTUALIZAÇÃO ============ -->
   <section class="section-card">
     <span class="tag laranja">TRILHA 6 · 8º ANO</span>
-    <h2>👯 Gêmeos geométricos</h2>
-
+    <h2>🏺 Os vasos sagrados de Maiana</h2>
+    
     <div class="contexto-flex">
       <div class="texto">
-        <p class="lead">Molde de biscoito, carimbo de pintura corporal, fôrma de bolo: todos servem para criar peças idênticas, sem desenhar tudo de novo cada vez. Há gerações, povos indígenas brasileiros usam carimbos e moldes para repetir com precisão os mesmos padrões geométricos em cerâmicas, cestarias e pinturas corporais.</p>
-        <p class="lead">Em matemática, duas figuras que têm exatamente o mesmo formato e tamanho — como se fossem "gêmeas" — são chamadas de figuras <strong>congruentes</strong>.</p>
-        <div class="balaozinho">🤔 Será que dá para garantir que dois triângulos são congruentes sem precisar comparar os 6 elementos (3 lados + 3 ângulos) de cada um, um por um?</div>
+        <p class="lead" style="text-align: justify;">Na bela Ilha de Marajó, no Pará, a menina <strong>Maiana</strong> passa as tardes na oficina de cerâmica de sua avó, uma respeitada artesã que preserva com amor os saberes ancestrais da antiga cultura <strong>Marajoara</strong>. A avó de Maiana consegue moldar e pintar desenhos geométricos impressionantes que se repetem perfeitamente ao redor dos vasos e urnas de argila.</p>
+        <p class="lead" style="text-align: justify;">"Vovô, como seus desenhos parecem gêmeos perfeitos? Eles têm o mesmo tamanho e as mesmas pontas!", pergunta Maiana, admirada. A avó explica que os antigos artistas sabiam que, se desenhassem triângulos com os mesmos três lados iguaizinhos, todos os ângulos e cantos deles também seriam exatamente iguais, sem precisar medir um por um.</p>
+        <p class="lead" style="text-align: justify;">Maiana descobre que esses "gêmeos da geometria" guardam uma simetria mágica: quando dois triângulos são perfeitamente idênticos (congruentes), eles se encaixam um sobre o outro de forma perfeita, mantendo a tradição, a simetria e a beleza da sua cultura.</p>
+        <div class="balaozinho" style="text-align: justify;">🤔 Quais os critérios mínimos necessários para garantir que dois triângulos são idênticos sem precisar medir todas as suas pontas e lados? Vamos descobrir juntos!</div>
       </div>
       <div class="imagem">
-        <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
-          <rect x="0" y="0" width="400" height="220" rx="24" fill="#FFF3E0"/>
-          <g transform="translate(170,10)">
-            <rect x="15" y="0" width="30" height="20" rx="4" fill="#8D5A2B"/>
-            <rect x="0" y="20" width="60" height="24" rx="8" fill="#5B2EE0"/>
-            <polygon points="30,24 42,40 18,40" fill="#FFD166"/>
-          </g>
-          <polygon points="55,175 155,175 90,85" fill="none" stroke="#5B2EE0" stroke-width="4"/>
-          <line x1="105.0" y1="181.0" x2="105.0" y2="169.0" stroke="#FF8A3D" stroke-width="2.5"/>
-          <line x1="77.0" y1="135.0" x2="65.8" y2="130.6" stroke="#FF8A3D" stroke-width="2.5"/>
-          <line x1="79.2" y1="129.4" x2="68.0" y2="125.0" stroke="#FF8A3D" stroke-width="2.5"/>
-          <path d="M71.0,175.0 A16,16 0 0,1 60.8,160.1" fill="none" stroke="#06D6A0" stroke-width="2.5"/>
-
-          <text x="200" y="150" text-anchor="middle" font-family="Baloo 2, cursive" font-size="30" fill="#5B2EE0" font-weight="700">≅</text>
-
-          <polygon points="245,175 345,175 280,85" fill="none" stroke="#5B2EE0" stroke-width="4"/>
-          <line x1="295.0" y1="181.0" x2="295.0" y2="169.0" stroke="#FF8A3D" stroke-width="2.5"/>
-          <line x1="267.0" y1="135.0" x2="255.8" y2="130.6" stroke="#FF8A3D" stroke-width="2.5"/>
-          <line x1="269.2" y1="129.4" x2="258.0" y2="125.0" stroke="#FF8A3D" stroke-width="2.5"/>
-          <path d="M261.0,175.0 A16,16 0 0,1 250.8,160.1" fill="none" stroke="#06D6A0" stroke-width="2.5"/>
-        </svg>
-        <p style="font-size:0.8rem; text-align:center; color:#5B2EE0; margin-top:6px;">Dois triângulos "carimbados" com as mesmas marcas: mesmo formato, mesmo tamanho.</p>
+        <figure style="margin:0;">
+          <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" style="width:100%; border-radius:20px; display:block; background: linear-gradient(135deg, #FFE0B2 0%, #FFCC80 100%); box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+            <style>
+              @keyframes espelharTriangulos {
+                0%, 100% { transform: scaleX(1); opacity: 0.9; }
+                50% { transform: scaleX(-1); opacity: 0.7; }
+              }
+              .triangulos-espelhados { animation: espelharTriangulos 4s ease-in-out infinite; transform-origin: 200px 140px; }
+            </style>
+            <!-- Fundo de texturas marajoaras delicadas -->
+            <path d="M 0,260 L 400,260" stroke="#3E2723" stroke-width="12" stroke-dasharray="15, 15"/>
+            <path d="M 0,20 L 400,20" stroke="#3E2723" stroke-width="12" stroke-dasharray="15, 15"/>
+            
+            <!-- Grupo de Triângulos de Grafismo Tradicional animado -->
+            <g class="triangulos-espelhados">
+              <!-- Urna Simbólica no centro -->
+              <path d="M150,60 C150,40 170,30 200,30 C230,30 250,40 250,60 L240,120 C270,140 270,180 240,220 L250,230 L150,230 L160,220 C130,180 130,140 160,120 Z" fill="#D84315" stroke="#3E2723" stroke-width="4"/>
+              
+              <!-- Grafismos Gêmeos Internos (Vermelho e Preto Marajoara) -->
+              <polygon points="200,90 170,140 200,140" fill="#3E2723"/>
+              <polygon points="200,90 230,140 200,140" fill="#B71C1C"/>
+              <polygon points="200,140 170,190 200,190" fill="#B71C1C"/>
+              <polygon points="200,140 230,190 200,190" fill="#3E2723"/>
+            </g>
+          </svg>
+          <figcaption style="text-align:center; font-size:0.85rem; color:var(--roxo-escuro); margin-top:10px; font-weight:800;">Simetria de Gêmeos da Cerâmica de Marajó</figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -199,7 +205,7 @@
     <div class="challenge-card">
       <h3>Pense em um carimbo, molde ou gabarito do seu contexto</h3>
       <div class="insp-grid">
-        <div class="insp"><b>Pintura corporal e cerâmica</b>Carimbos indígenas que repetem o mesmo grafismo.</div>
+        <div class="insp"><b>Cerâmica marajoara</b>Padrões geométricos repetidos em vasos e urnas da Ilha de Marajó (PA).</div>
         <div class="insp"><b>Costura e artesanato</b>Moldes de roupa ou gabaritos de corte.</div>
         <div class="insp"><b>Culinária</b>Fôrmas de biscoito ou moldes de doces.</div>
         <div class="insp"><b>Construção</b>Gabaritos usados por marceneiros e pedreiros para repetir peças.</div>

@@ -56,44 +56,61 @@
 
 <main class="container">
 
-  <!-- ============ CONTEXTUALIZAÇÃO ============ -->
+ <!-- ============ CONTEXTUALIZAÇÃO ============ -->
   <section class="section-card">
-    <span class="tag laranja">TRILHA 5 · 7º ANO</span>
-    <h2>🧭 Construindo passo a passo</h2>
-
+    <span class="tag laranja">TRILHA 5 · 8º ANO</span>
+    <h2>🧭 O caminho do rio de Potira</h2>
+    
     <div class="contexto-flex">
       <div class="texto">
-        <p class="lead">Muito antes de a palavra "algoritmo" existir, tecelãs, ceramistas e construtoras de cestos de povos indígenas e comunidades tradicionais brasileiras já seguiam sequências precisas de passos — sempre na mesma ordem — para criar seus padrões geométricos e suas construções. Uma receita de cozinha passada de geração em geração funciona do mesmo jeito: uma lista de passos que, seguida na ordem certa, sempre dá o mesmo resultado.</p>
-        <div class="balaozinho">🤔 E se a gente escrevesse uma "receita" — um algoritmo — para construir qualquer triângulo, sabendo só as medidas dos três lados?</div>
+        <p class="lead" style="text-align: justify;">Na Aldeia Kurisevo, a jovem <strong>Potira</strong>, do povo <strong>Kalapalo</strong>, ajuda sua mãe a organizar o caminho até a roça de mandioca. Para ensinar os irmãos mais novos a irem e voltarem em segurança sem se perderem na floresta, Potira desenha um "mapa de passos" na areia do chão.</p>
+        <p class="lead" style="text-align: justify;">"Primeiro, nós andamos até a árvore grande. Se o caminho estiver seco, seguimos em frente. Se tiver muita água da chuva, viramos à direita", explica Potira, apontando para os símbolos geométricos que desenhou na terra com o auxílio de pequenos gravetos.</p>
+        <p class="lead" style="text-align: justify;">O avô de Potira passa por perto e sorri ao ver a inteligência da neta. Ele explica que organizar as tarefas em etapas claras — onde uma decisão leva a uma ação lógica — é um saber antigo que o povo usa para planejar as colheitas, as pescarias e as grandes festas da aldeia. Potira percebe que, ao criar regras organizadas de "se acontecer isso, faça aquilo", ela está criando um caminho perfeito e seguro, assim como os computadores fazem para resolver problemas!</p>
+        <div class="balaozinho" style="text-align: justify;">🤔 Organizar as ideias passo a passo nos ajuda a construir grandes coisas. Vamos ajudar a Potira a encadear as decisões corretas para montar nosso próprio fluxograma!</div>
       </div>
       <div class="imagem">
-        <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
-          <rect x="0" y="0" width="400" height="220" rx="24" fill="#FFF3E0"/>
-          <!-- cesto trançado com padrão geometrico -->
-          <g transform="translate(30,30)">
-            <path d="M0,120 Q0,20 60,20 Q120,20 120,120 Z" fill="none" stroke="#8D5A2B" stroke-width="3"/>
-            <path d="M5,110 L115,110 M8,90 L112,90 M13,70 L107,70 M20,50 L100,50 M30,32 L90,32" stroke="#8D5A2B" stroke-width="2"/>
-            <path d="M10,120 L30,20 M35,120 L50,22 M60,120 L60,20 M85,120 L70,22 M110,120 L90,20" stroke="#C1440E" stroke-width="2"/>
-          </g>
-          <!-- setas de fluxograma estilizadas -->
-          <g transform="translate(210,25)">
-            <rect x="0" y="0" width="130" height="30" rx="14" fill="#F1ECFF" stroke="#5B2EE0" stroke-width="2.5"/>
-            <text x="65" y="20" text-anchor="middle" font-family="Baloo 2, cursive" font-size="12" fill="#5B2EE0" font-weight="700">passo 1</text>
-            <line x1="65" y1="30" x2="65" y2="52" stroke="#5B2EE0" stroke-width="2.5"/>
-            <polygon points="60,50 65,58 70,50" fill="#5B2EE0"/>
-            <rect x="0" y="58" width="130" height="30" rx="8" fill="#FFF8ED" stroke="#5B2EE0" stroke-width="2.5"/>
-            <text x="65" y="78" text-anchor="middle" font-family="Baloo 2, cursive" font-size="12" fill="#5B2EE0" font-weight="700">passo 2</text>
-            <line x1="65" y1="88" x2="65" y2="110" stroke="#5B2EE0" stroke-width="2.5"/>
-            <polygon points="60,108 65,116 70,108" fill="#5B2EE0"/>
-            <rect x="0" y="116" width="130" height="30" rx="8" fill="#FFF8ED" stroke="#5B2EE0" stroke-width="2.5"/>
-            <text x="65" y="136" text-anchor="middle" font-family="Baloo 2, cursive" font-size="12" fill="#5B2EE0" font-weight="700">passo 3</text>
-          </g>
-        </svg>
-        <p style="font-size:0.8rem; text-align:center; color:#5B2EE0; margin-top:6px;">Padrões de cestaria tradicional seguem sequências fixas de passos — assim como um fluxograma.</p>
+        <figure style="margin:0;">
+          <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" style="width:100%; border-radius:20px; display:block; background: linear-gradient(135deg, #E0F2F1 0%, #B2DFDB 100%); box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+            <style>
+              @keyframes pulsarSeta {
+                0%, 100% { stroke: #00897B; filter: drop-shadow(0 0 2px #00897B); }
+                50% { stroke: #00E676; filter: drop-shadow(0 0 6px #00E676); }
+              }
+              .seta-fluxo { animation: pulsarSeta 2s infinite; }
+            </style>
+            <!-- Árvores da floresta Kalapalo ao fundo -->
+            <path d="M 0,240 Q 80,180 160,240 T 320,240 T 400,240 L 400,280 L 0,280 Z" fill="#2E7D32" opacity="0.6"/>
+            <!-- Elementos lúdicos de mapa/areia -->
+            <path d="M 40,240 C 140,240 200,210 360,240" fill="none" stroke="#8D6E63" stroke-width="20" stroke-linecap="round" opacity="0.3"/>
+            
+            <g transform="translate(100, 20)">
+              <!-- Início -->
+              <rect x="40" y="10" width="120" height="35" rx="17.5" fill="#00897B" stroke="#004D40" stroke-width="2"/>
+              <text x="100" y="32" text-anchor="middle" font-weight="bold" fill="#FFF" font-size="11" font-family="sans-serif">Caminho da Roça</text>
+              
+              <!-- Seta pulsante -->
+              <line x1="100" y1="45" x2="100" y2="75" stroke-width="4" stroke-linecap="round" class="seta-fluxo"/>
+              
+              <!-- Decisão (Losango) -->
+              <polygon points="100,75 145,105 100,135 55,105" fill="#FFB300" stroke="#FF6F00" stroke-width="2"/>
+              <text x="100" y="109" text-anchor="middle" font-weight="bold" fill="#3E2723" font-size="9" font-family="sans-serif">Chuva Forte?</text>
+              
+              <!-- Caminho sim -->
+              <line x1="145" y1="105" x2="185" y2="105" stroke="#E65100" stroke-width="3" stroke-dasharray="4,4"/>
+              <rect x="185" y="90" width="75" height="30" rx="5" fill="#FF8A65"/>
+              <text x="222" y="109" text-anchor="middle" font-weight="bold" fill="#FFF" font-size="9" font-family="sans-serif">Abrigar-se</text>
+              
+              <!-- Caminho não -->
+              <line x1="100" y1="135" x2="100" y2="165" stroke="#00897B" stroke-width="3" stroke-linecap="round"/>
+              <rect x="40" y="165" width="120" height="35" rx="8" fill="#4CAF50" stroke="#1B5E20" stroke-width="2"/>
+              <text x="100" y="187" text-anchor="middle" font-weight="bold" fill="#FFF" font-size="11" font-family="sans-serif">Seguir Seguro</text>
+            </g>
+          </svg>
+          <figcaption style="text-align:center; font-size:0.85rem; color:var(--roxo-escuro); margin-top:10px; font-weight:800;">A Lógica de Caminhos de Potira</figcaption>
+        </figure>
       </div>
     </div>
   </section>
-
   <!-- ============ EXPLORANDO ============ -->
   <section class="section-card">
     <span class="tag roxo">EXPLORANDO</span>

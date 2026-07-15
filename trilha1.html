@@ -32,52 +32,49 @@
 
 <main class="container">
 
-  <!-- ============ CONTEXTUALIZAÇÃO ============ -->
+ <!-- ============ CONTEXTUALIZAÇÃO ============ -->
   <section class="section-card">
     <span class="tag laranja">TRILHA 1 · 6º ANO</span>
-    <h2>🔺 O que é um triângulo?</h2>
-
+    <h2>🔺 O grafismo de Kamukuaka</h2>
+    
     <div class="contexto-flex">
       <div class="texto">
-        <p class="lead">Muito antes de a régua e o compasso chegarem à escola, diferentes povos já usavam triângulos para resolver problemas do dia a dia. Povos indígenas brasileiros criam <strong>grafismos</strong> com padrões triangulares em pinturas corporais, cerâmicas e cestarias — cada padrão carrega um significado da sua cultura. Nas cidades, vemos triângulos sustentando telhados, enfeitando pipas e até avisando sobre curvas perigosas nas placas de trânsito.</p>
-        <div class="balaozinho">🤔 Mas afinal... o que faz uma forma ser um triângulo? E por que existem tantos tipos diferentes de triângulo?</div>
+        <p class="lead" style="text-align: justify;">Às margens do lindo Rio Batovi, no Parque Indígena do Xingu, o jovem <strong>Kamukuaka</strong>, um menino do povo <strong>Wauja</strong>, observa atento as mãos ágeis de seu tio. Com um pincel fino feito de fibra de buriti, o tio desenha padrões geométricos perfeitos nas panelas de cerâmica que sua família produz com tanto orgulho. O povo Wauja é famoso em todo o Brasil por sua belíssima arte em cerâmica e seus desenhos expressivos.</p>
+        <p class="lead" style="text-align: justify;">"Tio, como você consegue fazer essas pontas tão certas sem usar régua?", pergunta Kamukuaka, curioso. O tio sorri e explica que a floresta e o céu ensinam as direções. Ele mostra ao menino que, ao cruzar três linhas retas na pintura com a tinta preta do jenipapo, eles dão vida ao <em>kulupene</em> — um grafismo tradicional que representa a força dos peixes da região. Kamukuaka percebe, fascinado, que cada detalhe daquela pintura corporal e da cerâmica começa com uma forma simples e poderosa de três pontas e três lados.</p>
+        <div class="balaozinho" style="text-align: justify;">🤔 Mas afinal... o que faz uma forma ser um triângulo? Como Kamukuaka pode identificar essas figuras de três lados?</div>
       </div>
       <div class="imagem">
-        <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg">
-          <rect x="0" y="0" width="400" height="280" rx="24" fill="#DCF3FF"/>
-          <circle cx="335" cy="45" r="26" fill="#FFD166"/>
-          <!-- casa com telhado triangular -->
-          <polygon points="60,150 130,90 200,150" fill="#FF8A3D"/>
-          <rect x="75" y="150" width="110" height="70" fill="#FFF8ED" stroke="#E0794A" stroke-width="3"/>
-          <rect x="115" y="185" width="30" height="35" fill="#7C4DFF"/>
-          <rect x="90" y="165" width="24" height="24" fill="#4FC3F7"/>
-          <!-- pipa -->
-          <polygon points="290,90 320,130 290,190 260,130" fill="#FF6B9D" stroke="#C43F6E" stroke-width="3"/>
-          <line x1="290" y1="90" x2="290" y2="190" stroke="#C43F6E" stroke-width="2"/>
-          <line x1="260" y1="130" x2="320" y2="130" stroke="#C43F6E" stroke-width="2"/>
-          <path d="M290 190 Q300 205 290 215 Q280 225 290 235" stroke="#5B2EE0" stroke-width="3" fill="none"/>
-          <polygon points="288,197 296,203 288,209" fill="#FFD166"/>
-          <polygon points="288,217 296,223 288,229" fill="#06D6A0"/>
-          <!-- faixa decorativa: grafismo geométrico inspirado em tradições indígenas -->
-          <rect x="0" y="240" width="400" height="40" fill="#5B2EE0"/>
-          <g fill="#FFD166">
-            <polygon points="10,280 30,240 50,280"/>
-            <polygon points="50,280 70,240 90,280"/>
-            <polygon points="90,280 110,240 130,280"/>
-            <polygon points="130,280 150,240 170,280"/>
-            <polygon points="170,280 190,240 210,280"/>
-            <polygon points="210,280 230,240 250,280"/>
-            <polygon points="250,280 270,240 290,280"/>
-            <polygon points="290,280 310,240 330,280"/>
-            <polygon points="330,280 350,240 370,280"/>
-            <polygon points="370,280 390,240 410,280"/>
-          </g>
-        </svg>
-        <p style="font-size:0.8rem; text-align:center; color:#5B2EE0; margin-top:6px;">Triângulos no telhado, na pipa e em padrões geométricos inspirados em grafismos indígenas brasileiros.</p>
+        <figure style="margin:0;">
+          <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" style="width:100%; border-radius:20px; display:block; background: linear-gradient(135deg, #FFF9C4 0%, #FFF59D 100%); box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+            <style>
+              @keyframes brilharPintura {
+                0%, 100% { filter: drop-shadow(0 0 2px #E65100); }
+                50% { filter: drop-shadow(0 0 8px #FFCC80); }
+              }
+              .grafismo-arte { animation: brilharPintura 3s ease-in-out infinite; }
+            </style>
+            <!-- Céu de fundo e floresta sutil -->
+            <path d="M0,200 Q100,160 200,200 T400,200 L400,280 L0,280 Z" fill="#81C784" opacity="0.6"/>
+            <path d="M0,230 Q120,190 250,230 T400,230 L400,280 L0,280 Z" fill="#4CAF50" opacity="0.8"/>
+            <!-- O Grande Vaso de Cerâmica Wauja -->
+            <path d="M140,80 C140,60 160,50 200,50 C240,50 260,60 260,80 C260,110 280,140 280,180 C280,230 250,250 200,250 C150,250 120,230 120,180 C120,140 140,110 140,80 Z" fill="#D84315" stroke="#3E2723" stroke-width="6"/>
+            <!-- Detalhes do gargalo do vaso -->
+            <ellipse cx="200" cy="50" rx="35" ry="10" fill="#3E2723"/>
+            <!-- Grafismos triangulares brilhantes desenhados no vaso (Kulupene) -->
+            <g class="grafismo-arte" fill="#FFD54F" stroke="#3E2723" stroke-width="2">
+              <polygon points="200,100 170,150 230,150"/>
+              <polygon points="170,150 140,200 200,200"/>
+              <polygon points="230,150 200,200 260,200"/>
+              <circle cx="200" cy="133" r="5" fill="#3E2723"/>
+              <circle cx="170" cy="183" r="5" fill="#3E2723"/>
+              <circle cx="230" cy="183" r="5" fill="#3E2723"/>
+            </g>
+          </svg>
+          <figcaption style="text-align:center; font-size:0.85rem; color:var(--roxo-escuro); margin-top:10px; font-weight:800;">A Cerâmica Sagrada de Kamukuaka</figcaption>
+        </figure>
       </div>
     </div>
   </section>
-
   <!-- ============ EXPLORANDO ============ -->
   <section class="section-card">
     <span class="tag roxo">EXPLORANDO</span>
@@ -229,7 +226,7 @@
     <div class="challenge-card">
       <h3>Escolha um objeto triangular do seu contexto cultural e investigue por quê</h3>
       <div class="insp-grid">
-        <div class="insp"><b>Tecelagem &amp; cestaria</b>Padrões triangulares em trançados indígenas e ribeirinhos.</div>
+        <div class="insp"><b>Tecelagem &amp; cestaria</b>Como nos cestos dos povos Wayana e Aparai (PA/AP): padrões geométricos trançados fio a fio.</div>
         <div class="insp"><b>Arquitetura popular</b>Telhados e pontes de madeira com treliças triangulares artesanais.</div>
         <div class="insp"><b>Pipas &amp; brinquedos</b>A armação triangular que mantém uma pipa rígida no vento.</div>
         <div class="insp"><b>Instrumentos &amp; rituais</b>Formas triangulares em tambores, adornos e objetos cerimoniais.</div>

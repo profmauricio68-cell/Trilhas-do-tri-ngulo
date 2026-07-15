@@ -312,3 +312,4 @@ textarea.reflect::placeholder{ color: rgba(255,255,255,0.45); }
 .star-btn{ background:none; border:none; font-size:1.3rem; cursor:pointer; color:#E4DEFB; padding:2px; transition: color .1s ease; }
 .star-btn.filled{ color: var(--amarelo); }
 .assess-footer{ margin-top:16px; font-size:0.85rem; color:#8880ab; }
+p, .lead, .balaozinho, .contexto-flex .texto { text-align: justify; }

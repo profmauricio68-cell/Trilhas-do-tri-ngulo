@@ -35,38 +35,54 @@
   <!-- ============ CONTEXTUALIZAÇÃO ============ -->
   <section class="section-card">
     <span class="tag laranja">TRILHA 7 · 9º ANO</span>
-    <h2>📏 Parecidos, mas não iguais</h2>
-
+    <h2>☀️ A sombra do grande açaizeiro</h2>
+    
     <div class="contexto-flex">
       <div class="texto">
-        <p class="lead">Há mais de 2500 anos, o grego Tales de Mileto impressionou o Egito ao calcular a altura de uma pirâmide sem escalar nem usar nenhuma régua gigante. Ele esperou o momento exato do dia em que a sombra do seu próprio corpo tinha o mesmo tamanho da sua altura — e então bastou medir a sombra da pirâmide, no mesmo instante, para descobrir a altura dela. Técnicas parecidas, comparando sombras e proporções, são usadas até hoje por comunidades tradicionais para estimar a altura de árvores e construções sem precisar escalar.</p>
-        <div class="balaozinho">🤔 Como é possível descobrir a altura de algo gigante sem medir diretamente? A resposta está em triângulos "parecidos" — só que de tamanhos diferentes.</div>
+        <p class="lead" style="text-align: justify;">Na comunidade ribeirinha de Tapajós, no coração da Amazônia, o jovem <strong>Cauã</strong> adora desafiar seus amigos a adivinhar a altura das coisas. Diante de um açaizeiro gigante e imponente perto da margem do rio, Cauã pergunta: "Quem consegue descobrir o tamanho exato daquele açaizeiro sem precisar subir nele e sem usar uma régua gigante?"</p>
+        <p class="lead" style="text-align: justify;">Os amigos acham impossível, mas Cauã pega uma vara de madeira reta de exatamente 1 metro de comprimento e a finca no chão arenoso. Ele conta que aprendeu com seu pai uma história muito antiga sobre um sábio chamado <strong>Tales de Mileto</strong>, que usou a luz do Sol para medir grandes estruturas apenas olhando para as sombras projetadas no chão.</p>
+        <p class="lead" style="text-align: justify;">Cauã mostra aos amigos que, no momento em que a sombra da sua vara pequena no chão tem um tamanho proporcional, a sombra do açaizeiro gigante também segue a mesma proporção! Ao desenharem mentalmente os triângulos formados pela luz do Sol e pelas sombras, as crianças percebem que figuras parecidas — com os mesmos ângulos, mas tamanhos diferentes — guardam segredos incríveis para medir até o que parece inalcançável.</p>
+        <div class="balaozinho" style="text-align: justify;">🤔 Como podemos usar triângulos "parecidos" (semelhantes) e suas proporções para fazer cálculos fantásticos? Vamos investigar!</div>
       </div>
       <div class="imagem">
-        <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
-          <rect x="0" y="0" width="400" height="220" rx="24" fill="#DCF3FF"/>
-          <circle cx="360" cy="35" r="22" fill="#FFD166"/>
-
-          <!-- pessoa e sombra -->
-          <line x1="60" y1="180" x2="60" y2="130" stroke="#5B2EE0" stroke-width="5" stroke-linecap="round"/>
-          <circle cx="60" cy="120" r="10" fill="#5B2EE0"/>
-          <line x1="60" y1="180" x2="105" y2="180" stroke="#2E2452" stroke-width="3" stroke-dasharray="5 4"/>
-          <line x1="60" y1="120" x2="105" y2="180" stroke="#FFB020" stroke-width="2" stroke-dasharray="4 3"/>
-
-          <!-- piramide e sombra -->
-          <polygon points="220,180 320,180 270,90" fill="none" stroke="#8D5A2B" stroke-width="4"/>
-          <line x1="270" y1="180" x2="380" y2="180" stroke="#2E2452" stroke-width="3" stroke-dasharray="5 4"/>
-          <line x1="270" y1="90" x2="380" y2="180" stroke="#FFB020" stroke-width="2" stroke-dasharray="4 3"/>
-
-          <text x="80" y="200" text-anchor="middle" font-family="Baloo 2, cursive" font-size="12" fill="#5B2EE0" font-weight="700">eu</text>
-          <text x="300" y="203" text-anchor="middle" font-family="Baloo 2, cursive" font-size="12" fill="#8D5A2B" font-weight="700">pirâmide</text>
-          <text x="200" y="35" text-anchor="middle" font-family="Baloo 2, cursive" font-size="13" fill="#5B2EE0" font-weight="700">mesmo ângulo do sol ☀️</text>
-        </svg>
-        <p style="font-size:0.8rem; text-align:center; color:#5B2EE0; margin-top:6px;">Dois triângulos com o mesmo formato — um pequeno, um gigante — ligados pelo mesmo ângulo do sol.</p>
+        <figure style="margin:0;">
+          <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" style="width:100%; border-radius:20px; display:block; background: linear-gradient(180deg, #E0F7FA 0%, #80DEEA 100%); box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+            <style>
+              @keyframes pulsarSol {
+                0%, 100% { r: 18; opacity: 0.9; }
+                50% { r: 24; opacity: 1; filter: drop-shadow(0 0 8px #FFF9C4); }
+              }
+              .sol-brilhante { animation: pulsarSol 3s ease-in-out infinite; }
+            </style>
+            <!-- Rio azul sutil de Tapajós ao fundo -->
+            <path d="M 0,220 Q 120,200 240,220 T 400,220 L 400,280 L 0,280 Z" fill="#00ACC1" opacity="0.4"/>
+            <path d="M 0,230 L 400,230 L 400,280 L 0,280 Z" fill="#FFE082"/> <!-- Solo de areia clara -->
+            
+            <!-- Sol Vibrante de Tales -->
+            <circle cx="80" cy="60" r="20" fill="#FFEB3B" class="sol-brilhante"/>
+            
+            <!-- Feixes de Luz Solar Diagonais (Diretrizes de Proporção) -->
+            <line x1="80" y1="60" x2="280" y2="230" stroke="#FFF" stroke-width="1.5" stroke-dasharray="5,5" opacity="0.7"/>
+            <line x1="80" y1="60" x2="360" y2="230" stroke="#FFF" stroke-width="1.5" stroke-dasharray="5,5" opacity="0.7"/>
+            
+            <!-- Açaizeiro do Cauã -->
+            <rect x="260" y="80" width="10" height="150" rx="3" fill="#4E342E"/>
+            <ellipse cx="265" cy="80" rx="30" ry="15" fill="#1B5E20"/>
+            
+            <!-- Sombra do Açaizeiro projetada proporcionalmente -->
+            <polygon points="270,230 360,230 270,225" fill="#37474F" opacity="0.4"/>
+            
+            <!-- Vara fincada pelo Cauã -->
+            <line x1="180" y1="180" x2="180" y2="230" stroke="#8D6E63" stroke-width="4" stroke-linecap="round"/>
+            
+            <!-- Sombra da vara projetada proporcionalmente -->
+            <polygon points="180,230 220,230 180,228" fill="#37474F" opacity="0.4"/>
+          </svg>
+          <figcaption style="text-align:center; font-size:0.85rem; color:var(--roxo-escuro); margin-top:10px; font-weight:800;">Os Triângulos de Sombras Proporcionais</figcaption>
+        </figure>
       </div>
     </div>
   </section>
-
   <!-- ============ EXPLORANDO ============ -->
   <section class="section-card">
     <span class="tag roxo">EXPLORANDO</span>
