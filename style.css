@@ -116,6 +116,7 @@ a{ color: inherit; text-decoration: none; }
 .btn:active{ transform: translateY(3px); box-shadow: 0 2px 0 var(--roxo-escuro); }
 .btn.laranja{ background: var(--laranja); box-shadow: 0 6px 0 #C85A17; }
 .btn.verde{ background: var(--verde); box-shadow: 0 6px 0 #039073; }
+.btn.rosa{ background: var(--rosa); box-shadow: 0 6px 0 #C43F6E; }
 .btn:disabled, .btn.disabled{ background:#D8D3EA; box-shadow:0 6px 0 #b9b2d6; cursor:not-allowed; color:#8880ab; }
 
 /* ---------- Hero (index) ---------- */
