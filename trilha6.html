@@ -66,8 +66,8 @@
     <p class="lead">Dois triângulos são <strong>congruentes</strong> quando é possível sobrepor um ao outro fazendo coincidir todos os lados e todos os ângulos correspondentes. A boa notícia: não precisamos comparar os 6 elementos — basta garantir <strong>3 elementos certos</strong>, seguindo um dos casos abaixo.</p>
 
     <div class="legenda-marcas">
-      <span>🟠 tracinhos = lados marcados como iguais</span>
-      <span>🟢 arcos = ângulos marcados como iguais</span>
+      <span>🟠 tracinhos = lados marcados com a mesma medida</span>
+      <span>🟢 arcos = ângulos marcados com a mesma medida</span>
     </div>
 
     <div class="exemplos-grid" style="grid-template-columns: repeat(auto-fit, minmax(150px,1fr));">
@@ -102,7 +102,7 @@
     <h2>✏️ Vamos treinar</h2>
 
     <div class="quiz-item" data-correta="0">
-      <div class="quiz-pergunta">1. Dois triângulos têm os três lados respectivamente iguais. Qual caso garante que eles são congruentes?</div>
+      <div class="quiz-pergunta">1. Dois triângulos têm os três lados de medidas respectivamente iguais. Qual caso garante que eles são congruentes?</div>
       <div class="quiz-opcoes">
         <div class="quiz-opcao" data-valor="0">LLL</div>
         <div class="quiz-opcao" data-valor="1">ALA</div>
@@ -112,7 +112,7 @@
     </div>
 
     <div class="quiz-item" data-correta="2">
-      <div class="quiz-pergunta">2. Dois lados e o ângulo formado entre eles são respectivamente iguais. Qual é o caso?</div>
+      <div class="quiz-pergunta">2. Dois lados e o ângulo formado entre eles têm, respectivamente, medidas iguais. Qual é o caso?</div>
       <div class="quiz-opcoes">
         <div class="quiz-opcao" data-valor="0">LLL</div>
         <div class="quiz-opcao" data-valor="1">ALA</div>
@@ -157,7 +157,7 @@
     <div class="badges" id="et6-badges"></div>
 
     <h3 style="color:#5B2EE0; margin-top:26px;">Missão — Qual caso garante isso?</h3>
-    <p class="lead" style="font-size:0.9rem;">Se os 3 lados do seu triângulo ficaram iguais aos do modelo, qual caso de congruência garante que eles são congruentes?</p>
+    <p class="lead" style="font-size:0.9rem;">Se as medidas dos 3 lados do seu triângulo ficaram iguais às do modelo, qual caso de congruência garante que eles são congruentes?</p>
     <div class="jogo-botoes" id="et6-opcoes" style="justify-content:flex-start;"></div>
     <p class="nt-result" id="et6-resposta"></p>
 
@@ -403,6 +403,7 @@ Explore com as mãos — Trilha 6 (vire o gêmeo do modelo)
   const SVGNS = "http://www.w3.org/2000/svg";
   function el(tag, attrs){ const e = document.createElementNS(SVGNS, tag); for(const k in attrs) e.setAttribute(k, attrs[k]); return e; }
   function dist(p,q){ return Math.hypot(p.x-q.x, p.y-q.y); }
+  function roundToHalf(n){ return (Math.round(n*2)/2).toFixed(1); }
   const scale = 0.045;
 
   const modeloVerts = [{x:80,y:230},{x:260,y:230},{x:170,y:90}];
@@ -414,7 +415,7 @@ Explore com as mãos — Trilha 6 (vire o gêmeo do modelo)
     const labels = [ {mid:mid2(P2,P3), val:dist(P2,P3)*scale}, {mid:mid2(P1,P3), val:dist(P1,P3)*scale}, {mid:mid2(P1,P2), val:dist(P1,P2)*scale} ];
     labels.forEach(L=>{
       const t=el('text',{x:L.mid.x,y:L.mid.y,'font-size':13,fill:'#039073','text-anchor':'middle','font-weight':'700'});
-      t.textContent = L.val.toFixed(1); svgModelo.appendChild(t);
+      t.textContent = roundToHalf(L.val); svgModelo.appendChild(t);
     });
   }
   function mid2(p,q){ return {x:(p.x+q.x)/2, y:(p.y+q.y)/2}; }
@@ -442,9 +443,9 @@ Explore com as mãos — Trilha 6 (vire o gêmeo do modelo)
     });
 
     const a = dist(verts[1],verts[2])*scale, b = dist(verts[0],verts[2])*scale, c = dist(verts[0],verts[1])*scale;
-    document.getElementById('et6-a').textContent = a.toFixed(1)+' cm';
-    document.getElementById('et6-b').textContent = b.toFixed(1)+' cm';
-    document.getElementById('et6-c').textContent = c.toFixed(1)+' cm';
+    document.getElementById('et6-a').textContent = roundToHalf(a)+' cm';
+    document.getElementById('et6-b').textContent = roundToHalf(b)+' cm';
+    document.getElementById('et6-c').textContent = roundToHalf(c)+' cm';
 
     const ladosCopia = [a,b,c].sort((x,y)=>x-y);
     const tol = 0.35;
@@ -486,7 +487,7 @@ Explore com as mãos — Trilha 6 (vire o gêmeo do modelo)
     btn.addEventListener('click', ()=>{
       if(op === 'LLL'){
         btn.style.background='#06D6A0'; btn.style.color='#fff'; btn.style.borderColor='#06D6A0';
-        respostaEl.textContent = '✓ Isso! Com os 3 lados iguais, o caso LLL garante a congruência.';
+        respostaEl.textContent = '✓ Isso! Com os 3 lados de medidas iguais, o caso LLL garante a congruência.';
         respostaEl.className = 'nt-result ok';
         taskState.caso = true;
         updateTasksUI();
