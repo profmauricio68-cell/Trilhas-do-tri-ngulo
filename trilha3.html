@@ -70,11 +70,11 @@
 
     <div class="exemplos-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px,1fr));">
       <div class="exemplo-card">
-        <svg viewBox="0 0 100 100"><polygon points="50,20 75,75 25,75" fill="none" stroke="#5B2EE0" stroke-width="3"/><text x="50" y="31" text-anchor="middle" font-size="9" fill="#5B2EE0" font-weight="700">60°</text><text x="32" y="70" text-anchor="middle" font-size="9" fill="#5B2EE0" font-weight="700">60°</text><text x="68" y="70" text-anchor="middle" font-size="9" fill="#5B2EE0" font-weight="700">60°</text></svg>
+        <svg viewBox="0 0 100 100"><polygon points="50,20 75,75 25,75" fill="none" stroke="#5B2EE0" stroke-width="3"/><text x="50" y="31" text-anchor="middle" font-size="7" fill="#5B2EE0" font-weight="700">60°</text><text x="32" y="70" text-anchor="middle" font-size="7" fill="#5B2EE0" font-weight="700">60°</text><text x="68" y="70" text-anchor="middle" font-size="7" fill="#5B2EE0" font-weight="700">60°</text></svg>
         <div class="desc">60 + 60 + 60 = <strong>180°</strong> (equilátero)</div>
       </div>
       <div class="exemplo-card">
-        <svg viewBox="0 0 100 100"><polygon points="20,80 20,20 80,80" fill="none" stroke="#5B2EE0" stroke-width="3"/><text x="26" y="32" text-anchor="middle" font-size="9" fill="#5B2EE0" font-weight="700">45°</text><text x="26" y="74" text-anchor="middle" font-size="9" fill="#5B2EE0" font-weight="700">90°</text><text x="68" y="74" text-anchor="middle" font-size="9" fill="#5B2EE0" font-weight="700">45°</text></svg>
+        <svg viewBox="0 0 100 100"><polygon points="20,80 20,20 80,80" fill="none" stroke="#5B2EE0" stroke-width="3"/><text x="26" y="32" text-anchor="middle" font-size="7" fill="#5B2EE0" font-weight="700">45°</text><text x="26" y="74" text-anchor="middle" font-size="7" fill="#5B2EE0" font-weight="700">90°</text><text x="68" y="74" text-anchor="middle" font-size="7" fill="#5B2EE0" font-weight="700">45°</text></svg>
         <div class="desc">90 + 45 + 45 = <strong>180°</strong> (retângulo isósceles)</div>
       </div>
     </div>
@@ -240,9 +240,9 @@
         <div class="jogo-triangulo-area">
           <svg viewBox="0 0 100 100" style="width:320px;">
             <polygon id="jogoTriPoly" points="50,20 75,75 25,75" fill="none" stroke="#5B2EE0" stroke-width="3"/>
-            <text id="txtA" x="12" y="89" text-anchor="middle" font-size="9" fill="#7C4DFF" font-weight="800"></text>
-            <text id="txtB" x="88" y="89" text-anchor="middle" font-size="9" fill="#FF8A3D" font-weight="800"></text>
-            <text id="txtC" x="50" y="10" text-anchor="middle" font-size="9" fill="#06D6A0" font-weight="800">?</text>
+            <text id="txtA" x="12" y="89" text-anchor="middle" font-size="7" fill="#7C4DFF" font-weight="800"></text>
+            <text id="txtB" x="88" y="89" text-anchor="middle" font-size="7" fill="#FF8A3D" font-weight="800"></text>
+            <text id="txtC" x="50" y="10" text-anchor="middle" font-size="7" fill="#06D6A0" font-weight="800">?</text>
           </svg>
         </div>
         <div class="jogo-botoes" id="jogoBotoes"></div>
@@ -315,8 +315,12 @@ function gerarOpcoes(certo){
 }
 
 /* Calcula os 3 vértices reais (em coordenadas do SVG 0-100) de um triângulo
-   a partir dos ângulos em A e B, usando lei dos senos, e escala mantendo
-   as proporções (sem distorcer os ângulos) para caber no viewBox. */
+   a partir dos ângulos em A e B, usando lei dos senos. Antes de encaixar no
+   viewBox, o triângulo é girado (rotação rígida, que não muda nenhum ângulo
+   nem lado) para que o LADO MAIS LONGO fique na horizontal. Sem isso, sempre
+   que o ângulo desconhecido era pequeno, o lado oposto a ele (o mais curto)
+   virava a "base" e o triângulo saía desenhado como um espeto fino e alto —
+   o que fazia os outros dois ângulos parecerem bem menores do que realmente são. */
 function calcularVertices(aDeg, bDeg){
   const aR = aDeg * Math.PI/180;
   const bR = bDeg * Math.PI/180;
@@ -327,20 +331,38 @@ function calcularVertices(aDeg, bDeg){
   const Cx = acLen * Math.cos(aR);
   const Cy = acLen * Math.sin(aR);
 
-  const minX = Math.min(0,1,Cx), maxX = Math.max(0,1,Cx);
-  const minY = 0, maxY = Cy;
+  let pts = { A:{x:0,y:0}, B:{x:1,y:0}, C:{x:Cx,y:Cy} };
+  function dist(P,Q){ return Math.hypot(P.x-Q.x, P.y-Q.y); }
+  const lados = [ ['A','B',dist(pts.A,pts.B)], ['B','C',dist(pts.B,pts.C)], ['C','A',dist(pts.C,pts.A)] ];
+  lados.sort((p,q)=> q[2]-p[2]);
+  const [u,v] = lados[0];
+  const w3 = ['A','B','C'].find(k => k!==u && k!==v);
+  const P = pts[u], Q = pts[v], R = pts[w3];
+  const ang = Math.atan2(Q.y-P.y, Q.x-P.x);
+  function rot(pt){
+    const dx = pt.x-P.x, dy = pt.y-P.y;
+    const ca = Math.cos(-ang), sa = Math.sin(-ang);
+    return { x: dx*ca - dy*sa, y: dx*sa + dy*ca };
+  }
+  let P2 = rot(P), Q2 = rot(Q), R2 = rot(R);
+  if (R2.y < 0){ P2 = {x:P2.x,y:-P2.y}; Q2 = {x:Q2.x,y:-Q2.y}; R2 = {x:R2.x,y:-R2.y}; }
+  const novos = {}; novos[u] = P2; novos[v] = Q2; novos[w3] = R2;
+  const A2 = novos.A, B2 = novos.B, C2 = novos.C;
+
+  const minX = Math.min(A2.x,B2.x,C2.x), maxX = Math.max(A2.x,B2.x,C2.x);
+  const minY = Math.min(A2.y,B2.y,C2.y), maxY = Math.max(A2.y,B2.y,C2.y);
   const w = maxX - minX, h = maxY - minY;
 
-  const alvoLargura = 56, alvoAltura = 48, baseY = 86;
+  const alvoLargura = 72, alvoAltura = 62, baseY = 88;
   const escala = Math.min(alvoLargura/w, alvoAltura/h);
 
-  function transformar(px,py){
-    const sx = (px - minX) * escala;
-    const sy = (py - minY) * escala;
+  function transformar(p){
+    const sx = (p.x - minX) * escala;
+    const sy = (p.y - minY) * escala;
     return [ 50 - (w*escala)/2 + sx, baseY - sy ];
   }
 
-  return [ transformar(0,0), transformar(1,0), transformar(Cx,Cy) ];
+  return [ transformar(A2), transformar(B2), transformar(C2) ];
 }
 
 /* Posiciona o rótulo do ângulo sempre dentro do triângulo, deslocando o vértice em direção ao centro. */
@@ -348,19 +370,12 @@ function posicionarRotulo(vertice, centro, fracao){
   return [ vertice[0] + (centro[0]-vertice[0])*fracao, vertice[1] + (centro[1]-vertice[1])*fracao ];
 }
 
-/* Aumenta um triângulo em torno do seu centroide (sx = escala horizontal, sy = escala vertical). Usado só para deixar certas rodadas maiores/mais legíveis; não afeta os ângulos a/b usados na pontuação. */
-function ampliarTriangulo(pts, sx, sy){
-  const cx = (pts[0][0]+pts[1][0]+pts[2][0])/3;
-  const cy = (pts[0][1]+pts[1][1]+pts[2][1])/3;
-  return pts.map(p => [ cx + (p[0]-cx)*sx, cy + (p[1]-cy)*sy ]);
-}
-
 const rodadas = [
   { a:50, b:60 },
   { a:90, b:40 },
-  { a:30, b:30, sx:1.4, sy:1.4 },
+  { a:30, b:30 },
   { a:100, b:35 },
-  { a:45, b:45, sx:1, sy:1.6 },
+  { a:45, b:45 },
   { a:70, b:80 },
 ];
 
@@ -377,14 +392,13 @@ function carregarRodada(){
   document.getElementById('jogoRodadaAtual').textContent = rodadaIdx+1;
   document.getElementById('jogoMensagem').textContent = '';
 
-  let [A,B,C] = calcularVertices(r.a, r.b);
-  if (r.sx || r.sy) [A,B,C] = ampliarTriangulo([A,B,C], r.sx||1, r.sy||1);
+  const [A,B,C] = calcularVertices(r.a, r.b);
   document.getElementById('jogoTriPoly').setAttribute('points', `${A[0]},${A[1]} ${B[0]},${B[1]} ${C[0]},${C[1]}`);
 
   const centroide = [ (A[0]+B[0]+C[0])/3, (A[1]+B[1]+C[1])/3 ];
-  const posA = posicionarRotulo(A, centroide, 0.35);
-  const posB = posicionarRotulo(B, centroide, 0.35);
-  const posC = posicionarRotulo(C, centroide, 0.35);
+  const posA = posicionarRotulo(A, centroide, 0.3);
+  const posB = posicionarRotulo(B, centroide, 0.3);
+  const posC = posicionarRotulo(C, centroide, 0.3);
 
   const txtA = document.getElementById('txtA');
   const txtB = document.getElementById('txtB');
@@ -473,7 +487,7 @@ function elT3(tag, attrs){ const e = document.createElementNS(SVGNS_T3, tag); fo
       const ang = angleAtT3(L.p,L.o1,L.o2);
       const lx = L.p.x + 0.55*(centroidT3.x - L.p.x);
       const ly = L.p.y + 0.55*(centroidT3.y - L.p.y);
-      const t=elT3('text',{x:lx,y:ly,'font-size':12,fill:'#5B2EE0','text-anchor':'middle','font-weight':'700'});
+      const t=elT3('text',{x:lx,y:ly,'font-size':10,fill:'#5B2EE0','text-anchor':'middle','font-weight':'700'});
       t.textContent=Math.round(ang)+'°'; svg.appendChild(t);
     });
     verts.forEach((p,i)=>{
