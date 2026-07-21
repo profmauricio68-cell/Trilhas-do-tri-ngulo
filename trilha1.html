@@ -71,7 +71,7 @@
       <div class="exemplo-card">
         <svg viewBox="0 0 100 100"><polygon points="20,85 90,70 55,15" fill="#06D6A0" stroke="#039073" stroke-width="3"/></svg>
         <div class="nome">Escaleno</div>
-        <div class="desc">3 lados diferentes</div>
+        <div class="desc">3 lados de medidas diferentes</div>
       </div>
     </div>
 
@@ -88,7 +88,7 @@
         <div class="desc">um ângulo reto (90°)</div>
       </div>
       <div class="exemplo-card">
-        <svg viewBox="0 0 100 100"><polygon points="10,85 95,85 60,70" fill="#FFD166" stroke="#C99420" stroke-width="3"/></svg>
+        <svg viewBox="0 0 100 100"><polygon points="8,90 96,90 62,58" fill="#FFD166" stroke="#C99420" stroke-width="3"/></svg>
         <div class="nome">Obtusângulo</div>
         <div class="desc">um ângulo obtuso (&gt;90°)</div>
       </div>
@@ -177,18 +177,6 @@
         <div class="task-check">✓</div>
         <div class="task-text"><strong>Missão 3 — Obtusângulo escaleno</strong><span>Forme um triângulo com um ângulo maior que 90° e os três lados diferentes.</span></div>
       </div>
-    </div>
-
-    <div class="numeric-tester">
-      <strong style="color:#5B2EE0; font-size:1.05rem;">Missão 4 — Teste numérico</strong>
-      <p class="lead" style="font-size:0.9rem; margin:6px 0 0;">Digite três medidas de lado. Vamos testar se dá para formar um triângulo de verdade.</p>
-      <div class="nt-row">
-        <div class="nt-field"><label>Lado a</label><input type="number" id="nt-a-t1" value="3" min="0.1" step="0.1"></div>
-        <div class="nt-field"><label>Lado b</label><input type="number" id="nt-b-t1" value="4" min="0.1" step="0.1"></div>
-        <div class="nt-field"><label>Lado c</label><input type="number" id="nt-c-t1" value="10" min="0.1" step="0.1"></div>
-        <button class="btn" id="nt-test-t1">Testar</button>
-      </div>
-      <p class="nt-result" id="nt-result-t1"></p>
     </div>
   </section>
 
@@ -303,7 +291,7 @@ const rodadas = [
   { pontos:"50,12 90,82 10,82", tipo:"lados", resposta:"Equilátero", opcoes:["Equilátero","Isósceles","Escaleno"] },
   { pontos:"15,85 15,15 85,85", tipo:"angulos", resposta:"Retângulo", opcoes:["Acutângulo","Retângulo","Obtusângulo"] },
   { pontos:"20,85 90,70 55,15", tipo:"lados", resposta:"Escaleno", opcoes:["Equilátero","Isósceles","Escaleno"] },
-  { pontos:"10,85 95,85 60,70", tipo:"angulos", resposta:"Obtusângulo", opcoes:["Acutângulo","Retângulo","Obtusângulo"] },
+  { pontos:"8,90 96,90 62,58", tipo:"angulos", resposta:"Obtusângulo", opcoes:["Acutângulo","Retângulo","Obtusângulo"] },
   { pontos:"50,10 75,85 25,85", tipo:"lados", resposta:"Isósceles", opcoes:["Equilátero","Isósceles","Escaleno"] },
   { pontos:"50,15 85,75 20,70", tipo:"angulos", resposta:"Acutângulo", opcoes:["Acutângulo","Retângulo","Obtusângulo"] },
 ];
@@ -439,11 +427,11 @@ function makeTriangleAppletT1(svgId, opts){
     const labels = [
       {p:verts[0], o1:verts[1], o2:verts[2]}, {p:verts[1], o1:verts[0], o2:verts[2]}, {p:verts[2], o1:verts[0], o2:verts[1]}
     ];
+    const centroidT1 = {x:(verts[0].x+verts[1].x+verts[2].x)/3, y:(verts[0].y+verts[1].y+verts[2].y)/3};
     labels.forEach(L=>{
       const ang = angleAtT1(L.p, L.o1, L.o2);
-      const bis = Math.atan2(L.o1.y-L.p.y, L.o1.x-L.p.x) + (Math.atan2(L.o2.y-L.p.y,L.o2.x-L.p.x) - Math.atan2(L.o1.y-L.p.y,L.o1.x-L.p.x))/2;
-      const lx = L.p.x + 26*Math.cos(bis);
-      const ly = L.p.y + 26*Math.sin(bis);
+      const lx = L.p.x + 0.55*(centroidT1.x - L.p.x);
+      const ly = L.p.y + 0.55*(centroidT1.y - L.p.y);
       const t = elT1('text',{x:lx, y:ly, 'font-size':12, fill:'#5B2EE0', 'text-anchor':'middle', 'font-weight':'700'});
       t.textContent = Math.round(ang)+'°';
       svg.appendChild(t);
@@ -512,7 +500,7 @@ function updateTaskUIT1(){
 }
 
 makeTriangleAppletT1('svgMissoesT1', {
-  initial: [{x:70,y:220},{x:230,y:220},{x:150,y:90}],
+  initial: [{x:40,y:250},{x:280,y:250},{x:150,y:60}],
   onChange: (state)=>{
     document.getElementById('mt1-a').textContent = state.a.toFixed(1)+' cm';
     document.getElementById('mt1-b').textContent = state.b.toFixed(1)+' cm';
@@ -526,23 +514,6 @@ makeTriangleAppletT1('svgMissoesT1', {
   }
 });
 updateTaskUIT1();
-
-document.getElementById('nt-test-t1').addEventListener('click', ()=>{
-  const a = parseFloat(document.getElementById('nt-a-t1').value);
-  const b = parseFloat(document.getElementById('nt-b-t1').value);
-  const c = parseFloat(document.getElementById('nt-c-t1').value);
-  const result = document.getElementById('nt-result-t1');
-  if (!(a>0 && b>0 && c>0)) { result.textContent = 'Preencha os três lados com valores positivos.'; result.className='nt-result bad'; return; }
-  const sides = [a,b,c].sort((x,y)=>x-y);
-  if (sides[0]+sides[1] > sides[2]) {
-    result.textContent = '✓ Forma um triângulo válido! ' + a + ' + ' + b + ' e ' + c + ' respeitam a condição de existência.';
-    result.className = 'nt-result ok';
-  } else {
-    const [s1,s2,s3] = sides;
-    result.textContent = '✗ Impossível: os dois menores lados (' + s1 + ' + ' + s2 + ' = ' + (s1+s2).toFixed(1) + ') não superam o maior lado (' + s3 + '). As pontas nunca se encontrariam.';
-    result.className = 'nt-result bad';
-  }
-});
 
 /* ---------- Desafio final — persistência local ---------- */
 (function reflectionT1(){
@@ -570,8 +541,8 @@ document.getElementById('nt-test-t1').addEventListener('click', ()=>{
     'Eu sei explicar o que é um vértice, um lado e um ângulo interno de um triângulo.',
     'Eu sei explicar por que a soma dos ângulos internos é sempre 180°.',
     'Eu sei verificar se três medidas de lado conseguem formar um triângulo.',
-    'Eu consigo classificar um triângulo pelos lados (equilátero, isósceles, escaleno).',
-    'Eu consigo classificar um triângulo pelos ângulos (acutângulo, retângulo, obtusângulo).',
+    'Eu consigo classificar um triângulo pelas medidas dos lados (equilátero, isósceles, escaleno).',
+    'Eu consigo classificar um triângulo pelas medidas dos ângulos internos (acutângulo, retângulo, obtusângulo).',
     'Eu consigo explicar, com minhas palavras, por que o triângulo é uma forma rígida.',
     'Eu já pensei em pelo menos um objeto ou tradição cultural que usa a forma triangular.'
   ];

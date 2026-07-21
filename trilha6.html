@@ -406,19 +406,26 @@ Explore com as mãos — Trilha 6 (vire o gêmeo do modelo)
   function roundToHalf(n){ return (Math.round(n*2)/2).toFixed(1); }
   const scale = 0.045;
 
-  const modeloVerts = [{x:80,y:230},{x:260,y:230},{x:170,y:90}];
+  const modeloVerts = [{x:45,y:255},{x:295,y:255},{x:170,y:55}];
   const svgModelo = document.getElementById('svgModeloT6');
   function desenharModelo(){
     svgModelo.innerHTML=''; svgModelo.setAttribute('viewBox','0 0 320 280');
     svgModelo.appendChild(el('polygon',{points:modeloVerts.map(p=>p.x+','+p.y).join(' '), fill:'rgba(6,214,160,0.12)', stroke:'#039073','stroke-width':3}));
     const [P1,P2,P3] = modeloVerts;
+    const centroModelo = {x:(P1.x+P2.x+P3.x)/3, y:(P1.y+P2.y+P3.y)/3};
     const labels = [ {mid:mid2(P2,P3), val:dist(P2,P3)*scale}, {mid:mid2(P1,P3), val:dist(P1,P3)*scale}, {mid:mid2(P1,P2), val:dist(P1,P2)*scale} ];
     labels.forEach(L=>{
-      const t=el('text',{x:L.mid.x,y:L.mid.y,'font-size':13,fill:'#039073','text-anchor':'middle','font-weight':'700'});
+      const pos = paraFora(L.mid, centroModelo, 16);
+      const t=el('text',{x:pos.x,y:pos.y,'font-size':13,fill:'#039073','text-anchor':'middle','font-weight':'700'});
       t.textContent = roundToHalf(L.val); svgModelo.appendChild(t);
     });
   }
   function mid2(p,q){ return {x:(p.x+q.x)/2, y:(p.y+q.y)/2}; }
+  function paraFora(ponto, centro, distancia){
+    const dx = ponto.x-centro.x, dy = ponto.y-centro.y;
+    const len = Math.hypot(dx,dy) || 1;
+    return { x: ponto.x + (dx/len)*distancia, y: ponto.y + (dy/len)*distancia };
+  }
   desenharModelo();
   const modeloLados = [dist(modeloVerts[1],modeloVerts[2])*scale, dist(modeloVerts[0],modeloVerts[2])*scale, dist(modeloVerts[0],modeloVerts[1])*scale].sort((x,y)=>x-y);
 
@@ -431,7 +438,7 @@ Explore com as mãos — Trilha 6 (vire o gêmeo do modelo)
   }
 
   const svgCopia = document.getElementById('svgCopiaT6');
-  let verts = [{x:80,y:210},{x:230,y:220},{x:150,y:70}];
+  let verts = [{x:45,y:250},{x:275,y:260},{x:150,y:50}];
 
   function draw(){
     svgCopia.innerHTML=''; svgCopia.setAttribute('viewBox','0 0 320 280');

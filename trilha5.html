@@ -475,10 +475,10 @@ Explore com as mãos — Trilha 5 (simulador de construção real)
       svg.appendChild(el('line',{x1:A.x,y1:A.y,x2:B.x,y2:B.y,stroke:'#5B2EE0','stroke-width':3}));
     }
     if(passo >= 2 && A){
-      svg.appendChild(el('circle',{cx:A.x,cy:A.y,r:b*14,fill:'none',stroke:'#7C4DFF','stroke-width':2,'stroke-dasharray':'5 4'}));
+      svg.appendChild(el('circle',{cx:A.x,cy:A.y,r:b*16,fill:'none',stroke:'#7C4DFF','stroke-width':2,'stroke-dasharray':'5 4'}));
     }
     if(passo >= 3 && B){
-      svg.appendChild(el('circle',{cx:B.x,cy:B.y,r:c*14,fill:'none',stroke:'#FF8A3D','stroke-width':2,'stroke-dasharray':'5 4'}));
+      svg.appendChild(el('circle',{cx:B.x,cy:B.y,r:c*16,fill:'none',stroke:'#FF8A3D','stroke-width':2,'stroke-dasharray':'5 4'}));
     }
     if(passo >= 4 && C){
       svg.appendChild(el('circle',{cx:C.x,cy:C.y,r:5,fill:'#06D6A0'}));
@@ -510,8 +510,8 @@ Explore com as mãos — Trilha 5 (simulador de construção real)
     const lados = [a,b,c].sort((x,y)=>x-y);
     const fecha = (lados[0]+lados[1]) > lados[2];
 
-    A = {x:40, y:150};
-    B = {x:40 + a*14, y:150};
+    A = {x:60, y:150};
+    B = {x:60 + a*16, y:150};
 
     if(!fecha){
       desenhar();
@@ -522,7 +522,7 @@ Explore com as mãos — Trilha 5 (simulador de construção real)
       return;
     }
 
-    const centro = circleIntersect({x:40,y:150}, b*14, B, c*14);
+    const centro = circleIntersect(A, b*16, B, c*16);
     if(!centro){
       desenhar();
       status.textContent = '❌ Essas medidas não fecham um triângulo neste simulador. Tente valores menores.';

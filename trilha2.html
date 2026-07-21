@@ -236,6 +236,18 @@
         <div class="task-text"><strong>Missão 3 — Chegue perto do limite</strong><span>Deixe a soma dos dois menores lados no máximo 1 cm maior que o maior lado (mas ainda fechando).</span></div>
       </div>
     </div>
+
+    <div class="numeric-tester">
+      <strong style="color:#5B2EE0; font-size:1.05rem;">Missão 4 — Teste numérico</strong>
+      <p class="lead" style="font-size:0.9rem; margin:6px 0 0;">Digite três medidas de lado. Vamos testar se dá para formar um triângulo de verdade.</p>
+      <div class="nt-row">
+        <div class="nt-field"><label>Lado a</label><input type="number" id="nt-a-t2" value="3" min="0.1" step="0.1"></div>
+        <div class="nt-field"><label>Lado b</label><input type="number" id="nt-b-t2" value="4" min="0.1" step="0.1"></div>
+        <div class="nt-field"><label>Lado c</label><input type="number" id="nt-c-t2" value="10" min="0.1" step="0.1"></div>
+        <button class="btn" id="nt-test-t2">Testar</button>
+      </div>
+      <p class="nt-result" id="nt-result-t2"></p>
+    </div>
   </section>
 
   <!-- ============ DESAFIO FINAL ============ -->
@@ -490,6 +502,23 @@ Explore com as mãos — Trilha 2
   atualizar();
 })();
 
+document.getElementById('nt-test-t2').addEventListener('click', ()=>{
+  const a = parseFloat(document.getElementById('nt-a-t2').value);
+  const b = parseFloat(document.getElementById('nt-b-t2').value);
+  const c = parseFloat(document.getElementById('nt-c-t2').value);
+  const result = document.getElementById('nt-result-t2');
+  if (!(a>0 && b>0 && c>0)) { result.textContent = 'Preencha os três lados com valores positivos.'; result.className='nt-result bad'; return; }
+  const sides = [a,b,c].sort((x,y)=>x-y);
+  if (sides[0]+sides[1] > sides[2]) {
+    result.textContent = '✓ Forma um triângulo válido! ' + a + ' + ' + b + ' e ' + c + ' respeitam a condição de existência.';
+    result.className = 'nt-result ok';
+  } else {
+    const [s1,s2,s3] = sides;
+    result.textContent = '✗ Impossível: os dois menores lados (' + s1 + ' + ' + s2 + ' = ' + (s1+s2).toFixed(1) + ') não superam o maior lado (' + s3 + '). As pontas nunca se encontrariam.';
+    result.className = 'nt-result bad';
+  }
+});
+
 /* ---------- Desafio final — persistência local ---------- */
 (function reflectionT2(){
   const ta = document.getElementById('reflectTextT2');
@@ -508,7 +537,7 @@ Explore com as mãos — Trilha 2
     'Eu sei explicar o que é a desigualdade triangular.',
     'Eu sei verificar se três medidas de lado formam um triângulo.',
     'Eu sei o que é um arco e como o compasso desenha ele.',
-    'Eu sei os passos para construir um triângulo com régua e compasso, conhecendo os 3 lados.',
+    'Eu sei os passos para construir um triângulo com régua e compasso, conhecendo as medidas dos 3 lados.',
     'Eu sei explicar por que um trio de medidas às vezes "não fecha".',
     'Eu já pensei em uma construção do meu cotidiano que depende de medidas certas para fechar.'
   ];

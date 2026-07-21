@@ -364,19 +364,6 @@ function gerarCadeia(orientacao, nPaineis, comTriangulo){
     }
   });
 
-  if(!comTriangulo){
-    const desloc = 10;
-    if(orientacao === 'h'){
-      const y0 = paineis[0].y0, y1 = paineis[0].y1;
-      const xIni = paineis[0].x0, xFim = paineis[paineis.length-1].x1;
-      svg += `<polyline points="${xIni+desloc},${y0} ${xFim+desloc},${y0} ${xFim},${y1} ${xIni},${y1}" fill="none" stroke="#FF6B9D" stroke-width="2" stroke-dasharray="4 3"/>`;
-    }else{
-      const x0 = paineis[0].x0, x1 = paineis[0].x1;
-      const yIni = paineis[0].y0, yFim = paineis[paineis.length-1].y1;
-      svg += `<polyline points="${x0},${yIni} ${x1},${yIni+desloc} ${x1},${yFim+desloc} ${x0},${yFim}" fill="none" stroke="#FF6B9D" stroke-width="2" stroke-dasharray="4 3"/>`;
-    }
-  }
-
   return svg;
 }
 
@@ -389,10 +376,8 @@ function gerarTelhado(comTriangulo){
       <line x1="30" y1="50" x2="70" y2="50" stroke="#5B2EE0" stroke-width="2.5"/>
     `;
   }
-  const desloc = 12;
   return `
     <polygon points="20,80 80,80 65,30 35,30" fill="none" stroke="#5B2EE0" stroke-width="3"/>
-    <polyline points="${35+desloc},30 ${65+desloc},30 80,80 20,80" fill="none" stroke="#FF6B9D" stroke-width="2" stroke-dasharray="4 3"/>
   `;
 }
 
@@ -563,8 +548,8 @@ Explore com as mãos — Trilha 4 (demo de rigidez arrastável)
 
   // ---- Armação triangular (travada) ----
   const svgTri = document.getElementById('svgTrianguloT4');
-  const TA = {x:60, y:160}, TB = {x:200, y:160};
-  const lenTAapex = 100, lenTBapex = 120;
+  const TA = {x:40, y:195}, TB = {x:220, y:195};
+  const lenTAapex = 140, lenTBapex = 160;
   let apex = circleIntersect(TA, lenTAapex, TB, lenTBapex, true) || {x:110,y:50};
 
   function drawTriRig(){

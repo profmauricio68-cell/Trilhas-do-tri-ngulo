@@ -125,7 +125,7 @@
     <p class="lead">Arraste os dois vértices laranja para mudar os catetos. Observe: a área do quadrado da hipotenusa é sempre igual à soma das áreas dos quadrados dos catetos.</p>
 
     <div class="applet-card">
-      <svg id="svgPitagorasT8" viewBox="0 0 300 260" width="100%" height="260"></svg>
+      <svg id="svgPitagorasT8" viewBox="0 0 390 340" width="100%" height="340"></svg>
       <div class="applet-readout">
         <div class="ro-cell"><span class="k">Cateto b</span><span class="v" id="et8-b">–</span></div>
         <div class="ro-cell"><span class="k">Cateto c</span><span class="v" id="et8-c">–</span></div>
@@ -423,8 +423,8 @@ Explore com as mãos — Trilha 8 (quadrados de Pitágoras arrastáveis)
   function el(tag, attrs){ const e = document.createElementNS(SVGNS, tag); for(const k in attrs) e.setAttribute(k, attrs[k]); return e; }
 
   const svg = document.getElementById('svgPitagorasT8');
-  const P0 = {x:60, y:190}; // vértice do ângulo reto (fixo)
-  const scale = 8;
+  const P0 = {x:175, y:225}; // vértice do ângulo reto (fixo)
+  const scale = 5;
   let b = 6, c = 5; // catetos em "unidades"
 
   const taskState = { tres45:false, cinco1213:false };
@@ -453,7 +453,7 @@ Explore com as mãos — Trilha 8 (quadrados de Pitágoras arrastáveis)
     const a = Math.hypot(P1.x-P2.x, P1.y-P2.y) / scale; // hipotenusa em unidades
 
     svg.innerHTML = '';
-    svg.setAttribute('viewBox','0 0 300 260');
+    svg.setAttribute('viewBox','0 0 390 340');
 
     // quadrado no cateto b (abaixo)
     const qB = [P0, P1, {x:P1.x, y:P1.y+b*scale}, {x:P0.x, y:P0.y+b*scale}];
@@ -512,7 +512,7 @@ Explore com as mãos — Trilha 8 (quadrados de Pitágoras arrastáveis)
     ev.preventDefault();
     function move(e){
       const rect = svg.getBoundingClientRect();
-      const scaleX = 300/rect.width, scaleY = 260/rect.height;
+      const scaleX = 390/rect.width, scaleY = 340/rect.height;
       const mx = (e.clientX-rect.left)*scaleX, my = (e.clientY-rect.top)*scaleY;
       if(qual === 'b'){
         const novoB = (mx - P0.x)/scale;
