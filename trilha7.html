@@ -4,17 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trilha 7 · Parecidos, mas não iguais · Trilha dos Triângulos</title>
+<meta name="description" content="Trilha dos Triângulos: produto educacional PROFMAT/UFG sobre triângulos no Ensino Fundamental (BNCC, 6º ao 9º ano).">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
 <header class="site-header">
   <div class="header-inner">
     <a href="index.html" class="brand">
-      <svg class="mascote" viewBox="0 0 100 100"><polygon points="50,10 90,85 10,85" fill="#7C4DFF"/><circle cx="38" cy="65" r="6" fill="#fff"/><circle cx="62" cy="65" r="6" fill="#fff"/><circle cx="38" cy="65" r="3" fill="#2E2452"/><circle cx="62" cy="65" r="3" fill="#2E2452"/><path d="M35 76 Q50 88 65 76" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+      <svg class="mascote" viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,10 90,85 10,85" fill="#7C4DFF"/><circle cx="38" cy="65" r="6" fill="#fff"/><circle cx="62" cy="65" r="6" fill="#fff"/><circle cx="38" cy="65" r="3" fill="#2E2452"/><circle cx="62" cy="65" r="3" fill="#2E2452"/><path d="M35 76 Q50 88 65 76" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
       Trilha dos Triângulos
     </a>
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Navegação principal">
       <a href="index.html">Início</a>
       <a href="trilha1.html">Trilha 1</a>
       <a href="trilha2.html">Trilha 2</a>
@@ -25,16 +27,17 @@
       <a href="trilha7.html" class="active">Trilha 7</a>
       <a href="trilha8.html">Trilha 8</a>
       <a href="index.html#mapa">Mapa</a>
+      <a href="professor.html">Professor</a>
     </nav>
     <div class="progresso-pill" data-progresso-pill>⭐ 0/8 trilhas</div>
   </div>
 </header>
 
-<main class="container">
+<main class="container" id="conteudo">
 
   <!-- ============ CONTEXTUALIZAÇÃO ============ -->
   <section class="section-card">
-    <span class="tag laranja">TRILHA 7 · 9º ANO</span>
+    <span class="tag laranja">TRILHA 7 · 9º ANO · BNCC EF09MA12</span>
     <h2>☀️ A sombra do grande açaizeiro</h2>
     
     <div class="contexto-flex">
@@ -43,38 +46,51 @@
         <p class="lead" style="text-align: justify;">Os amigos acham impossível, mas Cauã pega uma vara de madeira reta de exatamente 1 metro de comprimento e a finca no chão arenoso. Ele conta que aprendeu com seu pai uma história muito antiga sobre um sábio chamado <strong>Tales de Mileto</strong>, que usou a luz do Sol para medir grandes estruturas apenas olhando para as sombras projetadas no chão.</p>
         <p class="lead" style="text-align: justify;">Cauã mostra aos amigos que, no momento em que a sombra da sua vara pequena no chão tem um tamanho proporcional, a sombra do açaizeiro gigante também segue a mesma proporção! Ao desenharem mentalmente os triângulos formados pela luz do Sol e pelas sombras, as crianças percebem que figuras parecidas — com os mesmos ângulos, mas tamanhos diferentes — guardam segredos incríveis para medir até o que parece inalcançável.</p>
         <div class="balaozinho" style="text-align: justify;">🤔 Como podemos usar triângulos "parecidos" (semelhantes) e suas proporções para fazer cálculos fantásticos? Vamos investigar!</div>
+        <p class="nota-narrativa"><strong>Sobre esta história:</strong> Cauã e seus amigos são personagens fictícios. A medição da altura da Grande Pirâmide pelas sombras é atribuída a Tales de Mileto (séc. VI a.C.) por autores gregos posteriores, como Plutarco e Diógenes Laércio; é uma tradição histórica, não um registro do próprio Tales (BOYER; MERZBACH, 2012).</p>
       </div>
       <div class="imagem">
         <figure style="margin:0;">
-          <img src="img/trilha7.jpg" alt="Os Triângulos de Sombras Proporcionais" style="width:100%; border-radius:20px; display:block; box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+          <img src="img/trilha7.webp" width="720" height="1019" decoding="async" alt="Cauã medindo a sombra do açaizeiro usando uma vara de um metro" style="width:100%; height:auto; border-radius:20px; display:block; box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
           <figcaption style="text-align:center; font-size:0.85rem; color:var(--roxo-escuro); margin-top:10px; font-weight:800;">Os Triângulos de Sombras Proporcionais</figcaption>
         </figure>
       </div>
+    </div>
   </section>
   <!-- ============ EXPLORANDO ============ -->
   <section class="section-card">
     <span class="tag roxo">EXPLORANDO</span>
     <h2>🔎 Semelhança de triângulos</h2>
     <p class="lead">Dois triângulos são <strong>semelhantes</strong> quando têm os três ângulos correspondentes congruentes e os lados correspondentes proporcionais — ou seja, o mesmo "formato", mas não necessariamente o mesmo tamanho.</p>
-    <p class="lead"><strong>Critério AA (Ângulo-Ângulo):</strong> basta que dois pares de ângulos correspondentes tenham a mesma medida para garantir que os triângulos são semelhantes — o terceiro par sai de graça, já que a soma dos ângulos internos de qualquer triângulo é sempre 180°!</p>
+    <p class="lead">Para garantir a semelhança de dois triângulos, não é preciso conferir as seis condições. Basta um dos <strong>critérios de semelhança</strong>:</p>
+    <ul class="lead" style="line-height:1.8;">
+      <li><strong>AA (Ângulo-Ângulo):</strong> dois pares de ângulos correspondentes congruentes. O terceiro par sai "de graça", porque a soma dos ângulos é sempre 180° (Trilha 3)!</li>
+      <li><strong>LAL~:</strong> dois pares de lados proporcionais e o ângulo <em>entre eles</em> congruente.</li>
+      <li><strong>LLL~:</strong> os três pares de lados proporcionais (com a mesma razão).</li>
+    </ul>
 
     <div class="center">
-      <svg viewBox="0 0 260 120" style="width:min(360px,95%);">
-        <polygon points="10,95 60,95 35,35" fill="none" stroke="#5B2EE0" stroke-width="3"/>
-        <text x="35" y="104" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11" fill="#5B2EE0" font-weight="700">4</text>
-        <text x="15" y="59" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11" fill="#5B2EE0" font-weight="700">6</text>
-        <text x="55" y="59" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11" fill="#5B2EE0" font-weight="700">8</text>
-
-        <text x="120" y="60" text-anchor="middle" font-family="Baloo 2, cursive" font-size="26" fill="#FF8A3D">~</text>
-
-        <polygon points="150,100 250,100 200,10" fill="none" stroke="#5B2EE0" stroke-width="3.5"/>
-        <text x="200" y="111" text-anchor="middle" font-family="Nunito, sans-serif" font-size="12" fill="#5B2EE0" font-weight="700">8</text>
-        <text x="166" y="49" text-anchor="middle" font-family="Nunito, sans-serif" font-size="12" fill="#5B2EE0" font-weight="700">12</text>
-        <text x="234" y="49" text-anchor="middle" font-family="Nunito, sans-serif" font-size="12" fill="#5B2EE0" font-weight="700">16</text>
-      </svg>
+      <svg viewBox="0 -14 270 130" style="width:min(380px,95%);" role="img" aria-label="Triângulo de lados 4, 6 e 8 semelhante a triângulo de lados 8, 12 e 16."><polygon points="28.0,100.0 64.0,100.0 14.5,47.7" fill="rgba(124,77,255,.08)" stroke="#5B2EE0" stroke-width="3"/><text x="51.7" y="113.4" text-anchor="middle" font-size="11" fill="#2E2452" font-weight="800">4</text><text x="11.9" y="72.1" text-anchor="middle" font-size="11" fill="#2E2452" font-weight="800">6</text><text x="43.6" y="67.8" text-anchor="middle" font-size="11" fill="#2E2452" font-weight="800">8</text><text x="110" y="70" text-anchor="middle" font-size="26" fill="#C2410C">~</text><polygon points="170.0,100.0 242.0,100.0 143.0,-4.6" fill="rgba(124,77,255,.08)" stroke="#5B2EE0" stroke-width="3.5"/><text x="211.7" y="113.4" text-anchor="middle" font-size="12" fill="#2E2452" font-weight="800">8</text><text x="147.1" y="46.0" text-anchor="middle" font-size="12" fill="#2E2452" font-weight="800">12</text><text x="196.8" y="41.6" text-anchor="middle" font-size="12" fill="#2E2452" font-weight="800">16</text></svg>
     </div>
     <p class="lead" style="font-size:0.95rem;">Repare: <strong>6/12 = 4/8 = 8/16 = 1/2</strong> — todos os lados do triângulo grande valem o dobro do pequeno. Essa razão constante entre lados correspondentes se chama <strong>razão de semelhança</strong>.</p>
 
+    <div class="demo-box">
+      <h3>⚠️ Por que só ângulos não bastam para outros polígonos? <span class="bncc-chip">EF09MA12</span></h3>
+      <p>Um quadrado de lado 4 e um retângulo 4 × 8 têm os <strong>quatro ângulos iguais</strong> (todos retos), mas <strong>não</strong> são semelhantes: 4/4 = 1, mas 8/4 = 2 — os lados não são proporcionais. E um quadrado e um losango "deitado" de mesmo lado têm todos os lados proporcionais (razão 1), mas ângulos diferentes.</p>
+      <svg class="passo-figura" viewBox="0 0 320 110" role="img" aria-label="Quadrado, retângulo e losango: contraexemplos de semelhança para quadriláteros.">
+        <rect x="15" y="40" width="60" height="60" fill="rgba(124,77,255,.12)" stroke="#5B2EE0" stroke-width="2.5"/>
+        <rect x="100" y="40" width="120" height="60" fill="rgba(194,65,12,.10)" stroke="#C2410C" stroke-width="2.5"/>
+        <polygon points="240,100 300,100 330,48 270,48" transform="translate(-14,0)" fill="rgba(4,120,87,.10)" stroke="#047857" stroke-width="2.5"/>
+        <text x="45" y="30" text-anchor="middle" font-size="11" font-weight="800" fill="#2E2452">quadrado</text>
+        <text x="160" y="30" text-anchor="middle" font-size="11" font-weight="800" fill="#2E2452">retângulo</text>
+        <text x="278" y="30" text-anchor="middle" font-size="11" font-weight="800" fill="#2E2452">losango</text>
+      </svg>
+      <p>Para polígonos em geral precisamos das <strong>duas</strong> condições (ângulos congruentes <em>e</em> lados proporcionais). O triângulo é especial: nele, ângulos iguais já obrigam os lados a serem proporcionais, e lados proporcionais já obrigam os ângulos a serem iguais. É por isso que os critérios AA e LLL~ funcionam — e é isso que significa "condições necessárias e suficientes".</p>
+    </div>
+    <div class="demo-box">
+      <h3>☀️ Por que o método de Tales funciona?</h3>
+      <p>O Sol está tão longe que seus raios chegam praticamente <strong>paralelos</strong>. A vara e a árvore estão em pé (ângulo reto com o chão) e os raios chegam com a mesma inclinação sobre as duas. Os dois triângulos "objeto–sombra–raio" têm, então, dois ângulos iguais: pelo critério <strong>AA</strong>, são semelhantes. Logo:</p>
+      <p class="center" style="font-weight:800;">altura do objeto ÷ sombra do objeto = altura da vara ÷ sombra da vara</p>
+    </div>
     <div class="balaozinho">💡 Para saber mais: essa ideia de "triângulos com o mesmo formato" também é a chave para demonstrar o Teorema de Pitágoras! Quer descobrir como? É o assunto da próxima trilha. 👉</div>
   </section>
 
@@ -86,31 +102,31 @@
     <div class="quiz-item" data-correta="0">
       <div class="quiz-pergunta">1. Dois triângulos são semelhantes quando:</div>
       <div class="quiz-opcoes">
-        <div class="quiz-opcao" data-valor="0">Têm os mesmos ângulos e lados proporcionais</div>
-        <div class="quiz-opcao" data-valor="1">Têm exatamente o mesmo tamanho</div>
-        <div class="quiz-opcao" data-valor="2">Têm só um lado de mesma medida</div>
+        <button type="button" class="quiz-opcao" data-valor="0">Têm os mesmos ângulos e lados proporcionais</button>
+        <button type="button" class="quiz-opcao" data-valor="1">Têm exatamente o mesmo tamanho</button>
+        <button type="button" class="quiz-opcao" data-valor="2">Têm só um lado igual</button>
       </div>
-      <div class="quiz-feedback"></div>
+      <div class="quiz-feedback" aria-live="polite"></div>
     </div>
 
     <div class="quiz-item" data-correta="1">
       <div class="quiz-pergunta">2. Um triângulo pequeno tem lados 3, 5 e 6. Um triângulo semelhante a ele, maior, tem razão de semelhança 2. Quais são os lados do triângulo maior?</div>
       <div class="quiz-opcoes">
-        <div class="quiz-opcao" data-valor="0">5, 7 e 8</div>
-        <div class="quiz-opcao" data-valor="1">6, 10 e 12</div>
-        <div class="quiz-opcao" data-valor="2">3, 5 e 6</div>
+        <button type="button" class="quiz-opcao" data-valor="0">5, 7 e 8</button>
+        <button type="button" class="quiz-opcao" data-valor="1">6, 10 e 12</button>
+        <button type="button" class="quiz-opcao" data-valor="2">3, 5 e 6</button>
       </div>
-      <div class="quiz-feedback"></div>
+      <div class="quiz-feedback" aria-live="polite"></div>
     </div>
 
     <div class="quiz-item" data-correta="1">
-      <div class="quiz-pergunta">3. Se dois triângulos têm dois pares de ângulos correspondentes de mesma medida, pelo critério AA, eles são:</div>
+      <div class="quiz-pergunta">3. Se dois triângulos têm dois pares de ângulos correspondentes iguais, pelo critério AA, eles são:</div>
       <div class="quiz-opcoes">
-        <div class="quiz-opcao" data-valor="0">Congruentes</div>
-        <div class="quiz-opcao" data-valor="1">Semelhantes</div>
-        <div class="quiz-opcao" data-valor="2">Sem relação nenhuma</div>
+        <button type="button" class="quiz-opcao" data-valor="0">Congruentes</button>
+        <button type="button" class="quiz-opcao" data-valor="1">Semelhantes</button>
+        <button type="button" class="quiz-opcao" data-valor="2">Sem relação nenhuma</button>
       </div>
-      <div class="quiz-feedback"></div>
+      <div class="quiz-feedback" aria-live="polite"></div>
     </div>
   </section>
 
@@ -122,15 +138,16 @@
 
     <div class="applet-card">
       <div class="nt-row">
-        <div class="nt-field"><label>Sua altura (m)</label><input type="number" id="et7-altura" value="1.6" min="0.5" max="2.2" step="0.1"></div>
-        <div class="nt-field"><label>Sua sombra (m)</label><input type="number" id="et7-sombra-pessoa" value="2" min="0.2" max="10" step="0.1"></div>
-        <div class="nt-field"><label>Sombra do objeto (m)</label><input type="number" id="et7-sombra-objeto" value="20" min="0.2" max="200" step="0.5"></div>
+        <div class="nt-field"><label for="et7-altura">Sua altura (m)</label><input type="number" id="et7-altura" value="1.6" min="0.5" max="2.2" step="0.1"></div>
+        <div class="nt-field"><label for="et7-sombra-pessoa">Sua sombra (m)</label><input type="number" id="et7-sombra-pessoa" value="2" min="0.2" max="10" step="0.1"></div>
+        <div class="nt-field"><label for="et7-sombra-objeto">Sombra do objeto (m)</label><input type="number" id="et7-sombra-objeto" value="20" min="0.2" max="200" step="0.5"></div>
         <button class="btn" id="et7-calcular">Calcular altura</button>
       </div>
       <div class="center" style="margin-top:14px;">
-        <svg id="svgSombraT7" viewBox="0 0 300 170" style="width:min(420px,95%);"></svg>
+        <svg id="svgSombraT7" viewBox="0 0 300 170" style="width:min(520px,98%);"></svg>
       </div>
       <p class="nt-result" id="et7-resultado"></p>
+      <p class="nt-note" style="font-size:.85rem; opacity:.75; text-align:center; margin:6px 0 0;">O triângulo menor foi ampliado no desenho para você enxergá-lo melhor; a forma dele continua a mesma.</p>
     </div>
 
     <h3 style="color:#5B2EE0; margin-top:26px;">Missões</h3>
@@ -150,7 +167,7 @@
   <section class="section-card">
     <span class="tag rosa">DESAFIO FINAL</span>
     <h2>🌳 Meça o que você não alcança</h2>
-    <p class="lead">A técnica de Tales é usada até hoje por comunidades tradicionais para estimar a altura de árvores, morros e construções sem precisar escalar nada.</p>
+    <p class="lead">Medir o que não se alcança com sombras, varas e proporções é uma ideia muito antiga, registrada em várias culturas — e ainda útil para estimar a altura de árvores, morros e construções sem precisar escalar nada.</p>
     <div class="challenge-card">
       <h3>Pense em algo grande no seu contexto que você gostaria de medir sem escalar</h3>
       <div class="insp-grid">
@@ -160,7 +177,7 @@
         <div class="insp"><b>Postes e antenas</b>Um poste de luz ou antena de transmissão.</div>
       </div>
       <p>Descreva o objeto e explique como você usaria sombras (ou outro método baseado em triângulos semelhantes) para estimar a altura dele.</p>
-      <textarea class="reflect" id="reflectTextT7" placeholder="Escreva aqui sua investigação..."></textarea>
+      <textarea class="reflect" id="reflectTextT7" aria-label="Sua investigação" placeholder="Escreva aqui sua investigação..."></textarea>
       <div class="challenge-actions">
         <button class="btn laranja" id="reflectSaveT7">Salvar minha investigação</button>
         <span class="save-note" id="reflectStatusT7">salvo automaticamente neste navegador</span>
@@ -199,7 +216,7 @@
           <svg viewBox="0 0 100 100" id="jogoSvg" style="width:260px;"></svg>
         </div>
         <div class="jogo-botoes" id="jogoBotoes"></div>
-        <div class="jogo-mensagem" id="jogoMensagem"></div>
+        <div class="jogo-mensagem" id="jogoMensagem" aria-live="polite"></div>
       </div>
 
       <div id="jogoFim" class="jogo-fim" style="display:none;">
@@ -218,7 +235,7 @@
 </main>
 
 <footer class="site-footer">
-  Trilha dos Triângulos — Produto Educacional PROFMAT 🔺✨
+  Trilha dos Triângulos — Produto Educacional PROFMAT/UFG 🔺✨ · <a href="professor.html" style="text-decoration:underline;">Guia do Professor</a>
 </footer>
 
 <script src="script.js"></script>
@@ -236,7 +253,7 @@ document.querySelectorAll('.quiz-item').forEach(item=>{
       if(valor === correta){
         op.classList.add('certo');
         feedback.textContent = '✅ Isso mesmo! Mandou bem.';
-        feedback.style.color = '#039073';
+        feedback.style.color = '#047857';
       }else{
         op.classList.add('errado');
         item.querySelector(`[data-valor="${correta}"]`).classList.add('certo');
@@ -332,7 +349,7 @@ function responder(escolha, btn){
     document.getElementById('jogoPontos').textContent = pontos;
     btn.style.background = '#06D6A0'; btn.style.color = '#fff'; btn.style.borderColor = '#06D6A0';
     msg.textContent = '✅ Isso aí! A resposta certa era ' + r.resposta + '.';
-    msg.style.color = '#039073';
+    msg.style.color = '#047857';
   }else{
     btn.style.background = '#FF6B9D'; btn.style.color = '#fff'; btn.style.borderColor = '#FF6B9D';
     msg.textContent = '❌ Era ' + r.resposta + '. Vamos para a próxima!';
@@ -384,8 +401,17 @@ Explore com as mãos — Trilha 7 (calculadora de sombras de Tales)
 
   function desenhar(alturaP, sombraP, alturaO, sombraO){
     const pxPerUnit = 85 / Math.max(alturaP, alturaO);
-    const hP = alturaP*pxPerUnit, sP = Math.min(sombraP*pxPerUnit, 90);
-    const hO = alturaO*pxPerUnit, sO = Math.min(sombraO*pxPerUnit, 170);
+    let hP = alturaP*pxPerUnit, sP = Math.min(sombraP*pxPerUnit, 90);
+    let hO = alturaO*pxPerUnit, sO = Math.min(sombraO*pxPerUnit, 170);
+    /* amplia o triângulo menor (mantendo a forma dele) para ficar bem visível */
+    const MIN_H = 55;
+    if (hP <= hO) {
+      const f = Math.max(1, Math.min(MIN_H / hP, 100 / sP, hO / hP));
+      hP *= f; sP *= f;
+    } else {
+      const f = Math.max(1, Math.min(MIN_H / hO, 170 / sO, hP / hO));
+      hO *= f; sO *= f;
+    }
     const baseY = 140;
     const xP0 = 25;
     const xO0 = xP0 + sP + 40;
@@ -415,7 +441,7 @@ Explore com as mãos — Trilha 7 (calculadora de sombras de Tales)
     }
     const razao = sombraO/sombraP;
     const alturaO = alturaP*razao;
-    resultado.textContent = `✓ Razão de semelhança = ${razao.toFixed(2)}x. Altura do objeto = ${alturaP} × ${razao.toFixed(2)} = ${alturaO.toFixed(2)} m.`;
+    resultado.textContent = `✓ Razão de semelhança = ${razao.toFixed(2).replace(".",",")}. Altura do objeto = ${String(alturaP).replace(".",",")} × ${razao.toFixed(2).replace(".",",")} = ${alturaO.toFixed(2).replace(".",",")} m.`;
     resultado.className = 'nt-result ok';
     desenhar(alturaP, sombraP, alturaO, sombraO);
 
@@ -473,7 +499,7 @@ Explore com as mãos — Trilha 7 (calculadora de sombras de Tales)
     for (let s=1; s<=5; s++){
       const b = document.createElement('button');
       b.className='star-btn' + ((stars[i]||0)>=s ? ' filled':'');
-      b.textContent='★';
+      b.textContent='★'; b.type='button'; b.setAttribute('aria-label', s+' de 5 estrelas — '+text);
       b.addEventListener('click', ()=>{
         stars[i] = (stars[i]===s) ? s-1 : s;
         starWrap.querySelectorAll('.star-btn').forEach((sb,idx)=> sb.classList.toggle('filled', idx < stars[i]));

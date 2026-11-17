@@ -4,17 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trilha 1 · O que é um triângulo? · Trilha dos Triângulos</title>
+<meta name="description" content="Trilha dos Triângulos: produto educacional PROFMAT/UFG sobre triângulos no Ensino Fundamental (BNCC, 6º ao 9º ano).">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
 <header class="site-header">
   <div class="header-inner">
     <a href="index.html" class="brand">
-      <svg class="mascote" viewBox="0 0 100 100"><polygon points="50,10 90,85 10,85" fill="#7C4DFF"/><circle cx="38" cy="65" r="6" fill="#fff"/><circle cx="62" cy="65" r="6" fill="#fff"/><circle cx="38" cy="65" r="3" fill="#2E2452"/><circle cx="62" cy="65" r="3" fill="#2E2452"/><path d="M35 76 Q50 88 65 76" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+      <svg class="mascote" viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,10 90,85 10,85" fill="#7C4DFF"/><circle cx="38" cy="65" r="6" fill="#fff"/><circle cx="62" cy="65" r="6" fill="#fff"/><circle cx="38" cy="65" r="3" fill="#2E2452"/><circle cx="62" cy="65" r="3" fill="#2E2452"/><path d="M35 76 Q50 88 65 76" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
       Trilha dos Triângulos
     </a>
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Navegação principal">
       <a href="index.html">Início</a>
       <a href="trilha1.html" class="active">Trilha 1</a>
       <a href="trilha2.html">Trilha 2</a>
@@ -25,53 +27,58 @@
       <a href="trilha7.html">Trilha 7</a>
       <a href="trilha8.html">Trilha 8</a>
       <a href="index.html#mapa">Mapa</a>
+      <a href="professor.html">Professor</a>
     </nav>
     <div class="progresso-pill" data-progresso-pill>⭐ 0/8 trilhas</div>
   </div>
 </header>
 
-<main class="container">
+<main class="container" id="conteudo">
 
  <!-- ============ CONTEXTUALIZAÇÃO ============ -->
   <section class="section-card">
-    <span class="tag laranja">TRILHA 1 · 6º ANO</span>
+    <span class="tag laranja">TRILHA 1 · 6º ANO · BNCC EF06MA19</span>
     <h2>🔺 O grafismo de Kamukuaka</h2>
     
     <div class="contexto-flex">
       <div class="texto">
         <p class="lead" style="text-align: justify;">Às margens do lindo Rio Batovi, no Parque Indígena do Xingu, o jovem <strong>Kamukuaka</strong>, um menino do povo <strong>Wauja</strong>, observa atento as mãos ágeis de seu tio. Com um pincel fino feito de fibra de buriti, o tio desenha padrões geométricos perfeitos nas panelas de cerâmica que sua família produz com tanto orgulho. O povo Wauja é famoso em todo o Brasil por sua belíssima arte em cerâmica e seus desenhos expressivos.</p>
-        <p class="lead" style="text-align: justify;">"Tio, como você consegue fazer essas pontas tão certas sem usar régua?", pergunta Kamukuaka, curioso. O tio sorri e explica que a floresta e o céu ensinam as direções. Ele mostra ao menino que, ao cruzar três linhas retas na pintura com a tinta preta do jenipapo, eles dão vida ao <em>kulupene</em> — um grafismo tradicional que representa a força dos peixes da região. Kamukuaka percebe, fascinado, que cada detalhe daquela pintura corporal e da cerâmica começa com uma forma simples e poderosa de três pontas e três lados.</p>
-        <div class="balaozinho" style="text-align: justify;">🤔 Mas afinal... o que faz uma forma ser um triângulo? Como Kamukuaka pode identificar essas figuras de três lados?</div>
+        <p class="lead" style="text-align: justify;">"Tio, como você consegue fazer essas pontas tão certas sem usar régua?", pergunta Kamukuaka, curioso. O tio sorri e explica que a floresta e o céu ensinam as direções. Ele mostra ao menino que, ao cruzar três linhas retas, nasce uma figura que se repete por toda a borda da panela — um dos muitos grafismos que os Wauja associam a seres do rio e da floresta. Kamukuaka percebe, fascinado, que muitos detalhes daquela pintura começam com uma forma simples e poderosa: <strong>três pontos ligados por três segmentos de reta</strong>.</p>
+        <div class="balaozinho" style="text-align: justify;">🤔 Mas afinal... o que faz uma forma ser um triângulo? E os triângulos da panela são todos do mesmo tipo, ou há triângulos "diferentes" entre si?</div>
+        <p class="nota-narrativa"><strong>Sobre esta história:</strong> Kamukuaka e seu tio são personagens fictícios. A narrativa se inspira na cerâmica e na arte gráfica do povo Wauja (Alto Xingu, MT), descritas por Barcelos Neto (2008). Os nomes e significados dos grafismos pertencem a cada povo; vale pesquisar, com a turma, materiais produzidos pelos próprios Wauja.</p>
       </div>
       <div class="imagem">
         <figure style="margin:0;">
-          <img src="img/trilha1.jpg" alt="A Cerâmica Sagrada de Kamukuaka" style="width:100%; border-radius:20px; display:block; box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+          <img src="img/trilha1.webp" width="720" height="1019" decoding="async" alt="Kamukuaka observa o tio pintando grafismos geométricos em cerâmica Wauja" style="width:100%; height:auto; border-radius:20px; display:block; box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
           <figcaption style="text-align:center; font-size:0.85rem; color:var(--roxo-escuro); margin-top:10px; font-weight:800;">A Cerâmica Sagrada de Kamukuaka</figcaption>
         </figure>
       </div>
+    </div>
   </section>
   <!-- ============ EXPLORANDO ============ -->
   <section class="section-card">
     <span class="tag roxo">EXPLORANDO</span>
     <h2>📐 Definindo o triângulo</h2>
-    <p class="lead">Um <strong>triângulo</strong> é uma figura geométrica plana formada por <strong>3 lados</strong>, <strong>3 vértices</strong> e <strong>3 ângulos internos</strong>. É a forma mais simples que existe com lados retos — e também uma das mais fortes, como você vai descobrir em outra trilha!</p>
+    <p class="lead">Marque três pontos <strong>A</strong>, <strong>B</strong> e <strong>C</strong> que <strong>não estejam na mesma reta</strong>. Ligando-os pelos segmentos AB, BC e CA, obtemos um <strong>triângulo</strong>. Os pontos A, B e C são os <strong>vértices</strong>; os segmentos são os <strong>lados</strong>; e em cada vértice há um <strong>ângulo interno</strong>. O triângulo é o polígono com o menor número possível de lados — e também um dos mais fortes, como você vai descobrir na Trilha 4!</p>
+    <div class="cuidado">⚠️ Por que os pontos não podem estar na mesma reta? Se A, B e C forem <em>colineares</em>, os três segmentos ficam "deitados" uns sobre os outros e não cercam região nenhuma: não há triângulo.</div>
+    <p class="lead" style="font-size:0.95rem;">Uma convenção muito usada: o lado oposto ao vértice A chama-se <strong>a</strong> (é o lado BC), o oposto a B chama-se <strong>b</strong> (lado AC) e o oposto a C chama-se <strong>c</strong> (lado AB).</p>
 
     <h3 style="color:#5B2EE0;">Classificação quanto aos lados</h3>
     <div class="exemplos-grid">
       <div class="exemplo-card">
-        <svg viewBox="0 0 100 100"><polygon points="50,12 90,82 10,82" fill="#7C4DFF" stroke="#5B2EE0" stroke-width="3"/></svg>
+        <svg viewBox="0 0 100 100"><polygon points="50,12.72 90,82 10,82" fill="#7C4DFF" stroke="#5B2EE0" stroke-width="3"/></svg>
         <div class="nome">Equilátero</div>
-        <div class="desc">3 lados de medidas iguais</div>
+        <div class="desc">3 lados iguais</div>
       </div>
       <div class="exemplo-card">
         <svg viewBox="0 0 100 100"><polygon points="50,10 75,85 25,85" fill="#FF8A3D" stroke="#C85A17" stroke-width="3"/></svg>
         <div class="nome">Isósceles</div>
-        <div class="desc">2 lados de medidas iguais</div>
+        <div class="desc">pelo menos 2 lados iguais</div>
       </div>
       <div class="exemplo-card">
         <svg viewBox="0 0 100 100"><polygon points="20,85 90,70 55,15" fill="#06D6A0" stroke="#039073" stroke-width="3"/></svg>
         <div class="nome">Escaleno</div>
-        <div class="desc">3 lados de medidas diferentes</div>
+        <div class="desc">3 lados diferentes</div>
       </div>
     </div>
 
@@ -88,13 +95,15 @@
         <div class="desc">um ângulo reto (90°)</div>
       </div>
       <div class="exemplo-card">
-        <svg viewBox="0 0 100 100"><polygon points="8,90 96,90 62,58" fill="#FFD166" stroke="#C99420" stroke-width="3"/></svg>
+        <svg viewBox="0 0 100 100"><polygon points="28,88 95,88 8,35" fill="#FFD166" stroke="#C99420" stroke-width="3"/></svg>
         <div class="nome">Obtusângulo</div>
         <div class="desc">um ângulo obtuso (&gt;90°)</div>
       </div>
     </div>
 
-    <div class="balaozinho">💡 Repare: todo triângulo tem uma classificação quanto aos lados <em>e</em> uma quanto aos ângulos, ao mesmo tempo! Por exemplo, um triângulo pode ser isósceles e retângulo ao mesmo tempo.</div>
+    <div class="balaozinho">💡 Repare: todo triângulo tem uma classificação quanto aos lados <em>e</em> uma quanto aos ângulos, ao mesmo tempo! Por exemplo, um triângulo pode ser isósceles e retângulo ao mesmo tempo (é o "esquadro de 45°").</div>
+    <div class="cuidado">🔎 <strong>Equilátero também é isósceles?</strong> Na Geometria Plana de Dolce e Pompeo, isósceles é o triângulo que tem <em>pelo menos</em> dois lados congruentes. Assim, todo triângulo equilátero é um caso particular de isósceles — do mesmo jeito que todo quadrado é um retângulo especial. Alguns livros usam "exatamente dois lados"; o importante é saber qual definição está sendo usada.</div>
+    <div class="cuidado">🚫 <strong>Pode existir triângulo com dois ângulos retos?</strong> Não! Os ângulos de um triângulo não podem "gastar" muito: um triângulo tem no máximo <em>um</em> ângulo reto ou obtuso. Por isso, os outros dois ângulos de um triângulo retângulo ou obtusângulo são sempre agudos. (Você vai entender o motivo na Trilha 3.)</div>
   </section>
 
   <!-- ============ PRATICANDO ============ -->
@@ -105,31 +114,31 @@
     <div class="quiz-item" data-correta="2">
       <div class="quiz-pergunta">1. Um triângulo com lados 5 cm, 5 cm e 5 cm é classificado quanto aos lados como:</div>
       <div class="quiz-opcoes">
-        <div class="quiz-opcao" data-valor="0">Escaleno</div>
-        <div class="quiz-opcao" data-valor="1">Isósceles</div>
-        <div class="quiz-opcao" data-valor="2">Equilátero</div>
+        <button type="button" class="quiz-opcao" data-valor="0">Escaleno</button>
+        <button type="button" class="quiz-opcao" data-valor="1">Isósceles</button>
+        <button type="button" class="quiz-opcao" data-valor="2">Equilátero</button>
       </div>
-      <div class="quiz-feedback"></div>
+      <div class="quiz-feedback" aria-live="polite"></div>
     </div>
 
     <div class="quiz-item" data-correta="2">
       <div class="quiz-pergunta">2. Um triângulo que tem um ângulo de exatamente 90° é chamado de:</div>
       <div class="quiz-opcoes">
-        <div class="quiz-opcao" data-valor="0">Acutângulo</div>
-        <div class="quiz-opcao" data-valor="1">Obtusângulo</div>
-        <div class="quiz-opcao" data-valor="2">Retângulo</div>
+        <button type="button" class="quiz-opcao" data-valor="0">Acutângulo</button>
+        <button type="button" class="quiz-opcao" data-valor="1">Obtusângulo</button>
+        <button type="button" class="quiz-opcao" data-valor="2">Retângulo</button>
       </div>
-      <div class="quiz-feedback"></div>
+      <div class="quiz-feedback" aria-live="polite"></div>
     </div>
 
-    <div class="quiz-item" data-correta="0">
-      <div class="quiz-pergunta">3. Todo triângulo, sem exceção, tem:</div>
+    <div class="quiz-item" data-correta="1">
+      <div class="quiz-pergunta">3. Os pontos A, B e C estão sobre uma mesma reta. Ligando-os, obtemos:</div>
       <div class="quiz-opcoes">
-        <div class="quiz-opcao" data-valor="0">3 lados e 3 ângulos</div>
-        <div class="quiz-opcao" data-valor="1">4 lados e 3 ângulos</div>
-        <div class="quiz-opcao" data-valor="2">3 lados e 4 ângulos</div>
+        <button type="button" class="quiz-opcao" data-valor="0">Um triângulo escaleno</button>
+        <button type="button" class="quiz-opcao" data-valor="1">Nenhum triângulo: os pontos são colineares</button>
+        <button type="button" class="quiz-opcao" data-valor="2">Um triângulo obtusângulo</button>
       </div>
-      <div class="quiz-feedback"></div>
+      <div class="quiz-feedback" aria-live="polite"></div>
     </div>
   </section>
 
@@ -137,7 +146,7 @@
   <section class="section-card">
     <span class="tag azul">EXPLORE COM AS MÃOS</span>
     <h2>🖐️ Arraste e descubra</h2>
-    <p class="lead">Arraste os vértices do triângulo abaixo e observe: os lados e os ângulos mudam, mas a soma dos ângulos internos nunca sai de <strong>180°</strong>.</p>
+    <p class="lead">Arraste os vértices laranja do triângulo e observe como as medidas dos lados e dos ângulos mudam — e como a classificação muda junto. Que formatos você consegue criar?</p>
 
     <div class="applet-card">
       <svg id="svgExploreT1" viewBox="0 0 320 280" width="100%" height="280"></svg>
@@ -149,12 +158,12 @@
         <div class="ro-cell"><span class="k">Ângulo B</span><span class="v" id="et1-B">–</span></div>
         <div class="ro-cell"><span class="k">Ângulo C</span><span class="v" id="et1-C">–</span></div>
       </div>
-      <p class="hint">Soma dos ângulos: <strong id="et1-sum">–</strong></p>
+      <p class="hint">Desafio extra: você consegue fazer um triângulo com dois ângulos obtusos? Tente — e anote o que acontece. <span id="et1-sum" hidden></span></p>
       <div class="badges" id="et1-badges"></div>
     </div>
 
     <h3 style="color:#5B2EE0; margin-top:26px;">Missões</h3>
-    <p class="lead" style="font-size:0.95rem;">Continue arrastando o triângulo abaixo até completar cada missão.</p>
+    <p class="lead" style="font-size:0.95rem;">Arraste o triângulo abaixo até completar cada missão. A classificação aparece embaixo do desenho.</p>
     <div class="applet-card">
       <svg id="svgMissoesT1" viewBox="0 0 320 280" width="100%" height="280"></svg>
       <div class="applet-readout">
@@ -167,7 +176,7 @@
     <div class="tasks" id="taskListT1">
       <div class="task" data-task="equilatero">
         <div class="task-check">✓</div>
-        <div class="task-text"><strong>Missão 1 — Equilátero</strong><span>Forme um triângulo com os três lados aproximadamente iguais.</span></div>
+        <div class="task-text"><strong>Missão 1 — Equilátero</strong><span>Forme um triângulo com os três lados aproximadamente iguais (diferença menor que 0,3 cm).</span></div>
       </div>
       <div class="task" data-task="retangulo">
         <div class="task-check">✓</div>
@@ -177,6 +186,21 @@
         <div class="task-check">✓</div>
         <div class="task-text"><strong>Missão 3 — Obtusângulo escaleno</strong><span>Forme um triângulo com um ângulo maior que 90° e os três lados diferentes.</span></div>
       </div>
+      <div class="task" data-task="isosceles-retangulo">
+        <div class="task-check">✓</div>
+        <div class="task-text"><strong>Missão 4 — Isósceles e retângulo</strong><span>Forme um triângulo que seja, ao mesmo tempo, isósceles e retângulo.</span></div>
+      </div>
+    </div>
+    <div class="numeric-tester">
+      <strong style="color:#5B2EE0; font-size:1.05rem;">Missão 5 — Classifique pelas medidas</strong>
+      <p class="lead" style="font-size:0.9rem; margin:6px 0 0;">Digite as medidas (em cm) dos três lados de um triângulo e veja a classificação quanto aos lados.</p>
+      <div class="nt-row">
+        <div class="nt-field"><label for="nt-a-t1">Lado a</label><input type="number" id="nt-a-t1" value="5" min="0.1" step="0.1"></div>
+        <div class="nt-field"><label for="nt-b-t1">Lado b</label><input type="number" id="nt-b-t1" value="5" min="0.1" step="0.1"></div>
+        <div class="nt-field"><label for="nt-c-t1">Lado c</label><input type="number" id="nt-c-t1" value="8" min="0.1" step="0.1"></div>
+        <button class="btn" id="nt-test-t1">Classificar</button>
+      </div>
+      <p class="nt-result" id="nt-result-t1" aria-live="polite"></p>
     </div>
   </section>
 
@@ -195,7 +219,7 @@
         <div class="insp"><b>Instrumentos &amp; rituais</b>Formas triangulares em tambores, adornos e objetos cerimoniais.</div>
       </div>
       <p>Descreva o objeto, de onde ele vem, e proponha uma explicação: por que a forma triangular foi a escolha certa ali — em termos de força, equilíbrio ou significado cultural?</p>
-      <textarea class="reflect" id="reflectTextT1" placeholder="Escreva aqui sua investigação..."></textarea>
+      <textarea class="reflect" id="reflectTextT1" aria-label="Sua investigação" placeholder="Escreva aqui sua investigação..."></textarea>
       <div class="challenge-actions">
         <button class="btn laranja" id="reflectSaveT1">Salvar minha investigação</button>
         <span class="save-note" id="reflectStatusT1">salvo automaticamente neste navegador</span>
@@ -224,7 +248,7 @@
   <section class="section-card">
     <span class="tag rosa">JOGO FINAL</span>
     <h2>🎮 Caça-Triângulos</h2>
-    <p class="lead">Classifique cada triângulo antes que a rodada acabe. Acerte o máximo possível para ganhar sua estrela da Trilha 1!</p>
+    <p class="lead">Classifique cada triângulo — escolha sempre a classificação <strong>mais específica</strong>. As medidas aparecem no desenho para você não depender só "do olho". Acerte o máximo possível para ganhar sua estrela da Trilha 1!</p>
 
     <div class="jogo-wrap">
       <div class="jogo-placar">
@@ -235,10 +259,10 @@
       <div id="jogoAtivo">
         <p class="center quiz-pergunta" id="jogoPergunta">Classifique este triângulo quanto aos lados:</p>
         <div class="jogo-triangulo-area">
-          <svg viewBox="0 0 100 100" id="jogoSvg"><polygon id="jogoPoligono" points="50,12 90,82 10,82" fill="#7C4DFF" stroke="#5B2EE0" stroke-width="3"/></svg>
+          <svg viewBox="-8 -4 116 106" id="jogoSvg" style="width:min(340px,92%);" role="img" aria-label="Triângulo da rodada"><polygon id="jogoPoligono" points="50,12.72 90,82 10,82" fill="#7C4DFF" fill-opacity="0.85" stroke="#5B2EE0" stroke-width="3"/><g id="jogoRotulos"></g></svg>
         </div>
         <div class="jogo-botoes" id="jogoBotoes"></div>
-        <div class="jogo-mensagem" id="jogoMensagem"></div>
+        <div class="jogo-mensagem" id="jogoMensagem" aria-live="polite"></div>
       </div>
 
       <div id="jogoFim" class="jogo-fim" style="display:none;">
@@ -257,7 +281,7 @@
 </main>
 
 <footer class="site-footer">
-  Trilha dos Triângulos — Produto Educacional PROFMAT 🔺✨
+  Trilha dos Triângulos — Produto Educacional PROFMAT/UFG 🔺✨ · <a href="professor.html" style="text-decoration:underline;">Guia do Professor</a>
 </footer>
 
 <script src="script.js"></script>
@@ -275,7 +299,7 @@ document.querySelectorAll('.quiz-item').forEach(item=>{
       if(valor === correta){
         op.classList.add('certo');
         feedback.textContent = '✅ Isso mesmo! Mandou bem.';
-        feedback.style.color = '#039073';
+        feedback.style.color = '#047857';
       }else{
         op.classList.add('errado');
         item.querySelector(`[data-valor="${correta}"]`).classList.add('certo');
@@ -288,10 +312,10 @@ document.querySelectorAll('.quiz-item').forEach(item=>{
 
 /* ---------- Jogo "Caça-Triângulos" ---------- */
 const rodadas = [
-  { pontos:"50,12 90,82 10,82", tipo:"lados", resposta:"Equilátero", opcoes:["Equilátero","Isósceles","Escaleno"] },
+  { pontos:"50,12.72 90,82 10,82", tipo:"lados", resposta:"Equilátero", opcoes:["Equilátero","Isósceles","Escaleno"] },
   { pontos:"15,85 15,15 85,85", tipo:"angulos", resposta:"Retângulo", opcoes:["Acutângulo","Retângulo","Obtusângulo"] },
   { pontos:"20,85 90,70 55,15", tipo:"lados", resposta:"Escaleno", opcoes:["Equilátero","Isósceles","Escaleno"] },
-  { pontos:"8,90 96,90 62,58", tipo:"angulos", resposta:"Obtusângulo", opcoes:["Acutângulo","Retângulo","Obtusângulo"] },
+  { pontos:"28,88 95,88 8,35", tipo:"angulos", resposta:"Obtusângulo", opcoes:["Acutângulo","Retângulo","Obtusângulo"] },
   { pontos:"50,10 75,85 25,85", tipo:"lados", resposta:"Isósceles", opcoes:["Equilátero","Isósceles","Escaleno"] },
   { pontos:"50,15 85,75 20,70", tipo:"angulos", resposta:"Acutângulo", opcoes:["Acutângulo","Retângulo","Obtusângulo"] },
 ];
@@ -319,6 +343,7 @@ function carregarRodada(){
     r.tipo === 'lados' ? 'Classifique este triângulo quanto aos LADOS:' : 'Classifique este triângulo quanto aos ÂNGULOS:';
   document.getElementById('jogoRodadaAtual').textContent = rodadaIdx+1;
   document.getElementById('jogoMensagem').textContent = '';
+  desenharRotulosJogo(r);
 
   const botoesDiv = document.getElementById('jogoBotoes');
   botoesDiv.innerHTML = '';
@@ -328,6 +353,37 @@ function carregarRodada(){
     btn.addEventListener('click', ()=> responder(op, btn));
     botoesDiv.appendChild(btn);
   });
+}
+
+/* Mostra as medidas no próprio desenho: lados (em cm, escala 1 u = 0,1 cm)
+   ou ângulos (arredondados de forma que a soma exibida seja 180°). */
+function desenharRotulosJogo(r){
+  const g = document.getElementById('jogoRotulos');
+  g.innerHTML = '';
+  const P = r.pontos.split(' ').map(t=>{ const [x,y]=t.split(',').map(Number); return {x,y}; });
+  const G = {x:(P[0].x+P[1].x+P[2].x)/3, y:(P[0].y+P[1].y+P[2].y)/3};
+  function txt(x,y,s){
+    const t = document.createElementNS('http://www.w3.org/2000/svg','text');
+    t.setAttribute('x',x); t.setAttribute('y',y); t.setAttribute('font-size','7');
+    t.setAttribute('font-weight','800'); t.setAttribute('fill','#2E2452'); t.setAttribute('text-anchor','middle');
+    t.setAttribute('dominant-baseline','middle'); t.textContent = s; g.appendChild(t);
+  }
+  if(r.tipo === 'lados'){
+    for(let i=0;i<3;i++){
+      const p=P[i], q=P[(i+1)%3];
+      const m={x:(p.x+q.x)/2, y:(p.y+q.y)/2};
+      const dx=m.x-G.x, dy=m.y-G.y, L=Math.hypot(dx,dy)||1;
+      const med = (Math.hypot(p.x-q.x,p.y-q.y)/10).toFixed(1).replace('.',',');
+      txt(m.x+dx/L*11, m.y+dy/L*11, med+' cm');
+    }
+  }else{
+    const angs = P.map((p,i)=>angleAtT1(p, P[(i+1)%3], P[(i+2)%3]));
+    const arred = arredondarAngulos(angs);
+    P.forEach((p,i)=>{
+      const dx=G.x-p.x, dy=G.y-p.y, L=Math.hypot(dx,dy)||1;
+      txt(p.x+dx/L*13, p.y+dy/L*13, arred[i]+'°');
+    });
+  }
 }
 
 function responder(escolha, btn){
@@ -340,7 +396,7 @@ function responder(escolha, btn){
     document.getElementById('jogoPontos').textContent = pontos;
     btn.style.background = '#06D6A0'; btn.style.color='#fff'; btn.style.borderColor='#06D6A0';
     msg.textContent = '✅ Isso aí! ' + r.resposta + ' correto!';
-    msg.style.color = '#039073';
+    msg.style.color = '#047857';
   }else{
     btn.style.background = '#FF6B9D'; btn.style.color='#fff'; btn.style.borderColor='#FF6B9D';
     msg.textContent = '❌ Era ' + r.resposta + '. Vamos para a próxima!';
@@ -402,16 +458,19 @@ function makeTriangleAppletT1(svgId, opts){
     const a = distT1(P2,P3), b = distT1(P1,P3), c = distT1(P1,P2);
     const A = angleAtT1(P1,P2,P3), B = angleAtT1(P2,P1,P3), C = angleAtT1(P3,P1,P2);
     const sides = [a,b,c].map(s=>s*scale);
-    const tol = 0.35;
+    /* Tolerância de 0,3 cm (as medidas exibidas têm 1 casa decimal).
+       Versão anterior usava ~21% de folga relativa e classificava
+       como "equilátero" triângulos de lados 8, 9 e 10 cm. */
+    const tol = 0.3;
     const sMax = Math.max(...sides), sMin = Math.min(...sides);
     let sideClass;
-    if (sMax - sMin < tol*sMax*0.6) sideClass = 'equilatero';
+    if (sMax - sMin < tol) sideClass = 'equilatero';
     else if (Math.abs(sides[0]-sides[1])<tol || Math.abs(sides[1]-sides[2])<tol || Math.abs(sides[0]-sides[2])<tol) sideClass = 'isosceles';
     else sideClass = 'escaleno';
     const angs = [A,B,C];
     const maxAng = Math.max(...angs);
     let angClass;
-    if (Math.abs(maxAng-90) < 4) angClass = 'retangulo';
+    if (Math.abs(maxAng-90) < 2) angClass = 'retangulo';
     else if (maxAng > 90) angClass = 'obtusangulo';
     else angClass = 'acutangulo';
     return {a: sides[0], b: sides[1], c: sides[2], A, B, C, sum:A+B+C, sideClass, angClass};
@@ -427,13 +486,19 @@ function makeTriangleAppletT1(svgId, opts){
     const labels = [
       {p:verts[0], o1:verts[1], o2:verts[2]}, {p:verts[1], o1:verts[0], o2:verts[2]}, {p:verts[2], o1:verts[0], o2:verts[1]}
     ];
-    const centroidT1 = {x:(verts[0].x+verts[1].x+verts[2].x)/3, y:(verts[0].y+verts[1].y+verts[2].y)/3};
+    const arredT1 = arredondarAngulos(labels.map(L=>angleAtT1(L.p, L.o1, L.o2)));
     labels.forEach(L=>{
       const ang = angleAtT1(L.p, L.o1, L.o2);
-      const lx = L.p.x + 0.55*(centroidT1.x - L.p.x);
-      const ly = L.p.y + 0.55*(centroidT1.y - L.p.y);
-      const t = elT1('text',{x:lx, y:ly, 'font-size':12, fill:'#5B2EE0', 'text-anchor':'middle', 'font-weight':'700'});
-      t.textContent = Math.round(ang)+'°';
+      /* direção da bissetriz interna = soma dos vetores unitários
+         (a fórmula anterior, com média de atan2, falhava quando o
+         ângulo cruzava ±180° e jogava o rótulo para fora) */
+      const u1x=L.o1.x-L.p.x, u1y=L.o1.y-L.p.y, n1=Math.hypot(u1x,u1y)||1;
+      const u2x=L.o2.x-L.p.x, u2y=L.o2.y-L.p.y, n2=Math.hypot(u2x,u2y)||1;
+      let bx=u1x/n1+u2x/n2, by=u1y/n1+u2y/n2; const nb=Math.hypot(bx,by)||1; bx/=nb; by/=nb;
+      const lx = L.p.x + 26*bx;
+      const ly = L.p.y + 26*by;
+      const t = elT1('text',{x:lx, y:ly, 'font-size':12, fill:'#5B2EE0', 'text-anchor':'middle', 'font-weight':'700', 'dominant-baseline':'middle'});
+      t.textContent = arredT1[labels.indexOf(L)]+'°';
       svg.appendChild(t);
     });
 
@@ -483,15 +548,16 @@ makeTriangleAppletT1('svgExploreT1', {
     document.getElementById('et1-a').textContent = state.a.toFixed(1)+' cm';
     document.getElementById('et1-b').textContent = state.b.toFixed(1)+' cm';
     document.getElementById('et1-c').textContent = state.c.toFixed(1)+' cm';
-    document.getElementById('et1-A').textContent = Math.round(state.A)+'°';
-    document.getElementById('et1-B').textContent = Math.round(state.B)+'°';
-    document.getElementById('et1-C').textContent = Math.round(state.C)+'°';
-    document.getElementById('et1-sum').textContent = Math.round(state.sum)+'°';
+    const [rA,rB,rC] = arredondarAngulos([state.A,state.B,state.C]);
+    document.getElementById('et1-A').textContent = rA+'°';
+    document.getElementById('et1-B').textContent = rB+'°';
+    document.getElementById('et1-C').textContent = rC+'°';
     renderBadgesT1(document.getElementById('et1-badges'), state);
   }
 });
 
-const taskStateT1 = {equilatero:false, retangulo:false, 'obtusangulo-escaleno':false};
+const taskStateT1 = {equilatero:false, retangulo:false, 'obtusangulo-escaleno':false, 'isosceles-retangulo':false};
+let missoesT1Ativas = false; /* só conta depois que o aluno arrastar (antes, o triângulo inicial podia "cumprir" missões sozinho) */
 function updateTaskUIT1(){
   document.querySelectorAll('#taskListT1 .task').forEach(t=>{
     const key = t.getAttribute('data-task');
@@ -500,20 +566,45 @@ function updateTaskUIT1(){
 }
 
 makeTriangleAppletT1('svgMissoesT1', {
-  initial: [{x:40,y:250},{x:280,y:250},{x:150,y:60}],
+  initial: [{x:70,y:220},{x:230,y:220},{x:150,y:90}],
   onChange: (state)=>{
     document.getElementById('mt1-a').textContent = state.a.toFixed(1)+' cm';
     document.getElementById('mt1-b').textContent = state.b.toFixed(1)+' cm';
     document.getElementById('mt1-c').textContent = state.c.toFixed(1)+' cm';
     renderBadgesT1(document.getElementById('mt1-badges'), state);
 
-    if (state.sideClass === 'equilatero') taskStateT1.equilatero = true;
-    if (state.angClass === 'retangulo') taskStateT1.retangulo = true;
-    if (state.angClass === 'obtusangulo' && state.sideClass === 'escaleno') taskStateT1['obtusangulo-escaleno'] = true;
+    if (missoesT1Ativas){
+      if (state.sideClass === 'equilatero') taskStateT1.equilatero = true;
+      if (state.angClass === 'retangulo') taskStateT1.retangulo = true;
+      if (state.angClass === 'obtusangulo' && state.sideClass === 'escaleno') taskStateT1['obtusangulo-escaleno'] = true;
+      if (state.angClass === 'retangulo' && state.sideClass === 'isosceles') taskStateT1['isosceles-retangulo'] = true;
+    }
+    missoesT1Ativas = true;
     updateTaskUIT1();
   }
 });
 updateTaskUIT1();
+
+document.getElementById('nt-test-t1').addEventListener('click', ()=>{
+  const a = parseFloat(document.getElementById('nt-a-t1').value);
+  const b = parseFloat(document.getElementById('nt-b-t1').value);
+  const c = parseFloat(document.getElementById('nt-c-t1').value);
+  const result = document.getElementById('nt-result-t1');
+  if (!(a>0 && b>0 && c>0)) { result.textContent = 'Preencha os três lados com valores positivos.'; result.className='nt-result bad'; return; }
+  const sides = [a,b,c].sort((x,y)=>x-y);
+  if (!(sides[0]+sides[1] > sides[2] + 1e-9)) {
+    result.textContent = '✗ Com essas medidas os lados não se fecham em triângulo (o maior lado é grande demais). Você vai entender o porquê na Trilha 2 — por enquanto, tente outras medidas.';
+    result.className = 'nt-result bad';
+    return;
+  }
+  const iguais = (x,y)=> Math.abs(x-y) < 1e-9;
+  let classe, motivo;
+  if (iguais(a,b) && iguais(b,c)) { classe='equilátero'; motivo='os três lados são iguais (e, por isso, ele também é um isósceles especial)'; }
+  else if (iguais(a,b) || iguais(b,c) || iguais(a,c)) { classe='isósceles'; motivo='exatamente dois lados são iguais'; }
+  else { classe='escaleno'; motivo='os três lados têm medidas diferentes'; }
+  result.textContent = '✓ Triângulo ' + classe + ': ' + motivo + '.';
+  result.className = 'nt-result ok';
+});
 
 /* ---------- Desafio final — persistência local ---------- */
 (function reflectionT1(){
@@ -539,11 +630,9 @@ updateTaskUIT1();
 (function assessmentT1(){
   const ITEMS = [
     'Eu sei explicar o que é um vértice, um lado e um ângulo interno de um triângulo.',
-    'Eu sei explicar por que a soma dos ângulos internos é sempre 180°.',
-    'Eu sei verificar se três medidas de lado conseguem formar um triângulo.',
-    'Eu consigo classificar um triângulo pelas medidas dos lados (equilátero, isósceles, escaleno).',
-    'Eu consigo classificar um triângulo pelas medidas dos ângulos internos (acutângulo, retângulo, obtusângulo).',
-    'Eu consigo explicar, com minhas palavras, por que o triângulo é uma forma rígida.',
+    'Eu sei explicar por que três pontos na mesma reta não formam um triângulo.',
+    'Eu consigo classificar um triângulo pelos lados (equilátero, isósceles, escaleno).',
+    'Eu consigo classificar um triângulo pelos ângulos (acutângulo, retângulo, obtusângulo).',
     'Eu já pensei em pelo menos um objeto ou tradição cultural que usa a forma triangular.'
   ];
   const KEY = 'trilha1-autoavaliacao';
@@ -574,7 +663,7 @@ updateTaskUIT1();
     for (let s=1; s<=5; s++){
       const b = document.createElement('button');
       b.className='star-btn' + ((stars[i]||0)>=s ? ' filled':'');
-      b.textContent='★';
+      b.textContent='★'; b.type='button'; b.setAttribute('aria-label', s+' de 5 estrelas — '+text);
       b.addEventListener('click', ()=>{
         stars[i] = (stars[i]===s) ? s-1 : s;
         starWrap.querySelectorAll('.star-btn').forEach((sb,idx)=> sb.classList.toggle('filled', idx < stars[i]));

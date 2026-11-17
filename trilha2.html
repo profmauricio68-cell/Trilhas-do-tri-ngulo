@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trilha 2 · Existe ou não existe? · Trilha dos Triângulos</title>
+<meta name="description" content="Trilha dos Triângulos: produto educacional PROFMAT/UFG sobre triângulos no Ensino Fundamental (BNCC, 6º ao 9º ano).">
 <link rel="stylesheet" href="style.css">
 <style>
   .barra-linha{ display:flex; align-items:center; gap:10px; margin:8px 0; }
@@ -15,14 +16,15 @@
 </style>
 </head>
 <body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
 <header class="site-header">
   <div class="header-inner">
     <a href="index.html" class="brand">
-      <svg class="mascote" viewBox="0 0 100 100"><polygon points="50,10 90,85 10,85" fill="#7C4DFF"/><circle cx="38" cy="65" r="6" fill="#fff"/><circle cx="62" cy="65" r="6" fill="#fff"/><circle cx="38" cy="65" r="3" fill="#2E2452"/><circle cx="62" cy="65" r="3" fill="#2E2452"/><path d="M35 76 Q50 88 65 76" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+      <svg class="mascote" viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,10 90,85 10,85" fill="#7C4DFF"/><circle cx="38" cy="65" r="6" fill="#fff"/><circle cx="62" cy="65" r="6" fill="#fff"/><circle cx="38" cy="65" r="3" fill="#2E2452"/><circle cx="62" cy="65" r="3" fill="#2E2452"/><path d="M35 76 Q50 88 65 76" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
       Trilha dos Triângulos
     </a>
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Navegação principal">
       <a href="index.html">Início</a>
       <a href="trilha1.html">Trilha 1</a>
       <a href="trilha2.html" class="active">Trilha 2</a>
@@ -33,37 +35,40 @@
       <a href="trilha7.html">Trilha 7</a>
       <a href="trilha8.html">Trilha 8</a>
       <a href="index.html#mapa">Mapa</a>
+      <a href="professor.html">Professor</a>
     </nav>
     <div class="progresso-pill" data-progresso-pill>⭐ 0/8 trilhas</div>
   </div>
 </header>
 
-<main class="container">
+<main class="container" id="conteudo">
 
  <!-- ============ CONTEXTUALIZAÇÃO ============ -->
   <section class="section-card">
-    <span class="tag laranja">TRILHA 2 · 7º ANO</span>
+    <span class="tag laranja">TRILHA 2 · 7º ANO · BNCC EF07MA24</span>
     <h2>🛶 As varas de amarrar de Jurema</h2>
     
     <div class="contexto-flex">
       <div class="texto">
-        <p class="lead" style="text-align: justify;">Na aldeia do povo <strong>Ticuna</strong>, na exuberante região do Alto Solimões, a jovem <strong>Jurema</strong> está animada: hoje ela vai ajudar seu avô, o sábio cacique <strong>Araquém</strong>, a preparar as varas de madeira para construir uma nova estrutura para secar sementes de urucum. Os Ticuna são o maior povo indígena da Amazônia brasileira e dominam a arte de construir estruturas, suportes e utensílios firmes usando recursos da floresta.</p>
+        <p class="lead" style="text-align: justify;">Na aldeia do povo <strong>Ticuna</strong>, na exuberante região do Alto Solimões, a jovem <strong>Jurema</strong> está animada: hoje ela vai ajudar seu avô, o sábio cacique <strong>Araquém</strong>, a preparar as varas de madeira para construir uma nova estrutura para secar sementes de urucum. Os Ticuna estão entre os povos indígenas mais numerosos do Brasil e têm longa tradição na construção de casas, suportes e utensílios com madeira, cipós e fibras da floresta.</p>
         <p class="lead" style="text-align: justify;">Jurema recolhe três varas caídas no chão. Uma delas é bem comprida, e as outras duas são gravetos bem curtinhos. "Vovô, com essas três varas nós conseguimos amarrar as pontas e formar um suporte de três lados firme?", pergunta Jurema. O avô Araquém olha com carinho para a tentativa da neta e diz: "Tente juntar as pontas deles, Jurema. Veja se eles conseguem se encontrar."</p>
         <p class="lead" style="text-align: justify;">Por mais que Jurema estique as varas, os dois gravetos curtos não alcançam as pontas um do outro se estiverem apoiados na vara maior! Ela descobre que, na natureza, para que três varas se unam e fiquem firmes, há um segredo de tamanho entre elas.</p>
         <div class="balaozinho" style="text-align: justify;">🤔 Por que será que algumas combinações de varas conseguem se fechar em um triângulo e outras não? Vamos ajudar Jurema a desvendar essa regra matemática!</div>
+        <p class="nota-narrativa"><strong>Sobre esta história:</strong> Jurema e Araquém são personagens fictícios, e a cena é uma situação imaginada para introduzir o problema. Os Ticuna (Magüta) vivem principalmente no Alto Solimões (AM); para conhecer sua cultura a partir da voz do próprio povo, vale pesquisar o Museu Magüta, em Benjamin Constant (AM).</p>
       </div>
       <div class="imagem">
         <figure style="margin:0;">
-          <img src="img/trilha2.jpg" alt="Os Gravetos Ticuna que não se alcançam" style="width:100%; border-radius:20px; display:block; box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+          <img src="img/trilha2.webp" width="720" height="1019" decoding="async" alt="Jurema e o cacique Araquém testando três varas de madeira" style="width:100%; height:auto; border-radius:20px; display:block; box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
           <figcaption style="text-align:center; font-size:0.85rem; color:var(--roxo-escuro); margin-top:10px; font-weight:800;">Os Gravetos Ticuna que não se alcançam</figcaption>
         </figure>
       </div>
+    </div>
   </section>
   <!-- ============ EXPLORANDO ============ -->
   <section class="section-card">
     <span class="tag roxo">EXPLORANDO</span>
     <h2>📏 A condição de existência do triângulo</h2>
-    <p class="lead">Para três segmentos formarem um triângulo, existe uma regra simples, chamada <strong>desigualdade triangular</strong>: <strong>a soma das medidas de quaisquer dois lados precisa ser maior que a medida do terceiro lado</strong>. Se isso não acontecer, os segmentos não se encontram — e o triângulo não existe.</p>
+    <p class="lead">Para três segmentos formarem um triângulo, existe uma regra simples, chamada <strong>desigualdade triangular</strong>: <strong>a soma de quaisquer dois lados precisa ser maior que o terceiro lado</strong>. Se isso não acontecer, os segmentos não se encontram — e o triângulo não existe.</p>
 
     <h3 style="color:#5B2EE0;">Exemplo que fecha</h3>
     <div class="barra-linha">
@@ -87,7 +92,14 @@
     </div>
     <p class="lead" style="font-size:0.95rem;">2 + 3 = 5, que é <strong>menor</strong> que 6 → <strong>não fecha ❌</strong> (os dois lados menores nem se encostam no terceiro)</p>
 
-    <div class="balaozinho">💡 Repare que a barra "2 + 3" fica bem mais curta que a barra "6" — por isso os canudinhos nunca se encontram!</div>
+    <div class="balaozinho">💡 Repare que a barra "2 + 3" fica bem mais curta que a barra "6" — por isso as varas nunca se encontram!</div>
+    <div class="cuidado">⚖️ <strong>E se a soma for exatamente igual?</strong> Com 3, 3 e 6, temos 3 + 3 = 6. As duas varas curtas até alcançam as pontas da vara maior, mas ficam <em>deitadas</em> em cima dela: os três "vértices" ficam na mesma reta e o triângulo "achata". Por isso a condição exige soma <strong>maior</strong> (desigualdade estrita), e não "maior ou igual".</div>
+    <div class="demo-box">
+      <h3>Por que a regra funciona? <span class="bncc-chip">EF07MA24</span></h3>
+      <p>Pense em ir de um vértice <strong>B</strong> até um vértice <strong>C</strong>. O caminho mais curto entre dois pontos é o segmento de reta BC. Qualquer outro caminho — por exemplo, passando por um terceiro ponto A fora da reta (indo de B até A e depois de A até C) — é mais longo. Logo, em todo triângulo:</p>
+      <p class="center" style="font-weight:800; font-size:1.1rem;">BA + AC &gt; BC</p>
+      <p>e o mesmo vale para cada um dos três lados. <strong>Atalho prático:</strong> basta testar se a soma dos <em>dois menores</em> lados é maior que o <em>maior</em> lado — as outras duas desigualdades já ficam garantidas automaticamente.</p>
+    </div>
 
     <h3 style="color:#5B2EE0; margin-top:26px;">Antes de começar: o que é um arco?</h3>
     <p class="lead">Para desenhar o triângulo vamos usar o <strong>compasso</strong>: um instrumento com duas hastes presas por uma dobradiça. Uma das pontas é a <strong>ponta seca</strong> (uma agulha, que fica fixa e parada em um ponto do papel); a outra ponta tem um <strong>grafite</strong>, que gira ao redor da ponta seca sem mudar de abertura.</p>
@@ -97,7 +109,7 @@
       <div class="imagem">
         <svg viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg">
           <rect x="0" y="0" width="300" height="220" rx="16" fill="#FFF8ED"/>
-          <path d="M210,150 A120,120 0 0,0 65,75" fill="none" stroke="#06D6A0" stroke-width="3" stroke-dasharray="6 5"/>
+          <path d="M204.1,187.1 A120,120 0 0,0 170.3,60.8" fill="none" stroke="#06D6A0" stroke-width="3" stroke-dasharray="6 5"/>
           <line x1="150" y1="25" x2="90" y2="150" stroke="#5B2EE0" stroke-width="5" stroke-linecap="round"/>
           <line x1="150" y1="25" x2="210" y2="150" stroke="#5B2EE0" stroke-width="5" stroke-linecap="round"/>
           <circle cx="150" cy="25" r="6" fill="#FF8A3D"/>
@@ -107,7 +119,7 @@
           <text x="90" y="175" text-anchor="middle" font-family="Nunito, sans-serif" font-size="12" fill="#2E2452" font-weight="700">ponta seca (A)</text>
           <text x="222" y="178" text-anchor="middle" font-family="Nunito, sans-serif" font-size="12" fill="#2E2452" font-weight="700">grafite</text>
           <text x="150" y="15" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11" fill="#FF8A3D" font-weight="700">dobradiça</text>
-          <text x="45" y="60" text-anchor="middle" font-family="Nunito, sans-serif" font-size="12" fill="#039073" font-weight="700">arco</text>
+          <text x="262" y="110" text-anchor="middle" font-family="Nunito, sans-serif" font-size="12" fill="#047857" font-weight="700">arco</text>
         </svg>
         <p style="font-size:0.8rem; text-align:center; color:#5B2EE0; margin-top:6px;">O compasso: ponta seca fixa em A, grafite gira e risca o arco.</p>
       </div>
@@ -161,29 +173,38 @@
     <div class="quiz-item" data-correta="0">
       <div class="quiz-pergunta">1. Lados de 3 cm, 4 cm e 5 cm formam um triângulo?</div>
       <div class="quiz-opcoes">
-        <div class="quiz-opcao" data-valor="0">Sim, formam</div>
-        <div class="quiz-opcao" data-valor="1">Não formam</div>
+        <button type="button" class="quiz-opcao" data-valor="0">Sim, formam</button>
+        <button type="button" class="quiz-opcao" data-valor="1">Não formam</button>
       </div>
-      <div class="quiz-feedback"></div>
+      <div class="quiz-feedback" aria-live="polite"></div>
     </div>
 
     <div class="quiz-item" data-correta="1">
       <div class="quiz-pergunta">2. Lados de 2 cm, 3 cm e 6 cm formam um triângulo?</div>
       <div class="quiz-opcoes">
-        <div class="quiz-opcao" data-valor="0">Sim, formam</div>
-        <div class="quiz-opcao" data-valor="1">Não formam</div>
+        <button type="button" class="quiz-opcao" data-valor="0">Sim, formam</button>
+        <button type="button" class="quiz-opcao" data-valor="1">Não formam</button>
       </div>
-      <div class="quiz-feedback"></div>
+      <div class="quiz-feedback" aria-live="polite"></div>
     </div>
 
     <div class="quiz-item" data-correta="1">
-      <div class="quiz-pergunta">3. Qual é a condição de existência de um triângulo?</div>
+      <div class="quiz-pergunta">3. Lados de 3 cm, 3 cm e 6 cm formam um triângulo?</div>
       <div class="quiz-opcoes">
-        <div class="quiz-opcao" data-valor="0">A soma dos três lados deve ser 180</div>
-        <div class="quiz-opcao" data-valor="1">A soma das medidas de quaisquer dois lados deve ser maior que a medida do terceiro</div>
-        <div class="quiz-opcao" data-valor="2">Os três lados devem ser diferentes</div>
+        <button type="button" class="quiz-opcao" data-valor="0">Sim, um triângulo isósceles</button>
+        <button type="button" class="quiz-opcao" data-valor="1">Não: 3 + 3 = 6 não é maior que 6 (o triângulo "achata")</button>
       </div>
-      <div class="quiz-feedback"></div>
+      <div class="quiz-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-item" data-correta="1">
+      <div class="quiz-pergunta">4. Qual é a condição de existência de um triângulo?</div>
+      <div class="quiz-opcoes">
+        <button type="button" class="quiz-opcao" data-valor="0">A soma dos três lados deve ser 180</button>
+        <button type="button" class="quiz-opcao" data-valor="1">A soma de quaisquer dois lados deve ser maior que o terceiro</button>
+        <button type="button" class="quiz-opcao" data-valor="2">Os três lados devem ser diferentes</button>
+      </div>
+      <div class="quiz-feedback" aria-live="polite"></div>
     </div>
   </section>
 
@@ -197,15 +218,15 @@
       <div style="display:flex; flex-direction:column; gap:14px;">
         <div class="barra-linha">
           <div class="barra-rotulo">Lado a: <span id="et2-va">4</span> cm</div>
-          <input type="range" id="et2-a" min="1" max="15" step="1" value="4" style="flex:1;">
+          <input type="range" id="et2-a" aria-label="Medida do lado a em centímetros" min="1" max="15" step="1" value="4" style="flex:1;">
         </div>
         <div class="barra-linha">
           <div class="barra-rotulo">Lado b: <span id="et2-vb">5</span> cm</div>
-          <input type="range" id="et2-b" min="1" max="15" step="1" value="5" style="flex:1;">
+          <input type="range" id="et2-b" aria-label="Medida do lado b em centímetros" min="1" max="15" step="1" value="5" style="flex:1;">
         </div>
         <div class="barra-linha">
           <div class="barra-rotulo">Lado c: <span id="et2-vc">6</span> cm</div>
-          <input type="range" id="et2-c" min="1" max="15" step="1" value="6" style="flex:1;">
+          <input type="range" id="et2-c" aria-label="Medida do lado c em centímetros" min="1" max="15" step="1" value="6" style="flex:1;">
         </div>
       </div>
 
@@ -217,7 +238,8 @@
         <div class="barra-rotulo">maior lado</div>
         <div class="barra-trilho"><div class="barra-preenchimento" id="et2-barraMaior" style="width:0%;"></div></div>
       </div>
-      <p class="hint" id="et2-resultado">–</p>
+      <svg id="svgT2" viewBox="0 0 320 200" width="100%" height="200" role="img" aria-label="Desenho das três varetas"></svg>
+      <p class="hint" id="et2-resultado" aria-live="polite">–</p>
       <div class="badges" id="et2-badges"></div>
     </div>
 
@@ -236,18 +258,6 @@
         <div class="task-text"><strong>Missão 3 — Chegue perto do limite</strong><span>Deixe a soma dos dois menores lados no máximo 1 cm maior que o maior lado (mas ainda fechando).</span></div>
       </div>
     </div>
-
-    <div class="numeric-tester">
-      <strong style="color:#5B2EE0; font-size:1.05rem;">Missão 4 — Teste numérico</strong>
-      <p class="lead" style="font-size:0.9rem; margin:6px 0 0;">Digite três medidas de lado. Vamos testar se dá para formar um triângulo de verdade.</p>
-      <div class="nt-row">
-        <div class="nt-field"><label>Lado a</label><input type="number" id="nt-a-t2" value="3" min="0.1" step="0.1"></div>
-        <div class="nt-field"><label>Lado b</label><input type="number" id="nt-b-t2" value="4" min="0.1" step="0.1"></div>
-        <div class="nt-field"><label>Lado c</label><input type="number" id="nt-c-t2" value="10" min="0.1" step="0.1"></div>
-        <button class="btn" id="nt-test-t2">Testar</button>
-      </div>
-      <p class="nt-result" id="nt-result-t2"></p>
-    </div>
   </section>
 
   <!-- ============ DESAFIO FINAL ============ -->
@@ -264,7 +274,7 @@
         <div class="insp"><b>Brinquedos e artesanato</b>Canudinhos, palitos ou varetas montados em formas fixas.</div>
       </div>
       <p>Descreva a construção e explique: o que aconteceria se as medidas das varas ou cordas fossem escolhidas de qualquer jeito, sem seguir uma regra?</p>
-      <textarea class="reflect" id="reflectTextT2" placeholder="Escreva aqui sua investigação..."></textarea>
+      <textarea class="reflect" id="reflectTextT2" aria-label="Sua investigação" placeholder="Escreva aqui sua investigação..."></textarea>
       <div class="challenge-actions">
         <button class="btn laranja" id="reflectSaveT2">Salvar minha investigação</button>
         <span class="save-note" id="reflectStatusT2">salvo automaticamente neste navegador</span>
@@ -313,7 +323,7 @@
           <button id="btnFecha">Fecha ✅</button>
           <button id="btnNaoFecha">Não fecha ❌</button>
         </div>
-        <div class="jogo-mensagem" id="jogoMensagem"></div>
+        <div class="jogo-mensagem" id="jogoMensagem" aria-live="polite"></div>
       </div>
 
       <div id="jogoFim" class="jogo-fim" style="display:none;">
@@ -332,7 +342,7 @@
 </main>
 
 <footer class="site-footer">
-  Trilha dos Triângulos — Produto Educacional PROFMAT 🔺✨
+  Trilha dos Triângulos — Produto Educacional PROFMAT/UFG 🔺✨ · <a href="professor.html" style="text-decoration:underline;">Guia do Professor</a>
 </footer>
 
 <script src="script.js"></script>
@@ -350,7 +360,7 @@ document.querySelectorAll('.quiz-item').forEach(item=>{
       if(valor === correta){
         op.classList.add('certo');
         feedback.textContent = '✅ Isso mesmo! Mandou bem.';
-        feedback.style.color = '#039073';
+        feedback.style.color = '#047857';
       }else{
         op.classList.add('errado');
         item.querySelector(`[data-valor="${correta}"]`).classList.add('certo');
@@ -419,7 +429,7 @@ function responder(escolha){
     msg.textContent = info.fecha
       ? `✅ Isso! ${info.menor1} + ${info.menor2} = ${info.soma}, maior que ${info.maior} — fecha!`
       : `✅ Isso! ${info.menor1} + ${info.menor2} = ${info.soma}, não é maior que ${info.maior} — não fecha!`;
-    msg.style.color = '#039073';
+    msg.style.color = '#047857';
   }else{
     btnEscolhido.style.background = '#FF6B9D'; btnEscolhido.style.color = '#fff';
     msg.textContent = info.fecha
@@ -464,6 +474,42 @@ Explore com as mãos — Trilha 2
   const resultado = document.getElementById('et2-resultado');
   const badges = document.getElementById('et2-badges');
   const taskState = { fecha:false, naofecha:false, limite:false };
+  let interagiu = false;
+  const svgT2 = document.getElementById('svgT2');
+  /* Desenha as varetas: se fecham, constrói o triângulo pela interseção
+     de duas circunferências (exatamente a construção com compasso);
+     se não fecham, mostra a vara maior e as duas menores "deitadas"
+     a partir de cada ponta, evidenciando o buraco entre elas. */
+  function desenharVaretas(l, fecha){
+    const [p,q,M] = l; // p ≤ q ≤ M
+    const NS='http://www.w3.org/2000/svg';
+    svgT2.innerHTML='';
+    let hU = 0;
+    if(fecha){ const xa=(q*q - p*p + M*M)/(2*M); hU = Math.sqrt(Math.max(q*q - xa*xa,0)); }
+    const esc = Math.min(260/Math.max(M, p+q), 24, hU>0 ? 135/hU : 24);
+    const x0 = 160 - M*esc/2, y0 = 170;
+    const B={x:x0,y:y0}, C={x:x0+M*esc,y:y0};
+    function ln(a,b,cor,w,dash){ const e=document.createElementNS(NS,'line'); e.setAttribute('x1',a.x);e.setAttribute('y1',a.y);e.setAttribute('x2',b.x);e.setAttribute('y2',b.y);e.setAttribute('stroke',cor);e.setAttribute('stroke-width',w);e.setAttribute('stroke-linecap','round'); if(dash)e.setAttribute('stroke-dasharray',dash); svgT2.appendChild(e); }
+    function tx(x,y,s,cor){ const e=document.createElementNS(NS,'text'); e.setAttribute('x',x);e.setAttribute('y',y);e.setAttribute('text-anchor','middle');e.setAttribute('font-size','12');e.setAttribute('font-weight','800');e.setAttribute('fill',cor||'#2E2452'); e.textContent=s; svgT2.appendChild(e); }
+    ln(B,C,'#5B2EE0',6); tx((B.x+C.x)/2, y0+20, M+' cm','#5B2EE0');
+    if(fecha){
+      // A tal que BA = q e CA = p  (lei dos cossenos)
+      const d=M, xA=(q*q - p*p + d*d)/(2*d), yA=Math.sqrt(Math.max(q*q - xA*xA,0));
+      let A={x:x0+xA*esc, y:y0 - yA*esc};
+      ln(B,A,'#C2410C',6); ln(C,A,'#047857',6);
+      const G={x:(A.x+B.x+C.x)/3,y:(A.y+B.y+C.y)/3};
+      const fora=(P,Q)=>{const m={x:(P.x+Q.x)/2,y:(P.y+Q.y)/2}; const dx=m.x-G.x, dy=m.y-G.y, L=Math.hypot(dx,dy)||1; return {x:m.x+dx/L*22, y:m.y+dy/L*22+4};};
+      const l1=fora(B,A), l2=fora(C,A);
+      tx(l1.x,l1.y,q+' cm','#C2410C'); tx(l2.x,l2.y,p+' cm','#047857');
+      tx(160,20, 'As pontas se encontram: triângulo! ✅','#047857');
+    }else{
+      const A1={x:B.x+q*esc*Math.cos(-0.12), y:B.y+q*esc*Math.sin(-0.12)};
+      const A2={x:C.x-p*esc*Math.cos(-0.12), y:C.y+p*esc*Math.sin(-0.12)};
+      ln(B,A1,'#C2410C',6); ln(C,A2,'#047857',6);
+      tx(B.x+20, y0-30, q+' cm','#C2410C'); tx(C.x-20, y0-30, p+' cm','#047857');
+      tx(160,20, p+q===M ? 'As pontas se tocam, mas ficam deitadas sobre a vara maior: não há triângulo.' : 'As pontas não se alcançam ✗', '#C2185B');
+    }
+  }
 
   function updateTasksUI(){
     document.querySelectorAll('#taskListT2 .task').forEach(t=>{
@@ -492,32 +538,19 @@ Explore com as mãos — Trilha 2
     b1.textContent = fecha ? 'Fecha' : 'Não fecha';
     badges.appendChild(b1);
 
-    if(fecha) taskState.fecha = true;
-    if(!fecha) taskState.naofecha = true;
-    if(fecha && (soma-maior) <= 1) taskState.limite = true;
+    desenharVaretas(lados, fecha);
+    if(interagiu){
+      if(fecha) taskState.fecha = true;
+      if(!fecha) taskState.naofecha = true;
+      if(fecha && (soma-maior) <= 1) taskState.limite = true;
+    }
+    interagiu = true;
     updateTasksUI();
   }
 
   [sa,sb,sc].forEach(s=> s.addEventListener('input', atualizar));
   atualizar();
 })();
-
-document.getElementById('nt-test-t2').addEventListener('click', ()=>{
-  const a = parseFloat(document.getElementById('nt-a-t2').value);
-  const b = parseFloat(document.getElementById('nt-b-t2').value);
-  const c = parseFloat(document.getElementById('nt-c-t2').value);
-  const result = document.getElementById('nt-result-t2');
-  if (!(a>0 && b>0 && c>0)) { result.textContent = 'Preencha os três lados com valores positivos.'; result.className='nt-result bad'; return; }
-  const sides = [a,b,c].sort((x,y)=>x-y);
-  if (sides[0]+sides[1] > sides[2]) {
-    result.textContent = '✓ Forma um triângulo válido! ' + a + ' + ' + b + ' e ' + c + ' respeitam a condição de existência.';
-    result.className = 'nt-result ok';
-  } else {
-    const [s1,s2,s3] = sides;
-    result.textContent = '✗ Impossível: os dois menores lados (' + s1 + ' + ' + s2 + ' = ' + (s1+s2).toFixed(1) + ') não superam o maior lado (' + s3 + '). As pontas nunca se encontrariam.';
-    result.className = 'nt-result bad';
-  }
-});
 
 /* ---------- Desafio final — persistência local ---------- */
 (function reflectionT2(){
@@ -537,7 +570,7 @@ document.getElementById('nt-test-t2').addEventListener('click', ()=>{
     'Eu sei explicar o que é a desigualdade triangular.',
     'Eu sei verificar se três medidas de lado formam um triângulo.',
     'Eu sei o que é um arco e como o compasso desenha ele.',
-    'Eu sei os passos para construir um triângulo com régua e compasso, conhecendo as medidas dos 3 lados.',
+    'Eu sei os passos para construir um triângulo com régua e compasso, conhecendo os 3 lados.',
     'Eu sei explicar por que um trio de medidas às vezes "não fecha".',
     'Eu já pensei em uma construção do meu cotidiano que depende de medidas certas para fechar.'
   ];
@@ -565,7 +598,7 @@ document.getElementById('nt-test-t2').addEventListener('click', ()=>{
     for (let s=1; s<=5; s++){
       const b = document.createElement('button');
       b.className='star-btn' + ((stars[i]||0)>=s ? ' filled':'');
-      b.textContent='★';
+      b.textContent='★'; b.type='button'; b.setAttribute('aria-label', s+' de 5 estrelas — '+text);
       b.addEventListener('click', ()=>{
         stars[i] = (stars[i]===s) ? s-1 : s;
         starWrap.querySelectorAll('.star-btn').forEach((sb,idx)=> sb.classList.toggle('filled', idx < stars[i]));

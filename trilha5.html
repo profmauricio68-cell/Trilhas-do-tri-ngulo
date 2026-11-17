@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trilha 5 · Construindo passo a passo · Trilha dos Triângulos</title>
+<meta name="description" content="Trilha dos Triângulos: produto educacional PROFMAT/UFG sobre triângulos no Ensino Fundamental (BNCC, 6º ao 9º ano).">
 <link rel="stylesheet" href="style.css">
 <style>
   .legenda-fluxo{ display:flex; gap:18px; flex-wrap:wrap; justify-content:center; margin:14px 0; font-size:0.85rem; font-weight:700; color:#5B2EE0; }
@@ -31,14 +32,15 @@
 </style>
 </head>
 <body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
 <header class="site-header">
   <div class="header-inner">
     <a href="index.html" class="brand">
-      <svg class="mascote" viewBox="0 0 100 100"><polygon points="50,10 90,85 10,85" fill="#7C4DFF"/><circle cx="38" cy="65" r="6" fill="#fff"/><circle cx="62" cy="65" r="6" fill="#fff"/><circle cx="38" cy="65" r="3" fill="#2E2452"/><circle cx="62" cy="65" r="3" fill="#2E2452"/><path d="M35 76 Q50 88 65 76" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+      <svg class="mascote" viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,10 90,85 10,85" fill="#7C4DFF"/><circle cx="38" cy="65" r="6" fill="#fff"/><circle cx="62" cy="65" r="6" fill="#fff"/><circle cx="38" cy="65" r="3" fill="#2E2452"/><circle cx="62" cy="65" r="3" fill="#2E2452"/><path d="M35 76 Q50 88 65 76" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
       Trilha dos Triângulos
     </a>
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Navegação principal">
       <a href="index.html">Início</a>
       <a href="trilha1.html">Trilha 1</a>
       <a href="trilha2.html">Trilha 2</a>
@@ -49,31 +51,34 @@
       <a href="trilha7.html">Trilha 7</a>
       <a href="trilha8.html">Trilha 8</a>
       <a href="index.html#mapa">Mapa</a>
+      <a href="professor.html">Professor</a>
     </nav>
     <div class="progresso-pill" data-progresso-pill>⭐ 0/8 trilhas</div>
   </div>
 </header>
 
-<main class="container">
+<main class="container" id="conteudo">
 
  <!-- ============ CONTEXTUALIZAÇÃO ============ -->
   <section class="section-card">
-    <span class="tag laranja">TRILHA 5 · 8º ANO</span>
+    <span class="tag laranja">TRILHA 5 · 7º ANO · BNCC EF07MA26</span>
     <h2>🧭 O caminho do rio de Potira</h2>
     
     <div class="contexto-flex">
       <div class="texto">
-        <p class="lead" style="text-align: justify;">Na Aldeia Kurisevo, a jovem <strong>Potira</strong>, do povo <strong>Kalapalo</strong>, ajuda sua mãe a organizar o caminho até a roça de mandioca. Para ensinar os irmãos mais novos a irem e voltarem em segurança sem se perderem na floresta, Potira desenha um "mapa de passos" na areia do chão.</p>
+        <p class="lead" style="text-align: justify;">Numa aldeia do povo <strong>Kalapalo</strong>, no Território Indígena do Xingu (MT), a jovem <strong>Potira</strong> ajuda sua mãe a organizar o caminho até a roça de mandioca. Para ensinar os irmãos mais novos a irem e voltarem em segurança sem se perderem na floresta, Potira desenha um "mapa de passos" na areia do chão.</p>
         <p class="lead" style="text-align: justify;">"Primeiro, nós andamos até a árvore grande. Se o caminho estiver seco, seguimos em frente. Se tiver muita água da chuva, viramos à direita", explica Potira, apontando para os símbolos geométricos que desenhou na terra com o auxílio de pequenos gravetos.</p>
-        <p class="lead" style="text-align: justify;">O avô de Potira passa por perto e sorri ao ver a inteligência da neta. Ele explica que organizar as tarefas em etapas claras — onde uma decisão leva a uma ação lógica — é um saber antigo que o povo usa para planejar as colheitas, as pescarias e as grandes festas da aldeia. Potira percebe que, ao criar regras organizadas de "se acontecer isso, faça aquilo", ela está criando um caminho perfeito e seguro, assim como os computadores fazem para resolver problemas!</p>
+        <p class="lead" style="text-align: justify;">O avô de Potira passa por perto e sorri ao ver a inteligência da neta. Ele explica que organizar as tarefas em etapas claras — onde uma decisão leva a uma ação lógica — é um saber antigo que o povo usa para planejar as colheitas, as pescarias e as grandes festas da aldeia. Potira percebe que, ao criar regras organizadas de "se acontecer isso, faça aquilo", ela está criando um caminho perfeito e seguro, assim como os programas de computador fazem para resolver problemas!</p>
         <div class="balaozinho" style="text-align: justify;">🤔 Organizar as ideias passo a passo nos ajuda a construir grandes coisas. Vamos ajudar a Potira a encadear as decisões corretas para montar nosso próprio fluxograma!</div>
+        <p class="nota-narrativa"><strong>Sobre esta história:</strong> Potira e sua família são personagens fictícios, e o "mapa de passos" é uma situação imaginada para aproximar a ideia de algoritmo de saberes do cotidiano. Os Kalapalo são um dos povos do Alto Xingu (MT).</p>
       </div>
       <div class="imagem">
         <figure style="margin:0;">
-          <img src="img/trilha5.jpg" alt="A Lógica de Caminhos de Potira" style="width:100%; border-radius:20px; display:block; box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+          <img src="img/trilha5.webp" width="720" height="1019" decoding="async" alt="Potira desenhando o mapa de passos na areia para os irmãos mais novos" style="width:100%; height:auto; border-radius:20px; display:block; box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
           <figcaption style="text-align:center; font-size:0.85rem; color:var(--roxo-escuro); margin-top:10px; font-weight:800;">A Lógica de Caminhos de Potira</figcaption>
         </figure>
       </div>
+    </div>
   </section>
   <!-- ============ EXPLORANDO ============ -->
   <section class="section-card">
@@ -121,23 +126,23 @@
         <text x="163" y="264" font-family="Nunito, sans-serif" font-size="11" fill="#039073" font-weight="700">Sim</text>
 
         <rect x="55" y="272" width="190" height="40" rx="8" fill="#FFF8ED" stroke="#5B2EE0" stroke-width="2.5"/>
-        <text x="150" y="296" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11.5" fill="#2E2452">Traçar AB (lado a)</text>
+        <text x="150" y="296" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11.5" fill="#2E2452">Traçar BC (lado a)</text>
         <line x1="150" y1="312" x2="150" y2="332" stroke="#5B2EE0" stroke-width="2.5" marker-end="url(#seta5)"/>
 
         <rect x="55" y="334" width="190" height="40" rx="8" fill="#FFF8ED" stroke="#5B2EE0" stroke-width="2.5"/>
-        <text x="150" y="358" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11.5" fill="#2E2452">Arco raio b a partir de A</text>
+        <text x="150" y="358" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11.5" fill="#2E2452">Arco de raio c, centro B</text>
         <line x1="150" y1="374" x2="150" y2="394" stroke="#5B2EE0" stroke-width="2.5" marker-end="url(#seta5)"/>
 
         <rect x="55" y="396" width="190" height="40" rx="8" fill="#FFF8ED" stroke="#5B2EE0" stroke-width="2.5"/>
-        <text x="150" y="420" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11.5" fill="#2E2452">Arco raio c a partir de B</text>
+        <text x="150" y="420" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11.5" fill="#2E2452">Arco de raio b, centro C</text>
         <line x1="150" y1="436" x2="150" y2="456" stroke="#5B2EE0" stroke-width="2.5" marker-end="url(#seta5)"/>
 
         <rect x="55" y="458" width="190" height="40" rx="8" fill="#FFF8ED" stroke="#5B2EE0" stroke-width="2.5"/>
-        <text x="150" y="482" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11.5" fill="#2E2452">Marcar C na interseção</text>
+        <text x="150" y="482" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11.5" fill="#2E2452">Marcar A na interseção</text>
         <line x1="150" y1="498" x2="150" y2="518" stroke="#5B2EE0" stroke-width="2.5" marker-end="url(#seta5)"/>
 
         <rect x="55" y="520" width="190" height="40" rx="8" fill="#FFF8ED" stroke="#5B2EE0" stroke-width="2.5"/>
-        <text x="150" y="544" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11.5" fill="#2E2452">Ligar AC e BC</text>
+        <text x="150" y="544" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11.5" fill="#2E2452">Traçar AB e AC</text>
         <line x1="150" y1="560" x2="150" y2="580" stroke="#5B2EE0" stroke-width="2.5" marker-end="url(#seta5)"/>
 
         <ellipse cx="150" cy="612" rx="80" ry="26" fill="#EAFBF6" stroke="#06D6A0" stroke-width="2.5"/>
@@ -146,7 +151,9 @@
       </svg>
     </div>
 
-    <div class="balaozinho">💡 O mesmo algoritmo, escrito por extenso: (1) verifique a condição de existência; (2) trace AB com a medida do lado a; (3) trace um arco de raio b a partir de A; (4) trace um arco de raio c a partir de B; (5) marque o ponto C onde os arcos se cruzam; (6) ligue AC e BC.</div>
+    <div class="balaozinho">💡 O mesmo algoritmo, escrito por extenso: (1) verifique a condição de existência; (2) trace o segmento BC com a medida do lado a; (3) com a ponta seca em B e abertura c, trace um arco; (4) com a ponta seca em C e abertura b, trace outro arco; (5) marque o ponto A onde os arcos se cruzam; (6) trace AB e AC.</div>
+    <p class="lead" style="font-size:0.92rem;"><strong>Notação:</strong> como na Trilha 1, o lado <strong>a</strong> é oposto ao vértice A (é o lado BC), <strong>b</strong> é oposto a B (lado AC) e <strong>c</strong> é oposto a C (lado AB).</p>
+    <div class="cuidado">🤖 <strong>Por que o losango vem primeiro?</strong> Um bom algoritmo testa as condições <em>antes</em> de gastar trabalho. Se a condição de existência falhar, os arcos não se cruzam fora da reta BC e o passo 5 seria impossível de executar — o algoritmo "travaria". Testar antes garante que todo caminho do fluxograma termina em um <em>Fim</em>.</div>
   </section>
 
   <!-- ============ PRATICANDO ============ -->
@@ -157,31 +164,31 @@
     <div class="quiz-item" data-correta="1">
       <div class="quiz-pergunta">1. Em um fluxograma, qual forma representa uma decisão (pergunta do tipo sim/não)?</div>
       <div class="quiz-opcoes">
-        <div class="quiz-opcao" data-valor="0">Retângulo</div>
-        <div class="quiz-opcao" data-valor="1">Losango</div>
-        <div class="quiz-opcao" data-valor="2">Círculo</div>
+        <button type="button" class="quiz-opcao" data-valor="0">Retângulo</button>
+        <button type="button" class="quiz-opcao" data-valor="1">Losango</button>
+        <button type="button" class="quiz-opcao" data-valor="2">Círculo</button>
       </div>
-      <div class="quiz-feedback"></div>
+      <div class="quiz-feedback" aria-live="polite"></div>
     </div>
 
     <div class="quiz-item" data-correta="0">
       <div class="quiz-pergunta">2. Antes de começar a desenhar o triângulo, qual é o primeiro passo do algoritmo?</div>
       <div class="quiz-opcoes">
-        <div class="quiz-opcao" data-valor="0">Verificar a condição de existência dos 3 lados</div>
-        <div class="quiz-opcao" data-valor="1">Traçar o segundo arco</div>
-        <div class="quiz-opcao" data-valor="2">Ligar os pontos A e C</div>
+        <button type="button" class="quiz-opcao" data-valor="0">Verificar a condição de existência dos 3 lados</button>
+        <button type="button" class="quiz-opcao" data-valor="1">Traçar o segundo arco</button>
+        <button type="button" class="quiz-opcao" data-valor="2">Traçar os segmentos AB e AC</button>
       </div>
-      <div class="quiz-feedback"></div>
+      <div class="quiz-feedback" aria-live="polite"></div>
     </div>
 
     <div class="quiz-item" data-correta="0">
       <div class="quiz-pergunta">3. O que é um algoritmo?</div>
       <div class="quiz-opcoes">
-        <div class="quiz-opcao" data-valor="0">Uma sequência ordenada de passos para resolver um problema</div>
-        <div class="quiz-opcao" data-valor="1">Um tipo especial de triângulo</div>
-        <div class="quiz-opcao" data-valor="2">Um instrumento de desenho, como a régua</div>
+        <button type="button" class="quiz-opcao" data-valor="0">Uma sequência ordenada de passos para resolver um problema</button>
+        <button type="button" class="quiz-opcao" data-valor="1">Um tipo especial de triângulo</button>
+        <button type="button" class="quiz-opcao" data-valor="2">Um instrumento de desenho, como a régua</button>
       </div>
-      <div class="quiz-feedback"></div>
+      <div class="quiz-feedback" aria-live="polite"></div>
     </div>
   </section>
 
@@ -193,9 +200,9 @@
 
     <div class="applet-card">
       <div class="nt-row">
-        <div class="nt-field"><label>Lado a (AB)</label><input type="number" id="et5-a" value="6" min="1" max="12" step="1"></div>
-        <div class="nt-field"><label>Lado b</label><input type="number" id="et5-b" value="5" min="1" max="12" step="1"></div>
-        <div class="nt-field"><label>Lado c</label><input type="number" id="et5-c" value="4" min="1" max="12" step="1"></div>
+        <div class="nt-field"><label for="et5-a">Lado a (BC)</label><input type="number" id="et5-a" value="6" min="1" max="12" step="1"></div>
+        <div class="nt-field"><label for="et5-b">Lado b (AC)</label><input type="number" id="et5-b" value="5" min="1" max="12" step="1"></div>
+        <div class="nt-field"><label for="et5-c">Lado c (AB)</label><input type="number" id="et5-c" value="4" min="1" max="12" step="1"></div>
         <button class="btn" id="et5-iniciar">Verificar</button>
       </div>
       <div class="center" style="margin-top:14px;">
@@ -215,7 +222,7 @@
       </div>
       <div class="task" data-task="isosceles">
         <div class="task-check">✓</div>
-        <div class="task-text"><strong>Missão 2 — Isósceles</strong><span>Construa (até o fim) um triângulo com dois lados de medidas iguais.</span></div>
+        <div class="task-text"><strong>Missão 2 — Isósceles</strong><span>Construa (até o fim) um triângulo com dois lados iguais.</span></div>
       </div>
       <div class="task" data-task="invalido">
         <div class="task-check">✓</div>
@@ -238,7 +245,7 @@
         <div class="insp"><b>Rituais e festas</b>Preparativos que seguem sempre a mesma ordem.</div>
       </div>
       <p>Escreva o "algoritmo" numerando os passos em ordem. O que aconteceria se alguém trocasse a ordem de dois passos?</p>
-      <textarea class="reflect" id="reflectTextT5" placeholder="Escreva aqui sua investigação..."></textarea>
+      <textarea class="reflect" id="reflectTextT5" aria-label="Sua investigação" placeholder="Escreva aqui sua investigação..."></textarea>
       <div class="challenge-actions">
         <button class="btn laranja" id="reflectSaveT5">Salvar minha investigação</button>
         <span class="save-note" id="reflectStatusT5">salvo automaticamente neste navegador</span>
@@ -267,7 +274,7 @@
 
     <div class="jogo-wrap">
       <div class="jogo-placar">
-        <div>Rodada <span id="jogoRodadaAtual">1</span>/<span id="jogoRodadaTotal">3</span></div>
+        <div>Rodada <span id="jogoRodadaAtual">1</span>/<span id="jogoRodadaTotal">4</span></div>
         <div>Pontos: <span class="valor" id="jogoPontos">0</span></div>
       </div>
 
@@ -275,7 +282,7 @@
         <p class="center quiz-pergunta" id="jogoPergunta">Monte a sequência de construção:</p>
         <div class="jogo-fluxo-sequencia" id="fluxoSequencia"></div>
         <div class="jogo-fluxo-cartas" id="fluxoCartas"></div>
-        <div class="jogo-mensagem" id="jogoMensagem"></div>
+        <div class="jogo-mensagem" id="jogoMensagem" aria-live="polite"></div>
       </div>
 
       <div id="jogoFim" class="jogo-fim" style="display:none;">
@@ -294,7 +301,7 @@
 </main>
 
 <footer class="site-footer">
-  Trilha dos Triângulos — Produto Educacional PROFMAT 🔺✨
+  Trilha dos Triângulos — Produto Educacional PROFMAT/UFG 🔺✨ · <a href="professor.html" style="text-decoration:underline;">Guia do Professor</a>
 </footer>
 
 <script src="script.js"></script>
@@ -312,7 +319,7 @@ document.querySelectorAll('.quiz-item').forEach(item=>{
       if(valor === correta){
         op.classList.add('certo');
         feedback.textContent = '✅ Isso mesmo! Mandou bem.';
-        feedback.style.color = '#039073';
+        feedback.style.color = '#047857';
       }else{
         op.classList.add('errado');
         item.querySelector(`[data-valor="${correta}"]`).classList.add('certo');
@@ -328,11 +335,13 @@ const rodadas = [
   { a:5, b:6, c:7 },
   { a:4, b:4, c:4 },
   { a:6, b:8, c:10 },
+  { a:9, b:3, c:4 },   /* não fecha: o fluxograma deve ir direto para o Fim */
 ];
 
 let rodadaIdx = 0;
 let pontos = 0;
-let proximoEsperado = 1;
+let proximoEsperado = 1; /* posição atual na sequência esperada */
+let usados = [];
 let acertouSemErro = true;
 
 document.getElementById('jogoRodadaTotal').textContent = rodadas.length;
@@ -349,22 +358,29 @@ function embaralhar(arr){
 function passosDaRodada(r){
   return [
     { id:1, texto:'Verificar a condição de existência dos 3 lados' },
-    { id:2, texto:`Desenhar o segmento AB = ${r.a} cm (lado a)` },
-    { id:3, texto:`Traçar um arco de raio ${r.b} cm a partir de A` },
-    { id:4, texto:`Traçar um arco de raio ${r.c} cm a partir de B` },
-    { id:5, texto:'Marcar o ponto C na interseção dos arcos' },
-    { id:6, texto:'Ligar AC e BC para fechar o triângulo' },
+    { id:2, texto:`Desenhar o segmento BC = ${r.a} cm (lado a)` },
+    { id:3, texto:`Traçar um arco de raio ${r.c} cm com centro em B` },
+    { id:4, texto:`Traçar um arco de raio ${r.b} cm com centro em C` },
+    { id:5, texto:'Marcar o ponto A na interseção dos arcos' },
+    { id:6, texto:'Traçar AB e AC para fechar o triângulo' },
+    { id:7, texto:'Encerrar: não é possível construir' },
   ];
+}
+function fecha(r){ const l=[r.a,r.b,r.c].sort((x,y)=>x-y); return l[0]+l[1] > l[2]; }
+/* Sequências aceitas. Os dois arcos podem ser traçados em qualquer ordem
+   (a versão anterior exigia uma ordem fixa e marcava como erro uma resposta correta). */
+function sequenciaEsperada(r){
+  return fecha(r) ? [[1],[2],[3,4],[3,4],[5],[6]] : [[1],[7]];
 }
 
 function carregarRodada(){
-  proximoEsperado = 1;
+  proximoEsperado = 1; usados = [];
   acertouSemErro = true;
   const r = rodadas[rodadaIdx];
   document.getElementById('jogoRodadaAtual').textContent = rodadaIdx+1;
   document.getElementById('jogoMensagem').textContent = '';
   document.getElementById('jogoPergunta').textContent =
-    `Monte a sequência para construir um triângulo de lados ${r.a} cm, ${r.b} cm e ${r.c} cm:`;
+    `Monte a sequência do algoritmo para os lados a = ${r.a} cm, b = ${r.b} cm e c = ${r.c} cm (alguns cartões podem sobrar!):`;
   document.getElementById('fluxoSequencia').innerHTML = '';
 
   const passos = embaralhar(passosDaRodada(r));
@@ -381,17 +397,22 @@ function carregarRodada(){
 
 function clicarPasso(id, btn){
   const msg = document.getElementById('jogoMensagem');
-  if(id === proximoEsperado){
+  const r = rodadas[rodadaIdx];
+  const seq = sequenciaEsperada(r);
+  if(btn.classList.contains('usada')) return;
+  const aceitos = seq[proximoEsperado-1] || [];
+  if(aceitos.includes(id) && !usados.includes(id)){
+    usados.push(id);
     btn.classList.add('usada');
     const chip = document.createElement('span');
     chip.className = 'seq-chip';
     chip.textContent = proximoEsperado;
     document.getElementById('fluxoSequencia').appendChild(chip);
     proximoEsperado++;
-    msg.textContent = '✅ Isso! Passo certo.';
-    msg.style.color = '#039073';
+    msg.textContent = id===7 ? '✅ Isso! Como a condição de existência falhou, o algoritmo termina aqui.' : '✅ Isso! Passo certo.';
+    msg.style.color = '#047857';
 
-    if(proximoEsperado > 6){
+    if(proximoEsperado > seq.length){
       if(acertouSemErro){
         pontos++;
         document.getElementById('jogoPontos').textContent = pontos;
@@ -411,8 +432,11 @@ function clicarPasso(id, btn){
   }else{
     acertouSemErro = false;
     btn.classList.add('errado');
-    msg.textContent = '❌ Ainda não é esse passo — pense no que precisa acontecer antes.';
-    msg.style.color = '#C43F6E';
+    setTimeout(()=>btn.classList.remove('errado'), 900);
+    msg.textContent = (proximoEsperado===2 && !fecha(r) && id!==7)
+      ? `❌ Confira a condição de existência: ${[r.a,r.b,r.c].sort((x,y)=>x-y).slice(0,2).join(' + ')} é maior que o maior lado?`
+      : '❌ Ainda não é esse passo — pense no que precisa acontecer antes.';
+    msg.style.color = '#C2185B';
   }
 }
 
@@ -448,7 +472,10 @@ Explore com as mãos — Trilha 5 (simulador de construção real)
     });
   }
 
-  let a=0,b=0,c=0, A=null,B=null,C=null, passo=0;
+  /* Notação padrão (Dolce e Pompeo): a = BC, b = AC, c = AB.
+     No código, A e B guardam as posições da BASE (pontos B e C do desenho)
+     e C guarda o vértice construído (ponto A do desenho). */
+  let a=0,b=0,c=0, A=null,B=null,C=null, passo=0, falhouFecho=false, esc=14;
 
   function circleIntersect(c1, r1, c2, r2){
     const dx = c2.x-c1.x, dy = c2.y-c1.y;
@@ -468,21 +495,32 @@ Explore com as mãos — Trilha 5 (simulador de construção real)
     svg.setAttribute('viewBox','0 0 300 200');
     if(A) svg.appendChild(el('circle',{cx:A.x,cy:A.y,r:4,fill:'#2E2452'}));
     if(B) svg.appendChild(el('circle',{cx:B.x,cy:B.y,r:4,fill:'#2E2452'}));
-    if(A) svg.appendChild(el('text',{x:A.x-10,y:A.y+18,'font-size':12,fill:'#5B2EE0','font-weight':'700'})).textContent='A';
-    if(B) svg.appendChild(el('text',{x:B.x+4,y:B.y+18,'font-size':12,fill:'#5B2EE0','font-weight':'700'})).textContent='B';
+    if(A) svg.appendChild(el('text',{x:A.x-10,y:A.y+18,'font-size':12,fill:'#5B2EE0','font-weight':'700'})).textContent='B';
+    if(B) svg.appendChild(el('text',{x:B.x+4,y:B.y+18,'font-size':12,fill:'#5B2EE0','font-weight':'700'})).textContent='C';
+
+    if(falhouFecho && A && B){
+      svg.appendChild(el('line',{x1:A.x,y1:A.y,x2:B.x,y2:B.y,stroke:'#5B2EE0','stroke-width':3}));
+      svg.appendChild(el('circle',{cx:A.x,cy:A.y,r:c*esc,fill:'none',stroke:'#FF6B9D','stroke-width':2,'stroke-dasharray':'5 4'}));
+      svg.appendChild(el('circle',{cx:B.x,cy:B.y,r:b*esc,fill:'none',stroke:'#FF6B9D','stroke-width':2,'stroke-dasharray':'5 4'}));
+      const midX = (A.x+B.x)/2;
+      const t = el('text',{x:midX,y:18,'text-anchor':'middle','font-size':12,fill:'#C43F6E','font-weight':'800'});
+      t.textContent = 'Os arcos não se encontram ✗';
+      svg.appendChild(t);
+      return;
+    }
 
     if(passo >= 1 && A && B){
       svg.appendChild(el('line',{x1:A.x,y1:A.y,x2:B.x,y2:B.y,stroke:'#5B2EE0','stroke-width':3}));
     }
     if(passo >= 2 && A){
-      svg.appendChild(el('circle',{cx:A.x,cy:A.y,r:b*16,fill:'none',stroke:'#7C4DFF','stroke-width':2,'stroke-dasharray':'5 4'}));
+      svg.appendChild(el('circle',{cx:A.x,cy:A.y,r:c*esc,fill:'none',stroke:'#7C4DFF','stroke-width':2,'stroke-dasharray':'5 4'}));
     }
     if(passo >= 3 && B){
-      svg.appendChild(el('circle',{cx:B.x,cy:B.y,r:c*16,fill:'none',stroke:'#FF8A3D','stroke-width':2,'stroke-dasharray':'5 4'}));
+      svg.appendChild(el('circle',{cx:B.x,cy:B.y,r:b*esc,fill:'none',stroke:'#FF8A3D','stroke-width':2,'stroke-dasharray':'5 4'}));
     }
     if(passo >= 4 && C){
       svg.appendChild(el('circle',{cx:C.x,cy:C.y,r:5,fill:'#06D6A0'}));
-      const t=el('text',{x:C.x-4,y:C.y-10,'font-size':12,fill:'#039073','font-weight':'700'}); t.textContent='C'; svg.appendChild(t);
+      const t=el('text',{x:C.x-4,y:C.y-10,'font-size':12,fill:'#047857','font-weight':'700'}); t.textContent='A'; svg.appendChild(t);
     }
     if(passo >= 5 && C){
       svg.appendChild(el('line',{x1:A.x,y1:A.y,x2:C.x,y2:C.y,stroke:'#5B2EE0','stroke-width':3}));
@@ -491,11 +529,11 @@ Explore com as mãos — Trilha 5 (simulador de construção real)
   }
 
   const passos = [
-    r=> `Passo 1: segmento AB traçado (lado a = ${a} cm).`,
-    r=> `Passo 2: arco de raio ${b} traçado a partir de A.`,
-    r=> `Passo 3: arco de raio ${c} traçado a partir de B.`,
-    r=> `Passo 4: ponto C marcado na interseção dos arcos.`,
-    r=> `Passo 5: segmentos AC e BC ligados — triângulo construído! 🎉`,
+    r=> `Passo 1: segmento BC traçado (lado a = ${a} cm).`,
+    r=> `Passo 2: arco de raio c = ${c} cm com a ponta seca em B.`,
+    r=> `Passo 3: arco de raio b = ${b} cm com a ponta seca em C.`,
+    r=> `Passo 4: ponto A marcado na interseção dos arcos.`,
+    r=> `Passo 5: segmentos AB e AC traçados — triângulo construído! 🎉`,
   ];
 
   function classificar(){
@@ -510,20 +548,28 @@ Explore com as mãos — Trilha 5 (simulador de construção real)
     const lados = [a,b,c].sort((x,y)=>x-y);
     const fecha = (lados[0]+lados[1]) > lados[2];
 
-    A = {x:60, y:150};
-    B = {x:60 + a*16, y:150};
+    if(!(a>0 && b>0 && c>0)){ status.textContent='Preencha os três lados com valores positivos.'; return; }
+    /* escala automática: o desenho sempre cabe na área (antes, lados grandes saíam da tela) */
+    const xA=(c*c - b*b + a*a)/(2*a), hA=Math.sqrt(Math.max(c*c - xA*xA, 0));
+    const minX=Math.min(0,xA), maxX=Math.max(a,xA);
+    esc = Math.min(22, 250/Math.max(maxX-minX, a), 150/Math.max(hA,0.5));
+    A = {x:25 - minX*esc, y:175};
+    B = {x:A.x + a*esc, y:175};
 
     if(!fecha){
+      falhouFecho = true;
       desenhar();
-      status.textContent = `❌ ${lados[0]} + ${lados[1]} = ${lados[0]+lados[1]}, não é maior que ${lados[2]} — o fluxograma segue para "Fim: não dá para construir".`;
+      status.textContent = `❌ ${lados[0]} + ${lados[1]} = ${lados[0]+lados[1]}, não é maior que ${lados[2]} — os arcos de raio ${c} (centro B) e ${b} (centro C) não se encontram em um ponto fora da reta BC. O fluxograma segue para "Fim: não dá para construir".`;
       btnProximo.disabled = true;
       taskState.invalido = true;
       updateTasksUI();
       return;
     }
+    falhouFecho = false;
 
-    const centro = circleIntersect(A, b*16, B, c*16);
+    const centro = circleIntersect(A, c*esc, B, b*esc);
     if(!centro){
+      falhouFecho = true;
       desenhar();
       status.textContent = '❌ Essas medidas não fecham um triângulo neste simulador. Tente valores menores.';
       btnProximo.disabled = true;
@@ -597,7 +643,7 @@ Explore com as mãos — Trilha 5 (simulador de construção real)
     for (let s=1; s<=5; s++){
       const b = document.createElement('button');
       b.className='star-btn' + ((stars[i]||0)>=s ? ' filled':'');
-      b.textContent='★';
+      b.textContent='★'; b.type='button'; b.setAttribute('aria-label', s+' de 5 estrelas — '+text);
       b.addEventListener('click', ()=>{
         stars[i] = (stars[i]===s) ? s-1 : s;
         starWrap.querySelectorAll('.star-btn').forEach((sb,idx)=> sb.classList.toggle('filled', idx < stars[i]));

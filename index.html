@@ -4,17 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trilha dos Triângulos</title>
+<meta name="description" content="Trilha dos Triângulos: produto educacional PROFMAT/UFG sobre triângulos no Ensino Fundamental (BNCC, 6º ao 9º ano).">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
 <header class="site-header">
   <div class="header-inner">
     <a href="index.html" class="brand">
-      <svg class="mascote" viewBox="0 0 100 100"><polygon points="50,10 90,85 10,85" fill="#7C4DFF"/><circle cx="38" cy="65" r="6" fill="#fff"/><circle cx="62" cy="65" r="6" fill="#fff"/><circle cx="38" cy="65" r="3" fill="#2E2452"/><circle cx="62" cy="65" r="3" fill="#2E2452"/><path d="M35 76 Q50 88 65 76" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+      <svg class="mascote" viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,10 90,85 10,85" fill="#7C4DFF"/><circle cx="38" cy="65" r="6" fill="#fff"/><circle cx="62" cy="65" r="6" fill="#fff"/><circle cx="38" cy="65" r="3" fill="#2E2452"/><circle cx="62" cy="65" r="3" fill="#2E2452"/><path d="M35 76 Q50 88 65 76" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
       Trilha dos Triângulos
     </a>
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Navegação principal">
       <a href="index.html" class="active">Início</a>
       <a href="trilha1.html">Trilha 1</a>
       <a href="trilha2.html">Trilha 2</a>
@@ -26,13 +28,13 @@
       <a href="trilha8.html">Trilha 8</a>
       <a href="#mapa">Mapa</a>
       <a href="#sobre">Sobre</a>
-      <a href="#creditos">Créditos</a>
+      <a href="professor.html">Professor</a>
     </nav>
     <div class="progresso-pill" data-progresso-pill>⭐ 0/8 trilhas</div>
   </div>
 </header>
 
-<main class="container">
+<main class="container" id="conteudo">
 
   <section class="hero">
     <div class="hero-text">
@@ -59,13 +61,13 @@
   <section class="section-card" id="mapa">
     <span class="tag roxo">MAPA DA APOSTILA</span>
     <h2>🗺️ Escolha sua trilha</h2>
-    <p class="lead">Todo o conteúdo de triângulos do Ensino Fundamental, organizado em trilhas — seguindo a BNCC, do 6º ao 9º ano.</p>
+    <p class="lead">Todo o conteúdo de triângulos do Ensino Fundamental, organizado em trilhas — seguindo a BNCC, do 6º ao 9º ano. As trilhas podem ser feitas na ordem do seu ano escolar; cada uma indica, no topo, o que é bom saber antes.</p>
 
     <div class="trilhas-grid">
 
       <a href="trilha1.html" class="trilha-card disponivel" style="text-decoration:none;">
         <div class="num">1</div>
-        <span class="serie">6º ANO</span>
+        <span class="serie">6º ANO · EF06MA19</span>
         <h3>O que é um triângulo?</h3>
         <p>Classificação quanto aos lados e aos ângulos.</p>
         <span class="status" data-trilha-status="trilha1">Disponível ▶</span>
@@ -73,7 +75,7 @@
 
       <a href="trilha2.html" class="trilha-card disponivel" style="text-decoration:none;">
         <div class="num">2</div>
-        <span class="serie">7º ANO</span>
+        <span class="serie">7º ANO · EF07MA24</span>
         <h3>Existe ou não existe?</h3>
         <p>Condição de existência e construção com régua e compasso.</p>
         <span class="status" data-trilha-status="trilha2">Disponível ▶</span>
@@ -81,7 +83,7 @@
 
       <a href="trilha3.html" class="trilha-card disponivel" style="text-decoration:none;">
         <div class="num">3</div>
-        <span class="serie">7º ANO</span>
+        <span class="serie">7º ANO · EF07MA24</span>
         <h3>Sempre 180°</h3>
         <p>Soma dos ângulos internos de um triângulo.</p>
         <span class="status" data-trilha-status="trilha3">Disponível ▶</span>
@@ -89,7 +91,7 @@
 
       <a href="trilha4.html" class="trilha-card disponivel" style="text-decoration:none;">
         <div class="num">4</div>
-        <span class="serie">7º ANO</span>
+        <span class="serie">7º ANO · EF07MA25</span>
         <h3>Triângulos não tremem!</h3>
         <p>Rigidez geométrica e aplicações reais (telhados, estruturas).</p>
         <span class="status" data-trilha-status="trilha4">Disponível ▶</span>
@@ -97,7 +99,7 @@
 
       <a href="trilha5.html" class="trilha-card disponivel" style="text-decoration:none;">
         <div class="num">5</div>
-        <span class="serie">7º ANO</span>
+        <span class="serie">7º ANO · EF07MA26</span>
         <h3>Construindo passo a passo</h3>
         <p>Algoritmo e fluxograma de construção.</p>
         <span class="status" data-trilha-status="trilha5">Disponível ▶</span>
@@ -105,7 +107,7 @@
 
       <a href="trilha6.html" class="trilha-card disponivel" style="text-decoration:none;">
         <div class="num">6</div>
-        <span class="serie">8º ANO</span>
+        <span class="serie">8º ANO · EF08MA14</span>
         <h3>Gêmeos geométricos</h3>
         <p>Congruência de triângulos e seus casos.</p>
         <span class="status" data-trilha-status="trilha6">Disponível ▶</span>
@@ -113,7 +115,7 @@
 
       <a href="trilha7.html" class="trilha-card disponivel" style="text-decoration:none;">
         <div class="num">7</div>
-        <span class="serie">9º ANO</span>
+        <span class="serie">9º ANO · EF09MA12</span>
         <h3>Parecidos, mas não iguais</h3>
         <p>Semelhança de triângulos.</p>
         <span class="status" data-trilha-status="trilha7">Disponível ▶</span>
@@ -121,7 +123,7 @@
 
       <a href="trilha8.html" class="trilha-card disponivel" style="text-decoration:none;">
         <div class="num">8</div>
-        <span class="serie">9º ANO</span>
+        <span class="serie">9º ANO · EF09MA13 · EF09MA14</span>
         <h3>A corda dos 12 nós</h3>
         <p>Teorema de Pitágoras.</p>
         <span class="status" data-trilha-status="trilha8">Disponível ▶</span>
@@ -130,38 +132,50 @@
     </div>
   </section>
 
+  <section class="section-card" id="feedback">
+    <span class="tag rosa">RELATÓRIO</span>
+    <h2>📤 Entregar meu progresso ao professor</h2>
+    <p class="lead">Quando o professor pedir, gere um resumo do seu progresso (trilhas concluídas, autoavaliações e investigações escritas). Seus dados ficam só neste navegador até você decidir baixá-los, copiá-los ou enviá-los.</p>
+    <div class="feedback-form">
+      <div><label for="feedbackNome">Seu nome</label><input type="text" id="feedbackNome" autocomplete="name" placeholder="Nome e sobrenome"></div>
+      <button type="button" class="btn" onclick="baixarRelatorio()">⬇️ Baixar relatório</button>
+      <button type="button" class="btn laranja" onclick="copiarRelatorio()">📋 Copiar relatório</button>
+      <button type="button" class="btn rosa" onclick="enviarFeedbackProfessor()">📤 Enviar à planilha do professor</button>
+    </div>
+    <p class="lead" id="feedbackEnvioStatus" aria-live="polite" style="font-weight:700; color:var(--roxo-escuro);">Carregando seu progresso...</p>
+  </section>
+
   <section class="section-card" id="sobre">
     <span class="tag verde">SOBRE</span>
     <h2>📘 Sobre esta apostila</h2>
     <p class="lead">Este site é o produto educacional de uma dissertação do PROFMAT sobre o ensino de triângulos no Ensino Fundamental. Ele une três ideias principais: a Matemática Humanista (a matemática como uma criação humana, ligada a histórias e "fazeres"), a Etnomatemática de Ubiratan D'Ambrosio (valorizar como diferentes culturas usam e criam matemática) e o rigor da Geometria Plana de Dolce e Pompeo, que garante a correção de cada conteúdo.</p>
-    <p class="lead">Cada trilha segue sempre o mesmo caminho: uma <strong>contextualização</strong> (uma história real ou cultural), o conteúdo <strong>explorando</strong> a ideia matemática, exercícios <strong>praticando</strong> e um <strong>jogo</strong> para fechar com diversão.</p>
-  </section>
+    <p class="lead">Cada trilha segue sempre o mesmo caminho: uma <strong>contextualização</strong> (uma narrativa ficcional inspirada em práticas culturais reais), o conteúdo <strong>explorando</strong> a ideia matemática, exercícios <strong>praticando</strong>, um applet para <strong>explorar com as mãos</strong>, um <strong>desafio</strong> de investigação, uma <strong>autoavaliação</strong> e um <strong>jogo</strong> para fechar.</p>
+    <p class="lead">As personagens das contextualizações são fictícias e as ilustrações são representações artísticas. As práticas culturais citadas são descritas com base nas referências abaixo; recomenda-se que o professor amplie a discussão com materiais produzidos pelos próprios povos e comunidades.</p>
+    <p class="lead"><a href="professor.html" class="btn">📘 Abrir o Guia do Professor</a></p>
 
-  <section class="section-card" id="feedback-professor">
-    <span class="tag rosa">FEEDBACK</span>
-    <h2>📨 Enviar feedback ao professor</h2>
-    <p class="lead">Quando quiser, envie um resumo do seu progresso (trilhas concluídas, autoavaliações e reflexões escritas) para o seu professor. Você pode enviar mais de uma vez — cada envio atualiza o registro mais recente.</p>
-    <div class="center" style="margin-top:10px;">
-      <button class="btn rosa" id="btnEnviarFeedback" onclick="enviarFeedbackProfessor()">📨 Enviar feedback ao professor</button>
+    <h3 style="color:#5B2EE0; margin-top:22px;">Referências</h3>
+    <div class="lead" style="font-size:0.92rem; text-align:left;">
+      <p style="margin:0 0 14px; padding-left:1.5em; text-indent:-1.5em;">BARCELOS NETO, Aristóteles. <strong>Apapaatai</strong>: rituais de máscaras no Alto Xingu. São Paulo: Edusp; Fapesp, 2008.</p>
+      <p style="margin:0 0 14px; padding-left:1.5em; text-indent:-1.5em;">BOYER, Carl B.; MERZBACH, Uta C. <strong>História da matemática</strong>. 3. ed. São Paulo: Blucher, 2012.</p>
+      <p style="margin:0 0 14px; padding-left:1.5em; text-indent:-1.5em;">BRASIL. Ministério da Educação. <strong>Base Nacional Comum Curricular</strong>. Brasília: MEC, 2018.</p>
+      <p style="margin:0 0 14px; padding-left:1.5em; text-indent:-1.5em;">CHAMORRO, Graciela. <strong>Terra madura, yvy araguyje</strong>: fundamento da palavra guarani. Dourados: Editora UFGD, 2008.</p>
+      <p style="margin:0 0 14px; padding-left:1.5em; text-indent:-1.5em;">D'AMBROSIO, Ubiratan. <strong>Etnomatemática</strong>: elo entre as tradições e a modernidade. Belo Horizonte: Autêntica, 2001.</p>
+      <p style="margin:0 0 14px; padding-left:1.5em; text-indent:-1.5em;">DOLCE, Osvaldo; POMPEO, José Nicolau. <strong>Fundamentos de matemática elementar, 9</strong>: geometria plana. 9. ed. São Paulo: Atual, 2013.</p>
+      <p style="margin:0 0 14px; padding-left:1.5em; text-indent:-1.5em;">EVES, Howard. <strong>Introdução à história da matemática</strong>. Campinas: Editora da Unicamp, 2004.</p>
+      <p style="margin:0 0 14px; padding-left:1.5em; text-indent:-1.5em;">GALLOIS, Dominique Tilkin. <strong>Kusiwa</strong>: pintura corporal e arte gráfica Wajãpi. Rio de Janeiro: Museu do Índio/FUNAI; APINA; NHII-USP, 2002.</p>
+      <p style="margin:0 0 14px; padding-left:1.5em; text-indent:-1.5em;">GERDES, Paulus. <strong>Da etnomatemática a arte-design e matrizes cíclicas</strong>. Belo Horizonte: Autêntica, 2010.</p>
+      <p style="margin:0 0 14px; padding-left:1.5em; text-indent:-1.5em;">SCHAAN, Denise Pahl. <strong>A linguagem iconográfica da cerâmica Marajoara</strong>: um estudo da arte pré-histórica na Ilha de Marajó, Brasil (400-1300 AD). Porto Alegre: EDIPUCRS, 1997.</p>
     </div>
-    <p class="assess-footer" id="feedbackEnvioStatus" style="text-align:center; margin-top:10px;">Carregando progresso...</p>
-  </section>
-
-  <section class="section-card" id="creditos">
-    <span class="tag azul">CRÉDITOS E REFERÊNCIAS</span>
-    <h2>📚 Créditos e referências</h2>
-    <p class="lead"><strong>Referência bibliográfica da notação matemática:</strong> a notação, as definições e os teoremas utilizados neste material seguem DOLCE, Osvaldo; POMPEO, José Nicolau. <em>Fundamentos de Matemática Elementar, volume 9: Geometria Plana</em>. São Paulo: Atual Editora. Professores que desejarem conferir ou aprofundar a fundamentação matemática podem consultar essa obra.</p>
-    <p class="lead"><strong>Referências complementares:</strong> D'AMBROSIO, Ubiratan. <em>Etnomatemática: elo entre as tradições e a modernidade</em>. Belo Horizonte: Autêntica, 2001. MATHIAS, Carlos. <em>Fazeres Matemáticos Humanistas</em>.</p>
-    <p class="lead"><strong>Uso de Inteligência Artificial:</strong> este material foi desenvolvido com o auxílio da IA Claude (Anthropic), utilizada como ferramenta de apoio na produção de conteúdo, código e revisão do site, sob supervisão e orientação do autor.</p>
-    <p class="lead"><strong>Autoria:</strong> mestrando Mauricio Pinheiro da Costa. <strong>Orientação:</strong> Prof. Dr. Hiuri Fellipe Santos dos Reis.</p>
   </section>
 
 </main>
 
 <footer class="site-footer">
-  Trilha dos Triângulos — Produto Educacional PROFMAT 🔺✨
+  Trilha dos Triângulos — Produto Educacional PROFMAT/UFG 🔺✨ · <a href="professor.html" style="text-decoration:underline;">Guia do Professor</a>
 </footer>
 
 <script src="script.js"></script>
 </body>
+
+
 </html>

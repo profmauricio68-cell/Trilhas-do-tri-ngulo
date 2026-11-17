@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trilha 8 · A corda dos 12 nós · Trilha dos Triângulos</title>
+<meta name="description" content="Trilha dos Triângulos: produto educacional PROFMAT/UFG sobre triângulos no Ensino Fundamental (BNCC, 6º ao 9º ano).">
 <link rel="stylesheet" href="style.css">
 <style>
   .pitagoras-box{ text-align:center; background:#F1ECFF; border-radius:16px; padding:18px; margin:16px 0; }
@@ -11,14 +12,15 @@
 </style>
 </head>
 <body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
 <header class="site-header">
   <div class="header-inner">
     <a href="index.html" class="brand">
-      <svg class="mascote" viewBox="0 0 100 100"><polygon points="50,10 90,85 10,85" fill="#7C4DFF"/><circle cx="38" cy="65" r="6" fill="#fff"/><circle cx="62" cy="65" r="6" fill="#fff"/><circle cx="38" cy="65" r="3" fill="#2E2452"/><circle cx="62" cy="65" r="3" fill="#2E2452"/><path d="M35 76 Q50 88 65 76" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+      <svg class="mascote" viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,10 90,85 10,85" fill="#7C4DFF"/><circle cx="38" cy="65" r="6" fill="#fff"/><circle cx="62" cy="65" r="6" fill="#fff"/><circle cx="38" cy="65" r="3" fill="#2E2452"/><circle cx="62" cy="65" r="3" fill="#2E2452"/><path d="M35 76 Q50 88 65 76" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
       Trilha dos Triângulos
     </a>
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Navegação principal">
       <a href="index.html">Início</a>
       <a href="trilha1.html">Trilha 1</a>
       <a href="trilha2.html">Trilha 2</a>
@@ -29,16 +31,17 @@
       <a href="trilha7.html">Trilha 7</a>
       <a href="trilha8.html" class="active">Trilha 8</a>
       <a href="index.html#mapa">Mapa</a>
+      <a href="professor.html">Professor</a>
     </nav>
     <div class="progresso-pill" data-progresso-pill>⭐ 0/8 trilhas</div>
   </div>
 </header>
 
-<main class="container">
+<main class="container" id="conteudo">
 
   <!-- ============ CONTEXTUALIZAÇÃO ============ -->
   <section class="section-card">
-    <span class="tag laranja">TRILHA 8 · 9º ANO</span>
+    <span class="tag laranja">TRILHA 8 · 9º ANO · BNCC EF09MA13 · EF09MA14</span>
     <h2>🪢 O esticador de cordas do rio Nilo</h2>
     
     <div class="contexto-flex">
@@ -47,13 +50,15 @@
         <p class="lead" style="text-align: justify;">É aí que entra o trabalho do pai de Ameni, conhecido como um "esticador de cordas". Ele não carrega ferramentas complicadas, apenas uma corda simples com <strong>12 nós</strong> amarrados com espaços iguaizinhos entre eles. "Pai, como essa corda simples consegue criar cantos tão perfeitamente retos para demarcar os lotes?", pergunta Ameni.</p>
         <p class="lead" style="text-align: justify;">O pai sorri, finca três estacas no chão e estica a corda formando um triângulo: um lado com 3 espaços, outro com 4 espaços e o maior lado com 5 espaços. "Veja, Ameni", diz o pai, "quando esticamos a corda exatamente desse jeito, o canto entre os lados menor e médio vira um ângulo reto perfeito, como o canto de uma folha de papiro." Ameni fica impressionado ao ver que a matemática daquela corda de 12 nós ajuda a reconstruir a ordem, a paz e a harmonia de todo o seu povo.</p>
         <div class="balaozinho" style="text-align: justify;">🤔 Qual é o segredo numérico por trás dos lados 3, 4 e 5 que faz o triângulo ter um canto perfeitamente reto? Vamos aprender essa relação matemática!</div>
+        <p class="nota-narrativa"><strong>Sobre esta história — e um alerta histórico:</strong> Ameni é um personagem fictício. Os "esticadores de corda" (<em>harpedonaptas</em>) são mencionados por um autor grego antigo, e os egípcios de fato demarcavam terras após as cheias do Nilo. Porém, <strong>não há documento egípcio que comprove o uso da corda 3-4-5</strong>: essa é uma hipótese levantada por historiadores do século XIX e repetida em muitos livros (BOYER; MERZBACH, 2012; EVES, 2004). Já os babilônios, por volta de 1800 a.C., registraram muitos trios pitagóricos na tábua Plimpton 322 — mais de mil anos antes de Pitágoras.</p>
       </div>
       <div class="imagem">
         <figure style="margin:0;">
-          <img src="img/trilha8.jpg" alt="A Corda em Esquadro do Egito Antigo" style="width:100%; border-radius:20px; display:block; box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+          <img src="img/trilha8.webp" width="720" height="1019" decoding="async" alt="Ameni e o pai esticando a corda de 12 nós às margens do Rio Nilo" style="width:100%; height:auto; border-radius:20px; display:block; box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
           <figcaption style="text-align:center; font-size:0.85rem; color:var(--roxo-escuro); margin-top:10px; font-weight:800;">A Corda em Esquadro do Egito Antigo</figcaption>
         </figure>
       </div>
+    </div>
   </section>
   <!-- ============ EXPLORANDO ============ -->
   <section class="section-card">
@@ -79,7 +84,32 @@
 
     <p class="lead" style="font-size:0.95rem;">Conferindo com o famoso triângulo 3-4-5 da corda de nós: 3² + 4² = 9 + 16 = 25 = 5². Funciona! ✅ Esse é o exemplo mais famoso, mas existem infinitos outros: 5² + 12² = 25 + 144 = 169 = 13² também funciona.</p>
 
-    <div class="balaozinho">💡 Para saber mais: quer entender <em>por que</em> esse teorema funciona? Ele pode ser demonstrado usando semelhança de triângulos (Trilha 7) — ao traçar a altura relativa à hipotenusa, formam-se dois triângulos menores, ambos semelhantes ao triângulo original!</div>
+    <div class="demo-box">
+      <h3>📐 Por que funciona? Demonstração por semelhança <span class="bncc-chip">EF09MA13</span></h3>
+      <svg class="passo-figura" viewBox="0 0 320 175" role="img" aria-label="Triângulo ABC retângulo em A, com a altura AH relativa à hipotenusa BC, que fica dividida nos segmentos m e n.">
+        <polygon points="20,150 300,150 120.8,15.6" fill="rgba(124,77,255,.08)" stroke="#5B2EE0" stroke-width="3"/>
+        <line x1="120.8" y1="15.6" x2="120.8" y2="150" stroke="#C2410C" stroke-width="2.5" stroke-dasharray="6 4"/>
+        <polyline points="120.8,140 130.8,140 130.8,150" fill="none" stroke="#C2410C" stroke-width="2"/>
+        <polyline points="114.8,23.6 122.8,29.6 128.8,21.6" fill="none" stroke="#2E2452" stroke-width="2"/>
+        <text x="116" y="10" font-size="13" font-weight="800" fill="#2E2452">A</text>
+        <text x="6" y="164" font-size="13" font-weight="800" fill="#2E2452">B</text>
+        <text x="304" y="164" font-size="13" font-weight="800" fill="#2E2452">C</text>
+        <text x="115" y="168" font-size="13" font-weight="800" fill="#C2410C">H</text>
+        <text x="70" y="166" font-size="12" font-weight="800" fill="#2E2452">m</text>
+        <text x="210" y="166" font-size="12" font-weight="800" fill="#2E2452">n</text>
+        <text x="57" y="78" font-size="12" font-weight="800" fill="#2E2452">c</text>
+        <text x="215" y="78" font-size="12" font-weight="800" fill="#2E2452">b</text>
+        <text x="127" y="92" font-size="12" font-weight="800" fill="#C2410C">h</text>
+      </svg>
+      <ol>
+        <li>No triângulo ABC, retângulo em A, trace a altura <strong>AH</strong> relativa à hipotenusa. Ela divide a hipotenusa <strong>a</strong> em dois pedaços: <strong>m = BH</strong> e <strong>n = HC</strong>, com <strong>m + n = a</strong>.</li>
+        <li>Os triângulos <strong>HBA</strong> e <strong>ABC</strong> têm o ângulo B̂ em comum e um ângulo reto cada (em H e em A). Pelo critério <strong>AA</strong> (Trilha 7), são semelhantes. Comparando hipotenusa com hipotenusa e cateto com cateto: c/a = m/c, ou seja, <strong>c² = a·m</strong>.</li>
+        <li>Do mesmo modo, <strong>HAC</strong> e <strong>ABC</strong> têm o ângulo Ĉ em comum e um ângulo reto cada: são semelhantes, e b/a = n/b, ou seja, <strong>b² = a·n</strong>.</li>
+        <li>Somando: b² + c² = a·n + a·m = a·(m + n) = a·a = <strong>a²</strong>. ∎</li>
+      </ol>
+      <p style="font-size:0.92rem;">De quebra, a mesma semelhança dá outras <strong>relações métricas</strong> do triângulo retângulo: h² = m·n e a·h = b·c.</p>
+    </div>
+    <div class="cuidado">🔁 <strong>E a corda de nós?</strong> O teorema diz: <em>se</em> o triângulo é retângulo, <em>então</em> a² = b² + c². A corda usa o caminho inverso: <em>se</em> 3² + 4² = 5², <em>então</em> o ângulo é reto. Isso é a <strong>recíproca</strong> do Teorema de Pitágoras — que também é verdadeira (pense: o triângulo retângulo de catetos 3 e 4 tem hipotenusa 5 e, pelo caso LLL da Trilha 6, é congruente ao triângulo da corda; logo, o ângulo da corda também é reto).</div>
   </section>
 
   <!-- ============ PRATICANDO ============ -->
@@ -90,31 +120,31 @@
     <div class="quiz-item" data-correta="0">
       <div class="quiz-pergunta">1. Um triângulo retângulo tem catetos de 6 cm e 8 cm. Qual é a medida da hipotenusa?</div>
       <div class="quiz-opcoes">
-        <div class="quiz-opcao" data-valor="0">10 cm</div>
-        <div class="quiz-opcao" data-valor="1">12 cm</div>
-        <div class="quiz-opcao" data-valor="2">14 cm</div>
+        <button type="button" class="quiz-opcao" data-valor="0">10 cm</button>
+        <button type="button" class="quiz-opcao" data-valor="1">12 cm</button>
+        <button type="button" class="quiz-opcao" data-valor="2">14 cm</button>
       </div>
-      <div class="quiz-feedback"></div>
+      <div class="quiz-feedback" aria-live="polite"></div>
     </div>
 
     <div class="quiz-item" data-correta="0">
       <div class="quiz-pergunta">2. A hipotenusa de um triângulo retângulo é:</div>
       <div class="quiz-opcoes">
-        <div class="quiz-opcao" data-valor="0">O lado oposto ao ângulo reto, sempre o maior</div>
-        <div class="quiz-opcao" data-valor="1">Qualquer um dos três lados</div>
-        <div class="quiz-opcao" data-valor="2">Sempre o menor lado</div>
+        <button type="button" class="quiz-opcao" data-valor="0">O lado oposto ao ângulo reto, sempre o maior</button>
+        <button type="button" class="quiz-opcao" data-valor="1">Qualquer um dos três lados</button>
+        <button type="button" class="quiz-opcao" data-valor="2">Sempre o menor lado</button>
       </div>
-      <div class="quiz-feedback"></div>
+      <div class="quiz-feedback" aria-live="polite"></div>
     </div>
 
     <div class="quiz-item" data-correta="0">
       <div class="quiz-pergunta">3. Um triângulo retângulo tem hipotenusa de 13 cm e um dos catetos mede 5 cm. Quanto mede o outro cateto?</div>
       <div class="quiz-opcoes">
-        <div class="quiz-opcao" data-valor="0">12 cm</div>
-        <div class="quiz-opcao" data-valor="1">8 cm</div>
-        <div class="quiz-opcao" data-valor="2">9 cm</div>
+        <button type="button" class="quiz-opcao" data-valor="0">12 cm</button>
+        <button type="button" class="quiz-opcao" data-valor="1">8 cm</button>
+        <button type="button" class="quiz-opcao" data-valor="2">9 cm</button>
       </div>
-      <div class="quiz-feedback"></div>
+      <div class="quiz-feedback" aria-live="polite"></div>
     </div>
   </section>
 
@@ -125,7 +155,7 @@
     <p class="lead">Arraste os dois vértices laranja para mudar os catetos. Observe: a área do quadrado da hipotenusa é sempre igual à soma das áreas dos quadrados dos catetos.</p>
 
     <div class="applet-card">
-      <svg id="svgPitagorasT8" viewBox="0 0 390 340" width="100%" height="340"></svg>
+      <svg id="svgPitagorasT8" viewBox="0 0 380 380" width="100%" style="display:block; width:100%; max-width:540px; height:auto; aspect-ratio:1/1; margin:0 auto; touch-action:none;"></svg>
       <div class="applet-readout">
         <div class="ro-cell"><span class="k">Cateto b</span><span class="v" id="et8-b">–</span></div>
         <div class="ro-cell"><span class="k">Cateto c</span><span class="v" id="et8-c">–</span></div>
@@ -153,8 +183,8 @@
       <strong style="color:#5B2EE0; font-size:1.05rem;">Missão 3 — Preveja antes de arrastar</strong>
       <p class="lead" style="font-size:0.9rem; margin:6px 0 0;">Digite dois catetos e calcule a hipotenusa antes de conferir arrastando o applet acima.</p>
       <div class="nt-row">
-        <div class="nt-field"><label>Cateto b</label><input type="number" id="nt-b-t8" value="9" min="0.5" step="0.5"></div>
-        <div class="nt-field"><label>Cateto c</label><input type="number" id="nt-c-t8" value="12" min="0.5" step="0.5"></div>
+        <div class="nt-field"><label for="nt-b-t8">Cateto b</label><input type="number" id="nt-b-t8" value="9" min="0.5" step="0.5"></div>
+        <div class="nt-field"><label for="nt-c-t8">Cateto c</label><input type="number" id="nt-c-t8" value="12" min="0.5" step="0.5"></div>
         <button class="btn" id="nt-test-t8">Calcular hipotenusa</button>
       </div>
       <p class="nt-result" id="nt-result-t8"></p>
@@ -165,7 +195,7 @@
   <section class="section-card">
     <span class="tag rosa">DESAFIO FINAL</span>
     <h2>🪢 Sua própria corda de nós</h2>
-    <p class="lead">Os harpedonaptas egípcios resolviam um problema prático — encontrar um ângulo reto sem esquadro — usando só uma corda com nós igualmente espaçados.</p>
+    <p class="lead">Encontrar um ângulo reto sem esquadro, só com uma corda de nós igualmente espaçados, é um truque prático usado até hoje por pedreiros e marceneiros — e é a recíproca do Teorema de Pitágoras em ação.</p>
     <div class="challenge-card">
       <h3>Proponha um uso prático do triângulo 3-4-5 no seu dia a dia</h3>
       <div class="insp-grid">
@@ -175,7 +205,7 @@
         <div class="insp"><b>Artesanato</b>Garantir ângulos retos em um móvel ou objeto feito à mão.</div>
       </div>
       <p>Descreva a situação e explique como você usaria uma corda com nós (ou uma fita métrica) marcando 3, 4 e 5 unidades para garantir um ângulo reto.</p>
-      <textarea class="reflect" id="reflectTextT8" placeholder="Escreva aqui sua investigação..."></textarea>
+      <textarea class="reflect" id="reflectTextT8" aria-label="Sua investigação" placeholder="Escreva aqui sua investigação..."></textarea>
       <div class="challenge-actions">
         <button class="btn laranja" id="reflectSaveT8">Salvar minha investigação</button>
         <span class="save-note" id="reflectStatusT8">salvo automaticamente neste navegador</span>
@@ -214,7 +244,7 @@
           <svg viewBox="-10 -10 120 120" id="jogoSvg" style="width:260px;"></svg>
         </div>
         <div class="jogo-botoes" id="jogoBotoes"></div>
-        <div class="jogo-mensagem" id="jogoMensagem"></div>
+        <div class="jogo-mensagem" id="jogoMensagem" aria-live="polite"></div>
       </div>
 
       <div id="jogoFim" class="jogo-fim" style="display:none;">
@@ -233,7 +263,7 @@
 </main>
 
 <footer class="site-footer">
-  Trilha dos Triângulos — Produto Educacional PROFMAT 🔺✨
+  Trilha dos Triângulos — Produto Educacional PROFMAT/UFG 🔺✨ · <a href="professor.html" style="text-decoration:underline;">Guia do Professor</a>
 </footer>
 
 <script src="script.js"></script>
@@ -251,7 +281,7 @@ document.querySelectorAll('.quiz-item').forEach(item=>{
       if(valor === correta){
         op.classList.add('certo');
         feedback.textContent = '✅ Isso mesmo! Mandou bem.';
-        feedback.style.color = '#039073';
+        feedback.style.color = '#047857';
       }else{
         op.classList.add('errado');
         item.querySelector(`[data-valor="${correta}"]`).classList.add('certo');
@@ -387,7 +417,7 @@ function responder(escolha, btn){
     document.getElementById('jogoPontos').textContent = pontos;
     btn.style.background = '#06D6A0'; btn.style.color = '#fff'; btn.style.borderColor = '#06D6A0';
     msg.textContent = '✅ Isso aí! A resposta certa era ' + r.resposta + '.';
-    msg.style.color = '#039073';
+    msg.style.color = '#047857';
   }else{
     btn.style.background = '#FF6B9D'; btn.style.color = '#fff'; btn.style.borderColor = '#FF6B9D';
     msg.textContent = '❌ Era ' + r.resposta + '. Vamos para a próxima!';
@@ -423,8 +453,9 @@ Explore com as mãos — Trilha 8 (quadrados de Pitágoras arrastáveis)
   function el(tag, attrs){ const e = document.createElementNS(SVGNS, tag); for(const k in attrs) e.setAttribute(k, attrs[k]); return e; }
 
   const svg = document.getElementById('svgPitagorasT8');
-  const P0 = {x:175, y:225}; // vértice do ângulo reto (fixo)
-  const scale = 5;
+  const P0 = {x:130, y:255}; // vértice do ângulo reto (fixo)
+  const scale = 7.5; // com catetos até 16, todos os quadrados cabem no desenho (380 × 380)
+  const MAXC = 16, VB = 380;
   let b = 6, c = 5; // catetos em "unidades"
 
   const taskState = { tres45:false, cinco1213:false };
@@ -453,25 +484,25 @@ Explore com as mãos — Trilha 8 (quadrados de Pitágoras arrastáveis)
     const a = Math.hypot(P1.x-P2.x, P1.y-P2.y) / scale; // hipotenusa em unidades
 
     svg.innerHTML = '';
-    svg.setAttribute('viewBox','0 0 390 340');
+    svg.setAttribute('viewBox','0 0 '+VB+' '+VB);
 
     // quadrado no cateto b (abaixo)
     const qB = [P0, P1, {x:P1.x, y:P1.y+b*scale}, {x:P0.x, y:P0.y+b*scale}];
     svg.appendChild(el('polygon',{points:qB.map(p=>p.x+','+p.y).join(' '), fill:'rgba(79,195,247,0.18)', stroke:'#1F8FC7','stroke-width':2}));
     const centerB = {x:(qB[0].x+qB[2].x)/2, y:(qB[0].y+qB[2].y)/2};
-    svg.appendChild(el('text',{x:centerB.x,y:centerB.y+5,'text-anchor':'middle','font-size':12,fill:'#1F8FC7','font-weight':'700'})).textContent = 'b²';
+    svg.appendChild(el('text',{x:centerB.x,y:centerB.y+5,'text-anchor':'middle','font-size':15,fill:'#1F8FC7','font-weight':'700'})).textContent = 'b²';
 
     // quadrado no cateto c (esquerda)
     const qC = [P0, P2, {x:P2.x-c*scale, y:P2.y}, {x:P0.x-c*scale, y:P0.y}];
-    svg.appendChild(el('polygon',{points:qC.map(p=>p.x+','+p.y).join(' '), fill:'rgba(6,214,160,0.18)', stroke:'#039073','stroke-width':2}));
+    svg.appendChild(el('polygon',{points:qC.map(p=>p.x+','+p.y).join(' '), fill:'rgba(6,214,160,0.18)', stroke:'#047857','stroke-width':2}));
     const centerC = {x:(qC[0].x+qC[2].x)/2, y:(qC[0].y+qC[2].y)/2};
-    svg.appendChild(el('text',{x:centerC.x,y:centerC.y+5,'text-anchor':'middle','font-size':12,fill:'#039073','font-weight':'700'})).textContent = 'c²';
+    svg.appendChild(el('text',{x:centerC.x,y:centerC.y+5,'text-anchor':'middle','font-size':15,fill:'#047857','font-weight':'700'})).textContent = 'c²';
 
     // quadrado na hipotenusa (para fora do triângulo)
     const qA = squareOutward(P1, P2, P0);
     svg.appendChild(el('polygon',{points:qA.map(p=>p.x+','+p.y).join(' '), fill:'rgba(255,138,61,0.18)', stroke:'#C85A17','stroke-width':2}));
     const centerA = {x:(qA[0].x+qA[2].x)/2, y:(qA[0].y+qA[2].y)/2};
-    svg.appendChild(el('text',{x:centerA.x,y:centerA.y+5,'text-anchor':'middle','font-size':12,fill:'#C85A17','font-weight':'700'})).textContent = 'a²';
+    svg.appendChild(el('text',{x:centerA.x,y:centerA.y+5,'text-anchor':'middle','font-size':15,fill:'#C85A17','font-weight':'700'})).textContent = 'a²';
 
     // triangulo
     svg.appendChild(el('polygon',{points:[P0,P1,P2].map(p=>p.x+','+p.y).join(' '), fill:'rgba(124,77,255,0.15)', stroke:'#5B2EE0','stroke-width':3}));
@@ -512,14 +543,14 @@ Explore com as mãos — Trilha 8 (quadrados de Pitágoras arrastáveis)
     ev.preventDefault();
     function move(e){
       const rect = svg.getBoundingClientRect();
-      const scaleX = 390/rect.width, scaleY = 340/rect.height;
+      const scaleX = VB/rect.width, scaleY = VB/rect.height;
       const mx = (e.clientX-rect.left)*scaleX, my = (e.clientY-rect.top)*scaleY;
       if(qual === 'b'){
         const novoB = (mx - P0.x)/scale;
-        b = Math.max(2, Math.min(20, novoB));
+        b = Math.max(2, Math.min(MAXC, novoB));
       }else{
         const novoC = (P0.y - my)/scale;
-        c = Math.max(2, Math.min(20, novoC));
+        c = Math.max(2, Math.min(MAXC, novoC));
       }
       draw();
     }
@@ -586,7 +617,7 @@ document.getElementById('nt-test-t8').addEventListener('click', ()=>{
     for (let s=1; s<=5; s++){
       const b = document.createElement('button');
       b.className='star-btn' + ((stars[i]||0)>=s ? ' filled':'');
-      b.textContent='★';
+      b.textContent='★'; b.type='button'; b.setAttribute('aria-label', s+' de 5 estrelas — '+text);
       b.addEventListener('click', ()=>{
         stars[i] = (stars[i]===s) ? s-1 : s;
         starWrap.querySelectorAll('.star-btn').forEach((sb,idx)=> sb.classList.toggle('filled', idx < stars[i]));

@@ -4,24 +4,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trilha 6 · Gêmeos geométricos · Trilha dos Triângulos</title>
+<meta name="description" content="Trilha dos Triângulos: produto educacional PROFMAT/UFG sobre triângulos no Ensino Fundamental (BNCC, 6º ao 9º ano).">
 <link rel="stylesheet" href="style.css">
 <style>
-  .caso-card{ text-align:center; background:#FFF8ED; border-radius:16px; padding:14px; border:2px solid #FFE7C2; }
-  .caso-card .nome{ font-weight:800; color:#5B2EE0; margin-top:4px; font-size:1.05rem; }
-  .caso-card .desc{ font-size:0.82rem; margin-top:2px; }
-  .legenda-marcas{ display:flex; gap:18px; flex-wrap:wrap; justify-content:center; margin:14px 0; font-size:0.85rem; font-weight:700; color:#5B2EE0; }
+  .caso-card{ text-align:center; background:#FFF8ED; border-radius:20px; padding:22px 20px; border:2px solid #FFE7C2; }
+  .caso-card svg{ width:100%; height:auto; display:block; }
+  .caso-card .nome{ font-weight:800; color:#5B2EE0; margin-top:10px; font-size:1.7rem; }
+  .caso-card .desc{ font-size:1.1rem; margin-top:4px; line-height:1.35; }
+  .legenda-marcas{ display:flex; gap:18px; flex-wrap:wrap; justify-content:center; margin:14px 0; font-size:1.05rem; font-weight:700; color:#5B2EE0; }
+  .demo-box .passo-figura{ width:100%; max-width:600px; }
+  .demo-box p, .demo-box li{ font-size:1.05rem; }
   .legenda-marcas span{ display:inline-flex; align-items:center; gap:6px; }
 </style>
 </head>
 <body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
 <header class="site-header">
   <div class="header-inner">
     <a href="index.html" class="brand">
-      <svg class="mascote" viewBox="0 0 100 100"><polygon points="50,10 90,85 10,85" fill="#7C4DFF"/><circle cx="38" cy="65" r="6" fill="#fff"/><circle cx="62" cy="65" r="6" fill="#fff"/><circle cx="38" cy="65" r="3" fill="#2E2452"/><circle cx="62" cy="65" r="3" fill="#2E2452"/><path d="M35 76 Q50 88 65 76" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+      <svg class="mascote" viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,10 90,85 10,85" fill="#7C4DFF"/><circle cx="38" cy="65" r="6" fill="#fff"/><circle cx="62" cy="65" r="6" fill="#fff"/><circle cx="38" cy="65" r="3" fill="#2E2452"/><circle cx="62" cy="65" r="3" fill="#2E2452"/><path d="M35 76 Q50 88 65 76" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
       Trilha dos Triângulos
     </a>
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Navegação principal">
       <a href="index.html">Início</a>
       <a href="trilha1.html">Trilha 1</a>
       <a href="trilha2.html">Trilha 2</a>
@@ -32,31 +37,34 @@
       <a href="trilha7.html">Trilha 7</a>
       <a href="trilha8.html">Trilha 8</a>
       <a href="index.html#mapa">Mapa</a>
+      <a href="professor.html">Professor</a>
     </nav>
     <div class="progresso-pill" data-progresso-pill>⭐ 0/8 trilhas</div>
   </div>
 </header>
 
-<main class="container">
+<main class="container" id="conteudo">
 
  <!-- ============ CONTEXTUALIZAÇÃO ============ -->
   <section class="section-card">
-    <span class="tag laranja">TRILHA 6 · 8º ANO</span>
+    <span class="tag laranja">TRILHA 6 · 8º ANO · BNCC EF08MA14</span>
     <h2>🏺 Os vasos sagrados de Maiana</h2>
     
     <div class="contexto-flex">
       <div class="texto">
         <p class="lead" style="text-align: justify;">Na bela Ilha de Marajó, no Pará, a menina <strong>Maiana</strong> passa as tardes na oficina de cerâmica de sua avó, uma respeitada artesã que preserva com amor os saberes ancestrais da antiga cultura <strong>Marajoara</strong>. A avó de Maiana consegue moldar e pintar desenhos geométricos impressionantes que se repetem perfeitamente ao redor dos vasos e urnas de argila.</p>
-        <p class="lead" style="text-align: justify;">"Vovô, como seus desenhos parecem gêmeos perfeitos? Eles têm o mesmo tamanho e as mesmas pontas!", pergunta Maiana, admirada. A avó explica que os antigos artistas sabiam que, se desenhassem triângulos com os mesmos três lados iguaizinhos, todos os ângulos e cantos deles também seriam exatamente iguais, sem precisar medir um por um.</p>
+        <p class="lead" style="text-align: justify;">"Vovó, como seus desenhos parecem gêmeos perfeitos? Eles têm o mesmo tamanho e as mesmas pontas!", pergunta Maiana, admirada. A avó mostra o pedacinho de cabaça que usa como gabarito e explica que, quando ela copia as três medidas de lado de um triângulo, a "abertura" de cada canto sai igualzinha também — sem precisar medir ângulo nenhum.</p>
         <p class="lead" style="text-align: justify;">Maiana descobre que esses "gêmeos da geometria" guardam uma simetria mágica: quando dois triângulos são perfeitamente idênticos (congruentes), eles se encaixam um sobre o outro de forma perfeita, mantendo a tradição, a simetria e a beleza da sua cultura.</p>
         <div class="balaozinho" style="text-align: justify;">🤔 Quais os critérios mínimos necessários para garantir que dois triângulos são idênticos sem precisar medir todas as suas pontas e lados? Vamos descobrir juntos!</div>
+        <p class="nota-narrativa"><strong>Sobre esta história:</strong> Maiana e sua avó são personagens fictícias. A cerâmica marajoara foi produzida por sociedades que viveram na Ilha de Marajó (PA) entre cerca de 400 e 1400 d.C. (SCHAAN, 1997); hoje, ceramistas paraenses — como os do distrito de Icoaraci, em Belém — mantêm viva e reinventam essa linguagem visual.</p>
       </div>
       <div class="imagem">
         <figure style="margin:0;">
-          <img src="img/trilha6.jpg" alt="Simetria de Gêmeos da Cerâmica de Marajó" style="width:100%; border-radius:20px; display:block; box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+          <img src="img/trilha6.webp" width="720" height="1019" decoding="async" alt="Maiana observa a avó pintando triângulos gêmeos na cerâmica Marajoara" style="width:100%; height:auto; border-radius:20px; display:block; box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
           <figcaption style="text-align:center; font-size:0.85rem; color:var(--roxo-escuro); margin-top:10px; font-weight:800;">Simetria de Gêmeos da Cerâmica de Marajó</figcaption>
         </figure>
       </div>
+    </div>
   </section>
 
   <!-- ============ EXPLORANDO ============ -->
@@ -66,34 +74,93 @@
     <p class="lead">Dois triângulos são <strong>congruentes</strong> quando é possível sobrepor um ao outro fazendo coincidir todos os lados e todos os ângulos correspondentes. A boa notícia: não precisamos comparar os 6 elementos — basta garantir <strong>3 elementos certos</strong>, seguindo um dos casos abaixo.</p>
 
     <div class="legenda-marcas">
-      <span>🟠 tracinhos = lados marcados com a mesma medida</span>
-      <span>🟢 arcos = ângulos marcados com a mesma medida</span>
+      <span>🟠 tracinhos: lados com o mesmo número de tracinhos são congruentes</span>
+      <span>🟢 arcos: ângulos com o mesmo número de arcos são congruentes</span>
     </div>
 
-    <div class="exemplos-grid" style="grid-template-columns: repeat(auto-fit, minmax(150px,1fr));">
+    <div class="exemplos-grid" style="grid-template-columns: repeat(auto-fit, minmax(min(100%,320px),1fr)); gap:22px;">
       <div class="caso-card">
-        <svg viewBox="0 0 100 100"><line x1="15" y1="85" x2="85" y2="85" stroke="#C9C2E6" stroke-width="3"/><line x1="15" y1="85" x2="50" y2="15" stroke="#C9C2E6" stroke-width="3"/><line x1="85" y1="85" x2="50" y2="15" stroke="#C9C2E6" stroke-width="3"/><line x1="50.0" y1="90.0" x2="50.0" y2="80.0" stroke="#FF8A3D" stroke-width="2.2"/><line x1="35.9" y1="54.5" x2="26.9" y2="50.0" stroke="#FF8A3D" stroke-width="2.2"/><line x1="38.1" y1="50.0" x2="29.1" y2="45.5" stroke="#FF8A3D" stroke-width="2.2"/><path d="M29.0,85.0 A14,14 0 0,1 21.3,72.5" fill="none" stroke="#06D6A0" stroke-width="2.2"/></svg>
+        <svg viewBox="0 0 215 100" role="img" aria-label="Dois triângulos congruentes com as marcas correspondentes"><g><line x1="15" y1="85" x2="85" y2="85" stroke="#C9C2E6" stroke-width="3"/><line x1="15" y1="85" x2="50" y2="15" stroke="#C9C2E6" stroke-width="3"/><line x1="85" y1="85" x2="50" y2="15" stroke="#C9C2E6" stroke-width="3"/><line x1="50.0" y1="90.0" x2="50.0" y2="80.0" stroke="#FF8A3D" stroke-width="2.2"/><line x1="35.9" y1="54.5" x2="26.9" y2="50.0" stroke="#FF8A3D" stroke-width="2.2"/><line x1="38.1" y1="50.0" x2="29.1" y2="45.5" stroke="#FF8A3D" stroke-width="2.2"/><path d="M29.0,85.0 A14,14 0 0,1 21.3,72.5" fill="none" stroke="#06D6A0" stroke-width="2.2"/></g><g transform="translate(215,0) scale(-1,1)"><line x1="15" y1="85" x2="85" y2="85" stroke="#C9C2E6" stroke-width="3"/><line x1="15" y1="85" x2="50" y2="15" stroke="#C9C2E6" stroke-width="3"/><line x1="85" y1="85" x2="50" y2="15" stroke="#C9C2E6" stroke-width="3"/><line x1="50.0" y1="90.0" x2="50.0" y2="80.0" stroke="#FF8A3D" stroke-width="2.2"/><line x1="35.9" y1="54.5" x2="26.9" y2="50.0" stroke="#FF8A3D" stroke-width="2.2"/><line x1="38.1" y1="50.0" x2="29.1" y2="45.5" stroke="#FF8A3D" stroke-width="2.2"/><path d="M29.0,85.0 A14,14 0 0,1 21.3,72.5" fill="none" stroke="#06D6A0" stroke-width="2.2"/></g></svg>
         <div class="nome">LAL</div>
         <div class="desc">2 lados e o ângulo entre eles</div>
       </div>
       <div class="caso-card">
-        <svg viewBox="0 0 100 100"><line x1="15" y1="85" x2="85" y2="85" stroke="#C9C2E6" stroke-width="3"/><line x1="15" y1="85" x2="50" y2="15" stroke="#C9C2E6" stroke-width="3"/><line x1="85" y1="85" x2="50" y2="15" stroke="#C9C2E6" stroke-width="3"/><path d="M29.0,85.0 A14,14 0 0,1 21.3,72.5" fill="none" stroke="#06D6A0" stroke-width="2.2"/><path d="M71.0,85.0 A14,14 0 0,1 78.7,72.5" fill="none" stroke="#06D6A0" stroke-width="2.2"/><path d="M66.0,85.0 A19,19 0 0,1 76.5,68.0" fill="none" stroke="#06D6A0" stroke-width="2.2"/><line x1="50.0" y1="90.0" x2="50.0" y2="80.0" stroke="#FF8A3D" stroke-width="2.2"/></svg>
+        <svg viewBox="0 0 215 100" role="img" aria-label="Dois triângulos congruentes com as marcas correspondentes"><g><line x1="15" y1="85" x2="85" y2="85" stroke="#C9C2E6" stroke-width="3"/><line x1="15" y1="85" x2="50" y2="15" stroke="#C9C2E6" stroke-width="3"/><line x1="85" y1="85" x2="50" y2="15" stroke="#C9C2E6" stroke-width="3"/><path d="M29.0,85.0 A14,14 0 0,1 21.3,72.5" fill="none" stroke="#06D6A0" stroke-width="2.2"/><path d="M71.0,85.0 A14,14 0 0,1 78.7,72.5" fill="none" stroke="#06D6A0" stroke-width="2.2"/><path d="M66.0,85.0 A19,19 0 0,1 76.5,68.0" fill="none" stroke="#06D6A0" stroke-width="2.2"/><line x1="50.0" y1="90.0" x2="50.0" y2="80.0" stroke="#FF8A3D" stroke-width="2.2"/></g><g transform="translate(215,0) scale(-1,1)"><line x1="15" y1="85" x2="85" y2="85" stroke="#C9C2E6" stroke-width="3"/><line x1="15" y1="85" x2="50" y2="15" stroke="#C9C2E6" stroke-width="3"/><line x1="85" y1="85" x2="50" y2="15" stroke="#C9C2E6" stroke-width="3"/><path d="M29.0,85.0 A14,14 0 0,1 21.3,72.5" fill="none" stroke="#06D6A0" stroke-width="2.2"/><path d="M71.0,85.0 A14,14 0 0,1 78.7,72.5" fill="none" stroke="#06D6A0" stroke-width="2.2"/><path d="M66.0,85.0 A19,19 0 0,1 76.5,68.0" fill="none" stroke="#06D6A0" stroke-width="2.2"/><line x1="50.0" y1="90.0" x2="50.0" y2="80.0" stroke="#FF8A3D" stroke-width="2.2"/></g></svg>
         <div class="nome">ALA</div>
         <div class="desc">2 ângulos e o lado entre eles</div>
       </div>
       <div class="caso-card">
-        <svg viewBox="0 0 100 100"><line x1="15" y1="85" x2="85" y2="85" stroke="#C9C2E6" stroke-width="3"/><line x1="15" y1="85" x2="50" y2="15" stroke="#C9C2E6" stroke-width="3"/><line x1="85" y1="85" x2="50" y2="15" stroke="#C9C2E6" stroke-width="3"/><line x1="50.0" y1="90.0" x2="50.0" y2="80.0" stroke="#FF8A3D" stroke-width="2.2"/><line x1="35.9" y1="54.5" x2="26.9" y2="50.0" stroke="#FF8A3D" stroke-width="2.2"/><line x1="38.1" y1="50.0" x2="29.1" y2="45.5" stroke="#FF8A3D" stroke-width="2.2"/><line x1="74.2" y1="52.2" x2="65.3" y2="56.7" stroke="#FF8A3D" stroke-width="2.2"/><line x1="72.0" y1="47.8" x2="63.0" y2="52.2" stroke="#FF8A3D" stroke-width="2.2"/><line x1="69.7" y1="43.3" x2="60.8" y2="47.8" stroke="#FF8A3D" stroke-width="2.2"/></svg>
+        <svg viewBox="0 0 215 100" role="img" aria-label="Dois triângulos congruentes com as marcas correspondentes"><g><line x1="15" y1="85" x2="85" y2="85" stroke="#C9C2E6" stroke-width="3"/><line x1="15" y1="85" x2="50" y2="15" stroke="#C9C2E6" stroke-width="3"/><line x1="85" y1="85" x2="50" y2="15" stroke="#C9C2E6" stroke-width="3"/><line x1="50.0" y1="90.0" x2="50.0" y2="80.0" stroke="#FF8A3D" stroke-width="2.2"/><line x1="35.9" y1="54.5" x2="26.9" y2="50.0" stroke="#FF8A3D" stroke-width="2.2"/><line x1="38.1" y1="50.0" x2="29.1" y2="45.5" stroke="#FF8A3D" stroke-width="2.2"/><line x1="74.2" y1="52.2" x2="65.3" y2="56.7" stroke="#FF8A3D" stroke-width="2.2"/><line x1="72.0" y1="47.8" x2="63.0" y2="52.2" stroke="#FF8A3D" stroke-width="2.2"/><line x1="69.7" y1="43.3" x2="60.8" y2="47.8" stroke="#FF8A3D" stroke-width="2.2"/></g><g transform="translate(215,0) scale(-1,1)"><line x1="15" y1="85" x2="85" y2="85" stroke="#C9C2E6" stroke-width="3"/><line x1="15" y1="85" x2="50" y2="15" stroke="#C9C2E6" stroke-width="3"/><line x1="85" y1="85" x2="50" y2="15" stroke="#C9C2E6" stroke-width="3"/><line x1="50.0" y1="90.0" x2="50.0" y2="80.0" stroke="#FF8A3D" stroke-width="2.2"/><line x1="35.9" y1="54.5" x2="26.9" y2="50.0" stroke="#FF8A3D" stroke-width="2.2"/><line x1="38.1" y1="50.0" x2="29.1" y2="45.5" stroke="#FF8A3D" stroke-width="2.2"/><line x1="74.2" y1="52.2" x2="65.3" y2="56.7" stroke="#FF8A3D" stroke-width="2.2"/><line x1="72.0" y1="47.8" x2="63.0" y2="52.2" stroke="#FF8A3D" stroke-width="2.2"/><line x1="69.7" y1="43.3" x2="60.8" y2="47.8" stroke="#FF8A3D" stroke-width="2.2"/></g></svg>
         <div class="nome">LLL</div>
         <div class="desc">os 3 lados</div>
       </div>
       <div class="caso-card">
-        <svg viewBox="0 0 100 100"><line x1="15" y1="85" x2="85" y2="85" stroke="#C9C2E6" stroke-width="3"/><line x1="15" y1="85" x2="50" y2="15" stroke="#C9C2E6" stroke-width="3"/><line x1="85" y1="85" x2="50" y2="15" stroke="#C9C2E6" stroke-width="3"/><line x1="50.0" y1="90.0" x2="50.0" y2="80.0" stroke="#FF8A3D" stroke-width="2.2"/><path d="M29.0,85.0 A14,14 0 0,1 21.3,72.5" fill="none" stroke="#06D6A0" stroke-width="2.2"/><path d="M43.7,27.5 A14,14 0 0,1 56.3,27.5" fill="none" stroke="#06D6A0" stroke-width="2.2"/><path d="M41.5,32.0 A19,19 0 0,1 58.5,32.0" fill="none" stroke="#06D6A0" stroke-width="2.2"/></svg>
+        <svg viewBox="0 0 215 100" role="img" aria-label="Dois triângulos congruentes com as marcas correspondentes"><g><line x1="15" y1="85" x2="85" y2="85" stroke="#C9C2E6" stroke-width="3"/><line x1="15" y1="85" x2="50" y2="15" stroke="#C9C2E6" stroke-width="3"/><line x1="85" y1="85" x2="50" y2="15" stroke="#C9C2E6" stroke-width="3"/><line x1="50.0" y1="90.0" x2="50.0" y2="80.0" stroke="#FF8A3D" stroke-width="2.2"/><path d="M29.0,85.0 A14,14 0 0,1 21.3,72.5" fill="none" stroke="#06D6A0" stroke-width="2.2"/><path d="M43.7,27.5 A14,14 0 0,1 56.3,27.5" fill="none" stroke="#06D6A0" stroke-width="2.2"/><path d="M41.5,32.0 A19,19 0 0,1 58.5,32.0" fill="none" stroke="#06D6A0" stroke-width="2.2"/></g><g transform="translate(215,0) scale(-1,1)"><line x1="15" y1="85" x2="85" y2="85" stroke="#C9C2E6" stroke-width="3"/><line x1="15" y1="85" x2="50" y2="15" stroke="#C9C2E6" stroke-width="3"/><line x1="85" y1="85" x2="50" y2="15" stroke="#C9C2E6" stroke-width="3"/><line x1="50.0" y1="90.0" x2="50.0" y2="80.0" stroke="#FF8A3D" stroke-width="2.2"/><path d="M29.0,85.0 A14,14 0 0,1 21.3,72.5" fill="none" stroke="#06D6A0" stroke-width="2.2"/><path d="M43.7,27.5 A14,14 0 0,1 56.3,27.5" fill="none" stroke="#06D6A0" stroke-width="2.2"/><path d="M41.5,32.0 A19,19 0 0,1 58.5,32.0" fill="none" stroke="#06D6A0" stroke-width="2.2"/></g></svg>
         <div class="nome">LAAo</div>
         <div class="desc">1 lado, o ângulo adjacente e o ângulo oposto a ele</div>
       </div>
     </div>
 
-    <div class="balaozinho">💡 Aplicação real: para provar que um quadrilátero (como o paralelogramo) tem lados opostos iguais, os matemáticos traçam uma diagonal e mostram que ela cria dois triângulos congruentes — essa é uma das razões pelas quais a congruência de triângulos é tão importante!</div>
+    <p class="lead" style="font-size:0.95rem;">Repare que, em cada par, o segundo triângulo é o reflexo do primeiro num espelho. Mover, girar ou refletir um triângulo não muda suas medidas: as figuras continuam congruentes.</p>
+
+    <div class="demo-box">
+      <h3>⚠️ Três elementos quaisquer não bastam!</h3>
+      <p><strong>AAA não garante congruência.</strong> Um triângulo equilátero de lado 2 cm e outro de lado 5 cm têm os três ângulos iguais (60°), mas tamanhos diferentes. (Eles são <em>semelhantes</em> — assunto da Trilha 7.)</p>
+      <svg class="passo-figura" viewBox="0 0 490 292" role="img" aria-label="Dois triângulos equiláteros de tamanhos diferentes, um de lado 2 cm e outro de lado 5 cm, ambos com os três ângulos de 60°.">
+        <polygon points="20,262 140,262 80.0,158.1" fill="rgba(124,77,255,.15)" stroke="#5B2EE0" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M42.0,262 A22,22 0 0 0 31.0,242.9" fill="none" stroke="#06A77D" stroke-width="2.2"/>
+        <path d="M118.0,262 A22,22 0 0 1 129.0,242.9" fill="none" stroke="#06A77D" stroke-width="2.2"/>
+        <path d="M69.0,177.1 A22,22 0 0 0 91.0,177.1" fill="none" stroke="#06A77D" stroke-width="2.2"/>
+        <text x="51.2" y="249.2" text-anchor="middle" font-size="15" font-weight="800" fill="#2E2452">60°</text>
+        <text x="108.8" y="249.2" text-anchor="middle" font-size="15" font-weight="800" fill="#2E2452">60°</text>
+        <text x="80.0" y="213.7" text-anchor="middle" font-size="15" font-weight="800" fill="#2E2452">60°</text>
+        <text x="80.0" y="284" text-anchor="middle" font-size="15" font-weight="800" fill="#5B2EE0">lado 2 cm</text>
+        <polygon points="170,262 470,262 320.0,2.2" fill="rgba(194,65,12,.12)" stroke="#C2410C" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M204.0,262 A34,34 0 0 0 187.0,232.6" fill="none" stroke="#06A77D" stroke-width="2.2"/>
+        <path d="M436.0,262 A34,34 0 0 1 453.0,232.6" fill="none" stroke="#06A77D" stroke-width="2.2"/>
+        <path d="M303.0,31.6 A34,34 0 0 0 337.0,31.6" fill="none" stroke="#06A77D" stroke-width="2.2"/>
+        <text x="247.9" y="224.0" text-anchor="middle" font-size="20" font-weight="800" fill="#2E2452">60°</text>
+        <text x="392.1" y="224.0" text-anchor="middle" font-size="20" font-weight="800" fill="#2E2452">60°</text>
+        <text x="320.0" y="135.2" text-anchor="middle" font-size="20" font-weight="800" fill="#2E2452">60°</text>
+        <text x="320.0" y="284" text-anchor="middle" font-size="15" font-weight="800" fill="#C2410C">lado 5 cm</text>
+      </svg>
+      <p><strong>LLA (dois lados e um ângulo que <em>não</em> está entre eles) também não garante.</strong> Fixe o lado AB = 6 cm e o ângulo de 30° em A. Com a ponta seca em B e abertura 4 cm, o arco corta a outra semirreta de A em <em>dois</em> pontos, C₁ e C₂: os triângulos ABC₁ e ABC₂ têm AB = 6, BC = 4 e Â = 30°, mas não são congruentes.</p>
+      <svg class="passo-figura" viewBox="0 0 320 150" role="img" aria-label="Contraexemplo do caso LLA: dois triângulos diferentes com os mesmos dois lados e o mesmo ângulo não incluído.">
+        <line x1="20" y1="130" x2="245.2" y2="0" stroke="#9A92C2" stroke-width="1.5" stroke-dasharray="5 4"/>
+        <circle cx="200" cy="130" r="120" fill="none" stroke="#C9C2E6" stroke-width="1.5" stroke-dasharray="4 4"/>
+        <polygon points="20,130 200,130 86.3,91.7" fill="rgba(124,77,255,.15)" stroke="#5B2EE0" stroke-width="2.5"/>
+        <polygon points="20,130 200,130 223.7,12.4" fill="rgba(194,65,12,.10)" stroke="#C2410C" stroke-width="2.5"/>
+        <text x="10" y="145" font-size="13" font-weight="800" fill="#2E2452">A</text>
+        <text x="204" y="145" font-size="13" font-weight="800" fill="#2E2452">B</text>
+        <text x="70" y="86" font-size="13" font-weight="800" fill="#5B2EE0">C₁</text>
+        <text x="230" y="14" font-size="13" font-weight="800" fill="#C2410C">C₂</text>
+        <path d="M50,130 A30,30 0 0 0 46,115" fill="none" stroke="#06A77D" stroke-width="2"/>
+        <text x="55" y="124" font-size="12" font-weight="800" fill="#2E2452">30°</text>
+      </svg>
+      <p style="font-size:0.92rem;">Por isso os casos têm nomes tão precisos: no LAL o ângulo precisa estar <em>entre</em> os dois lados; no ALA o lado precisa estar <em>entre</em> os dois ângulos; e no LAAo o ângulo oposto ao lado precisa ser o correspondente.</p>
+    </div>
+
+    <div class="demo-box">
+      <h3>🧱 Congruência a serviço dos quadriláteros <span class="bncc-chip">EF08MA14</span></h3>
+      <p><strong>Propriedade:</strong> em todo paralelogramo ABCD, os lados opostos são congruentes (AB = CD e AD = BC).</p>
+      <svg class="passo-figura" viewBox="0 0 320 140" role="img" aria-label="Paralelogramo ABCD com a diagonal AC dividindo-o em dois triângulos congruentes.">
+        <polygon points="30,115 210,115 290,25 110,25" fill="rgba(124,77,255,.08)" stroke="#5B2EE0" stroke-width="3"/>
+        <line x1="30" y1="115" x2="290" y2="25" stroke="#C2410C" stroke-width="2.5" stroke-dasharray="6 4"/>
+        <text x="16" y="130" font-size="13" font-weight="800" fill="#2E2452">A</text>
+        <text x="214" y="132" font-size="13" font-weight="800" fill="#2E2452">B</text>
+        <text x="294" y="22" font-size="13" font-weight="800" fill="#2E2452">C</text>
+        <text x="96" y="20" font-size="13" font-weight="800" fill="#2E2452">D</text>
+      </svg>
+      <ol>
+        <li>Trace a diagonal <strong>AC</strong>. Ela divide o paralelogramo nos triângulos ABC e CDA.</li>
+        <li>Como AB ∥ DC e AC é transversal, os ângulos alternos internos são congruentes: ∠BAC ≅ ∠DCA.</li>
+        <li>Como AD ∥ BC, também ∠BCA ≅ ∠DAC.</li>
+        <li>O lado AC é comum aos dois triângulos.</li>
+        <li>Pelo caso <strong>ALA</strong> (ângulo, lado comum entre eles, ângulo), ABC ≅ CDA.</li>
+        <li>Lados correspondentes de triângulos congruentes são congruentes: <strong>AB = CD</strong> e <strong>BC = DA</strong>. ∎</li>
+      </ol>
+      <p style="font-size:0.92rem;">Do mesmo modo, comparando os triângulos formados pelas duas diagonais, prova-se que elas se cortam ao meio. Experimente: que propriedade do retângulo você conseguiria provar com o caso LAL?</p>
+    </div>
   </section>
 
   <!-- ============ PRATICANDO ============ -->
@@ -102,33 +169,33 @@
     <h2>✏️ Vamos treinar</h2>
 
     <div class="quiz-item" data-correta="0">
-      <div class="quiz-pergunta">1. Dois triângulos têm os três lados de medidas respectivamente iguais. Qual caso garante que eles são congruentes?</div>
+      <div class="quiz-pergunta">1. Dois triângulos têm os três lados respectivamente iguais. Qual caso garante que eles são congruentes?</div>
       <div class="quiz-opcoes">
-        <div class="quiz-opcao" data-valor="0">LLL</div>
-        <div class="quiz-opcao" data-valor="1">ALA</div>
-        <div class="quiz-opcao" data-valor="2">LAL</div>
+        <button type="button" class="quiz-opcao" data-valor="0">LLL</button>
+        <button type="button" class="quiz-opcao" data-valor="1">ALA</button>
+        <button type="button" class="quiz-opcao" data-valor="2">LAL</button>
       </div>
-      <div class="quiz-feedback"></div>
+      <div class="quiz-feedback" aria-live="polite"></div>
     </div>
 
     <div class="quiz-item" data-correta="2">
-      <div class="quiz-pergunta">2. Dois lados e o ângulo formado entre eles têm, respectivamente, medidas iguais. Qual é o caso?</div>
+      <div class="quiz-pergunta">2. Dois lados e o ângulo formado entre eles são respectivamente iguais. Qual é o caso?</div>
       <div class="quiz-opcoes">
-        <div class="quiz-opcao" data-valor="0">LLL</div>
-        <div class="quiz-opcao" data-valor="1">ALA</div>
-        <div class="quiz-opcao" data-valor="2">LAL</div>
+        <button type="button" class="quiz-opcao" data-valor="0">LLL</button>
+        <button type="button" class="quiz-opcao" data-valor="1">ALA</button>
+        <button type="button" class="quiz-opcao" data-valor="2">LAL</button>
       </div>
-      <div class="quiz-feedback"></div>
+      <div class="quiz-feedback" aria-live="polite"></div>
     </div>
 
     <div class="quiz-item" data-correta="1">
       <div class="quiz-pergunta">3. Duas figuras que têm exatamente o mesmo formato e tamanho são chamadas de:</div>
       <div class="quiz-opcoes">
-        <div class="quiz-opcao" data-valor="0">Semelhantes</div>
-        <div class="quiz-opcao" data-valor="1">Congruentes</div>
-        <div class="quiz-opcao" data-valor="2">Equivalentes</div>
+        <button type="button" class="quiz-opcao" data-valor="0">Semelhantes</button>
+        <button type="button" class="quiz-opcao" data-valor="1">Congruentes</button>
+        <button type="button" class="quiz-opcao" data-valor="2">Equivalentes</button>
       </div>
-      <div class="quiz-feedback"></div>
+      <div class="quiz-feedback" aria-live="polite"></div>
     </div>
   </section>
 
@@ -141,11 +208,11 @@
     <div style="display:grid; grid-template-columns:1fr 1fr; gap:0; margin:18px 0 8px; border-top:1px dashed #E4DEFB;">
       <div style="padding:16px 14px; text-align:center; border-right:1px dashed #E4DEFB;">
         <div style="font-weight:800; color:#5B2EE0; margin-bottom:4px; font-size:0.9rem;">Modelo</div>
-        <svg id="svgModeloT6" viewBox="0 0 320 280" width="100%" height="220"></svg>
+        <svg id="svgModeloT6" viewBox="0 0 320 280" width="100%" style="display:block; width:100%; max-width:440px; height:auto; aspect-ratio:320/280; margin:0 auto;"></svg>
       </div>
       <div style="padding:16px 14px; text-align:center;">
         <div style="font-weight:800; color:#5B2EE0; margin-bottom:4px; font-size:0.9rem;">Seu triângulo</div>
-        <svg id="svgCopiaT6" viewBox="0 0 320 280" width="100%" height="220"></svg>
+        <svg id="svgCopiaT6" viewBox="0 0 320 280" width="100%" style="display:block; width:100%; max-width:440px; height:auto; aspect-ratio:320/280; margin:0 auto;"></svg>
       </div>
     </div>
 
@@ -157,7 +224,7 @@
     <div class="badges" id="et6-badges"></div>
 
     <h3 style="color:#5B2EE0; margin-top:26px;">Missão — Qual caso garante isso?</h3>
-    <p class="lead" style="font-size:0.9rem;">Se as medidas dos 3 lados do seu triângulo ficaram iguais às do modelo, qual caso de congruência garante que eles são congruentes?</p>
+    <p class="lead" style="font-size:0.9rem;">Se os 3 lados do seu triângulo ficaram iguais aos do modelo, qual caso de congruência garante que eles são congruentes?</p>
     <div class="jogo-botoes" id="et6-opcoes" style="justify-content:flex-start;"></div>
     <p class="nt-result" id="et6-resposta"></p>
 
@@ -187,7 +254,7 @@
         <div class="insp"><b>Construção</b>Gabaritos usados por marceneiros e pedreiros para repetir peças.</div>
       </div>
       <p>Descreva o objeto e explique: por que usar um molde garante peças congruentes, em vez de desenhar cada uma "de olho"?</p>
-      <textarea class="reflect" id="reflectTextT6" placeholder="Escreva aqui sua investigação..."></textarea>
+      <textarea class="reflect" id="reflectTextT6" aria-label="Sua investigação" placeholder="Escreva aqui sua investigação..."></textarea>
       <div class="challenge-actions">
         <button class="btn laranja" id="reflectSaveT6">Salvar minha investigação</button>
         <span class="save-note" id="reflectStatusT6">salvo automaticamente neste navegador</span>
@@ -223,10 +290,10 @@
       <div id="jogoAtivo">
         <p class="center quiz-pergunta">Qual caso de congruência é esse?</p>
         <div class="jogo-triangulo-area">
-          <svg viewBox="0 0 100 100" id="jogoSvg" style="width:200px;"></svg>
+          <svg viewBox="0 0 212 100" id="jogoSvg" style="width:min(380px,100%);" role="img" aria-label="Par de triângulos com marcas de lados e ângulos correspondentes"></svg>
         </div>
         <div class="jogo-botoes" id="jogoBotoes"></div>
-        <div class="jogo-mensagem" id="jogoMensagem"></div>
+        <div class="jogo-mensagem" id="jogoMensagem" aria-live="polite"></div>
       </div>
 
       <div id="jogoFim" class="jogo-fim" style="display:none;">
@@ -245,7 +312,7 @@
 </main>
 
 <footer class="site-footer">
-  Trilha dos Triângulos — Produto Educacional PROFMAT 🔺✨
+  Trilha dos Triângulos — Produto Educacional PROFMAT/UFG 🔺✨ · <a href="professor.html" style="text-decoration:underline;">Guia do Professor</a>
 </footer>
 
 <script src="script.js"></script>
@@ -263,7 +330,7 @@ document.querySelectorAll('.quiz-item').forEach(item=>{
       if(valor === correta){
         op.classList.add('certo');
         feedback.textContent = '✅ Isso mesmo! Mandou bem.';
-        feedback.style.color = '#039073';
+        feedback.style.color = '#047857';
       }else{
         op.classList.add('errado');
         item.querySelector(`[data-valor="${correta}"]`).classList.add('certo');
@@ -346,7 +413,8 @@ function carregarRodada(){
   const r = rodadas[rodadaIdx];
   document.getElementById('jogoRodadaAtual').textContent = rodadaIdx+1;
   document.getElementById('jogoMensagem').textContent = '';
-  document.getElementById('jogoSvg').innerHTML = r.svg;
+  /* mostra o PAR de triângulos: o segundo é o primeiro girado 180° — congruência não depende da posição */
+  document.getElementById('jogoSvg').innerHTML = '<g>'+r.svg+'</g><g transform="translate(212,100) rotate(180)">'+r.svg+'</g>';
 
   const botoesDiv = document.getElementById('jogoBotoes');
   botoesDiv.innerHTML = '';
@@ -368,7 +436,7 @@ function responder(escolha, btn){
     document.getElementById('jogoPontos').textContent = pontos;
     btn.style.background = '#06D6A0'; btn.style.color = '#fff'; btn.style.borderColor = '#06D6A0';
     msg.textContent = '✅ Isso aí! Caso ' + r.caso + ' correto!';
-    msg.style.color = '#039073';
+    msg.style.color = '#047857';
   }else{
     btn.style.background = '#FF6B9D'; btn.style.color = '#fff'; btn.style.borderColor = '#FF6B9D';
     msg.textContent = '❌ Era o caso ' + r.caso + '. Vamos para a próxima!';
@@ -403,29 +471,27 @@ Explore com as mãos — Trilha 6 (vire o gêmeo do modelo)
   const SVGNS = "http://www.w3.org/2000/svg";
   function el(tag, attrs){ const e = document.createElementNS(SVGNS, tag); for(const k in attrs) e.setAttribute(k, attrs[k]); return e; }
   function dist(p,q){ return Math.hypot(p.x-q.x, p.y-q.y); }
-  function roundToHalf(n){ return (Math.round(n*2)/2).toFixed(1); }
   const scale = 0.045;
 
-  const modeloVerts = [{x:45,y:255},{x:295,y:255},{x:170,y:55}];
+  const modeloVerts = [{x:80,y:230},{x:260,y:230},{x:170,y:90}];
   const svgModelo = document.getElementById('svgModeloT6');
   function desenharModelo(){
     svgModelo.innerHTML=''; svgModelo.setAttribute('viewBox','0 0 320 280');
-    svgModelo.appendChild(el('polygon',{points:modeloVerts.map(p=>p.x+','+p.y).join(' '), fill:'rgba(6,214,160,0.12)', stroke:'#039073','stroke-width':3}));
+    svgModelo.appendChild(el('polygon',{points:modeloVerts.map(p=>p.x+','+p.y).join(' '), fill:'rgba(6,214,160,0.12)', stroke:'#047857','stroke-width':3}));
     const [P1,P2,P3] = modeloVerts;
-    const centroModelo = {x:(P1.x+P2.x+P3.x)/3, y:(P1.y+P2.y+P3.y)/3};
-    const labels = [ {mid:mid2(P2,P3), val:dist(P2,P3)*scale}, {mid:mid2(P1,P3), val:dist(P1,P3)*scale}, {mid:mid2(P1,P2), val:dist(P1,P2)*scale} ];
-    labels.forEach(L=>{
-      const pos = paraFora(L.mid, centroModelo, 16);
-      const t=el('text',{x:pos.x,y:pos.y,'font-size':13,fill:'#039073','text-anchor':'middle','font-weight':'700'});
-      t.textContent = roundToHalf(L.val); svgModelo.appendChild(t);
+    const cx = (P1.x+P2.x+P3.x)/3, cy = (P1.y+P2.y+P3.y)/3;
+    const labels = [ [P2,P3], [P1,P3], [P1,P2] ];
+    labels.forEach(([p,q])=>{
+      const m = mid2(p,q);
+      const val = dist(p,q)*scale;
+      /* empurra o rótulo para fora do triângulo */
+      let nx = m.x-cx, ny = m.y-cy; const nn = Math.hypot(nx,ny)||1; nx/=nn; ny/=nn;
+      const t=el('text',{x:m.x+nx*(30+22*Math.abs(nx)),y:m.y+ny*(30+22*Math.abs(nx))+7,'font-size':22,fill:'#047857','text-anchor':'middle','font-weight':'800',
+        stroke:'#fff','stroke-width':4,'paint-order':'stroke','stroke-linejoin':'round'});
+      t.textContent = val.toFixed(1).replace('.',',') + ' cm'; svgModelo.appendChild(t);
     });
   }
   function mid2(p,q){ return {x:(p.x+q.x)/2, y:(p.y+q.y)/2}; }
-  function paraFora(ponto, centro, distancia){
-    const dx = ponto.x-centro.x, dy = ponto.y-centro.y;
-    const len = Math.hypot(dx,dy) || 1;
-    return { x: ponto.x + (dx/len)*distancia, y: ponto.y + (dy/len)*distancia };
-  }
   desenharModelo();
   const modeloLados = [dist(modeloVerts[1],modeloVerts[2])*scale, dist(modeloVerts[0],modeloVerts[2])*scale, dist(modeloVerts[0],modeloVerts[1])*scale].sort((x,y)=>x-y);
 
@@ -438,7 +504,7 @@ Explore com as mãos — Trilha 6 (vire o gêmeo do modelo)
   }
 
   const svgCopia = document.getElementById('svgCopiaT6');
-  let verts = [{x:45,y:250},{x:275,y:260},{x:150,y:50}];
+  let verts = [{x:80,y:210},{x:230,y:220},{x:150,y:70}];
 
   function draw(){
     svgCopia.innerHTML=''; svgCopia.setAttribute('viewBox','0 0 320 280');
@@ -450,9 +516,9 @@ Explore com as mãos — Trilha 6 (vire o gêmeo do modelo)
     });
 
     const a = dist(verts[1],verts[2])*scale, b = dist(verts[0],verts[2])*scale, c = dist(verts[0],verts[1])*scale;
-    document.getElementById('et6-a').textContent = roundToHalf(a)+' cm';
-    document.getElementById('et6-b').textContent = roundToHalf(b)+' cm';
-    document.getElementById('et6-c').textContent = roundToHalf(c)+' cm';
+    document.getElementById('et6-a').textContent = a.toFixed(1).replace('.',',')+' cm';
+    document.getElementById('et6-b').textContent = b.toFixed(1).replace('.',',')+' cm';
+    document.getElementById('et6-c').textContent = c.toFixed(1).replace('.',',')+' cm';
 
     const ladosCopia = [a,b,c].sort((x,y)=>x-y);
     const tol = 0.35;
@@ -494,7 +560,7 @@ Explore com as mãos — Trilha 6 (vire o gêmeo do modelo)
     btn.addEventListener('click', ()=>{
       if(op === 'LLL'){
         btn.style.background='#06D6A0'; btn.style.color='#fff'; btn.style.borderColor='#06D6A0';
-        respostaEl.textContent = '✓ Isso! Com os 3 lados de medidas iguais, o caso LLL garante a congruência.';
+        respostaEl.textContent = '✓ Isso! Com os 3 lados iguais, o caso LLL garante a congruência.';
         respostaEl.className = 'nt-result ok';
         taskState.caso = true;
         updateTasksUI();
@@ -553,7 +619,7 @@ Explore com as mãos — Trilha 6 (vire o gêmeo do modelo)
     for (let s=1; s<=5; s++){
       const b = document.createElement('button');
       b.className='star-btn' + ((stars[i]||0)>=s ? ' filled':'');
-      b.textContent='★';
+      b.textContent='★'; b.type='button'; b.setAttribute('aria-label', s+' de 5 estrelas — '+text);
       b.addEventListener('click', ()=>{
         stars[i] = (stars[i]===s) ? s-1 : s;
         starWrap.querySelectorAll('.star-btn').forEach((sb,idx)=> sb.classList.toggle('filled', idx < stars[i]));

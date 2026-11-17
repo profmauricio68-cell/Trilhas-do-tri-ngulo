@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trilha 3 · Sempre 180° · Trilha dos Triângulos</title>
+<meta name="description" content="Trilha dos Triângulos: produto educacional PROFMAT/UFG sobre triângulos no Ensino Fundamental (BNCC, 6º ao 9º ano).">
 <link rel="stylesheet" href="style.css">
 <style>
   .formula-box{
@@ -14,14 +15,15 @@
 </style>
 </head>
 <body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
 <header class="site-header">
   <div class="header-inner">
     <a href="index.html" class="brand">
-      <svg class="mascote" viewBox="0 0 100 100"><polygon points="50,10 90,85 10,85" fill="#7C4DFF"/><circle cx="38" cy="65" r="6" fill="#fff"/><circle cx="62" cy="65" r="6" fill="#fff"/><circle cx="38" cy="65" r="3" fill="#2E2452"/><circle cx="62" cy="65" r="3" fill="#2E2452"/><path d="M35 76 Q50 88 65 76" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+      <svg class="mascote" viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,10 90,85 10,85" fill="#7C4DFF"/><circle cx="38" cy="65" r="6" fill="#fff"/><circle cx="62" cy="65" r="6" fill="#fff"/><circle cx="38" cy="65" r="3" fill="#2E2452"/><circle cx="62" cy="65" r="3" fill="#2E2452"/><path d="M35 76 Q50 88 65 76" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
       Trilha dos Triângulos
     </a>
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Navegação principal">
       <a href="index.html">Início</a>
       <a href="trilha1.html">Trilha 1</a>
       <a href="trilha2.html">Trilha 2</a>
@@ -32,31 +34,34 @@
       <a href="trilha7.html">Trilha 7</a>
       <a href="trilha8.html">Trilha 8</a>
       <a href="index.html#mapa">Mapa</a>
+      <a href="professor.html">Professor</a>
     </nav>
     <div class="progresso-pill" data-progresso-pill>⭐ 0/8 trilhas</div>
   </div>
 </header>
 
-<main class="container">
+<main class="container" id="conteudo">
 
  <!-- ============ CONTEXTUALIZAÇÃO ============ -->
   <section class="section-card">
-    <span class="tag laranja">TRILHA 3 · 7º ANO</span>
+    <span class="tag laranja">TRILHA 3 · 7º ANO · BNCC EF07MA24</span>
     <h2>🎨 Os mosaicos de Seu Benedito</h2>
     
     <div class="contexto-flex">
       <div class="texto">
         <p class="lead" style="text-align: justify;">No centro histórico de São Luís, no Maranhão, o sol bate na fachada dos antigos casarões e reflete um festival de cores. Ali vive o <strong>Seu Benedito</strong>, um dos últimos mestres ladrilheiros da região. Ele aprendeu com seu pai a arte secular de fabricar e assentar <strong>ladrilhos hidráulicos</strong>, um patrimônio cultural vibrante e muito amado no Brasil.</p>
-        <p class="lead" style="text-align: justify;">Hoje é um dia especial: o pequeno <strong>Tiago</strong>, neto de Seu Benedito, está na oficina ajudando a organizar as peças de cerâmica. Ele fica fascinado com a forma como os triângulos coloridos pintados nas peças se encaixam perfeitamente ao redor de um ponto no piso, sem deixar nenhuma fresta ou espaço vazio.</p>
-        <p class="lead" style="text-align: justify;">"Vovô, como os triângulos sabem exatamente como se encaixar sem brigar?", pergunta Tiago, rindo. Seu Benedito coloca as mãos sujas de argila nos ombros do neto e explica: "Cada triângulo, Tiago, carrega um segredo dentro de suas três pontas. Quando você junta as três curvas de suas pontas em uma linha reta, elas formam exatamente metade de uma volta completa. É essa harmonia invisível de 180° que permite que a gente crie esses tapetes coloridos no chão da nossa cidade."</p>
-        <div class="balaozinho" style="text-align: justify;">🤔 Se os ângulos internos de todo triângulo sempre se juntam dessa mesma maneira, o que acontece se tentarmos somá-los? Vamos descobrir com o Seu Benedito!</div>
+        <p class="lead" style="text-align: justify;">Hoje é um dia especial: o pequeno <strong>Tiago</strong>, neto de Seu Benedito, está na oficina ajudando a desenformar as peças — feitas de cimento e pigmentos, prensadas em moldes de metal e curadas na água, por isso o nome "hidráulico". Ele fica fascinado com a forma como os triângulos coloridos se encaixam perfeitamente ao redor de cada ponto do piso, sem deixar nenhuma fresta ou espaço vazio.</p>
+        <p class="lead" style="text-align: justify;">"Vovô, como os triângulos sabem exatamente como se encaixar sem brigar?", pergunta Tiago, rindo. Seu Benedito coloca as mãos sujas de cimento nos ombros do neto e explica: "Cada triângulo, Tiago, carrega um segredo nas suas três pontas. Se você juntar as três pontas lado a lado, elas formam uma linha reta: <strong>meia volta</strong>. Em volta de cada ponto do piso cabe uma volta inteira — e cada canto de triângulo aparece ali duas vezes. Duas meias voltas fecham a volta completa, sem sobrar nem faltar."</p>
+        <div class="balaozinho" style="text-align: justify;">🤔 Será que isso vale para <em>qualquer</em> triângulo, de qualquer formato? E por quê? Vamos descobrir com o Seu Benedito!</div>
+        <p class="nota-narrativa"><strong>Sobre esta história:</strong> Seu Benedito e Tiago são personagens fictícios. O Centro Histórico de São Luís (MA), Patrimônio Mundial da UNESCO desde 1997, é conhecido pelos casarões revestidos de azulejos portugueses; os ladrilhos hidráulicos, de cimento, são outra tradição de pisos decorados presente em muitas cidades brasileiras.</p>
       </div>
       <div class="imagem">
         <figure style="margin:0;">
-          <img src="img/trilha3.jpg" alt="O Ladrilho Hidráulico Giratório de São Luís" style="width:100%; border-radius:20px; display:block; box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+          <img src="img/trilha3.webp" width="720" height="1019" decoding="async" alt="Seu Benedito e o neto Tiago com os ladrilhos hidráulicos triangulares" style="width:100%; height:auto; border-radius:20px; display:block; box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
           <figcaption style="text-align:center; font-size:0.85rem; color:var(--roxo-escuro); margin-top:10px; font-weight:800;">O Ladrilho Hidráulico Giratório de São Luís</figcaption>
         </figure>
       </div>
+    </div>
   </section>
   <!-- ============ EXPLORANDO ============ -->
   <section class="section-card">
@@ -66,36 +71,53 @@
 
     <div class="formula-box">α + β + γ = 180°</div>
 
-    <p class="lead">Isso significa que, se você já sabe dois dos três ângulos, consegue descobrir o terceiro sem medir nada — basta subtrair a soma das medidas dos dois ângulos de 180°.</p>
+    <p class="lead">Isso significa que, se você já sabe dois dos três ângulos, consegue descobrir o terceiro sem medir nada — basta subtrair de 180°.</p>
 
     <div class="exemplos-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px,1fr));">
       <div class="exemplo-card">
-        <svg viewBox="0 0 100 100">
-          <polygon points="50,31.2 77,78 23,78" fill="none" stroke="#FF8A3D" stroke-width="3"/>
-          <path d="M 50.0,31.2 L 55.5,40.7 A 11,11 0 0 1 44.5,40.7 Z" fill="rgba(120,120,120,0.30)" stroke="#8a8a8a" stroke-width="1"/>
-          <path d="M 77.0,78.0 L 71.5,68.5 A 11,11 0 0 0 66.0,78.0 Z" fill="rgba(120,120,120,0.30)" stroke="#8a8a8a" stroke-width="1"/>
-          <path d="M 23.0,78.0 L 28.5,68.5 A 11,11 0 0 1 34.0,78.0 Z" fill="rgba(120,120,120,0.30)" stroke="#8a8a8a" stroke-width="1"/>
-          <text x="50.0" y="50.0" text-anchor="middle" font-size="8" fill="#5B2EE0" font-weight="700">60°</text>
-          <text x="60.7" y="68.6" text-anchor="middle" font-size="8" fill="#5B2EE0" font-weight="700">60°</text>
-          <text x="39.3" y="68.6" text-anchor="middle" font-size="8" fill="#5B2EE0" font-weight="700">60°</text>
-        </svg>
+        <svg viewBox="0 0 100 100"><polygon points="50,31.7 75,75 25,75" fill="none" stroke="#5B2EE0" stroke-width="3"/><text x="50" y="25.7" text-anchor="middle" font-size="9" fill="#5B2EE0" font-weight="700">60°</text><text x="15" y="86" text-anchor="middle" font-size="9" fill="#5B2EE0" font-weight="700">60°</text><text x="85" y="86" text-anchor="middle" font-size="9" fill="#5B2EE0" font-weight="700">60°</text></svg>
         <div class="desc">60 + 60 + 60 = <strong>180°</strong> (equilátero)</div>
       </div>
       <div class="exemplo-card">
-        <svg viewBox="0 0 100 100">
-          <polygon points="20,80 20,20 80,80" fill="none" stroke="#1F8FC7" stroke-width="3"/>
-          <polyline points="20,74 26,74 26,80" fill="none" stroke="#7a7a7a" stroke-width="1.5"/>
-          <path d="M 20.0,20.0 L 20.0,32.0 A 12,12 0 0 0 28.5,28.5 Z" fill="rgba(120,120,120,0.30)" stroke="#8a8a8a" stroke-width="1"/>
-          <path d="M 80.0,80.0 L 68.0,80.0 A 12,12 0 0 1 71.5,71.5 Z" fill="rgba(120,120,120,0.30)" stroke="#8a8a8a" stroke-width="1"/>
-          <text x="27.6" y="38.3" text-anchor="middle" font-size="8" fill="#5B2EE0" font-weight="700">45°</text>
-          <text x="31.9" y="68.1" text-anchor="middle" font-size="8" fill="#5B2EE0" font-weight="700">90°</text>
-          <text x="61.7" y="72.4" text-anchor="middle" font-size="8" fill="#5B2EE0" font-weight="700">45°</text>
-        </svg>
+        <svg viewBox="0 0 100 100"><polygon points="20,80 20,20 80,80" fill="none" stroke="#5B2EE0" stroke-width="3"/><text x="20" y="10" text-anchor="middle" font-size="9" fill="#5B2EE0" font-weight="700">45°</text><text x="8" y="93" text-anchor="middle" font-size="9" fill="#5B2EE0" font-weight="700">90°</text><text x="91" y="93" text-anchor="middle" font-size="9" fill="#5B2EE0" font-weight="700">45°</text></svg>
         <div class="desc">90 + 45 + 45 = <strong>180°</strong> (retângulo isósceles)</div>
       </div>
     </div>
 
-    <p class="lead" style="font-size:0.92rem;"><strong>Para saber mais:</strong> além da demonstração com o recorte de papel, existe uma prova geométrica formal (usada em livros como o de Dolce e Pompeo): traçando por um vértice do triângulo uma reta paralela ao lado oposto, os ângulos alternos internos mostram exatamente por que os três ângulos, somados, formam um ângulo raso (180°) sobre essa reta.</p>
+    <div class="demo-box">
+      <h3>✂️ Experimento: rasgue as pontas</h3>
+      <ol>
+        <li>Desenhe um triângulo qualquer numa folha e pinte cada canto de uma cor.</li>
+        <li>Recorte o triângulo e rasgue (não corte!) os três cantos coloridos.</li>
+        <li>Junte os três cantos com as pontas no mesmo ponto, lado a lado, sem sobrepor.</li>
+        <li>Observe: as bordas externas formam uma <strong>linha reta</strong> — um ângulo raso, de 180°.</li>
+      </ol>
+      <p style="font-size:0.92rem;">Cada colega pode fazer com um triângulo diferente e comparar. O experimento <em>convence</em>, mas não <em>prova</em>: medidas com papel têm imprecisões, e não dá para testar todos os triângulos do mundo. Para ter certeza, precisamos de um argumento que valha para qualquer triângulo.</p>
+    </div>
+    <div class="demo-box">
+      <h3>📐 A demonstração (vale para todo triângulo)</h3>
+      <svg class="passo-figura" viewBox="0 0 320 170" role="img" aria-label="Triângulo ABC com reta r paralela a BC passando por A; os ângulos alternos internos são congruentes aos ângulos B e C.">
+        <line x1="10" y1="35" x2="310" y2="35" stroke="#2E2452" stroke-width="2" stroke-dasharray="6 4"/>
+        <text x="300" y="26" font-size="13" fill="#2E2452" font-weight="700">r</text>
+        <polygon points="130,35 40,150 280,150" fill="rgba(124,77,255,0.08)" stroke="#5B2EE0" stroke-width="3"/>
+        <path d="M40,150 L62.2,121.6 A36,36 0 0,1 76.0,150.0 Z" fill="#C2410C" opacity=".75"/>
+        <path d="M280,150 L244.0,150.0 A36,36 0 0,1 251.4,128.1 Z" fill="#047857" opacity=".75"/>
+        <path d="M130,35 L94.0,35.0 A36,36 0 0,0 107.8,63.4 Z" fill="#C2410C" opacity=".75"/>
+        <path d="M130,35 L166.0,35.0 A36,36 0 0,1 158.6,56.9 Z" fill="#047857" opacity=".75"/>
+        <path d="M130,35 L107.8,63.4 A36,36 0 0,0 158.6,56.9 Z" fill="#5B2EE0" opacity=".55"/>
+        <text x="126" y="24" font-size="14" font-weight="800" fill="#2E2452">A</text>
+        <text x="24" y="164" font-size="14" font-weight="800" fill="#2E2452">B</text>
+        <text x="286" y="164" font-size="14" font-weight="800" fill="#2E2452">C</text>
+      </svg>
+      <ol>
+        <li>Pelo vértice <strong>A</strong>, trace a reta <strong>r</strong> paralela ao lado <strong>BC</strong>. (Pelo postulado das paralelas, essa reta existe e é única.)</li>
+        <li>O lado AB é uma transversal às paralelas r e BC. Os ângulos <span style="color:#C2410C; font-weight:800;">laranja</span> são <strong>alternos internos</strong>, portanto congruentes: o ângulo laranja em A mede o mesmo que B̂.</li>
+        <li>Da mesma forma, com a transversal AC, o ângulo <span style="color:#047857; font-weight:800;">verde</span> em A mede o mesmo que Ĉ.</li>
+        <li>Em A, os três ângulos — laranja, roxo (o próprio Â) e verde — estão lado a lado sobre a reta r e formam um ângulo raso. Logo, <strong>B̂ + Â + Ĉ = 180°</strong>. ∎</li>
+      </ol>
+      <p style="font-size:0.92rem;"><strong>Consequências:</strong> (1) um triângulo nunca tem dois ângulos retos ou obtusos; (2) cada ângulo de um triângulo equilátero mede 60°; (3) o ângulo externo em um vértice é igual à soma dos dois ângulos internos não adjacentes a ele.</p>
+    </div>
+    <div class="cuidado">🧩 <strong>De volta ao piso do Seu Benedito:</strong> numa malha de triângulos iguais, em volta de cada ponto se encontram 6 cantos — dois de cada ângulo (Â, B̂ e Ĉ). Então a soma em volta do ponto é 2 × (Â + B̂ + Ĉ) = 2 × 180° = 360°, que é exatamente uma volta completa. É por isso que <strong>qualquer</strong> triângulo serve para ladrilhar um piso!</div>
   </section>
 
   <!-- ============ PRATICANDO ============ -->
@@ -106,31 +128,31 @@
     <div class="quiz-item" data-correta="1">
       <div class="quiz-pergunta">1. Um triângulo tem ângulos de 60° e 70°. Qual é o terceiro ângulo?</div>
       <div class="quiz-opcoes">
-        <div class="quiz-opcao" data-valor="0">40°</div>
-        <div class="quiz-opcao" data-valor="1">50°</div>
-        <div class="quiz-opcao" data-valor="2">60°</div>
+        <button type="button" class="quiz-opcao" data-valor="0">40°</button>
+        <button type="button" class="quiz-opcao" data-valor="1">50°</button>
+        <button type="button" class="quiz-opcao" data-valor="2">60°</button>
       </div>
-      <div class="quiz-feedback"></div>
+      <div class="quiz-feedback" aria-live="polite"></div>
     </div>
 
     <div class="quiz-item" data-correta="1">
       <div class="quiz-pergunta">2. A soma dos ângulos internos de qualquer triângulo é:</div>
       <div class="quiz-opcoes">
-        <div class="quiz-opcao" data-valor="0">90°</div>
-        <div class="quiz-opcao" data-valor="1">180°</div>
-        <div class="quiz-opcao" data-valor="2">360°</div>
+        <button type="button" class="quiz-opcao" data-valor="0">90°</button>
+        <button type="button" class="quiz-opcao" data-valor="1">180°</button>
+        <button type="button" class="quiz-opcao" data-valor="2">360°</button>
       </div>
-      <div class="quiz-feedback"></div>
+      <div class="quiz-feedback" aria-live="polite"></div>
     </div>
 
     <div class="quiz-item" data-correta="0">
       <div class="quiz-pergunta">3. Um triângulo tem ângulos de 90°, 45° e x. Qual é o valor de x?</div>
       <div class="quiz-opcoes">
-        <div class="quiz-opcao" data-valor="0">45°</div>
-        <div class="quiz-opcao" data-valor="1">55°</div>
-        <div class="quiz-opcao" data-valor="2">35°</div>
+        <button type="button" class="quiz-opcao" data-valor="0">45°</button>
+        <button type="button" class="quiz-opcao" data-valor="1">55°</button>
+        <button type="button" class="quiz-opcao" data-valor="2">35°</button>
       </div>
-      <div class="quiz-feedback"></div>
+      <div class="quiz-feedback" aria-live="polite"></div>
     </div>
   </section>
 
@@ -138,7 +160,8 @@
   <section class="section-card">
     <span class="tag azul">EXPLORE COM AS MÃOS</span>
     <h2>🖐️ Arraste e confirme os 180°</h2>
-    <p class="lead">Arraste os vértices do triângulo abaixo. Não importa o formato: a soma dos três ângulos internos nunca sai de 180°.</p>
+    <p class="lead">Arraste os vértices do triângulo abaixo. Não importa o formato: a soma dos três ângulos nunca sai de 180°. Ative a reta paralela para ver a demonstração acontecendo em movimento.</p>
+      <label style="display:flex; gap:8px; align-items:center; font-weight:700; margin:6px 0;"><input type="checkbox" id="et3-paralela"> Mostrar a reta paralela e os ângulos alternos</label>
     <div class="applet-card">
       <svg id="svgExploreT3" viewBox="0 0 320 280" width="100%" height="280"></svg>
       <div class="applet-readout">
@@ -154,8 +177,8 @@
     <p class="lead" style="font-size:0.9rem;">Digite dois ângulos de um triângulo. Vamos calcular o terceiro.</p>
     <div class="numeric-tester">
       <div class="nt-row">
-        <div class="nt-field"><label>Ângulo A</label><input type="number" id="nt-a-t3" value="60" min="1" max="178" step="1"></div>
-        <div class="nt-field"><label>Ângulo B</label><input type="number" id="nt-b-t3" value="70" min="1" max="178" step="1"></div>
+        <div class="nt-field"><label for="nt-a-t3">Ângulo A</label><input type="number" id="nt-a-t3" value="60" min="1" max="178" step="1"></div>
+        <div class="nt-field"><label for="nt-b-t3">Ângulo B</label><input type="number" id="nt-b-t3" value="70" min="1" max="178" step="1"></div>
         <button class="btn" id="nt-test-t3">Calcular ângulo C</button>
       </div>
       <p class="nt-result" id="nt-result-t3"></p>
@@ -166,47 +189,81 @@
   <section class="section-card">
     <span class="tag rosa">DESAFIO FINAL</span>
     <h2>🎨 Ângulos que se encaixam na sua cultura</h2>
-    <p class="lead">Ladrilhos hidráulicos, mosaicos e a Arte Kusiwa — sistema gráfico do povo Wajãpi (Amapá), reconhecido pela UNESCO como Patrimônio Cultural Imaterial da Humanidade — usam ângulos que se encaixam perfeitamente ao redor de um ponto, sem sobras nem buracos.</p>
+    <p class="lead">Ladrilhos hidráulicos e mosaicos cobrem o chão sem sobras nem buracos porque os ângulos que se encontram em cada ponto somam uma volta completa (360°). Já a Arte Kusiwa — sistema gráfico do povo Wajãpi (Amapá), reconhecido pela UNESCO como Patrimônio Cultural Imaterial da Humanidade — combina triângulos, losangos e linhas em padrões que se repetem ao longo de faixas.</p>
 
     <figure style="max-width:420px; margin:0 auto 20px;">
-      <svg viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg" style="width:100%; border-radius:16px; display:block;">
-        <rect x="0" y="0" width="400" height="260" rx="24" fill="#FFF3E0"/>
-        <rect x="30" y="30" width="340" height="200" rx="18" fill="#F0D9B5" stroke="#8D5A2B" stroke-width="4"/>
-        <!-- faixa superior de triângulos (grafismo Kusiwa) -->
-        <g fill="#B5432B">
-          <polygon points="50,55 68,80 32,80"/>
-          <polygon points="86,55 104,80 68,80"/>
-          <polygon points="122,55 140,80 104,80"/>
-          <polygon points="158,55 176,80 140,80"/>
-        </g>
-        <g fill="#2E2452">
-          <polygon points="242,55 260,80 224,80"/>
-          <polygon points="278,55 296,80 260,80"/>
-          <polygon points="314,55 332,80 296,80"/>
-          <polygon points="350,55 368,80 332,80"/>
-        </g>
-        <!-- motivo central: forma curvilínea inspirada em ser da natureza (peixe estilizado) -->
-        <path d="M110 165 Q160 120 210 165 Q160 210 110 165 Z" fill="#B5432B"/>
-        <polygon points="205,165 235,150 235,180" fill="#B5432B"/>
-        <circle cx="130" cy="158" r="4" fill="#FFF3E0"/>
-        <path d="M240 165 Q290 120 340 165 Q290 210 240 165 Z" fill="#2E2452"/>
-        <polygon points="335,165 365,150 365,180" fill="#2E2452"/>
-        <circle cx="260" cy="158" r="4" fill="#FFF3E0"/>
-        <!-- faixa inferior espelhada -->
-        <g fill="#2E2452">
-          <polygon points="50,205 68,180 32,180"/>
-          <polygon points="86,205 104,180 68,180"/>
-          <polygon points="122,205 140,180 104,180"/>
-          <polygon points="158,205 176,180 140,180"/>
-        </g>
-        <g fill="#B5432B">
-          <polygon points="242,205 260,180 224,180"/>
-          <polygon points="278,205 296,180 260,180"/>
-          <polygon points="314,205 332,180 296,180"/>
-          <polygon points="350,205 368,180 332,180"/>
-        </g>
-      </svg>
-      <figcaption style="font-size:0.8rem; text-align:center; color:#5B2EE0; margin-top:6px;">Ilustração inspirada na Arte Kusiwa, sistema gráfico do povo Wajãpi (Amapá) reconhecido pela UNESCO como Patrimônio Cultural Imaterial da Humanidade: padrões com triângulos e formas curvas inspiradas em peixes, cobras e outros seres da natureza.</figcaption>
+      <svg viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pintura corporal em urucum (vermelho) e jenipapo (azul-escuro) sobre a pele, com faixas de triângulos, linhas em espinha e losangos, no estilo da arte Kusiwa" style="width:100%; border-radius:16px; display:block;">
+        <defs>
+<linearGradient id="kPele" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#CB925F"/><stop offset=".55" stop-color="#BC7F4F"/><stop offset="1" stop-color="#A86B3F"/></linearGradient>
+<radialGradient id="kLuz" cx=".3" cy=".2" r=".8"><stop offset="0" stop-color="#fff" stop-opacity=".16"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+<filter id="kTinta" x="-2%" y="-2%" width="104%" height="104%"><feTurbulence type="fractalNoise" baseFrequency="0.07" numOctaves="2" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.6"/></filter>
+<filter id="kPoro" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="2"/><feColorMatrix values="0 0 0 0 .25  0 0 0 0 .13  0 0 0 0 .05  0 0 0 .5 0"/></filter>
+<clipPath id="kRecorte"><rect x="16" y="16" width="368" height="228" rx="26"/></clipPath>
+</defs>
+        <rect width="400" height="260" rx="24" fill="#3a2a20"/>
+        <g clip-path="url(#kRecorte)"><rect x="16" y="16" width="368" height="228" fill="url(#kPele)"/>
+        <rect x="16" y="16" width="368" height="228" filter="url(#kPoro)" opacity=".35"/><rect x="16" y="16" width="368" height="228" fill="url(#kLuz)"/>
+        <g filter="url(#kTinta)" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="30.2" y1="42.4" x2="370.5" y2="42.8" stroke="#1E2438" stroke-width="3.4" opacity="0.93"/>
+        <line x1="30.4" y1="98.8" x2="369.2" y2="97.9" stroke="#1E2438" stroke-width="3.0" opacity="0.93"/>
+        <line x1="30.8" y1="102.3" x2="370.7" y2="101.3" stroke="#1E2438" stroke-width="3.0" opacity="0.93"/>
+        <line x1="29.9" y1="157.5" x2="370.1" y2="158.1" stroke="#1E2438" stroke-width="3.0" opacity="0.93"/>
+        <line x1="29.1" y1="161.5" x2="369.6" y2="162.7" stroke="#1E2438" stroke-width="3.0" opacity="0.93"/>
+        <line x1="30.5" y1="217.4" x2="370.5" y2="217.3" stroke="#1E2438" stroke-width="3.4" opacity="0.93"/>
+        <polygon points="32.0,94.0 65.8,94.0 48.9,50.0" fill="#B5301C" opacity=".92"/>
+        <polygon points="50.9,46.0 84.7,46.0 67.8,90.0" fill="none" stroke="#1E2438" stroke-width="3" opacity=".93"/>
+        <polygon points="69.8,94.0 103.6,94.0 86.7,50.0" fill="#B5301C" opacity=".92"/>
+        <polygon points="88.7,46.0 122.4,46.0 105.6,90.0" fill="none" stroke="#1E2438" stroke-width="3" opacity=".93"/>
+        <polygon points="107.6,94.0 141.3,94.0 124.4,50.0" fill="#B5301C" opacity=".92"/>
+        <polygon points="126.4,46.0 160.2,46.0 143.3,90.0" fill="none" stroke="#1E2438" stroke-width="3" opacity=".93"/>
+        <polygon points="145.3,94.0 179.1,94.0 162.2,50.0" fill="#B5301C" opacity=".92"/>
+        <polygon points="164.2,46.0 198.0,46.0 181.1,90.0" fill="none" stroke="#1E2438" stroke-width="3" opacity=".93"/>
+        <polygon points="183.1,94.0 216.9,94.0 200.0,50.0" fill="#B5301C" opacity=".92"/>
+        <polygon points="202.0,46.0 235.8,46.0 218.9,90.0" fill="none" stroke="#1E2438" stroke-width="3" opacity=".93"/>
+        <polygon points="220.9,94.0 254.7,94.0 237.8,50.0" fill="#B5301C" opacity=".92"/>
+        <polygon points="239.8,46.0 273.6,46.0 256.7,90.0" fill="none" stroke="#1E2438" stroke-width="3" opacity=".93"/>
+        <polygon points="258.7,94.0 292.4,94.0 275.6,50.0" fill="#B5301C" opacity=".92"/>
+        <polygon points="277.6,46.0 311.3,46.0 294.4,90.0" fill="none" stroke="#1E2438" stroke-width="3" opacity=".93"/>
+        <polygon points="296.4,94.0 330.2,94.0 313.3,50.0" fill="#B5301C" opacity=".92"/>
+        <polygon points="315.3,46.0 349.1,46.0 332.2,90.0" fill="none" stroke="#1E2438" stroke-width="3" opacity=".93"/>
+        <polygon points="334.2,94.0 368.0,94.0 351.1,50.0" fill="#B5301C" opacity=".92"/>
+        <line x1="30.2" y1="129.3" x2="369.1" y2="130.7" stroke="#1E2438" stroke-width="3.2" opacity="0.93"/>
+        <polyline points="40,110 52,130 40,150" fill="none" stroke="#1E2438" stroke-width="4" opacity=".93"/>
+        <polyline points="60,110 72,130 60,150" fill="none" stroke="#B5301C" stroke-width="4" opacity=".93"/>
+        <polyline points="80,110 92,130 80,150" fill="none" stroke="#1E2438" stroke-width="4" opacity=".93"/>
+        <polyline points="100,110 112,130 100,150" fill="none" stroke="#B5301C" stroke-width="4" opacity=".93"/>
+        <polyline points="120,110 132,130 120,150" fill="none" stroke="#1E2438" stroke-width="4" opacity=".93"/>
+        <polyline points="140,110 152,130 140,150" fill="none" stroke="#B5301C" stroke-width="4" opacity=".93"/>
+        <polyline points="160,110 172,130 160,150" fill="none" stroke="#1E2438" stroke-width="4" opacity=".93"/>
+        <polyline points="180,110 192,130 180,150" fill="none" stroke="#B5301C" stroke-width="4" opacity=".93"/>
+        <polyline points="200,110 212,130 200,150" fill="none" stroke="#1E2438" stroke-width="4" opacity=".93"/>
+        <polyline points="220,110 232,130 220,150" fill="none" stroke="#B5301C" stroke-width="4" opacity=".93"/>
+        <polyline points="240,110 252,130 240,150" fill="none" stroke="#1E2438" stroke-width="4" opacity=".93"/>
+        <polyline points="260,110 272,130 260,150" fill="none" stroke="#B5301C" stroke-width="4" opacity=".93"/>
+        <polyline points="280,110 292,130 280,150" fill="none" stroke="#1E2438" stroke-width="4" opacity=".93"/>
+        <polyline points="300,110 312,130 300,150" fill="none" stroke="#B5301C" stroke-width="4" opacity=".93"/>
+        <polyline points="320,110 332,130 320,150" fill="none" stroke="#1E2438" stroke-width="4" opacity=".93"/>
+        <polyline points="340,110 352,130 340,150" fill="none" stroke="#B5301C" stroke-width="4" opacity=".93"/>
+        <polygon points="47,168 64,190 47,212 30,190" fill="#1E2438" opacity=".93"/>
+        <polygon points="47,180 54,190 47,200 40,190" fill="#B5301C" opacity=".95"/>
+        <polygon points="85,168 102,190 85,212 68,190" fill="#1E2438" opacity=".93"/>
+        <polygon points="85,180 92,190 85,200 78,190" fill="#B5301C" opacity=".95"/>
+        <polygon points="123,168 140,190 123,212 106,190" fill="#1E2438" opacity=".93"/>
+        <polygon points="123,180 130,190 123,200 116,190" fill="#B5301C" opacity=".95"/>
+        <polygon points="161,168 178,190 161,212 144,190" fill="#1E2438" opacity=".93"/>
+        <polygon points="161,180 168,190 161,200 154,190" fill="#B5301C" opacity=".95"/>
+        <polygon points="199,168 216,190 199,212 182,190" fill="#1E2438" opacity=".93"/>
+        <polygon points="199,180 206,190 199,200 192,190" fill="#B5301C" opacity=".95"/>
+        <polygon points="237,168 254,190 237,212 220,190" fill="#1E2438" opacity=".93"/>
+        <polygon points="237,180 244,190 237,200 230,190" fill="#B5301C" opacity=".95"/>
+        <polygon points="275,168 292,190 275,212 258,190" fill="#1E2438" opacity=".93"/>
+        <polygon points="275,180 282,190 275,200 268,190" fill="#B5301C" opacity=".95"/>
+        <polygon points="313,168 330,190 313,212 296,190" fill="#1E2438" opacity=".93"/>
+        <polygon points="313,180 320,190 313,200 306,190" fill="#B5301C" opacity=".95"/>
+        <polygon points="351,168 368,190 351,212 334,190" fill="#1E2438" opacity=".93"/>
+        <polygon points="351,180 358,190 351,200 344,190" fill="#B5301C" opacity=".95"/>
+        </g></g></svg>
+      <figcaption style="font-size:0.8rem; text-align:center; color:#5B2EE0; margin-top:6px;">Ilustração de apoio: pintura corporal feita com urucum (vermelho) e jenipapo (azul-escuro), em faixas de triângulos, linhas em espinha e losangos, como na Arte Kusiwa do povo Wajãpi (Amapá), reconhecida como Patrimônio Cultural Imaterial pela UNESCO. Esta imagem <strong>não reproduz um padrão específico</strong>: os padrões kusiwa são conhecimento do povo Wajãpi. Para conhecê-los de verdade, procure materiais feitos pelos próprios Wajãpi e pelo Iphan.</figcaption>
     </figure>
 
     <div class="challenge-card">
@@ -217,8 +274,8 @@
         <div class="insp"><b>Trançados e cestaria</b>Fibras entrelaçadas formando ângulos regulares.</div>
         <div class="insp"><b>Tecidos e rendas</b>Padrões geométricos repetidos em tecelagem tradicional.</div>
       </div>
-      <p>Descreva o padrão e proponha uma explicação: como os ângulos das peças se somam para fechar perfeitamente ao redor de cada ponto de encontro?</p>
-      <textarea class="reflect" id="reflectTextT3" placeholder="Escreva aqui sua investigação..."></textarea>
+      <p>Descreva o padrão e proponha uma explicação: como os ângulos das peças se somam para fechar perfeitamente ao redor de cada ponto de encontro? <em>Dica: uma volta completa mede 360°. Quantos cantos de peça se encontram em cada ponto?</em></p>
+      <textarea class="reflect" id="reflectTextT3" aria-label="Sua investigação" placeholder="Escreva aqui sua investigação..."></textarea>
       <div class="challenge-actions">
         <button class="btn laranja" id="reflectSaveT3">Salvar minha investigação</button>
         <span class="save-note" id="reflectStatusT3">salvo automaticamente neste navegador</span>
@@ -254,18 +311,15 @@
       <div id="jogoAtivo">
         <p class="center quiz-pergunta">Qual é o ângulo que falta?</p>
         <div class="jogo-triangulo-area">
-          <svg viewBox="0 0 100 100" style="width:320px;">
+          <svg viewBox="0 0 100 100">
             <polygon id="jogoTriPoly" points="50,20 75,75 25,75" fill="none" stroke="#5B2EE0" stroke-width="3"/>
-            <path id="jogoArcA" fill="rgba(120,120,120,0.30)" stroke="#8a8a8a" stroke-width="1"/>
-            <path id="jogoArcB" fill="rgba(120,120,120,0.30)" stroke="#8a8a8a" stroke-width="1"/>
-            <path id="jogoArcC" fill="rgba(120,120,120,0.30)" stroke="#8a8a8a" stroke-width="1"/>
-            <text id="txtA" x="12" y="89" text-anchor="middle" font-size="7.5" fill="#7C4DFF" font-weight="800"></text>
-            <text id="txtB" x="88" y="89" text-anchor="middle" font-size="7.5" fill="#FF8A3D" font-weight="800"></text>
-            <text id="txtC" x="50" y="10" text-anchor="middle" font-size="7.5" fill="#06D6A0" font-weight="800">?</text>
+            <text id="txtA" x="12" y="89" text-anchor="middle" font-size="9" fill="#7C4DFF" font-weight="800"></text>
+            <text id="txtB" x="88" y="89" text-anchor="middle" font-size="9" fill="#FF8A3D" font-weight="800"></text>
+            <text id="txtC" x="50" y="10" text-anchor="middle" font-size="9" fill="#06D6A0" font-weight="800">?</text>
           </svg>
         </div>
         <div class="jogo-botoes" id="jogoBotoes"></div>
-        <div class="jogo-mensagem" id="jogoMensagem"></div>
+        <div class="jogo-mensagem" id="jogoMensagem" aria-live="polite"></div>
       </div>
 
       <div id="jogoFim" class="jogo-fim" style="display:none;">
@@ -284,7 +338,7 @@
 </main>
 
 <footer class="site-footer">
-  Trilha dos Triângulos — Produto Educacional PROFMAT 🔺✨
+  Trilha dos Triângulos — Produto Educacional PROFMAT/UFG 🔺✨ · <a href="professor.html" style="text-decoration:underline;">Guia do Professor</a>
 </footer>
 
 <script src="script.js"></script>
@@ -302,7 +356,7 @@ document.querySelectorAll('.quiz-item').forEach(item=>{
       if(valor === correta){
         op.classList.add('certo');
         feedback.textContent = '✅ Isso mesmo! Mandou bem.';
-        feedback.style.color = '#039073';
+        feedback.style.color = '#047857';
       }else{
         op.classList.add('errado');
         item.querySelector(`[data-valor="${correta}"]`).classList.add('certo');
@@ -334,12 +388,8 @@ function gerarOpcoes(certo){
 }
 
 /* Calcula os 3 vértices reais (em coordenadas do SVG 0-100) de um triângulo
-   a partir dos ângulos em A e B, usando lei dos senos. Antes de encaixar no
-   viewBox, o triângulo é girado (rotação rígida, que não muda nenhum ângulo
-   nem lado) para que o LADO MAIS LONGO fique na horizontal. Sem isso, sempre
-   que o ângulo desconhecido era pequeno, o lado oposto a ele (o mais curto)
-   virava a "base" e o triângulo saía desenhado como um espeto fino e alto —
-   o que fazia os outros dois ângulos parecerem bem menores do que realmente são. */
+   a partir dos ângulos em A e B, usando lei dos senos, e escala mantendo
+   as proporções (sem distorcer os ângulos) para caber no viewBox. */
 function calcularVertices(aDeg, bDeg){
   const aR = aDeg * Math.PI/180;
   const bR = bDeg * Math.PI/180;
@@ -350,55 +400,27 @@ function calcularVertices(aDeg, bDeg){
   const Cx = acLen * Math.cos(aR);
   const Cy = acLen * Math.sin(aR);
 
-  let pts = { A:{x:0,y:0}, B:{x:1,y:0}, C:{x:Cx,y:Cy} };
-  function dist(P,Q){ return Math.hypot(P.x-Q.x, P.y-Q.y); }
-  const lados = [ ['A','B',dist(pts.A,pts.B)], ['B','C',dist(pts.B,pts.C)], ['C','A',dist(pts.C,pts.A)] ];
-  lados.sort((p,q)=> q[2]-p[2]);
-  const [u,v] = lados[0];
-  const w3 = ['A','B','C'].find(k => k!==u && k!==v);
-  const P = pts[u], Q = pts[v], R = pts[w3];
-  const ang = Math.atan2(Q.y-P.y, Q.x-P.x);
-  function rot(pt){
-    const dx = pt.x-P.x, dy = pt.y-P.y;
-    const ca = Math.cos(-ang), sa = Math.sin(-ang);
-    return { x: dx*ca - dy*sa, y: dx*sa + dy*ca };
-  }
-  let P2 = rot(P), Q2 = rot(Q), R2 = rot(R);
-  if (R2.y < 0){ P2 = {x:P2.x,y:-P2.y}; Q2 = {x:Q2.x,y:-Q2.y}; R2 = {x:R2.x,y:-R2.y}; }
-  const novos = {}; novos[u] = P2; novos[v] = Q2; novos[w3] = R2;
-  const A2 = novos.A, B2 = novos.B, C2 = novos.C;
-
-  const minX = Math.min(A2.x,B2.x,C2.x), maxX = Math.max(A2.x,B2.x,C2.x);
-  const minY = Math.min(A2.y,B2.y,C2.y), maxY = Math.max(A2.y,B2.y,C2.y);
+  const minX = Math.min(0,1,Cx), maxX = Math.max(0,1,Cx);
+  const minY = 0, maxY = Cy;
   const w = maxX - minX, h = maxY - minY;
 
-  const alvoLargura = 72, alvoAltura = 62, baseY = 88;
+  const alvoLargura = 56, alvoAltura = 48, baseY = 86;
   const escala = Math.min(alvoLargura/w, alvoAltura/h);
 
-  function transformar(p){
-    const sx = (p.x - minX) * escala;
-    const sy = (p.y - minY) * escala;
+  function transformar(px,py){
+    const sx = (px - minX) * escala;
+    const sy = (py - minY) * escala;
     return [ 50 - (w*escala)/2 + sx, baseY - sy ];
   }
 
-  return [ transformar(A2), transformar(B2), transformar(C2) ];
+  return [ transformar(0,0), transformar(1,0), transformar(Cx,Cy) ];
 }
 
-/* Posiciona o rótulo do ângulo sempre dentro do triângulo, deslocando o vértice em direção ao centro. */
-function posicionarRotulo(vertice, centro, fracao){
-  return [ vertice[0] + (centro[0]-vertice[0])*fracao, vertice[1] + (centro[1]-vertice[1])*fracao ];
-}
-
-/* Incentro do triângulo (ponto equidistante dos 3 lados). Diferente do centroide,
-   deslocar o rótulo em direção ao incentro garante uma distância mínima parecida
-   até os dois lados que formam o ângulo — mesmo em ângulos bem estreitos, onde
-   o centroide simples deixava o texto quase colado nos lados. */
-function incentroT3(A,B,C){
-  const a = Math.hypot(B[0]-C[0], B[1]-C[1]);
-  const b = Math.hypot(C[0]-A[0], C[1]-A[1]);
-  const c = Math.hypot(A[0]-B[0], A[1]-B[1]);
-  const per = a+b+c;
-  return [ (a*A[0]+b*B[0]+c*C[0])/per, (a*A[1]+b*B[1]+c*C[1])/per ];
+/* Empurra um rótulo para fora do triângulo, na direção centro→vértice. */
+function posicionarRotulo(vertice, centro, distancia){
+  const dx = vertice[0]-centro[0], dy = vertice[1]-centro[1];
+  const len = Math.sqrt(dx*dx+dy*dy) || 1;
+  return [ vertice[0] + (dx/len)*distancia, vertice[1] + (dy/len)*distancia ];
 }
 
 const rodadas = [
@@ -426,36 +448,17 @@ function carregarRodada(){
   const [A,B,C] = calcularVertices(r.a, r.b);
   document.getElementById('jogoTriPoly').setAttribute('points', `${A[0]},${A[1]} ${B[0]},${B[1]} ${C[0]},${C[1]}`);
 
-  // Arcos cinzas de ângulo (mesmo estilo dos exemplos estáticos e do "Explore com
-  // as mãos"), com raio proporcional ao menor lado adjacente a cada vértice. O
-  // rótulo do ângulo é posicionado na bissetriz, a uma distância fixa (raio do
-  // arco + folga + metade da altura do texto) além do arco — igual à referência
-  // enviada — em vez de uma fração do caminho até o incentro, que deixava o
-  // número quase em cima do arco.
-  const toXYT3 = p => ({x:p[0], y:p[1]});
-  const distArrT3 = (p,q) => Math.hypot(p[0]-q[0], p[1]-q[1]);
-  const arcosT3 = [
-    { vert:A, o1:B, o2:C, id:'jogoArcA', txt:'txtA' },
-    { vert:B, o1:A, o2:C, id:'jogoArcB', txt:'txtB' },
-    { vert:C, o1:A, o2:B, id:'jogoArcC', txt:'txtC' },
-  ];
-  const FONT_JOGO = 7.5, GAP_JOGO = 3;
-  arcosT3.forEach(w=>{
-    const V=toXYT3(w.vert), P1=toXYT3(w.o1), P2=toXYT3(w.o2);
-    const rMax = 0.4*Math.min(distArrT3(w.vert,w.o1), distArrT3(w.vert,w.o2));
-    const raio = Math.max(4, Math.min(11, rMax));
-    document.getElementById(w.id).setAttribute('d', wedgePathT3(V, P1, P2, raio));
-    const pos = labelPosT3(V, P1, P2, raio, FONT_JOGO, GAP_JOGO);
-    const txt = document.getElementById(w.txt);
-    txt.setAttribute('x', pos.x); txt.setAttribute('y', pos.y);
-  });
+  const centroide = [ (A[0]+B[0]+C[0])/3, (A[1]+B[1]+C[1])/3 ];
+  const posA = posicionarRotulo(A, centroide, 10);
+  const posB = posicionarRotulo(B, centroide, 10);
+  const posC = posicionarRotulo(C, centroide, 10);
 
   const txtA = document.getElementById('txtA');
   const txtB = document.getElementById('txtB');
   const txtC = document.getElementById('txtC');
-  txtA.textContent = r.a + '°';
-  txtB.textContent = r.b + '°';
-  txtC.textContent = '?';
+  txtA.setAttribute('x', posA[0]); txtA.setAttribute('y', posA[1]); txtA.textContent = r.a + '°';
+  txtB.setAttribute('x', posB[0]); txtB.setAttribute('y', posB[1]); txtB.textContent = r.b + '°';
+  txtC.setAttribute('x', posC[0]); txtC.setAttribute('y', posC[1]); txtC.textContent = '?';
 
   const botoesDiv = document.getElementById('jogoBotoes');
   botoesDiv.innerHTML = '';
@@ -479,7 +482,7 @@ function responder(escolha, btn){
     document.getElementById('jogoPontos').textContent = pontos;
     btn.style.background = '#06D6A0'; btn.style.color = '#fff'; btn.style.borderColor = '#06D6A0';
     msg.textContent = `✅ Isso aí! ${r.a}° + ${r.b}° + ${resposta}° = 180°.`;
-    msg.style.color = '#039073';
+    msg.style.color = '#047857';
   }else{
     btn.style.background = '#FF6B9D'; btn.style.color = '#fff'; btn.style.borderColor = '#FF6B9D';
     msg.textContent = '❌ Era ' + resposta + '°. Vamos para a próxima!';
@@ -522,70 +525,54 @@ function angleAtT3(p, q1, q2){
 const SVGNS_T3 = "http://www.w3.org/2000/svg";
 function elT3(tag, attrs){ const e = document.createElementNS(SVGNS_T3, tag); for(const k in attrs) e.setAttribute(k, attrs[k]); return e; }
 
-/* Caminho do arco/leque cinza que marca visualmente um ângulo (mesmo estilo dos
-   exemplos estáticos), sempre traçando o arco menor (o ângulo interno real). */
-function wedgePathT3(V, P1, P2, r){
-  function unit(P){ const dx=P.x-V.x, dy=P.y-V.y; const d=Math.hypot(dx,dy)||1; return {x:dx/d, y:dy/d}; }
-  const u1=unit(P1), u2=unit(P2);
-  const A={x:V.x+u1.x*r, y:V.y+u1.y*r};
-  const B={x:V.x+u2.x*r, y:V.y+u2.y*r};
-  const theta = angleAtT3(V,P1,P2);
-  const ang1=Math.atan2(u1.y,u1.x), ang2=Math.atan2(u2.y,u2.x);
-  let span=(ang2-ang1) % (2*Math.PI); if(span<0) span+=2*Math.PI;
-  const sweep = Math.abs(span*180/Math.PI - theta) < 1 ? 1 : 0;
-  return `M ${V.x},${V.y} L ${A.x},${A.y} A ${r},${r} 0 0 ${sweep} ${B.x},${B.y} Z`;
-}
-
-/* Posição do rótulo do ângulo: sobre a bissetriz do vértice, a uma distância fixa
-   além do arco cinza (raio do arco + folga + metade da altura do texto) — igual
-   à referência enviada, onde o número fica claramente separado do arco, e não
-   "em cima" dele nem espremido perto do vértice. */
-function labelPosT3(V, P1, P2, r, fontSize, gap){
-  function unit(P){ const dx=P.x-V.x, dy=P.y-V.y; const d=Math.hypot(dx,dy)||1; return {x:dx/d, y:dy/d}; }
-  const u1=unit(P1), u2=unit(P2);
-  let bx=u1.x+u2.x, by=u1.y+u2.y;
-  const bl=Math.hypot(bx,by)||1; bx/=bl; by/=bl;
-  const dist = r + gap + fontSize*0.6;
-  return { x: V.x + bx*dist, y: V.y + by*dist };
-}
-
 (function exploreT3(){
   const svg = document.getElementById('svgExploreT3');
   const W=320, H=280;
+  document.getElementById('et3-paralela').addEventListener('change', ()=>draw());
   let verts = [{x:70,y:210},{x:250,y:210},{x:150,y:70}];
 
+  /* Sobreposição da demonstração: reta por verts[2] paralela a verts[0]verts[1]
+     e setores coloridos mostrando os ângulos alternos internos. */
+  function setor(P,u,v,r,cor,op){
+    const a1=Math.atan2(u.y,u.x), a2=Math.atan2(v.y,v.x);
+    let d=a2-a1; while(d>Math.PI) d-=2*Math.PI; while(d<=-Math.PI) d+=2*Math.PI;
+    const p1={x:P.x+r*Math.cos(a1),y:P.y+r*Math.sin(a1)}, p2={x:P.x+r*Math.cos(a2),y:P.y+r*Math.sin(a2)};
+    svg.appendChild(elT3('path',{d:`M${P.x},${P.y} L${p1.x},${p1.y} A${r},${r} 0 0,${d>0?1:0} ${p2.x},${p2.y} Z`, fill:cor, opacity:op}));
+  }
+  function desenharParalela(){
+    const [P0,P1,P2]=verts; const dx=P1.x-P0.x, dy=P1.y-P0.y, n=Math.hypot(dx,dy)||1;
+    svg.appendChild(elT3('line',{x1:P2.x-dx/n*400,y1:P2.y-dy/n*400,x2:P2.x+dx/n*400,y2:P2.y+dy/n*400,stroke:'#2E2452','stroke-width':2,'stroke-dasharray':'6 4'}));
+    const v=(p,q)=>({x:q.x-p.x,y:q.y-p.y});
+    setor(P0,v(P0,P1),v(P0,P2),30,'#C2410C',.6);
+    setor(P1,v(P1,P0),v(P1,P2),30,'#047857',.6);
+    setor(P2,v(P2,P0),v(P2,P1),30,'#7C4DFF',.45);
+    setor(P2,{x:-dx,y:-dy},v(P2,P0),30,'#C2410C',.6);
+    setor(P2,{x:dx,y:dy},v(P2,P1),30,'#047857',.6);
+  }
   function draw(){
     svg.innerHTML=''; svg.setAttribute('viewBox','0 0 '+W+' '+H);
-    svg.appendChild(elT3('polygon',{points:verts.map(p=>p.x+','+p.y).join(' '), fill:'none', stroke:'#5B2EE0','stroke-width':3}));
+    svg.appendChild(elT3('polygon',{points:verts.map(p=>p.x+','+p.y).join(' '), fill:'rgba(124,77,255,0.12)', stroke:'#5B2EE0','stroke-width':3}));
     const A=angleAtT3(verts[0],verts[1],verts[2]), B=angleAtT3(verts[1],verts[0],verts[2]), C=angleAtT3(verts[2],verts[0],verts[1]);
     const labels=[{p:verts[0],o1:verts[1],o2:verts[2]},{p:verts[1],o1:verts[0],o2:verts[2]},{p:verts[2],o1:verts[0],o2:verts[1]}];
-    const FONT_EXP = 12, GAP_EXP = 8;
-    // Arcos cinzas de ângulo (mesmo estilo dos exemplos estáticos), com raio
-    // proporcional ao menor lado adjacente para nunca ultrapassar o vértice oposto.
-    // O rótulo fica sobre a bissetriz do vértice, a uma distância fixa além do
-    // arco (raio + folga + metade da altura do texto) — igual à referência.
-    labels.forEach(L=>{
-      const rMax = 0.4*Math.min(distT3(L.p,L.o1), distT3(L.p,L.o2));
-      const r = Math.max(10, Math.min(24, rMax));
-      const d = wedgePathT3(L.p, L.o1, L.o2, r);
-      svg.appendChild(elT3('path',{d:d, fill:'rgba(120,120,120,0.30)', stroke:'#8a8a8a','stroke-width':1}));
-      L._r = r;
-    });
-    labels.forEach(L=>{
-      const ang = angleAtT3(L.p,L.o1,L.o2);
-      const pos = labelPosT3(L.p, L.o1, L.o2, L._r, FONT_EXP, GAP_EXP);
-      const t=elT3('text',{x:pos.x,y:pos.y,'font-size':FONT_EXP,fill:'#5B2EE0','text-anchor':'middle','font-weight':'700'});
-      t.textContent=Math.round(ang)+'°'; svg.appendChild(t);
+    const arr = arredondarAngulos([A,B,C]);
+    if(document.getElementById('et3-paralela') && document.getElementById('et3-paralela').checked) desenharParalela();
+    labels.forEach((L,k)=>{
+      const u1x=L.o1.x-L.p.x, u1y=L.o1.y-L.p.y, n1=Math.hypot(u1x,u1y)||1;
+      const u2x=L.o2.x-L.p.x, u2y=L.o2.y-L.p.y, n2=Math.hypot(u2x,u2y)||1;
+      let bx=u1x/n1+u2x/n2, by=u1y/n1+u2y/n2; const nb=Math.hypot(bx,by)||1;
+      const lx=L.p.x+26*bx/nb, ly=L.p.y+26*by/nb;
+      const t=elT3('text',{x:lx,y:ly,'font-size':12,fill:'#2E2452','text-anchor':'middle','font-weight':'800','dominant-baseline':'middle'});
+      t.textContent=arr[k]+'°'; svg.appendChild(t);
     });
     verts.forEach((p,i)=>{
       const c=elT3('circle',{cx:p.x,cy:p.y,r:9,fill:'#FF8A3D',stroke:'#2E2452','stroke-width':2,class:'handle'});
       c.addEventListener('pointerdown',(ev)=>startDrag(ev,i));
       svg.appendChild(c);
     });
-    document.getElementById('et3-A').textContent=Math.round(A)+'°';
-    document.getElementById('et3-B').textContent=Math.round(B)+'°';
-    document.getElementById('et3-C').textContent=Math.round(C)+'°';
-    document.getElementById('et3-sum').textContent=Math.round(A+B+C)+'°';
+    document.getElementById('et3-A').textContent=arr[0]+'°';
+    document.getElementById('et3-B').textContent=arr[1]+'°';
+    document.getElementById('et3-C').textContent=arr[2]+'°';
+    document.getElementById('et3-sum').textContent=arr[0]+'° + '+arr[1]+'° + '+arr[2]+'° = '+(arr[0]+arr[1]+arr[2])+'°';
     const badges=document.getElementById('et3-badges'); badges.innerHTML='';
     const b1=document.createElement('span'); b1.className='badge on'; b1.textContent='Soma = 180° ✓';
     badges.appendChild(b1);
@@ -612,7 +599,7 @@ document.getElementById('nt-test-t3').addEventListener('click', ()=>{
   const b = parseFloat(document.getElementById('nt-b-t3').value);
   const result = document.getElementById('nt-result-t3');
   if(!(a>0 && b>0)){ result.textContent='Preencha os dois ângulos com valores positivos.'; result.className='nt-result bad'; return; }
-  const c = 180 - a - b;
+  const c = Math.round((180 - a - b)*100)/100;
   if(c <= 0){
     result.textContent = `✗ Impossível: ${a}° + ${b}° já somam ${a+b}°, que é maior ou igual a 180°. Não sobra ângulo para o terceiro.`;
     result.className='nt-result bad';
@@ -667,7 +654,7 @@ document.getElementById('nt-test-t3').addEventListener('click', ()=>{
     for (let s=1; s<=5; s++){
       const b = document.createElement('button');
       b.className='star-btn' + ((stars[i]||0)>=s ? ' filled':'');
-      b.textContent='★';
+      b.textContent='★'; b.type='button'; b.setAttribute('aria-label', s+' de 5 estrelas — '+text);
       b.addEventListener('click', ()=>{
         stars[i] = (stars[i]===s) ? s-1 : s;
         starWrap.querySelectorAll('.star-btn').forEach((sb,idx)=> sb.classList.toggle('filled', idx < stars[i]));

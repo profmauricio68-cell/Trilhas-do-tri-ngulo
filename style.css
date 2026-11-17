@@ -4,11 +4,11 @@
 :root{
   --roxo: #7C4DFF;
   --roxo-escuro: #5B2EE0;
-  --laranja: #FF8A3D;
+  --laranja: #C2410C;   /* revisado: contraste AA com texto branco */
   --amarelo: #FFD166;
-  --verde: #06D6A0;
-  --rosa: #FF6B9D;
-  --azul: #4FC3F7;
+  --verde: #047857;
+  --rosa: #C2185B;
+  --azul: #0369A1;
   --creme: #FFF8ED;
   --texto: #2E2452;
   --branco: #FFFFFF;
@@ -117,7 +117,7 @@ a{ color: inherit; text-decoration: none; }
 .btn.laranja{ background: var(--laranja); box-shadow: 0 6px 0 #C85A17; }
 .btn.verde{ background: var(--verde); box-shadow: 0 6px 0 #039073; }
 .btn.rosa{ background: var(--rosa); box-shadow: 0 6px 0 #C43F6E; }
-.btn:disabled, .btn.disabled{ background:#D8D3EA; box-shadow:0 6px 0 #b9b2d6; cursor:not-allowed; color:#8880ab; }
+.btn:disabled, .btn.disabled{ background:#D8D3EA; box-shadow:0 6px 0 #b9b2d6; cursor:not-allowed; color:#625A8A; }
 
 /* ---------- Hero (index) ---------- */
 .hero{
@@ -157,7 +157,12 @@ a{ color: inherit; text-decoration: none; }
 .trilha-card.disponivel .status{ color: var(--verde); }
 
 /* ---------- Contextualização ---------- */
-.contexto-flex{ display:flex; gap: 26px; align-items:center; flex-wrap: wrap-reverse; }
+.contexto-flex{ display:flex; gap: 26px; align-items:flex-start; flex-wrap: wrap; }
+@media (max-width: 700px){ .contexto-flex .imagem{ order:-1; } }
+/* gravura alinhada ao topo: começa na altura da 1ª linha do texto */
+.contexto-flex .texto > :first-child{ margin-top:0; }
+.contexto-flex .imagem{ align-self:flex-start; }
+.contexto-flex .imagem figure, .contexto-flex .imagem img{ margin-top:0; }
 .contexto-flex .imagem{ flex: 1 1 280px; }
 .contexto-flex .texto{ flex: 2 1 340px; }
 .balaozinho{
@@ -222,7 +227,8 @@ a{ color: inherit; text-decoration: none; }
 .center{ text-align:center; }
 
 @media (max-width: 600px){
-  .main-nav{ display:none; }
+  .main-nav{ display:flex; flex-wrap:nowrap; overflow-x:auto; width:100%; padding-bottom:6px; -webkit-overflow-scrolling:touch; }
+  .main-nav a{ white-space:nowrap; }
 }
 
 /* ===== Adições — exercícios extras da Trilha 1 ===== */
@@ -238,7 +244,7 @@ a{ color: inherit; text-decoration: none; }
   border:1px solid #FFE7C2; margin-top:14px; border-radius: 10px; overflow:hidden;
 }
 .ro-cell{ background:#fff; padding:9px 8px; text-align:center; }
-.ro-cell .k{ display:block; color:#8880ab; font-size:0.7rem; text-transform:uppercase; letter-spacing:.04em; margin-bottom:3px; font-weight:700; }
+.ro-cell .k{ display:block; color:#625A8A; font-size:0.7rem; text-transform:uppercase; letter-spacing:.04em; margin-bottom:3px; font-weight:700; }
 .ro-cell .v{ font-weight:800; font-size:0.95rem; color: var(--roxo-escuro); }
 .badges{ display:flex; gap:8px; margin-top:12px; flex-wrap:wrap; }
 .badge{
@@ -247,7 +253,7 @@ a{ color: inherit; text-decoration: none; }
 }
 .badge.on{ background: var(--roxo); border-color: var(--roxo); color:#fff; }
 .badge.on.aviso{ background: var(--rosa); border-color: var(--rosa); }
-.hint{ font-size:0.85rem; color:#8880ab; margin-top:10px; }
+.hint{ font-size:0.85rem; color:#625A8A; margin-top:10px; }
 .handle{ cursor:grab; }
 .handle:active{ cursor:grabbing; }
 
@@ -270,7 +276,7 @@ a{ color: inherit; text-decoration: none; }
   margin-top:22px; padding:18px; border:2px dashed var(--roxo); border-radius:16px;
 }
 .nt-row{ display:flex; gap:10px; flex-wrap:wrap; align-items:flex-end; margin-top:10px; }
-.nt-field label{ display:block; font-weight:700; font-size:0.75rem; text-transform:uppercase; color:#8880ab; margin-bottom:4px; }
+.nt-field label{ display:block; font-weight:700; font-size:0.75rem; text-transform:uppercase; color:#625A8A; margin-bottom:4px; }
 .nt-field input{
   width:76px; font-size:1rem; padding:8px; border:2px solid var(--roxo); border-radius:10px; font-family:'Nunito',sans-serif;
 }
@@ -312,5 +318,48 @@ textarea.reflect::placeholder{ color: rgba(255,255,255,0.45); }
 .stars{ display:flex; gap:3px; }
 .star-btn{ background:none; border:none; font-size:1.3rem; cursor:pointer; color:#E4DEFB; padding:2px; transition: color .1s ease; }
 .star-btn.filled{ color: var(--amarelo); }
-.assess-footer{ margin-top:16px; font-size:0.85rem; color:#8880ab; }
+.assess-footer{ margin-top:16px; font-size:0.85rem; color:#625A8A; }
 p, .lead, .balaozinho, .contexto-flex .texto { text-align: justify; }
+
+
+/* ================================================================
+   REVISÃO (2026): acessibilidade, toque e novos componentes
+================================================================ */
+/* Arrastar no celular: impede que o gesto role a página */
+.applet-card svg, .rigidez-stage svg, #svgModeloT6, #svgCopiaT6, #svgPitagorasT8{ touch-action:none; -webkit-user-select:none; user-select:none; }
+.handle{ touch-action:none; }
+
+/* Foco visível para navegação por teclado */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, .quiz-opcao:focus-visible, [tabindex]:focus-visible{
+  outline: 3px solid #1D4ED8; outline-offset: 3px; border-radius: 10px;
+}
+.pular{ position:absolute; left:-9999px; top:0; background:#2E2452; color:#fff; padding:10px 16px; z-index:100; border-radius:0 0 12px 0; }
+.pular:focus{ left:0; }
+
+/* Opções de quiz agora são botões de verdade */
+button.quiz-opcao{ font:inherit; text-align:left; width:100%; cursor:pointer; }
+
+/* Nota de autoria / fontes da narrativa */
+.nota-narrativa{ margin-top:14px; font-size:0.82rem; line-height:1.5; color:#4A4270; background:#F4F0FF; border-left:4px solid var(--roxo-escuro); padding:10px 14px; border-radius:10px; }
+.nota-narrativa strong{ color:var(--roxo-escuro); }
+
+/* Caixas de demonstração / aprofundamento */
+.demo-box{ background:#FFFFFF; border:2px dashed #C9C2E6; border-radius:18px; padding:16px 20px; margin:18px 0; }
+.demo-box h3{ margin-top:0; color:var(--roxo-escuro); }
+.demo-box ol, .demo-box ul{ line-height:1.75; padding-left:22px; }
+.demo-box .passo-figura{ max-width:420px; margin:10px auto; }
+.cuidado{ background:#FFF4E5; border-left:4px solid var(--laranja); padding:10px 14px; border-radius:10px; margin:14px 0; font-size:0.95rem; }
+.bncc-chip{ display:inline-block; font-size:0.75rem; font-weight:800; background:#2E2452; color:#fff; padding:3px 10px; border-radius:999px; margin-left:6px; vertical-align:middle; letter-spacing:.03em; }
+
+/* Bloco de feedback */
+.feedback-form{ display:flex; gap:10px; flex-wrap:wrap; align-items:flex-end; margin:10px 0 14px; }
+.feedback-form label{ display:block; font-weight:700; font-size:0.8rem; color:#625A8A; text-transform:uppercase; margin-bottom:4px; }
+.feedback-form input{ font:inherit; padding:10px 12px; border:2px solid var(--roxo); border-radius:12px; min-width:240px; }
+
+/* Guia do professor */
+.tabela-guia{ width:100%; border-collapse:collapse; font-size:0.92rem; margin:12px 0; }
+.tabela-guia th, .tabela-guia td{ border:1px solid #E4DEFB; padding:8px 10px; text-align:left; vertical-align:top; }
+.tabela-guia th{ background:#F1ECFF; color:var(--roxo-escuro); }
+.tabela-wrap{ overflow-x:auto; }
+
+@media (prefers-reduced-motion: reduce){ *{ animation:none !important; transition:none !important; scroll-behavior:auto !important; } }
