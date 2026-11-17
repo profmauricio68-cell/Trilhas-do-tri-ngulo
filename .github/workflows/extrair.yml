@@ -1,0 +1,24 @@
+name: Extrair site
+on:
+  push:
+    paths: ['site_final.zip']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  extrair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extrair e publicar
+        run: |
+          if [ ! -f site_final.zip ]; then echo "sem zip"; exit 0; fi
+          unzip -o site_final.zip -d _novo
+          rm -f img/*.jpg
+          cp -r _novo/. .
+          rm -rf _novo site_final.zip
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add -A
+          git commit -m "Versão revisada pelo orientador"
+          git push
